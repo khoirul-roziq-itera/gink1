@@ -25,19 +25,19 @@
                 <div class="row">
                     <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
                         <div class="login-brand">
-                            <img src="{{ asset('stisla/assets/img/stisla-fill.svg') }}" alt="logo" width="100" class="shadow-light rounded-circle">
+                            <img src="{{ asset('stisla/assets/img/ginktech.jpg') }}" alt="logo" width="150" class="shadow-light rounded-circle">
                         </div>
 
-                        <div class="card card-primary">
+                        <div class="card card-danger">
                             <div class="card-header">
                                 <h4>Register</h4>
                             </div>
 
                             <div class="card-body">
-                                <!-- <form method="POST" action="{{ route('register') }}">
+                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="name">First Name</label>
+                                        <label for="name">Name</label>
                                         <input id="name" type="text" class="form-control" name="name" autofocus>
                                     </div>
 
@@ -71,63 +71,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                            {{ __('Register') }}
-                                        </button>
 
-                                    </div>
-                                </form> -->
-                                <form method="POST" action="{{ route('register') }}">
-                                    @csrf
-
-
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input id="name" type="text" class="form-control" name="name" :value="old('name')" required autofocus autocomplete="name">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input id="email" type="email" class="form-control" name="email" required>
-                                        <div class="invalid-feedback">
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="form-group col-6">
-                                            <label for="password" class="d-block">Password</label>
-                                            <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
-                                            <div id="pwindicator" class="pwindicator">
-                                                <div class="bar"></div>
-                                                <div class="label"></div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-6">
-                                            <label for="password_confirmation" class="d-block">Password Confirmation</label>
-                                            <input id="password_confirmation" type="password" class="form-control" name="password_confirmation">
-                                        </div>
-                                    </div>
-
-                                    @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                                    <div class="mt-4">
-                                        <x-jet-label for="terms">
-                                            <div class="flex items-center">
-                                                <x-jet-checkbox name="terms" id="terms" />
-
-                                                <div class="ml-2">
-                                                    {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                                    'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Terms of Service').'</a>',
-                                                    'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Privacy Policy').'</a>',
-                                                    ]) !!}
-                                                </div>
-                                            </div>
-                                        </x-jet-label>
-                                    </div>
-                                    @endif
-
-                                    <div class="form-group">
-
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                        <button type="submit" class="btn btn-danger btn-lg btn-block">
                                             {{ __('Register') }}
                                         </button>
 
@@ -135,11 +80,12 @@
                                             {{ __('Already registered?') }}
                                         </a>
                                     </div>
-                                </form>
+                                </form> 
+                                
                             </div>
                         </div>
                         <div class="simple-footer">
-                            Copyright &copy; Stisla 2018
+                            Copyright &copy; GinkTech 2021
                         </div>
                     </div>
                 </div>
