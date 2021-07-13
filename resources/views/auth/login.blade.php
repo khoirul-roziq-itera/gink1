@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="{{asset('stisla/assets/css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('css/style.css')}}">
   <link rel="stylesheet" href="{{asset('stisla/assets/css/components.css')}}">
 </head>
 
@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-12 col-sm-10 offset-sm-3 col-md-6 ">
             <div class="login-brand">
-              <img src="{{ asset('stisla/assets/img/ginktech.jpg') }}" alt="logo" width="150" class="shadow-light rounded-circle">
+              <img src="{{ asset('img/ginktech.jpg') }}" alt="logo" width="150" class="shadow-light rounded-circle">
             </div>
 
             <div class="card card-danger">
