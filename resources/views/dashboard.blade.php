@@ -12,10 +12,11 @@
           </div>
 
           <div class="section-body">
-            <button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i>  Tambah Data</button>
-                  
+            {{-- <button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i>  Tambah Data</button> --}}
+            
+            <a href="{{ asset('#')}}" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i> Tambah Data</a>
             <div class="row">
-              <div class="col-12">
+              <div class="col-lg-12">
                 <div class="card">
                   <div class="card-header">
                     <h4>Data Proyek</h4>
@@ -40,7 +41,6 @@
                                 <th>Kategori</th>
                                 <th>Jangka Waktu</th>
                                 <th>Jumlah Modul</th>
-                                <th>Fungsi</th>
                                 <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
@@ -52,7 +52,6 @@
                                 <td>Akutansi</td>
                                 <td>30/05/2021</td>
                                 <td>3</td>
-                                <td>BE</td>
                                 <td><div class="badge badge-success">Selesai</div></td>
                                 <td>
                                     <a href="#" class="btn btn-primary"><i class="fas fa-info-circle"></i></a>
@@ -66,7 +65,6 @@
                                 <td>aaaaaaaaaa</td>
                                 <td>bbbbbbbbbb</td>
                                 <td>xxxxx</td>
-                                <td>yyyyy</td>
                                 <td><div class="badge badge-warning">Sedang dikerjakan</div></td>
                                 <td>
                                     <a href="#" class="btn btn-primary"><i class="fas fa-info-circle"></i></a>
@@ -80,7 +78,6 @@
                                 <td>aaaaaaaaaa</td>
                                 <td>bbbbbbbbbb</td>
                                 <td>xxxxx</td>
-                                <td>yyyyy</td>
                                 <td><div class="badge badge-danger">Menunggu</div></td>
                                 <td>
                                     <a href="#" class="btn btn-primary"><i class="fas fa-info-circle"></i></a>
