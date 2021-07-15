@@ -18,12 +18,11 @@
 
     <div class="section-body">
 
-      {{-- <a href="{{url('projects/create')}}"><button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i>  Tambah Data</button></a> --}}
+      <a href="{{url('projects/create')}}"><button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i>  Tambah Data</button></a>
     
-      {{-- Modal Tambah Data --}}
-      <button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 1em" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i>
+      {{-- <button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 1em" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i>
         Tambah Data
-      </button>
+      </button> --}}
 
       
       {{-- akhir modal tambah data --}}
@@ -143,7 +142,7 @@
     </div>
 </div>
 
-     <!-- Modal -->
+     {{-- <!-- Modal -->
      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
           <div class="modal-content">
@@ -209,7 +208,7 @@
 
           </div>
       </div>
-  </div>
+  </div> --}}
 
 </section>
 

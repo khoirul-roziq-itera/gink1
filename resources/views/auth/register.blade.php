@@ -15,7 +15,7 @@
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('stisla/assets/css/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components.css') }}">
 </head>
 
 <body>
@@ -38,6 +38,11 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="name">Name</label>
+                                        <input id="name" type="text" class="form-control" name="name" autofocus>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name">Jabatan</label>
                                         <input id="name" type="text" class="form-control" name="name" autofocus>
                                     </div>
 

@@ -34,14 +34,15 @@
                 <div class="row">
                     <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
                         
-                        <div class="card card-danger">
-                            <div class="card-header">
-                                <h4>Tambah Data Project</h4>
-                            </div>
-
-                            <div class="card-body">
+                             <div class="card card-danger">                           
                                  <form method="POST" action="{{ url('projects/create') }}">
                                     @csrf
+                                    <div class="card-header">
+                                        <h4>Tambah Data Project</h4>
+                                        <br>
+                                    </div>
+                                    
+                                    <div class="card-body">
                                         <div class="form-group">
                                             <label for="nama">Nama Project</label>
                                             <input type="text" id="nama" class="form-control" placeholder="Masukkan nama project">
@@ -81,15 +82,16 @@
                                                 <option value="">Sedang Dikerjakan</option>
                                             </select>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group float-right">
                                             <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-danger btn-lg">Kembali</button></a>
                                             <a href="{{ url('#') }}"><button type="button" class="btn btn-primary btn-lg">Simpan</button></a>
                                         </div>
+                                    </div>
                                 </form>   
                             </div>
-                        </div>
-                        <div class="simple-footer">
-                            Copyright &copy; GinkTech 2021
+                            <div class="simple-footer">
+                                Copyright &copy; GinkTech 2021
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,22 +107,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="{{ asset('stisla/assets/js/stisla.js')}}"></script>
 
-    <!-- JS Libraies -->
-    <script src="../node_modules/cleave.js/dist/cleave.min.js"></script>
-    <script src="../node_modules/cleave.js/dist/addons/cleave-phone.us.js"></script>
-    <script src="../node_modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
-    <script src="../node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="../node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-    <script src="../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
-    <script src="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-    <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
-    <script src="../node_modules/selectric/public/jquery.selectric.min.js"></script>
-
-    <script src="{{ asset('stisla/assets/js/stisla.js') }}"></script>
 
     <!-- Template JS File -->
-    <script src="{{ asset('stisla/assets/js/scripts.js') }}"></script>
-    <script src="{{ asset('stisla/assets/js/custom.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){

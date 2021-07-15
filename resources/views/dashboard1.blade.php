@@ -12,7 +12,7 @@
           </div>
 
           <div class="section-body">
-            <button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i>  Tambah Data</button>
+            <a><button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i>  Tambah Data</button></a>
                   
             <div class="row">
               <div class="col-12">
