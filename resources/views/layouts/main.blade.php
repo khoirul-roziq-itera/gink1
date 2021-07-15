@@ -10,13 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <!-- CSS Libraries -->
-
-    <!-- Template CSS -->
+     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('stisla/assets/css/components.css') }}">
-    
-</head>
+    <link rel="stylesheet" href="{{ asset('css/components.css') }}">
 
 <body>
     <div id="app">
@@ -66,53 +62,55 @@
             </nav>
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
-                    <div class="sidebar-brand">
-                        <a href="index.html">POCC</a>
+                    <div class="sidebar-brand" style="padding: 10px">
+                            <img src="{{ asset('img/ginktech.jpg') }}" alt="logo" width="100" class="img-thumbnail">
+                            <p style="margin-top: 3px; font-size:14pt; font-weight:bold">CTO</p>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="index.html">POCC</a>
                     </div>
-                    <ul class="sidebar-menu">
-                        <li>
-                            <a href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Data Proyek</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">Create Proyek</a></li>
-                                <li><a class="nav-link" href="index.html">List Proyek</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Data Modul</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                                <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Data Fungsi</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                                <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Laporan</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                                <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>History</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                                <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                        
+                    <div class="menu-sidebar" style="margin-top: 2em">
+                        <ul class="sidebar-menu">
+                            <li>
+                                <a href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Data Proyek</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="index-0.html">Create Proyek</a></li>
+                                    <li><a class="nav-link" href="index.html">List Proyek</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Data Modul</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
+                                    <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Data Fungsi</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
+                                    <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Laporan</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
+                                    <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>History</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
+                                    <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>    
                     
                 </aside>
             </div>
@@ -125,9 +123,6 @@
                 <div class="footer-left">
                     Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="https://ginktech.net/">GinkTech</a>
                 </div>
-                <div class="footer-right">
-                    2.3.0
-                </div>
             </footer>
         </div>
     </div>
@@ -138,13 +133,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="{{ asset('stisla/assets/js/stisla.js') }}"></script>
+    <script src="{{ asset('js/stisla.js') }}"></script>
 
     <!-- JS Libraies -->
 
     <!-- Template JS File -->
-    <script src="{{ asset('stisla/assets/js/scripts.js') }}"></script>
-    <script src="{{ asset('stisla/assets/js/custom.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
+   
 
     <!-- Page Specific JS File -->
     
