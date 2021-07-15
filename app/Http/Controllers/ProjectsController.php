@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Application;
 
 class ProjectsController extends Controller
 {
@@ -33,7 +34,15 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Application::create([
+            'app_name' => $request->appName,
+            'category' => $request->category,
+            'tags' => $request->tags,
+            'status' => $request->status,
+            'start_project_t' => $request->startProjectT,
+            'end_project_t' => $request->endProjectT,
+            'deadline_project_t' => $request->deadlineProjectT
+        ]);
     }
 
     /**
