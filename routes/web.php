@@ -18,8 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
+Route::get('testedit', function () {
     return view('/projects/edit');
+});
+
+Route::get('testdetail', function () {
+    return view('/projects/detail');
 });
 
 Route::group(['middleware' => 'auth'], function () {
