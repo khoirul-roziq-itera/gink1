@@ -17,15 +17,7 @@
     </div>
 
     <div class="section-body">
-
       <a href="{{url('projects/create')}}"><button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i> Tambah Data</button></a>
-
-      {{-- <button type="button" class="btn btn-primary btn-lg" style="margin-bottom: 1em" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i>
-        Tambah Data
-      </button> --}}
-
-
-      {{-- akhir modal tambah data --}}
 
       <div class="row">
         <div class="col-12">
@@ -45,7 +37,7 @@
             </div>
             <div class="card-body p-0">
               <div class="table-responsive">
-                <table id="example" class="table table-hover table-bordered border-primary">
+                <table id="table" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
                       <th>No</th>
@@ -73,7 +65,7 @@
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <a href="testdetail" class="btn btn-primary" style="margin: 2px"><i class="fas fa-info-circle"></i></a>
                           <a href="testedit" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                          <a href="#" class="btn btn-danger" style="margin: 2px"><i class="fas fa-trash-alt"></i></a>
+                          <a href="#" class="btn btn-danger" style="margin: 2px" id="swal-6"><i class="fas fa-trash-alt"></i></a>
                         </div>
                       </td>
                     </tr>
@@ -109,7 +101,9 @@
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <a href="#" class="btn btn-primary" style="margin: 2px"><i class="fas fa-info-circle"></i></a>
                           <a href="#" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                          <a href="#" class="btn btn-danger" style="margin: 2px"><i class="fas fa-trash-alt"></i></a>
+                          <a href="#" class="btn btn-danger" style="margin: 2px" id="swal"><i class="fas fa-trash-alt">
+                           
+                          </i></a>
                         </div>
                       </td>
                     </tr>
@@ -141,74 +135,6 @@
 
     </div>
 </div>
-
-{{-- <!-- Modal -->
-     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h4 class="modal-title" id="exampleModalLabel">INPUT DATA PROJECT</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                <form method="POST" action="{{ url('projects/create') }}">
-@csrf
-<div class="form-group">
-  <label for="nama">Nama Project</label>
-  <input type="text" id="nama" class="form-control" placeholder="Masukkan nama project">
-</div>
-<div class="form-group">
-  <label for="pekerjaan">Kategori</label>
-  <select id="pekerjaan" class="form-control">
-    <option value="">- Pilih Kateg</option>
-    <option value="">Akutansi</option>
-    <option value="">Administrasi</option>
-    <option value="">aaaaaa</option>
-    <option value="">aaaaaa</option>
-    <option value="">aaaaaa</option>
-  </select>
-</div>
-<div class="form-group">
-  <label>Batas Pengerjaan</label>
-  <input type="date" name="tanggal" class="form-control datepicker" required />
-</div>
-<div class="form-group">
-  <div class="multi_select_box">
-    <label for="modul">Modul</label>
-    <select id="multiple-checkboxes" class="multi_select" multiple="multiple">
-      <option value="php">PHP</option>
-      <option value="javascript">JavaScript</option>
-      <option value="java">Java</option>
-      <option value="sql">SQL</option>
-      <option value="jquery">Jquery</option>
-      <option value=".net">.Net</option>
-    </select>
-  </div>
-</div>
-
-<div class="form-group">
-  <label for="pekerjaan">Status</label>
-  <select id="pekerjaan" class="form-control">
-    <option value="">- Pilih Status</option>
-    <option value="">Selesai</option>
-    <option value="">Menunggu</option>
-    <option value="">Sedang Dikerjakan</option>
-  </select>
-</div>
-
-
-<div class="modal-footer ">
-  <button type="button" class="btn btn-primary">Simpan</button>
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
-</div>
-</form>
-</div>
-
-</div>
-</div>
-</div> --}}
 
 </section>
 

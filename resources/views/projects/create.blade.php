@@ -24,6 +24,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
     <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+        
+    {{-- modul sweetalert --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
@@ -83,7 +86,7 @@
                                     </div>
                                     <div class="form-group float-right">
                                         <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-danger btn-lg">Kembali</button></a>
-                                        <button type="submit" class="btn btn-primary btn-lg">Simpan</button>
+                                        <button type="submit" class="btn btn-primary btn-lg" id="swal-2">Simpan</button>
                                     </div>
                                 </div>
                             </form>
@@ -110,6 +113,9 @@
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="{{asset('js/page/modules-sweetalert.js')}}"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
