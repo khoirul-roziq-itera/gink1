@@ -176,13 +176,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
-        App\Providers\JetstreamServiceProvider::class,
-        Yajra\DataTables\DataTablesServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
-        Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
-        InfyOm\CoreTemplates\CoreTemplatesServiceProvider::class, 
+        App\Providers\JetstreamServiceProvider::class
 
     ],
 
