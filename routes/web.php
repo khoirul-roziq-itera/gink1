@@ -26,6 +26,10 @@ Route::get('testdetail', function () {
     return view('/projects/detail');
 });
 
+Route::get('testprofile', function () {
+    return view('/profile/user');
+});
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', function () {
         return view('dashboard');
