@@ -14,21 +14,10 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/components.css') }}">
 
-      {{-- <!-- CSS Libraries -->
-    <link rel="stylesheet" href="{{ asset ('../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css')}}">
-    <link rel="stylesheet" href="{{ asset ('../node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css')}}"> --}}
-
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset ('DataTables/datatables.min.css')}}"/> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset ('DataTables/DataTables-1.10.25/css/dataTables.bootstrap4.min.css')}}"/>
-    
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"/> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css"/> --}}
-    {{-- modul sweetalert --}}
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  
-    
-  
 <body>
     <div id="app">
         <div class="main-wrapper">
@@ -144,11 +133,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     
-        <!-- JS Libraies -->
-    <script src="{{ asset ('../node_modules/datatables/media/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{ asset ('../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{ asset ('../node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js')}}"></script>
-
 
     <!-- Page Specific JS File -->
     <script src="{{asset('js/page/modules-sweetalert.js')}}"></script>
