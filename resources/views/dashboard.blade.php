@@ -2,107 +2,145 @@
 
 
 @section('title','Dashboard')
-
+    
 @section('container')
-<!-- Main Content -->
-<div class="main-content">
-  <section class="section">
-    <div class="section-header">
-      <h1>Dashboard</h1>
-    </div>
-
-    <div class="section-body">
-      <a href="{{url('projects/create')}}"><button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i> Tambah Data</button></a>
-
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h4>Data Project</h4>
-
-            </div>
-            <div class="card-body p-0">
-              <div class="table-responsive">
-                <table id="table-1" class="table table-hover table-bordered border-primary">
-                  <thead class="text-center">
-                    <tr>
-                        <th>No</th>
-                        <th>Nama Project</th>
-                        <th>Kategori</th>
-                        <th>Batas Pengerjaan</th>
-                        <th>Jumlah Modul</th>
-                        <th>Fungsi</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="text-center">
-                      <td>1</td>
-                      <td>Calculator App</td>
-                      <td>Akutansi</td>
-                      <td>30/05/2021</td>
-                      <td>3</td>
-                      <td>BE</td>
-                      <td>
-                        <div class="badge badge-success">Selesai</div>
-                      </td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <a href="testdetail" class="btn btn-primary" style="margin: 2px"><i class="fas fa-info-circle"></i></a>
-                          <a href="testedit" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                          <a href="#" class="btn btn-danger" style="margin: 2px" id="swal-6"><i class="fas fa-trash-alt"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>2</td>
-                      <td>Create a mobile app</td>
-                      <td>aaaaaaaaaa</td>
-                      <td>bbbbbbbbbb</td>
-                      <td>xxxxx</td>
-                      <td>yyyyy</td>
-                      <td>
-                        <div class="badge badge-warning">Sedang dikerjakan</div>
-                      </td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <a href="#" class="btn btn-primary" style="margin: 2px"><i class="fas fa-info-circle"></i></a>
-                          <a href="#" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                          <a href="#" class="btn btn-danger" style="margin: 2px"><i class="fas fa-trash-alt"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>3</td>
-                      <td>Create a mobile app</td>
-                      <td>aaaaaaaaaa</td>
-                      <td>bbbbbbbbbb</td>
-                      <td>xxxxx</td>
-                      <td>yyyyy</td>
-                      <td>
-                        <div class="badge badge-danger">Menunggu</div>
-                      </td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <a href="#" class="btn btn-primary" style="margin: 2px"><i class="fas fa-info-circle"></i></a>
-                          <a href="#" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                          <a href="#" class="btn btn-danger" style="margin: 2px" id="swal"><i class="fas fa-trash-alt">
-                           
-                          </i></a>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+     <!-- Main Content -->
+     <div class="main-content">
+      <section class="section">
+        <div class="section-header">
+          <h1>Dashboard</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-icon bg-danger">
+                <i class="far fa-clock"></i>
               </div>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Waiting</h4>
+                </div>
+                <div class="card-body">
+                  10
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-icon bg-success">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Processed</h4>
+                </div>
+                <div class="card-body">
+                  42
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-icon bg-primary">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Completed</h4>
+                </div>
+                <div class="card-body">
+                  10
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-icon bg-secondary">
+                <i class="far fa-list-alt"></i>
+              </div>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Total Orders</h4>
+                </div>
+                <div class="card-body">
+                  47
+                </div>
+              </div>
+            </div>
+          </div>                  
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h4>Calendar</h4>
+              </div>
+              <div class="section-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
 
+                      <div class="card-body">
+                        <div class="fc-overflow">
+                          <div id="myEvent"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-12 col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h4>History</h4>
+              </div>
+              <div class="card-body">             
+                <ul class="list-unstyled list-unstyled-border">
+                  <li class="media">
+                    <img class="mr-3 rounded-circle" width="50" src="assets/img/avatar/avatar-1.png" alt="avatar">
+                    <div class="media-body">
+                      <div class="float-right text-primary">Now</div>
+                      <div class="media-title">Farhan A Mujib</div>
+                      <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                    </div>
+                  </li>
+                  <li class="media">
+                    <img class="mr-3 rounded-circle" width="50" src="assets/img/avatar/avatar-2.png" alt="avatar">
+                    <div class="media-body">
+                      <div class="float-right">12m</div>
+                      <div class="media-title">Ujang Maman</div>
+                      <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                    </div>
+                  </li>
+                  <li class="media">
+                    <img class="mr-3 rounded-circle" width="50" src="assets/img/avatar/avatar-3.png" alt="avatar">
+                    <div class="media-body">
+                      <div class="float-right">17m</div>
+                      <div class="media-title">Rizal Fakhri</div>
+                      <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                    </div>
+                  </li>
+                  <li class="media">
+                    <img class="mr-3 rounded-circle" width="50" src="assets/img/avatar/avatar-4.png" alt="avatar">
+                    <div class="media-body">
+                      <div class="float-right">21m</div>
+                      <div class="media-title">Alfa Zulkarnain</div>
+                      <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="text-center pt-1 pb-1">
+                  <a href="#" class="btn btn-primary btn-lg btn-round">
+                    View All
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-    </div>
-</div>
-
 @endsection

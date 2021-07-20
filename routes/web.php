@@ -30,6 +30,10 @@ Route::get('testprofile', function () {
     return view('/profile/user');
 });
 
+Route::get('testlist', function () {
+    return view('/projects/list');
+});
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', function () {
         return view('dashboard');

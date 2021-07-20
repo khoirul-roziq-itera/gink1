@@ -21,11 +21,14 @@
         "tailwindcss": "^2.2.2"
     },
     "dependencies": {
+        "angular-nicescroll": "0.0.0",
         "datatables": "^1.10.18",
         "datatables.net": "^1.10.25",
         "datatables.net-bs4": "^3.2.2",
         "datatables.net-dt": "^1.1.0",
         "datatables.net-select-bs4": "^1.3.3",
+        "jquery": "^3.3.1",
+        "jquery.nicescroll": "^3.7.6",
         "sweetalert": "^2.1.2"
     }
 }

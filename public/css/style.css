@@ -3211,8 +3211,8 @@ pre {
     border-radius: 3px;
     border: none;
     position: relative;
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
     display: flex;
     align-items: center;
 }
@@ -3220,7 +3220,7 @@ pre {
     margin-bottom: 0;
     font-weight: 700;
     display: inline-block;
-    font-size: 25px;
+    font-size: 18px;
     margin-top: 3px;
     color: #34395e;
 }
