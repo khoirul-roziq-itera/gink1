@@ -1,40 +1,58 @@
 @extends('layouts/main')
 
-@section('title','Profile')
 
+@section('title','Dashboard')
+    
 @section('container')
-
-      <!-- Main Content -->
-      <div class="main-content">
-        <section class="section">
-          <div class="section-header">
-            <h1>Profile</h1>
-            <div class="section-header-breadcrumb">
-              <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-              <div class="breadcrumb-item">Profile</div>
-            </div>
-          </div>
-          <div class="section-body">
-            
-            <div class="row mt-sm-2">
-              <div class="col-12 col-md-12 col-lg-5">
-                <div class="card profile-widget">
-                  <div class="profile-widget-header" >
-                    <img alt="image" src="{{ asset ('stisla/assets/img/avatar/avatar-1.png')}}" class="rounded-circle profile-widget-picture">
-                  </div>
-                  <div class="profile-widget-description">
-                    <div class="profile-widget-name">Ujang Maman <div class="text-muted d-inline font-weight-normal"><div class="slash"></div> Web Developer</div></div>
-                    
-                  </div>
+     <!-- Main Content -->
+     <div class="main-content">
+      <section class="section">
+        <div class="section-header">
+          <h1>Profile</h1>
+        </div>
+        <div class="row">
+          <div class="col-6 col-sm-6 col-lg-6">
+            <div class="card card-danger">
+              <div class="card-header">
+                <h4>My Profile</h4>
+              </div>
+              <div class="section-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row justify-content-center">
+                          <div class="col-2">
+                              <img alt="image" src="{{ asset ('img/avatar.png')}}" class="rounded-circle author-box-picture" width="150">
+                          </div>
+                        </div>
+                        <div class="row justify-content-center" style="padding-top: 3em">
+                          <div class="col-8 text-center">
+                            <h4>Dwiki</h4>
+                            <h4> dwiki.1118140016@student.itera.ac.id</h4>
+                          </div>
+                        </div>
+                      </div>
                 </div>
               </div>
-              <div class="col-12 col-md-12 col-lg-7">
-                <div class="card">
-                  <form method="post" class="needs-validation" novalidate="">
-                    <div class="card-header">
-                      <h4>Edit Profile</h4>
-                    </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        
+        <div class="col-6 col-sm-6 col-lg-6">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h4>Edit Profile</h4>
+            </div>
+            <div class="section-body">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
                     <div class="card-body">
+                      
+                      <form method="POST" action="{{ route('register') }}">
+                        @csrf
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input id="name" type="text" class="form-control" name="name" autofocus>
@@ -66,14 +84,23 @@
                                 <input id="password_confirmation" type="password" class="form-control" name="password_confirmation">
                             </div>
                         </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-primary">Save Changes</button>
-                    </div>
-                  </form>
+
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                {{ __('Save') }}
+                            </button>
+
+                        </div>
+                    </form> 
+
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
+      </div>
+    </div>
 @endsection

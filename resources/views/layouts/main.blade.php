@@ -37,7 +37,7 @@
                     <div class="d-sm-none d-lg-inline-block">Hi, Admin</div></a>
                     <div class="dropdown-menu dropdown-menu-right">
                       <div class="dropdown-title text-center">My Profile</div>
-                      <a href="features-profile.html" class="dropdown-item has-icon">
+                      <a href="testprofile" class="dropdown-item has-icon">
                         <i class="far fa-user"></i> Profile
                       </a>
                       <div class="dropdown-divider"></div>
@@ -72,8 +72,8 @@
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i></i><span>Data Modul</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="index-0.html">Create Modul</a></li>
-                                    <li><a class="nav-link" href="index.html">List Modul</a></li>
+                                    <li><a class="nav-link" href="{{ url('projects/create')}}">Create Modul</a></li>
+                                    <li><a class="nav-link" href="testlist">List Modul</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -83,12 +83,8 @@
                                     <li><a class="nav-link" href="index.html">List Modul</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li>
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-print"></i><span>Laporan</span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="index-0.html">Create Modul</a></li>
-                                    <li><a class="nav-link" href="index.html">List Modul</a></li>
-                                </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-history"></i><span>History</span></a>
@@ -139,10 +135,9 @@
     
     
     <script src="{{asset ('js/page/modules-datatables.js')}}"></script>    
-    <script src="{{asset ('js/page/components-statistic.js')}}"></script>
     <script src="{{asset ('js/page/modules-calendar.js')}}"></script>
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function() {
             var multipleCancelButton = new Choices('#pilih-modul', {
                 removeItemButton: true,
@@ -151,7 +146,7 @@
                 renderChoiceLimit: 10
             });
         });
-    </script>    
+    </script>     --}}
      
 </body>
 

@@ -1,17 +1,17 @@
 @extends('layouts/main')
 
 
-@section('title','List Project')
+@section('title','Data Moduls')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>List Project</h1>
+      <h1>Data Moduls</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-        <div class="breadcrumb-item">List Project</div>
+        <div class="breadcrumb-item active"><a href="#">Data Moduls</a></div>
+        <div class="breadcrumb-item">List Moduls</div>
       </div>
     </div>
 
@@ -21,7 +21,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Data Project</h4>
+              <h4>Data Moduls</h4>
             </div>
             <div class="card-body p-0">
               <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-left:1em">
