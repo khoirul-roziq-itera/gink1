@@ -66,14 +66,14 @@
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span>Data Project</span></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="{{ url('projects/create')}} ">Create Project</a></li>
-                                    <li><a class="nav-link" href="testlist">List Project</a></li>
+                                    <li><a class="nav-link" href="{{ url ('projects')}}">List Project</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i></i><span>Data Modul</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="{{ url('projects/create')}}">Create Modul</a></li>
-                                    <li><a class="nav-link" href="testlist">List Modul</a></li>
+                                    <li><a class="nav-link" href="{{ url ('projects/create')}}">Create Modul</a></li>
+                                    <li><a class="nav-link" href="{{ url ('projects')}}">List Modul</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
