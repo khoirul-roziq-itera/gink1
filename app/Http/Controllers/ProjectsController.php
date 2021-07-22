@@ -44,6 +44,8 @@ class ProjectsController extends Controller
             'end_project_t' => $request->endProjectT,
             'deadline_project_t' => $request->deadlineProjectT
         ]);
+
+        return view('projects.index');
     }
 
     /**
