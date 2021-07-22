@@ -6,10 +6,10 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Create Function</h1>
+                <h1>Create Moduls</h1>
                 <div class="section-header-breadcrumb">
-                  <div class="breadcrumb-item active"><a href="#">Data Function</a></div>
-                  <div class="breadcrumb-item">Create Function</div>
+                  <div class="breadcrumb-item active"><a href="#">Data Moduls</a></div>
+                  <div class="breadcrumb-item">Create Moduls</div>
                 </div>
               </div>
             <div class="container mt-5">

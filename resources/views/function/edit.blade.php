@@ -1,15 +1,16 @@
 @extends('layouts/main')
 
-@section('title','Create Data')
+@section('title','Edit Data')
     
 @section('container')
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Create Function</h1>
+                <h1>Edit Project</h1>
                 <div class="section-header-breadcrumb">
-                  <div class="breadcrumb-item active"><a href="#">Data Function</a></div>
-                  <div class="breadcrumb-item">Create Function</div>
+                  <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
+                  <div class="breadcrumb-item active"><a href="#">List Project</a></div>
+                  <div class="breadcrumb-item">Edit Project</div>
                 </div>
               </div>
             <div class="container mt-5">
@@ -19,7 +20,7 @@
                             <form method="POST" action="{{ route('projects.store') }}">
                                 @csrf
                                 <div class="card-header">
-                                    <h4>Tambah Data Project</h4>
+                                    <h4>Edit Data Project</h4>
                                     <br>
                                 </div>
 
@@ -64,7 +65,7 @@
                                     </div>
                                     <div class="form-group float-right">
                                         <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                        <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Submit</button>
+                                        <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Save</button>
                                     </div>
                                 </div>
                             </form>

@@ -16,13 +16,12 @@
                 <div class="row">
                     <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
                         <div class="card card-danger">
-                            <form method="POST" action="{{ route('projects.store') }}">
+                            <form method="POST" action="{{ route('projects.store') }}" id="myForm">
                                 @csrf
                                 <div class="card-header">
                                     <h4>Tambah Data Project</h4>
                                     <br>
                                 </div>
-
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="appName">Nama Aplikasi</label>
@@ -64,7 +63,8 @@
                                     </div>
                                     <div class="form-group float-right">
                                         <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                        <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Submit</button>
+                                        <button type="submit" onclick="sweet()" class="btn btn-danger btn-lg" id="swal-2">Submit</button>
+                                    
                                     </div>
                                 </div>
                             </form>

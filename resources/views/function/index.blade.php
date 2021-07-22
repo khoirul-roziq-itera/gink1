@@ -25,9 +25,9 @@
             </div>
             <div class="card-body p-0">
               <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-left:1em">
-                <button type="button" class="btn btn-danger rounded" style="margin: 2px"><i class="fas fa-file-pdf"></i></button>
-                <button type="button" class="btn btn-success rounded" style="margin: 2px"><i class="fas fa-file-excel"></i></button>
-                <button type="button" class="btn btn-secondary rounded" style="margin: 2px"><i class="fas fa-print"></i></button>
+                <button type="button" class="btn btn-danger rounded" style="margin: 2px"><i class="fas fa-file-pdf fa-lg"> PDF</i></button>
+                <button type="button" class="btn btn-success rounded" style="margin: 2px"><i class="fas fa-file-excel fa-lg"> EXCEL</i></button>
+                <button type="button" class="btn btn-secondary rounded" style="margin: 2px"><i class="fas fa-print fa-lg"> PRINT</i></button>
               </div>
               <div class="table-responsive">
                 <table id="table-1" class="table table-hover table-bordered border-primary">

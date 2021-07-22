@@ -34,6 +34,14 @@ Route::get('testlist', function () {
     return view('/projects/list');
 });
 
+Route::get('testmoduls', function () {
+    return view('/moduls/index');
+});
+
+Route::get('addmoduls', function () {
+    return view('/moduls/create');
+});
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', function () {
         return view('dashboard');

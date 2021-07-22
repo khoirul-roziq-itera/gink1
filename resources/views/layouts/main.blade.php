@@ -60,7 +60,7 @@
                     <div class="menu-sidebar" style="margin-top: 2em">
                         <ul class="sidebar-menu">
                             <li>
-                                <a href="dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+                                <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span>Data Project</span></a>
@@ -72,19 +72,19 @@
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i></i><span>Data Modul</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="{{ url ('projects/create')}}">Create Modul</a></li>
-                                    <li><a class="nav-link" href="{{ url ('projects')}}">List Modul</a></li>
+                                    <li><a class="nav-link" href="addmoduls">Create Modul</a></li>
+                                    <li><a class="nav-link" href="testmoduls">List Modul</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i></i><span>Data Fungsi</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i></i><span>Data Function</span></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="index-0.html">Create Modul</a></li>
                                     <li><a class="nav-link" href="index.html">List Modul</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-print"></i><span>Laporan</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-signature"></i><span>Laporan</span></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-history"></i><span>History</span></a>
@@ -147,6 +147,8 @@
             });
         });
     </script>     --}}
+
+   
      
 </body>
 
