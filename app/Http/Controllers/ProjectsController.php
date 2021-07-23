@@ -14,7 +14,8 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        return view('projects.index');
+        $apps = Application::all();
+        return view('projects.index', compact('apps'));
     }
 
     /**
@@ -45,7 +46,7 @@ class ProjectsController extends Controller
             'deadline_project_t' => $request->deadlineProjectT
         ]);
 
-        return view('projects.index');
+        return redirect()->back()->with('success', 'Success Project Created!');
     }
 
     /**
