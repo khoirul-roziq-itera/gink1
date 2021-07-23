@@ -52,11 +52,17 @@
                         <div class="badge badge-primary">Selesai</div>
                       </td>
                       <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <a href="testdetail" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                          <a href="testedit" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                          <a href="#" class="btn btn-danger" style="margin: 2px" id="swal-6"><i class="fas fa-trash-alt"></i></a>
-                        </div>
+
+                        <form action="{{ route('projects.destroy', $result->id ) }}" method="post">
+                          @csrf
+                          @method('delete')
+                          <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="testdetail" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                            <a href="testedit" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
+                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-trash-alt"></i></a>
+                          </div>
+                        </form>
+
                       </td>
                     </tr>
                     @endforeach

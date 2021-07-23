@@ -46,7 +46,7 @@ class ProjectsController extends Controller
             'deadline_project_t' => $request->deadlineProjectT
         ]);
 
-        return redirect()->back()->with('success', 'Success Project Created!');
+        return redirect('projects')->with('success', 'Project Successfully Created!');
     }
 
     /**
@@ -91,6 +91,9 @@ class ProjectsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $app = Application::findorfail($id);
+        $app->delete();
+
+        return redirect('projects')->with('success', 'Project Archived Successfully!');
     }
 }
