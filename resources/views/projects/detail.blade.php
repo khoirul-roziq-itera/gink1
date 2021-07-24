@@ -13,7 +13,6 @@
               <div class="breadcrumb-item">Edit Project</div>
             </div>
           </div>
-
           <div class="section-body">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-6">

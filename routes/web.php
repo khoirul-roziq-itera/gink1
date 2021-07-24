@@ -42,6 +42,10 @@ Route::get('addmoduls', function () {
     return view('/moduls/create');
 });
 
+Route::get('testarchive', function () {
+    return view('/projects/archive');
+});
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', function () {
         return view('dashboard');

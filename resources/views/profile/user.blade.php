@@ -29,7 +29,7 @@
                         <div class="row justify-content-center" style="padding-top: 3em">
                           <div class="col-8 text-center">
                             <h4>Dwiki</h4>
-                            <h4> dwiki.1118140016@student.itera.ac.id</h4>
+                            <h4>dwiki.118140016@student.itera.ac.id</h4>
                           </div>
                         </div>
                       </div>

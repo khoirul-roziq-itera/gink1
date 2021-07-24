@@ -34,7 +34,7 @@
                 </form>
                 <ul class="navbar-nav navbar-right">
                   <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                    <img alt="image" src="{{ asset ('img/avatar.png')}}" class="rounded-circle mr-1">
+                    <img alt="image" src="{{ asset ('img/avatar-1.png')}}" class="rounded-circle mr-1">
                     <div class="d-sm-none d-lg-inline-block">Hi, Admin</div></a>
                     <div class="dropdown-menu dropdown-menu-right">
                       <div class="dropdown-title text-center">My Profile</div>
@@ -68,7 +68,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="{{ url('projects/create')}}"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
                                     <li><a class="nav-link" href="{{ url ('projects')}}"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
-                                    <li><a class="nav-link" href="{{ url ('projects')}}"  style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                    <li><a class="nav-link" href="testarchive"  style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
