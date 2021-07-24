@@ -818,9 +818,10 @@ select.form-control:not([size]):not([multiple]) {
     align-self: center;
     width: 100%;
     min-height: 70px;
-    padding: 1em;
+    padding: 2em;
     display: flex;
     align-items: center;
+    
 }
 .card .card-header .btn {
     margin-top: 1px;

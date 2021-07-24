@@ -9,7 +9,8 @@
         <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
      <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/components.css') }}">
@@ -51,47 +52,43 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand" style="padding: 10px">
-                            <img src="{{ asset('img/ginktech.jpg') }}" alt="logo" width="80" class="img-thumbnail">
+                            <img src="{{ asset('img/ginktech.jpg') }}" alt="logo" width="80" class="rounded-3">
                             <p style="margin-top: 3px; font-size:14pt; font-weight:bold">GinkTech</p>
                     </div>
-                    <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">GT</a>
+                    <div class="sidebar-brand sidebar-brand-sm" style="margin-bottom: 7em">
+                        <a  style="font-weight:bold; font-size:19px">GT</a>
                     </div>
-                    <div class="menu-sidebar" style="margin-top: 2em">
+                    <div class="menu-sidebar" style="margin-top: 3.5em">
                         <ul class="sidebar-menu">
                             <li>
-                                <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+                                <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Dashboard</span></a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span>Data Project</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span  style="font-weight:bold; font-size:19px">Data Project</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="{{ url('projects/create')}} ">Create Project</a></li>
-                                    <li><a class="nav-link" href="{{ url ('projects')}}">List Project</a></li>
+                                    <li><a class="nav-link" href="{{ url('projects/create')}}"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li><a class="nav-link" href="{{ url ('projects')}}"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
+                                    <li><a class="nav-link" href="{{ url ('projects')}}"  style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i></i><span>Data Modul</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i></i><span style="font-weight:bold; font-size:19px">Data Modul</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="addmoduls">Create Modul</a></li>
-                                    <li><a class="nav-link" href="testmoduls">List Modul</a></li>
+                                    <li><a class="nav-link" href="addmoduls"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li><a class="nav-link" href="testmoduls"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li><a class="nav-link" href="testmoduls"  style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i></i><span>Data Function</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i></i><span style="font-weight:bold; font-size:19px">Data Function</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="index-0.html">Create Modul</a></li>
-                                    <li><a class="nav-link" href="index.html">List Modul</a></li>
+                                    <li><a class="nav-link" href="index-0.html"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li><a class="nav-link" href="index.html"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li><a class="nav-link" href="index.html"  style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-signature"></i><span>Laporan</span></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-history"></i><span>History</span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="index-0.html">Create Modul</a></li>
-                                    <li><a class="nav-link" href="index.html">List Modul</a></li>
-                                </ul>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-signature"></i><span style="font-weight:bold; font-size:19px">Laporan</span></a>
                             </li>
                         </ul>
                     </div>    
@@ -123,6 +120,8 @@
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <!-- sweetalert -->
     <script src="{{asset('js/page/modules-sweetalert.js')}}"></script>
     {{-- datatables  --}}

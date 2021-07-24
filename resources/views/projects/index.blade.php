@@ -24,12 +24,19 @@
               <h4>Data Project</h4>
             </div>
             <div class="card-body p-0">
-              <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-left:1em">
-                <button type="button" class="btn btn-danger rounded" style="margin: 2px"><i class="fas fa-file-pdf fa-lg"> PDF</i></button>
-                <button type="button" class="btn btn-success rounded" style="margin: 2px"><i class="fas fa-file-excel fa-lg"> EXCEL</i></button>
-                <button type="button" class="btn btn-secondary rounded" style="margin: 2px"><i class="fas fa-print fa-lg"> PRINT</i></button>
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
+                <button type="button" class="btn btn-secondary" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>              
+                <div class="btn-group" role="group">
+                  <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-file-export"></i>  EXPORT
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i>  PDF</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="table-responsive">
+              <div class="table-responsive" style="padding: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
@@ -69,7 +76,6 @@
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
         </div>
