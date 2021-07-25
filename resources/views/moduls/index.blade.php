@@ -1,35 +1,42 @@
 @extends('layouts/main')
 
 
-@section('title','Data Moduls')
+@section('title','Data Modul')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Data Moduls</h1>
+      <h1>Data Modul</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Moduls</a></div>
-        <div class="breadcrumb-item">List Moduls</div>
+        <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
+        <div class="breadcrumb-item">List Modul</div>
       </div>
     </div>
 
     <div class="section-body">
-      <a href="{{ url('projects/create')}} "><button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i> Tambah Data</button></a>
+      <a href="addmoduls"><button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i> Tambah Data</button></a>
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Data Moduls</h4>
+              <h4>Data Modul</h4>
             </div>
-            <div class="card-body p-0">
-              <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-left:1em">
-                <button type="button" class="btn btn-danger rounded" style="margin: 2px"><i class="fas fa-file-pdf fa-lg"> PDF</i></button>
-                <button type="button" class="btn btn-success rounded" style="margin: 2px"><i class="fas fa-file-excel fa-lg"> EXCEL</i></button>
-                <button type="button" class="btn btn-secondary rounded" style="margin: 2px"><i class="fas fa-print fa-lg"> PRINT</i></button>
-              </div>
-              <div class="table-responsive">
+            <div class="card-body p-0">              
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
+                  <button type="button" class="btn btn-success" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>              
+                  <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-file-export"></i>  EXPORT
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i>  PDF</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
+                    </ul>
+                  </div>
+            </div>
+              <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
@@ -62,53 +69,13 @@
                           </div>
                         </td>
                       </tr>
-                      <tr class="text-center">
-                        <td>2</td>
-                        <td>Create a mobile app</td>
-                        <td>aaaaaaaaaa</td>
-                        <td>bbbbbbbbbb</td>
-                        <td>xxxxx</td>
-                        <td>yyyyy</td>
-                        <td>
-                          <div class="badge badge-success">Sedang dikerjakan</div>
-                        </td>
-                        <td>
-                          <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="#" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                            <a href="#" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="btn btn-danger" style="margin: 2px"><i class="fas fa-trash-alt"></i></a>
-                          </div>
-                        </td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>3</td>
-                      <td>Create a mobile app</td>
-                      <td>aaaaaaaaaa</td>
-                      <td>bbbbbbbbbb</td>
-                      <td>xxxxx</td>
-                      <td>yyyyy</td>
-                      <td>
-                        <div class="badge badge-danger">Menunggu</div>
-                      </td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <a href="#" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                          <a href="#" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                          <a href="#" class="btn btn-danger" style="margin: 2px" id="swal"><i class="fas fa-trash-alt">
-                           
-                          </i></a>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </div>

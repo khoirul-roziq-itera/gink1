@@ -25,7 +25,7 @@
             </div>
             <div class="card-body p-0">
               <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
-                <button type="button" class="btn btn-secondary" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>              
+                <button type="button" class="btn btn-success" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>              
                 <div class="btn-group" role="group">
                   <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-file-export"></i>  EXPORT
@@ -36,7 +36,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="table-responsive" style="padding: 2em">
+              <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>

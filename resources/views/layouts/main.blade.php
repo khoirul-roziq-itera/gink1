@@ -68,23 +68,23 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="{{ url('projects/create')}}"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
                                     <li><a class="nav-link" href="{{ url ('projects')}}"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
-                                    <li><a class="nav-link" href="testarchive"  style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                    <li><a class="nav-link" href="archiveP"  style="font-weight:bold; font-size:15px"><i class="fas fa-file-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i></i><span style="font-weight:bold; font-size:19px">Data Modul</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="addmoduls"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li><a class="nav-link" href="testmoduls"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
-                                    <li><a class="nav-link" href="testmoduls"  style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                    <li><a class="nav-link" href="addModul"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li><a class="nav-link" href="listModul"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li><a class="nav-link" href="archiveModul"  style="font-weight:bold; font-size:15px"><i class="fas fa-file-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i></i><span style="font-weight:bold; font-size:19px">Data Function</span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="index-0.html"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li><a class="nav-link" href="index.html"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
-                                    <li><a class="nav-link" href="index.html"  style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                    <li><a class="nav-link" href="addFunction"  style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li><a class="nav-link" href="listFunction"  style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li><a class="nav-link" href="archiveFunction"  style="font-weight:bold; font-size:15px"><i class="fas fa-file-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li>
