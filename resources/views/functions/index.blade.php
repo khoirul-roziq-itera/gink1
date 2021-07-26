@@ -1,17 +1,17 @@
 @extends('layouts/main')
 
 
-@section('title','List Project')
+@section('title','List Function')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Project</h1>
+      <h1 style="font-size: 25px">List Function</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-        <div class="breadcrumb-item">List Project</div>
+        <div class="breadcrumb-item active"><a href="#">Data Function</a></div>
+        <div class="breadcrumb-item">List Function</div>
       </div>
     </div>
 
@@ -41,43 +41,39 @@
                   </div>
                 </div>
               </div>
-              
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
-                      <th style="font-size: 20px">Nomor</th>
-                      <th style="font-size: 20px">Applications Name</th>
-                      <th style="font-size: 20px">Category</th>
-                      <th style="font-size: 20px">Deadline</th>
-                      <th style="font-size: 20px">Status</th>
-                      <th style="font-size: 20px">Actions</th>
+                        <th>No</th>
+                        <th>Nama Project</th>
+                        <th>Kategori</th>
+                        <th>Batas Pengerjaan</th>
+                        <th>Jumlah Modul</th>
+                        <th>Fungsi</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($apps as $app => $result)
-                    <tr class="text-center">
-                      <td style="font-size: 18px">{{ $app + 1 }}</td>
-                      <td style="font-size: 18px">{{ $result->app_name }}</td>
-                      <td style="font-size: 18px">{{ $result->category }}</td>
-                      <td style="font-size: 18px">{{ $result->deadline_project_t }}</td>
-                      <td style="font-size: 18px">
-                        <div class="badge badge-primary">Selesai</div>
-                      </td>
-                      <td>
-
-                        <form action="{{ route('projects.destroy', $result->id ) }}" method="post">
-                          @csrf
-                          @method('delete')
+                     <tr class="text-center">
+                        <td>1</td>
+                        <td>Calculator App</td>
+                        <td>Akutansi</td>
+                        <td>30/05/2021</td>
+                        <td>3</td>
+                        <td>BE</td>
+                        <td>
+                          <div class="badge badge-primary">Selesai</div>
+                        </td>
+                        <td>
                           <div class="btn-group" role="group" aria-label="Basic example">
                             <a href="testdetail" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-trash-alt"></i></a>
+                            <a href="testedit" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="btn btn-danger" style="margin: 2px" id="swal-6"><i class="fas fa-trash-alt"></i></a>
                           </div>
-                        </form>
-
-                      </td>
-                    </tr>
-                    @endforeach
+                        </td>
+                      </tr>
                   </tbody>
                 </table>
               </div>
@@ -85,7 +81,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </div>

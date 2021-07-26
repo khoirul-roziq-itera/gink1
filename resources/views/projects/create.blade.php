@@ -6,7 +6,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Create Project</h1>
+                <h1 style="font-size: 25px">Create Project</h1>
                 <div class="section-header-breadcrumb">
                   <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
                   <div class="breadcrumb-item">Create Project</div>
@@ -59,8 +59,7 @@
                                     </div>
                                     <div class="form-group float-right">
                                         <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                        <button type="submit" onclick="sweet()" class="btn btn-danger btn-lg" id="swal-2">Submit</button>
-                                    
+                                        <button type="submit" onclick="sweet()" class="btn btn-danger btn-lg" id="swal-2">Submit</button>            
                                     </div>
                                 </div>
                             </form>
