@@ -65,4 +65,6 @@ Route::group(['middleware' => 'auth'], function () {
         return view('dashboard');
     });
     Route::resource('/projects', ProjectsController::class);
+    Route::resource('/moduls', ModulsController::class);
+    Route::resource('/functions', FunctionsController::class);
 });
