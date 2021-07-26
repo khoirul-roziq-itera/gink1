@@ -23,13 +23,13 @@
               <div class="row">
                 <div class="col-6">
                   <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
-                    <button type="button" class="btn btn-primary" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>              
+                    <button type="button" class="btn btn-primary" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>
                     <div class="btn-group" role="group">
                       <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-file-export"></i>  EXPORT
+                        <i class="fas fa-file-export"></i> EXPORT
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i>  PDF</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
                         <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
                       </ul>
                     </div>
@@ -41,27 +41,27 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
-                      <th style="font-size: 20px">Nomor</th>
-                      <th style="font-size: 20px">Applications Name</th>
-                      <th style="font-size: 20px">Category</th>
-                      <th style="font-size: 20px">Deadline</th>
-                      <th style="font-size: 20px">Status</th>
-                      <th style="font-size: 20px">Actions</th>
+                      <th>Nomor</th>
+                      <th>Applications Name</th>
+                      <th>Category</th>
+                      <th>Deadline</th>
+                      <th>Status</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach($apps as $app => $result)
                     <tr class="text-center">
-                      <td style="font-size: 18px">{{ $app + 1 }}</td>
-                      <td style="font-size: 18px">{{ $result->app_name }}</td>
-                      <td style="font-size: 18px">{{ $result->category }}</td>
-                      <td style="font-size: 18px">{{ $result->deadline_project_t }}</td>
-                      <td style="font-size: 18px">
+                      <td>{{ $app + 1 }}</td>
+                      <td>{{ $result->app_name }}</td>
+                      <td>{{ $result->category }}</td>
+                      <td>{{ $result->deadline_project_t }}</td>
+                      <td>
                         <div class="badge badge-primary">Selesai</div>
                       </td>
                       <td>

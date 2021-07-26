@@ -16,45 +16,45 @@
     </div>
 
     <div class="section-body">
-      
+
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-body p-0">
-              <div  style="padding: 3em">
-                <a href="{{ url('projects/create')}}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</button></a>
-              </div>
               <div class="table-responsive" style="padding: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
-                        <th>No</th>
-                        <th>Nama Project</th>
-                        <th>Kategori</th>
-                        <th>Batas Pengerjaan</th>
-                        <th>Jumlah Modul</th>
-                        <th>Fungsi</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
+                      <th>Nomor</th>
+                      <th>Applications Name</th>
+                      <th>Category</th>
+                      <th>Deadline</th>
+                      <th>Status</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                     <tr class="text-center">
-                        <td>1</td>
-                        <td>Calculator App</td>
-                        <td>Akutansi</td>
-                        <td>30/05/2021</td>
-                        <td>3</td>
-                        <td>BE</td>
-                        <td>
-                          <div class="badge badge-primary">Selesai</div>
-                        </td>
-                        <td>
+                    @foreach($apps as $app => $result)
+                    <tr class="text-center">
+                      <td>{{ $app + 1 }}</td>
+                      <td>{{ $result->app_name }}</td>
+                      <td>{{ $result->category }}</td>
+                      <td>{{ $result->deadline_project_t }}</td>
+                      <td>
+                        <div class="badge badge-primary">Selesai</div>
+                      </td>
+                      <td>
+                        <form action="{{ url('projects/kill/'.$result->id) }}" method="post">
+                          @csrf
+                          @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="#" class="btn btn-success" style="margin: 2px"><i class="fas fa-history"> Restore</i></a>
+                            <a href="{{ url('projects/restore/'.$result->id) }}" class="btn btn-success" style="margin: 2px"><i class="fas fa-history"> Restore</i></a>
+                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i></a>
                           </div>
-                        </td>
-                      </tr>
+                        </form>
+                      </td>
+                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Application;
+use App\View\Components\AppLayout;
 
 class ProjectsController extends Controller
 {
@@ -57,7 +58,8 @@ class ProjectsController extends Controller
      */
     public function show($id)
     {
-        //
+        $app = Application::where('id', $id)->first();
+        return view('projects.detail', compact('app'));
     }
 
     /**
@@ -95,5 +97,25 @@ class ProjectsController extends Controller
         $app->delete();
 
         return redirect('projects')->with('success', 'Project Archived Successfully!');
+    }
+
+    public function archive()
+    {
+        $apps = Application::onlyTrashed()->get();
+        return view('projects.archive', compact('apps'));
+    }
+
+    public function restore($id)
+    {
+        Application::withTrashed()->where('id', $id)->first()->restore();
+
+        return redirect()->back()->with('status', 'Project Successfully Restored!');
+    }
+
+    public function kill($id)
+    {
+        Application::withTrashed()->where('id', $id)->first()->forceDelete();
+
+        return redirect()->back()->with('success', 'Project Deleted Successfully!');
     }
 }

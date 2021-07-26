@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\FunctionsController;
+use App\Http\Controllers\ModulsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +79,22 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', function () {
         return view('dashboard');
     });
+
+    // Controller Projects Routes
+    Route::get('/projects/archive', [ProjectsController::class, 'archive']);
+    Route::delete('/projects/kill/{id}', [ProjectsController::class, 'kill']);
+    Route::get('/projects/restore/{id}', [ProjectsController::class, 'restore']);
     Route::resource('/projects', ProjectsController::class);
+
+    // Controller Moduls Routes
+    Route::get('/moduls/archive', [ModulsController::class, 'archive']);
+    Route::delete('/moduls/kill/{id}', [ModulsController::class, 'kill']);
+    Route::get('/moduls/restore/{id}', [ModulsController::class, 'restore']);
     Route::resource('/moduls', ModulsController::class);
+
+    // Controller Functions Routes
+    Route::get('/functions/archive', [FunctionsController::class, 'archive']);
+    Route::delete('/functions/kill/{id}', [FunctionsController::class, 'kill']);
+    Route::get('/functions/restore/{id}', [FunctionsController::class, 'restore']);
     Route::resource('/functions', FunctionsController::class);
 });

@@ -13,7 +13,7 @@ class ModulsController extends Controller
      */
     public function index()
     {
-        //
+        return view('moduls.index');
     }
 
     /**
