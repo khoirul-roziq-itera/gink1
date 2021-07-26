@@ -1,16 +1,16 @@
 @extends('layouts/main')
 
-@section('title','Detail Project')
+@section('title','Detail Function')
     
 @section('container')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Detail Project</h1>
+            <h1 style="font-size: 25px">Detail Function</h1>
             <div class="section-header-breadcrumb">
-              <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-              <div class="breadcrumb-item active"><a href="#">List Project</a></div>
-              <div class="breadcrumb-item">Edit Project</div>
+              <div class="breadcrumb-item active"><a href="#">Data Function</a></div>
+              <div class="breadcrumb-item active"><a href="#">List Function</a></div>
+              <div class="breadcrumb-item">Edit Function</div>
             </div>
           </div>
 
@@ -19,7 +19,7 @@
                 <div class="col-12 col-md-6 col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                          <h4>Nama Project</h4>
+                          <h4>Nama Function</h4>
                         </div>
                         <div class="card-body">
                           This is some text within a card body.

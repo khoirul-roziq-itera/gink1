@@ -1,17 +1,17 @@
 @extends('layouts/main')
 
 
-@section('title','Archive Project')
+@section('title','Archive Function')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Archive Modul</h1>
+      <h1 style="font-size: 25px">Archive Function</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
-        <div class="breadcrumb-item">Archive Modul</div>
+        <div class="breadcrumb-item active"><a href="#">Data Function</a></div>
+        <div class="breadcrumb-item">Archive Function</div>
       </div>
     </div>
 

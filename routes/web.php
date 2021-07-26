@@ -28,8 +28,11 @@ Route::get('testprofile', function () {
     return view('/profile/user');
 });
 
-Route::get('testlist', function () {
-    return view('/projects/list');
+Route::get('listproject', function () {
+    return view('/projects/index');
+});
+Route::get('archiveP', function () {
+    return view('/projects/archive');
 });
 
 
@@ -43,9 +46,14 @@ Route::get('addModul', function () {
 Route::get('archiveModul', function () {
     return view('/moduls/archive');
 });
-Route::get('archiveP', function () {
-    return view('/projects/archive');
+Route::get('detailModul', function () {
+    return view('/moduls/detail');
 });
+Route::get('editModul', function () {
+    return view('/moduls/edit');
+});
+
+
 
 
 // menu function
@@ -58,7 +66,12 @@ Route::get('listFunction', function () {
 Route::get('archiveFunction', function () {
     return view('/functions/archive');
 });
-
+Route::get('archiveFunction', function () {
+    return view('/functions/edit');
+});
+Route::get('archiveFunction', function () {
+    return view('/functions/detail');
+});
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', function () {

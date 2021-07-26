@@ -6,7 +6,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Create Project</h1>
+                <h1 style="font-size: 25px">Create Project</h1>
                 <div class="section-header-breadcrumb">
                   <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
                   <div class="breadcrumb-item">Create Project</div>
@@ -18,10 +18,6 @@
                         <div class="card card-danger">
                             <form method="POST" action="{{ route('projects.store') }}" id="myForm">
                                 @csrf
-                                <div class="card-header">
-                                    <h4>Tambah Data Project</h4>
-                                    <br>
-                                </div>
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="appName">Nama Aplikasi</label>
@@ -63,14 +59,10 @@
                                     </div>
                                     <div class="form-group float-right">
                                         <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                        <button type="submit" onclick="sweet()" class="btn btn-danger btn-lg" id="swal-2">Submit</button>
-                                    
+                                        <button type="submit" onclick="sweet()" class="btn btn-danger btn-lg" id="swal-2">Submit</button>            
                                     </div>
                                 </div>
                             </form>
-                        </div>
-                        <div class="simple-footer">
-                            Copyright &copy; GinkTech 2021
                         </div>
                     </div>
                 </div>
