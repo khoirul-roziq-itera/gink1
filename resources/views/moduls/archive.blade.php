@@ -1,29 +1,29 @@
 @extends('layouts/main')
 
 
-@section('title','Data Modul')
+@section('title','Data Project')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Data Modul</h1>
+      <h1>Data Project</h1>
       <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
-        <div class="breadcrumb-item">List Modul</div>
+        <div class="breadcrumb-item">Archive Modul</div>
       </div>
     </div>
 
     <div class="section-body">
-      <a href="{{ url('projects/create')}} "><button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i> Tambah Data</button></a>
+      
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <div class="card-header">
-              <h4>Data Archive</h4>
-            </div>
             <div class="card-body p-0">
+              <div  style="padding: 3em">
+                <a href="{{ url('projects/create')}}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</button></a>
+              </div>
               <div class="table-responsive" style="padding: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
@@ -58,10 +58,12 @@
                   </tbody>
                 </table>
               </div>
+
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </div>

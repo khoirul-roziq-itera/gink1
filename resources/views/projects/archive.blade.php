@@ -16,14 +16,14 @@
     </div>
 
     <div class="section-body">
-      <a href="{{ url('projects/create')}} "><button type="button" class="btn btn-danger btn-lg" style="margin-bottom: 1em"><i class="fas fa-plus"></i> Tambah Data</button></a>
+      
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <div class="card-header">
-              <h4>Data Archive</h4>
-            </div>
             <div class="card-body p-0">
+              <div  style="padding: 3em">
+                <a href="{{ url('projects/create')}}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</button></a>
+              </div>
               <div class="table-responsive" style="padding: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">

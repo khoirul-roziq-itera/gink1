@@ -6,10 +6,10 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Create Function</h1>
+                <h1>Create Modul</h1>
                 <div class="section-header-breadcrumb">
-                  <div class="breadcrumb-item active"><a href="#">Data Function</a></div>
-                  <div class="breadcrumb-item">Create Function</div>
+                  <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
+                  <div class="breadcrumb-item">Create Modul</div>
                 </div>
               </div>
             <div class="container mt-5">
@@ -18,11 +18,6 @@
                         <div class="card card-danger">
                             <form method="POST" action="{{ route('projects.store') }}">
                                 @csrf
-                                <div class="card-header">
-                                    <h4>Tambah Data Project</h4>
-                                    <br>
-                                </div>
-
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="appName">Nama Aplikasi</label>
@@ -68,9 +63,6 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
-                        <div class="simple-footer">
-                            Copyright &copy; GinkTech 2021
                         </div>
                     </div>
                 </div>

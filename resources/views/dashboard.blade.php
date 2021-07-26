@@ -13,14 +13,14 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
-              <div class="card-icon bg-danger">
-                <i class="fas fa-clock"></i>
+              <div class="card-icon bg-danger text-center">
+                <i class="fas fa-clock" style="font-size: 40pt; margin-top:10px"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4>Waiting</h4>
+                  <h4 style="font-size: 15px">Waiting</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="font-size: 25pt">
                   10
                 </div>
               </div>
@@ -29,13 +29,13 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
               <div class="card-icon bg-success">
-                <i class="fas fa-recycle"></i>
+                <i class="fas fa-recycle" style="font-size: 40pt; margin-top:10px"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4>Processed</h4>
+                  <h4 style="font-size: 15px">Processed</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="font-size: 25pt">
                   42
                 </div>
               </div>
@@ -44,13 +44,13 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
               <div class="card-icon bg-primary" >
-                <i class="fas fa-clipboard-list"></i>
+                <i class="fas fa-clipboard-list" style="font-size: 40pt; margin-top:10px"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4>Completed</h4>
+                  <h4 style="font-size: 15px">Completed</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="font-size: 25pt">
                   10
                 </div>
               </div>
@@ -59,13 +59,13 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
               <div class="card-icon bg-secondary">
-                <i class="far fa-list-alt"></i>
+                <i class="far fa-list-alt" style="font-size: 40pt; margin-top:10px"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4>Total Project</h4>
+                  <h4 style="font-size: 15px">Total Project</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body"  style="font-size: 25pt">
                   47
                 </div>
               </div>

@@ -18,10 +18,6 @@
                         <div class="card card-danger">
                             <form method="POST" action="{{ route('projects.store') }}" id="myForm">
                                 @csrf
-                                <div class="card-header">
-                                    <h4>Tambah Data Project</h4>
-                                    <br>
-                                </div>
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="appName">Nama Aplikasi</label>
@@ -68,9 +64,6 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
-                        <div class="simple-footer">
-                            Copyright &copy; GinkTech 2021
                         </div>
                     </div>
                 </div>

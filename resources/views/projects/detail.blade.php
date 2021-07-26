@@ -15,17 +15,35 @@
           </div>
           <div class="section-body">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-6">
+                <div class="col-md-6 col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                          <h4>Nama Project</h4>
+                            <a href="{{ url ('projects')}}"><i class="fas fa-arrow-circle-left" style="font-size: 30px; color:silver"></i></a>
                         </div>
                         <div class="card-body">
-                          This is some text within a card body.
+                          <div class="row">
+                            <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
+                            <label  class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+                          </div>
+                          <div class="row">
+                            <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
+                            <label  class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+                          </div>
+                          <div class="row">
+                            <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
+                            <label  class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+                          </div>
+                          <div class="row">
+                            <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
+                            <label  class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+                          </div>
+                          <div class="row">
+                            <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
+                            <label  class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+                          </div>
                         </div>
                         <div class="card-footer text-right">
-                            <a href="testlist"><button class="btn btn-secondary">Back</button></a>
-                            <a href="testedit"><button class="btn btn-danger">Edit</button>
+                            <a href="testedit"><button class="btn btn-danger"> <i class="fas fa-edit"></i> Edit</button></a>
                         </div>
                       </div>
                 </div>
