@@ -1,17 +1,17 @@
 @extends('layouts/main')
 
 
-@section('title','Data Project')
+@section('title','Data Functions')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Archive Project</h1>
+      <h1 style="font-size: 25px">Archive Functions</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
-        <div class="breadcrumb-item">Archive Modul</div>
+        <div class="breadcrumb-item active"><a href="#">Data Functions</a></div>
+        <div class="breadcrumb-item">Archive Functions</div>
       </div>
     </div>
 
@@ -34,9 +34,9 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($apps as $app => $result)
+                    @foreach($funcs as $func => $result)
                     <tr class="text-center">
-                      <td>{{ $app + 1 }}</td>
+                      <td>{{ $func + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
                       <td>{{ $result->category }}</td>
                       <td>{{ $result->deadline_project_t }}</td>
@@ -44,11 +44,11 @@
                         <div class="badge badge-primary">Selesai</div>
                       </td>
                       <td>
-                        <form action="{{ url('projects/kill/'.$result->id) }}" method="post">
+                        <form action="{{ url('functions/kill/'.$result->id) }}" method="post">
                           @csrf
                           @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ url('projects/restore/'.$result->id) }}" class="btn btn-success" style="margin: 2px"><i class="fas fa-history"> Restore</i></a>
+                            <a href="{{ url('functions/restore/'.$result->id) }}" class="btn btn-success" style="margin: 2px"><i class="fas fa-history"> Restore</i></a>
                             <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i></a>
                           </div>
                         </form>
