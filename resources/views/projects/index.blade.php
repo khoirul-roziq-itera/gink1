@@ -70,7 +70,7 @@
                           @csrf
                           @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="testdetail" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                            <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
                             <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
                           </div>
                         </form>
