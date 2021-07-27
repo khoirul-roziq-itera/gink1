@@ -60,7 +60,7 @@ class FunctionsController extends Controller
     public function edit($id)
     {
         $func = Func::where('id', $id)->first();
-        return view('functions.detail', compact('func'));
+        return view('functions.edit', compact('func'));
     }
 
     /**

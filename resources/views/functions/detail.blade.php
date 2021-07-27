@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="card-footer text-right">
-              <a href="{{ route('projects.edit', $app->id) }}"><button class="btn btn-danger"> <i class="fas fa-edit"></i> Edit</button></a>
+              <a href="{{ route('functions.edit', $func->id) }}"><button class="btn btn-danger"> <i class="fas fa-edit"></i> Edit</button></a>
             </div>
           </div>
         </div>
