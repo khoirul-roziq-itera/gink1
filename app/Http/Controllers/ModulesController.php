@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Modul;
+use App\Models\Module;
 
-class ModulsController extends Controller
+class ModulesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ModulsController extends Controller
      */
     public function index()
     {
-        $moduls = Modul::all();
+        $modules = Module::all();
         return view('moduls.index', compact('moduls'));
     }
 
@@ -47,7 +47,7 @@ class ModulsController extends Controller
      */
     public function show($id)
     {
-        $modul = Modul::where('id', $id)->first();
+        $module = Module::where('id', $id)->first();
         return view('moduls.detail', compact('modul'));
     }
 
@@ -59,7 +59,7 @@ class ModulsController extends Controller
      */
     public function edit($id)
     {
-        $modul = Modul::where('id', $id)->first();
+        $module = Module::where('id', $id)->first();
         return view('moduls.edit', compact('modul'));
     }
 
@@ -83,28 +83,28 @@ class ModulsController extends Controller
      */
     public function destroy($id)
     {
-        $modul = Modul::findorfail($id);
-        $modul->delete();
+        $module = Module::findorfail($id);
+        $module->delete();
 
         return redirect('moduls')->with('success', 'Modul Archived Successfully!');
     }
 
     public function archive()
     {
-        $moduls = Modul::onlyTrashed()->get();
+        $modules = Module::onlyTrashed()->get();
         return view('moduls.archive', compact('apps'));
     }
 
     public function restore($id)
     {
-        Modul::withTrashed()->where('id', $id)->first()->restore();
+        Module::withTrashed()->where('id', $id)->first()->restore();
 
         return redirect()->back()->with('status', 'Modul Successfully Restored!');
     }
 
     public function kill($id)
     {
-        Modul::withTrashed()->where('id', $id)->first()->forceDelete();
+        Module::withTrashed()->where('id', $id)->first()->forceDelete();
 
         return redirect()->back()->with('success', 'Modul Deleted Successfully!');
     }

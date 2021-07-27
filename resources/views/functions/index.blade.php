@@ -1,17 +1,17 @@
 @extends('layouts/main')
 
 
-@section('title','List Function')
+@section('title','List Functions')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Function</h1>
+      <h1 style="font-size: 25px">List Functions</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Function</a></div>
-        <div class="breadcrumb-item">List Function</div>
+        <div class="breadcrumb-item active"><a href="#">Data Functions</a></div>
+        <div class="breadcrumb-item">List Functions</div>
       </div>
     </div>
 
@@ -23,13 +23,13 @@
               <div class="row">
                 <div class="col-6">
                   <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
-                    <button type="button" class="btn btn-primary" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>              
+                    <button type="button" class="btn btn-primary" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>
                     <div class="btn-group" role="group">
                       <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-file-export"></i>  EXPORT
+                        <i class="fas fa-file-export"></i> EXPORT
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i>  PDF</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
                         <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
                       </ul>
                     </div>
@@ -37,43 +37,47 @@
                 </div>
                 <div class="col-6">
                   <div style="padding:2.5em">
-                    <a href="{{ url('projects/create')}}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</button></a>
+                    <a href="{{ url('moduls/create')}}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</button></a>
                   </div>
                 </div>
               </div>
+
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
-                        <th>No</th>
-                        <th>Nama Project</th>
-                        <th>Kategori</th>
-                        <th>Batas Pengerjaan</th>
-                        <th>Jumlah Modul</th>
-                        <th>Fungsi</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
+                      <th>Nomor</th>
+                      <th>Applications Name</th>
+                      <th>Category</th>
+                      <th>Deadline</th>
+                      <th>Status</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                     <tr class="text-center">
-                        <td>1</td>
-                        <td>Calculator App</td>
-                        <td>Akutansi</td>
-                        <td>30/05/2021</td>
-                        <td>3</td>
-                        <td>BE</td>
-                        <td>
-                          <div class="badge badge-primary">Selesai</div>
-                        </td>
-                        <td>
+                    @foreach($funcs as $func => $result)
+                    <tr class="text-center">
+                      <td>{{ $func + 1 }}</td>
+                      <td>{{ $result->app_name }}</td>
+                      <td>{{ $result->category }}</td>
+                      <td>{{ $result->deadline_modul_t }}</td>
+                      <td>
+                        <div class="badge badge-primary">Selesai</div>
+                      </td>
+                      <td>
+
+                        <form action="{{ route('functions.destroy', $result->id ) }}" method="post">
+                          @csrf
+                          @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="testdetail" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                            <a href="testedit" class="btn btn-success" style="margin: 2px"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="btn btn-danger" style="margin: 2px" id="swal-6"><i class="fas fa-trash-alt"></i></a>
+                            <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
                           </div>
-                        </td>
-                      </tr>
+                        </form>
+
+                      </td>
+                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>
@@ -81,6 +85,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </div>

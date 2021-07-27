@@ -86,11 +86,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/projects/restore/{id}', [ProjectsController::class, 'restore']);
     Route::resource('/projects', ProjectsController::class);
 
-    // Controller Moduls Routes
-    Route::get('/moduls/archive', [ModulsController::class, 'archive']);
-    Route::delete('/moduls/kill/{id}', [ModulsController::class, 'kill']);
-    Route::get('/moduls/restore/{id}', [ModulsController::class, 'restore']);
-    Route::resource('/moduls', ModulsController::class);
+    // Controller Modules Routes
+    Route::get('/modules/archive', [ModulesController::class, 'archive']);
+    Route::delete('/modules/kill/{id}', [ModulesController::class, 'kill']);
+    Route::get('/modules/restore/{id}', [ModulesController::class, 'restore']);
+    Route::resource('/modules', ModulesController::class);
 
     // Controller Functions Routes
     Route::get('/functions/archive', [FunctionsController::class, 'archive']);
