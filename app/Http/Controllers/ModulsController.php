@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Modul;
+
 use Illuminate\Http\Request;
 
 class ModulsController extends Controller
@@ -13,7 +15,8 @@ class ModulsController extends Controller
      */
     public function index()
     {
-        return view('moduls.index');
+        $moduls = Modul::all();
+        return view('moduls.index', compact('moduls'));
     }
 
     /**
@@ -23,7 +26,7 @@ class ModulsController extends Controller
      */
     public function create()
     {
-        //
+        return view('moduls.create');
     }
 
     /**
@@ -45,7 +48,8 @@ class ModulsController extends Controller
      */
     public function show($id)
     {
-        //
+        $modul = Modul::where('id', $id)->first();
+        return view('moduls.detail', compact('modul'));
     }
 
     /**
@@ -56,7 +60,8 @@ class ModulsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $modul = Modul::where('id', $id)->first();
+        return view('moduls.edit', compact('modul'));
     }
 
     /**
@@ -79,6 +84,29 @@ class ModulsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $modul = Modul::findorfail($id);
+        $modul->delete();
+
+        return redirect('moduls')->with('success', 'Modul Archived Successfully!');
+    }
+
+    public function archive()
+    {
+        $moduls = Modul::onlyTrashed()->get();
+        return view('moduls.archive', compact('apps'));
+    }
+
+    public function restore($id)
+    {
+        Modul::withTrashed()->where('id', $id)->first()->restore();
+
+        return redirect()->back()->with('status', 'Modul Successfully Restored!');
+    }
+
+    public function kill($id)
+    {
+        Modul::withTrashed()->where('id', $id)->first()->forceDelete();
+
+        return redirect()->back()->with('success', 'Modul Deleted Successfully!');
     }
 }
