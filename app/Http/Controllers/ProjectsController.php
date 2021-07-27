@@ -70,7 +70,8 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
-        return view('projects.edit');
+        $app = Application::where('id', $id)->first();
+        return view('projects.edit', compact('app'));
     }
 
     /**
@@ -82,7 +83,17 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Application::where('id', $id)->update([
+            'app_name' => $request->appName,
+            'category' => $request->category,
+            'tags' => $request->tags,
+            'status' => $request->status,
+            'start_project_t' => $request->startProjectT,
+            'end_project_t' => $request->endProjectT,
+            'deadline_project_t' => $request->deadlineProjectT
+        ]);
+
+        return redirect('projects')->with('success', 'Project Successfully Updated!');
     }
 
     /**
