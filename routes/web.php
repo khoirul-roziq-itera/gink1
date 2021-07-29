@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\FunctionsController;
-use App\Http\Controllers\ModulsController;
+use App\Http\Controllers\ModulesController;
+use App\Http\Controllers\TagsController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,4 +115,16 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/functions/kill/{id}', [FunctionsController::class, 'kill']);
     Route::get('/functions/restore/{id}', [FunctionsController::class, 'restore']);
     Route::resource('/functions', FunctionsController::class);
+
+    // Controller Tags Routes
+    Route::get('/tags/archive', [TagsController::class, 'archive']);
+    Route::delete('/tags/kill/{id}', [TagsController::class, 'kill']);
+    Route::get('/tags/restore/{id}', [TagsController::class, 'restore']);
+    Route::resource('/tags', TagsController::class);
+
+    // Controller Categories Routes
+    Route::get('/categories/archive', [CategoriesController::class, 'archive']);
+    Route::delete('/categories/kill/{id}', [CategoriesController::class, 'kill']);
+    Route::get('/categories/restore/{id}', [CategoriesController::class, 'restore']);
+    Route::resource('/categories', CategoriesController::class);
 });

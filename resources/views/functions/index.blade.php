@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-6">
                   <div style="padding:2.5em">
-                    <a href="{{ url('moduls/create')}}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</button></a>
+                    <a href="{{ url('functions/create')}}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</button></a>
                   </div>
                 </div>
               </div>
@@ -58,24 +58,24 @@
                     {{-- @foreach($funcs as $func => $result)
                     <tr class="text-center">
                       <td>{{ $func + 1 }}</td>
-                      <td>{{ $result->app_name }}</td>
-                      <td>{{ $result->category }}</td>
-                      <td>{{ $result->deadline_modul_t }}</td>
-                      <td>
-                        <div class="badge badge-primary">Selesai</div>
-                      </td>
-                      <td>
+                    <td>{{ $result->app_name }}</td>
+                    <td>{{ $result->category }}</td>
+                    <td>{{ $result->deadline_modul_t }}</td>
+                    <td>
+                      <div class="badge badge-primary">Selesai</div>
+                    </td>
+                    <td>
 
-                        <form action="{{ route('functions.destroy', $result->id ) }}" method="post">
-                          @csrf
-                          @method('delete')
-                          <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
-                          </div>
-                        </form>
+                      <form action="{{ route('functions.destroy', $result->id ) }}" method="post">
+                        @csrf
+                        @method('delete')
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                          <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
+                        </div>
+                      </form>
 
-                      </td>
+                    </td>
                     </tr>
                     @endforeach --}}
                   </tbody>
