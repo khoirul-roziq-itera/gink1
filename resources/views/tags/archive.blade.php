@@ -1,22 +1,21 @@
 @extends('layouts/main')
 
 
-@section('title','Data Project')
+@section('title','Archive Tags')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Archive Project</h1>
+      <h1 style="font-size: 25px">Archive Tags</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
-        <div class="breadcrumb-item">Archive Modul</div>
+        <div class="breadcrumb-item active"><a href="#">Data Tags</a></div>
+        <div class="breadcrumb-item">Archive Tags</div>
       </div>
     </div>
 
     <div class="section-body">
-
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -25,16 +24,13 @@
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
-                      <th>No</th>
-                      <th>Applications Name</th>
-                      <th>Category</th>
-                      <th>Finished</th>
-                      <th>Estimated Costs</th>
+                      <th>Nomor</th>
+                      <th>Tags Name</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
-                  {{-- <tbody>
-                    @foreach($apps as $app => $result)
+                  <tbody>
+                    {{-- @foreach($apps as $app => $result)
                     <tr class="text-center">
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>

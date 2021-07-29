@@ -15,7 +15,7 @@ class ModulesController extends Controller
     public function index()
     {
         $modules = Module::all();
-        return view('moduls.index', compact('moduls'));
+        return view('modules.index', compact('modules'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ModulesController extends Controller
      */
     public function create()
     {
-        return view('moduls.create');
+        return view('modules.create');
     }
 
     /**
@@ -48,7 +48,7 @@ class ModulesController extends Controller
     public function show($id)
     {
         $module = Module::where('id', $id)->first();
-        return view('moduls.detail', compact('modul'));
+        return view('modules.detail', compact('modul'));
     }
 
     /**
@@ -60,7 +60,7 @@ class ModulesController extends Controller
     public function edit($id)
     {
         $module = Module::where('id', $id)->first();
-        return view('moduls.edit', compact('modul'));
+        return view('modules.edit', compact('modul'));
     }
 
     /**
@@ -86,13 +86,13 @@ class ModulesController extends Controller
         $module = Module::findorfail($id);
         $module->delete();
 
-        return redirect('moduls')->with('success', 'Modul Archived Successfully!');
+        return redirect('modules')->with('success', 'Modul Archived Successfully!');
     }
 
     public function archive()
     {
         $modules = Module::onlyTrashed()->get();
-        return view('moduls.archive', compact('apps'));
+        return view('modules.archive', compact('apps'));
     }
 
     public function restore($id)

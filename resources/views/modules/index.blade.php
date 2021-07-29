@@ -14,7 +14,6 @@
         <div class="breadcrumb-item">List Project</div>
       </div>
     </div>
-
     <div class="section-body">
       <div class="row">
         <div class="col-12">
@@ -55,7 +54,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($apps as $app => $result)
+                    {{-- @foreach($modules as $app => $result)
                     <tr class="text-center">
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
@@ -65,7 +64,6 @@
                         <div class="badge badge-primary">Selesai</div>
                       </td>
                       <td>
-
                         <form action="{{ route('projects.destroy', $result->id ) }}" method="post">
                           @csrf
                           @method('delete')
@@ -74,10 +72,9 @@
                             <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
                           </div>
                         </form>
-
                       </td>
                     </tr>
-                    @endforeach
+                    @endforeach --}}
                   </tbody>
                 </table>
               </div>

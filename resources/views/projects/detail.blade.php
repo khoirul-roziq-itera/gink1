@@ -15,35 +15,49 @@
     </div>
     <div class="section-body">
       <div class="row">
-        <div class="col-md-6 col-lg-6">
+        <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <a href="{{ url ('projects')}}"><i class="fas fa-arrow-circle-left" style="font-size: 30px; color:silver"></i></a>
+              <a href="{{ url ('projects')}}"><button class="btn btn-secondary "><i class="fas fa-arrow-circle-left"></i> Back</button></a>
             </div>
             <div class="card-body">
-              <div class="row">
-                <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
-                <label class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">App Name</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="Appku" >
+                </div>
               </div>
-              <div class="row">
-                <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
-                <label class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Category</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="Akutansi">
+                </div>
               </div>
-              <div class="row">
-                <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
-                <label class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Deadline</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="01/09/2021" >
+                </div>
               </div>
-              <div class="row">
-                <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
-                <label class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Status</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="Selesai" >
+                </div>
               </div>
-              <div class="row">
-                <label class="col-sm-2 col-form-label" style="font-size: 20px; font-weight:bold">Nama</label>
-                <label class="col-sm-10 col-form-label" style="font-size: 20px; font-weight:bold">: Dwiki Agus Saputra</label>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Estimasi Biaya</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="Rp. 100.000" >
+                </div>
               </div>
-            </div>
-            <div class="card-footer text-right">
-              <a href="{{ route('projects.edit', $app->id) }}"><button class="btn btn-danger"> <i class="fas fa-edit"></i> Edit</button></a>
+              <div class="form-group row">
+                <div class="col-sm-9">
+                  <div class="card-footer text-right">
+                    <a href="{{ route('projects.edit', $app->id) }}"><button class="btn btn-success "> <i class="fas fa-edit" style="font-size: 18px"></i> Edit</button></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

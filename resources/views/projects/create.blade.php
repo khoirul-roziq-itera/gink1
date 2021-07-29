@@ -12,55 +12,75 @@
                   <div class="breadcrumb-item">Create Project</div>
                 </div>
               </div>
-            <div class="container mt-5">
+            <div class="section-body">
                 <div class="row">
-                    <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
-                        <div class="card card-danger">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>INPUT DATA</h4>
+                            </div>
                             <form method="POST" action="{{ route('projects.store') }}" id="myForm">
                                 @csrf
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="appName">Nama Aplikasi</label>
-                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project">
+                                    <div class="form-group row">
+                                        <label for="appname" class="col-sm-2 col-form-label">App Name</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project">
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="category">Kategori</label>
-                                        <select id="category" name="category" class="form-control">
-                                            <option value="">- Pilih Kateg</option>
-                                            <option value="Akutansi">Akutansi</option>
-                                            <option value="Administrasi">Administrasi</option>
-                                        </select>
+                                    <div class="form-group row">
+                                        <label for="category" class="col-sm-2 col-form-label">Category</label>
+                                        <div class="col-sm-7">
+                                            <select id="category" name="category" class="form-control">
+                                                <option value="">- Pilih Kateg</option>
+                                                <option value="Akutansi">Akutansi</option>
+                                                <option value="Administrasi">Administrasi</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="tags">Tag</label>
-                                        <input type="text" id="tags" name="tags" class="form-control" placeholder="Masukkan nama project">
+                                    <div class="form-group row">
+                                        <label for="tags" class="col-sm-2 col-form-label">Tag</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" id="tags" name="tags" class="form-control" placeholder="Masukkan tags">
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Waktu Mulai</label>
-                                        <input type="date" name="startProjectT" class="form-control datepicker" required />
+                                    <div class="form-group row">
+                                        <label for="startTime" class="col-sm-2 col-form-label">Start Time</label>
+                                        <div class="col-sm-7">
+                                            <input type="date" name="startProjectT" class="form-control datepicker" required />
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Batas Waktu</label>
-                                        <input type="date" name="deadlineProjectT" class="form-control datepicker" required />
+                                    <div class="form-group row">
+                                        <label for="deadline" class="col-sm-2 col-form-label">Deadline</label>
+                                        <div class="col-sm-7">
+                                            <input type="date" name="deadlineProjectT" class="form-control datepicker" required />
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Waktu Selesai</label>
-                                        <input type="date" name="endProjectT" class="form-control datepicker" required />
+                                    <div class="form-group row">
+                                        <label for="finished" class="col-sm-2 col-form-label">Finished</label>
+                                        <div class="col-sm-7">
+                                            <input type="date" name="endProjectT" class="form-control datepicker" required />
+                                        </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="status">Status</label>
-                                        <select id="status" name="status" class="form-control">
-                                            <option value="">- Pilih Status</option>
-                                            <option value="3">Selesai</option>
-                                            <option value="2">Sedang Dikerjakan</option>
-                                            <option value="1">Menunggu</option>
-                                        </select>
+                                    <div class="form-group row">
+                                        <label for="status" class="col-sm-2 col-form-label">Status</label>
+                                        <div class="col-sm-7">
+                                            <select id="status" name="status" class="form-control">
+                                                <option value="">- Pilih Status</option>
+                                                <option value="3">Selesai</option>
+                                                <option value="2">Sedang Dikerjakan</option>
+                                                <option value="1">Menunggu</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="form-group float-right">
-                                        <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                        <button type="submit" onclick="sweet()" class="btn btn-danger btn-lg" id="swal-2">Submit</button>            
-                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-9">
+                                            <div class="form-group float-right">
+                                                <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
+                                                <button type="submit" onclick="sweet()" class="btn btn-danger btn-lg" id="swal-2">Submit</button>            
+                                            </div>
+                                        </div>
+                                    </div>  
                                 </div>
                             </form>
                         </div>

@@ -14,7 +14,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
               <div class="card-icon bg-danger text-center">
-                <i class="fas fa-clock" style="font-size: 40pt; margin-top:10px"></i>
+                <i class="fas fa-clock" style="font-size: 30pt; padding-top:0.5em"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
@@ -29,7 +29,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
               <div class="card-icon bg-success">
-                <i class="fas fa-recycle" style="font-size: 40pt; margin-top:10px"></i>
+                <i class="fas fa-recycle" style="font-size: 30pt; padding-top:0.5em"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
@@ -44,7 +44,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
               <div class="card-icon bg-primary" >
-                <i class="fas fa-clipboard-list" style="font-size: 40pt; margin-top:10px"></i>
+                <i class="fas fa-clipboard-list" style="font-size: 30pt; padding-top:0.5em"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
@@ -59,7 +59,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
               <div class="card-icon bg-secondary">
-                <i class="far fa-list-alt" style="font-size: 40pt; margin-top:10px"></i>
+                <i class="far fa-list-alt" style="font-size: 30pt; padding-top:0.5em"></i>
               </div>
               <div class="card-wrap">
                 <div class="card-header">
@@ -131,4 +131,6 @@
             </div>
           </div>
         </div>
+      </section>
+     </div>
 @endsection

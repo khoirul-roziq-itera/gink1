@@ -20,6 +20,9 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
+            <div class="card-header">
+              <h4>DATA ARCHIVE</h4>
+            </div>
             <div class="card-body p-0">
               <div class="table-responsive" style="padding: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">

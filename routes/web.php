@@ -40,19 +40,19 @@ Route::get('archiveP', function () {
 
 // MENU MODUL
 Route::get('listModul', function () {
-    return view('/moduls/index');
+    return view('/modules/index');
 });
 Route::get('addModul', function () {
-    return view('/moduls/create');
+    return view('/modules/create');
 });
 Route::get('archiveModul', function () {
-    return view('/moduls/archive');
+    return view('/modules/archive');
 });
 Route::get('detailModul', function () {
-    return view('/moduls/detail');
+    return view('/modules/detail');
 });
 Route::get('editModul', function () {
-    return view('/moduls/edit');
+    return view('/modules/edit');
 });
 
 
@@ -73,6 +73,22 @@ Route::get('archiveFunction', function () {
 });
 Route::get('archiveFunction', function () {
     return view('/functions/detail');
+});
+
+// TAGS
+Route::get('archiveTags', function () {
+    return view('/tags/archive');
+});
+Route::get('listTags', function () {
+    return view('/tags/index');
+});
+
+//Category
+Route::get('addCateg', function () {
+    return view('/categories/create');
+});
+Route::get('listCateg', function () {
+    return view('/categories/index');
 });
 
 Route::group(['middleware' => 'auth'], function () {

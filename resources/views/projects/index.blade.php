@@ -1,6 +1,5 @@
 @extends('layouts/main')
 
-
 @section('title','List Project')
 
 @section('container')
@@ -19,6 +18,9 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
+            <div class="card-header">
+              <h4>DATA PROJECT</h4>
+            </div>
             <div class="card-body p-0">
               <div class="row">
                 <div class="col-6">
@@ -41,13 +43,12 @@
                   </div>
                 </div>
               </div>
-
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered border-primary">
                   <thead class="text-center">
                     <tr>
-                      <th>Nomor</th>
-                      <th>Applications Name</th>
+                      <th>No</th>
+                      <th>App Name</th>
                       <th>Category</th>
                       <th>Deadline</th>
                       <th>Status</th>
@@ -70,7 +71,7 @@
                           @csrf
                           @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                            <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px" ><i class="fas fa-eye"></i></a>
                             <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
                           </div>
                         </form>
@@ -85,7 +86,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </div>

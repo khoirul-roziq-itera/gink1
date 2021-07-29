@@ -55,7 +55,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($funcs as $func => $result)
+                    {{-- @foreach($funcs as $func => $result)
                     <tr class="text-center">
                       <td>{{ $func + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
@@ -77,7 +77,7 @@
 
                       </td>
                     </tr>
-                    @endforeach
+                    @endforeach --}}
                   </tbody>
                 </table>
               </div>

@@ -20,12 +20,6 @@
                         <form method="POST" action="{{ route('projects.update', $app->id) }}">
                             @csrf
                             @method('patch')
-
-                            <div class="card-header">
-                                <h4>Edit Data Project</h4>
-                                <br>
-                            </div>
-
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="appName">Nama Aplikasi</label>
@@ -71,9 +65,6 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <div class="simple-footer">
-                        Copyright &copy; GinkTech 2021
                     </div>
                 </div>
             </div>
