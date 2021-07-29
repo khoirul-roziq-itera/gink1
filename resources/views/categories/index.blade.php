@@ -1,15 +1,15 @@
 @extends('layouts/main')
 
-@section('title','List Tags')
+@section('title','List Category')
 
 @section('container')
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Tags</h1>
+      <h1 style="font-size: 25px">List Category</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Tags</a></div>
-        <div class="breadcrumb-item active">List Tags</a></div>
+        <div class="breadcrumb-item active"><a href="#">Data Category</a></div>
+        <div class="breadcrumb-item active">List Category</a></div>
       </div>
     </div>
     <div class="section-body">
@@ -17,12 +17,12 @@
         <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h4>Tambah Tags</h4>
+                <h4>Tambah Category</h4>
               </div>
               <div class="card-body">
                 <form >
                     <div class="form-group row">
-                        <label for="nameTags" class="col-sm-2 col-form-label">Tags Name</label>
+                        <label for="nameTags" class="col-sm-2 col-form-label">Category Name</label>
                         <div class="col-sm-5">
                           <input type="nama" class="form-control" id="namaTags" placeholder="Input tags">
                         </div>
@@ -34,12 +34,11 @@
                   </form>
               </div>
             </div>
-
             <div class="row">
               <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Data Tags</h4>
+                        <h4>Data Category</h4>
                     </div>
                     <div class="card-body p-0">
                         <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
@@ -86,6 +85,7 @@
       </div>
     </div>
   </section>
-</div>
+</div>    
+                    
 
 @endsection

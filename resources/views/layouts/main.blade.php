@@ -107,6 +107,11 @@
                             </li>
                             <li>
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-signature"></i><span style="font-weight:bold; font-size:19px">Laporan</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="addCateg" style="font-weight:bold; font-size:15px;">Project</a></li>
+                                    <li><a class="nav-link" href="listCateg" style="font-weight:bold; font-size:15px">Function</a></li>
+                                    <li><a class="nav-link" href="listCateg" style="font-weight:bold; font-size:15px">Modul</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
