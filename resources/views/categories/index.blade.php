@@ -20,11 +20,12 @@
               <h4>Add Category</h4>
             </div>
             <div class="card-body">
-              <form>
+              <form action="{{ route('categories.store') }}" method="POST">
+                @csrf
                 <div class="form-group row">
-                  <label for="nameTags" class="col-sm-2 col-form-label">Category Name</label>
+                  <label for="categoryName" class="col-sm-2 col-form-label">Category Name</label>
                   <div class="col-sm-5">
-                    <input type="nama" class="form-control" id="namaTags" placeholder="Input tags">
+                    <input type="nama" class="form-control" id="categoryName" name="categoryName" placeholder="Input Category">
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
                     <button class="btn btn-success"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
