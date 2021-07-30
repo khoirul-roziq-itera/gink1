@@ -24,7 +24,7 @@
               <div class="form-group row">
                 <label for="appname" class="col-sm-2 col-form-label">App Name</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="Appku" >
+                  <input type="name" class="form-control" id="name" readonly="" value="Appku">
                 </div>
               </div>
               <div class="form-group row">
@@ -34,21 +34,33 @@
                 </div>
               </div>
               <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Tags</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="-">
+                </div>
+              </div>
+              <div class="form-group row">
                 <label for="appname" class="col-sm-2 col-form-label">Deadline</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="01/09/2021" >
+                  <input type="name" class="form-control" id="name" readonly="" value="01/09/2021">
                 </div>
               </div>
               <div class="form-group row">
                 <label for="appname" class="col-sm-2 col-form-label">Status</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="Selesai" >
+                  <input type="name" class="form-control" id="name" readonly="" value="Selesai">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="appname" class="col-sm-2 col-form-label">Estimasi Biaya</label>
+                <label for="appname" class="col-sm-2 col-form-label">Cost Total</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="Rp. 100.000" >
+                  <input type="name" class="form-control" id="name" readonly="" value="Rp. 100.000">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Price Total</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="Rp. 150.000">
                 </div>
               </div>
               <div class="form-group row">
