@@ -64,6 +64,12 @@
                 </div>
               </div>
               <div class="form-group row">
+                <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+                <div class="col-sm-7">
+                  <textarea class="form-control" id="notes" readonly=""></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
                     <a href="{{ route('projects.edit', $app->id) }}"><button class="btn btn-success "> <i class="fas fa-edit" style="font-size: 18px"></i> Edit</button></a>
