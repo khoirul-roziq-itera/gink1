@@ -51,29 +51,24 @@
                         </tr>
                       </thead>
                       <tbody>
-                        {{-- @foreach($funcs as $func => $result)
-                            <tr class="text-center">
-                                <td>{{ $func + 1 }}</td>
-                        <td>{{ $result->app_name }}</td>
-                        <td>{{ $result->category }}</td>
-                        <td>{{ $result->deadline_modul_t }}</td>
-                        <td>
-                          <div class="badge badge-primary">Selesai</div>
-                        </td>
-                        <td>
+                        @foreach($categories as $category => $result)
+                        <tr class="text-center">
+                          <td>{{ $category + 1 }}</td>
+                          <td>{{ $result->category_name }}</td>
+                          <td>
 
-                          <form action="{{ route('functions.destroy', $result->id ) }}" method="post">
-                            @csrf
-                            @method('delete')
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                              <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                              <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
-                            </div>
-                          </form>
+                            <form action="{{ route('categories.destroy', $result->id ) }}" method="post">
+                              @csrf
+                              @method('delete')
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="{{ url('categories', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                                <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
+                              </div>
+                            </form>
 
-                        </td>
+                          </td>
                         </tr>
-                        @endforeach --}}
+                        @endforeach
                       </tbody>
                     </table>
                   </div>
