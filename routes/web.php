@@ -19,7 +19,7 @@ use App\Http\Controllers\CategoriesController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::get('testedit', function () {

@@ -17,17 +17,18 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Tambah Tags</h4>
+              <h4>Add Tag</h4>
             </div>
             <div class="card-body">
-              <form>
+              <form action="{{ route('tags.store') }}" method="POST">
+                @csrf
                 <div class="form-group row">
-                  <label for="nameTags" class="col-sm-2 col-form-label">Tags Name</label>
+                  <label for="tagName" class="col-sm-2 col-form-label">Tag Name</label>
                   <div class="col-sm-5">
-                    <input type="nama" class="form-control" id="namaTags" placeholder="Input tags">
+                    <input type="nama" class="form-control" id="tagName" name="tagName" placeholder="Input tag">
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
-                    <button class="btn btn-success"> <i class="fas fa-plus-circle fa-lg"></i> Tambah</button>
+                    <button class="btn btn-success"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
                   </div>
 
                 </div>

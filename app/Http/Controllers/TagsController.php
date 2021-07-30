@@ -37,7 +37,11 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Tag::create([
+            'tag_name' => $request->tagName
+        ]);
+
+        return redirect('tags')->with('success', 'Tag Successfully Created!');
     }
 
     /**
