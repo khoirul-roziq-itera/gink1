@@ -12,4 +12,9 @@ class Application extends Model
     use SoftDeletes;
 
     protected $fillable = ['app_name', 'category', 'tags', 'status', 'start_project_t', 'end_project_t', 'deadline_project_t'];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
 }
