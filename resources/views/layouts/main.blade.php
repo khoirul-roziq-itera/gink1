@@ -68,7 +68,7 @@
                                 <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Dashboard</span></a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Data Project</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="{{ url('projects/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
                                     <li><a class="nav-link" href="{{ url ('projects') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
@@ -76,7 +76,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i><span style="font-weight:bold; font-size:19px">Data Modul</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="{{ url('modules/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
                                     <li><a class="nav-link" href="{{ url('modules') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
@@ -84,7 +84,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Data Function</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="{{ url('functions/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
                                     <li><a class="nav-link" href="{{ url('functions') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
@@ -105,14 +105,14 @@
                                     <li><a class="nav-link" href="{{ url('categories/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-signature"></i><span style="font-weight:bold; font-size:19px">Laporan</span></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="addCateg" style="font-weight:bold; font-size:15px;">Project</a></li>
                                     <li><a class="nav-link" href="listCateg" style="font-weight:bold; font-size:15px">Function</a></li>
                                     <li><a class="nav-link" href="listCateg" style="font-weight:bold; font-size:15px">Modul</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 

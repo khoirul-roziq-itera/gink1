@@ -92,7 +92,7 @@ class ModulesController extends Controller
     public function archive()
     {
         $modules = Module::onlyTrashed()->get();
-        return view('modules.archive', compact('apps'));
+        return view('modules.archive', compact('modules'));
     }
 
     public function restore($id)
