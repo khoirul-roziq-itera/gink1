@@ -14,6 +14,7 @@ class Func extends Model
     protected $table = 'functions';
 
     protected $fillable = [
+        'function_Title',
         'function_Name',
         'function_Group',
         'function_FE_Duration',
@@ -25,6 +26,7 @@ class Func extends Model
         'function_FS_Duration',
         'function_FS_Cost',
         'function_FS_Price',
-        'function_Coment'
+        'function_Notes',
+        'function_Status'
     ];
 }

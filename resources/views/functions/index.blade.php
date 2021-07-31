@@ -47,37 +47,41 @@
                   <thead class="text-center">
                     <tr>
                       <th>Nomor</th>
-                      <th>Applications Name</th>
-                      <th>Category</th>
-                      <th>Deadline</th>
+                      <th>Function Title</th>
+                      <th>Function Name</th>
                       <th>Status</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {{-- @foreach($funcs as $func => $result)
+                    @foreach($funcs as $func => $result)
                     <tr class="text-center">
                       <td>{{ $func + 1 }}</td>
-                    <td>{{ $result->app_name }}</td>
-                    <td>{{ $result->category }}</td>
-                    <td>{{ $result->deadline_modul_t }}</td>
-                    <td>
-                      <div class="badge badge-primary">Selesai</div>
-                    </td>
-                    <td>
+                      <td>{{ $result->function_Title }}</td>
+                      <td>{{ $result->function_Name }}</td>
+                      <td>
+                        @if( $result->function_Status == 1)
+                        <span class="badge badge-warning">Menunggu</span>
+                        @elseif( $result->function_Status == 2 )
+                        <span class="badge badge-info">Sedang Dikerjakan</span>
+                        @else
+                        <span class="badge badge-success">Selesai</span>
+                        @endif
+                      </td>
+                      <td>
 
-                      <form action="{{ route('functions.destroy', $result->id ) }}" method="post">
-                        @csrf
-                        @method('delete')
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                          <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
-                        </div>
-                      </form>
+                        <form action="{{ route('functions.destroy', $result->id ) }}" method="post">
+                          @csrf
+                          @method('delete')
+                          <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
+                          </div>
+                        </form>
 
-                    </td>
+                      </td>
                     </tr>
-                    @endforeach --}}
+                    @endforeach
                   </tbody>
                 </table>
               </div>

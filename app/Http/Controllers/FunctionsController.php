@@ -36,7 +36,24 @@ class FunctionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Func::create([
+            'function_Title' => $request->funcTitle,
+            'function_Name' => $request->funcName,
+            'function_Group' => $request->funcGroup,
+            'function_FE_Duration' => $request->FEDuration,
+            'function_FE_Cost' => $request->FECost,
+            'function_FE_Price' => $request->FEPrice,
+            'function_BE_Duration' => $request->BEDuration,
+            'function_BE_Cost' => $request->BECost,
+            'function_BE_Price' => $request->BEPrice,
+            'function_FS_Duration' => $request->FSDuration,
+            'function_FS_Cost' => $request->FSCost,
+            'function_FS_Price' => $request->FSPrice,
+            'function_Notes' => $request->funcNotes,
+            'function_Status' => $request->funcStatus
+        ]);
+
+        return redirect('functions')->with('success', 'Function Successfully Created!');
     }
 
     /**
@@ -48,7 +65,15 @@ class FunctionsController extends Controller
     public function show($id)
     {
         $func = Func::where('id', $id)->first();
-        return view('functions.detail', compact('func'));
+        if ($func->function_Status == 1) {
+            $funcStatus = 'Menunggu';
+        } else if ($func->function_Status == 2) {
+            $funcStatus = 'Sedang Dikerjakan';
+        } else {
+            $funcStatus = 'Selesai';
+        }
+
+        return view('functions.detail', compact('func', 'funcStatus'));
     }
 
     /**
@@ -72,7 +97,23 @@ class FunctionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Func::where('id', $id)->update([
+            'function_Title' => $request->funcTitle,
+            'function_Name' => $request->funcName,
+            'function_Group' => $request->funcGroup,
+            'function_FE_Duration' => $request->FEDuration,
+            'function_FE_Cost' => $request->FECost,
+            'function_FE_Price' => $request->FEPrice,
+            'function_BE_Duration' => $request->BEDuration,
+            'function_BE_Cost' => $request->BECost,
+            'function_BE_Price' => $request->BEPrice,
+            'function_FS_Duration' => $request->FSDuration,
+            'function_FS_Cost' => $request->FSCost,
+            'function_FS_Price' => $request->FSPrice,
+            'function_Notes' => $request->funcNotes,
+            'function_Status' => $request->funcStatus
+        ]);
+        return redirect('functions')->with('success', 'Function Successfully Updated!');
     }
 
     /**

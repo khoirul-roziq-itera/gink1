@@ -15,6 +15,7 @@ class CreateFunctionsTable extends Migration
     {
         Schema::create('functions', function (Blueprint $table) {
             $table->id();
+            $table->string('function_Title');
             $table->string('function_Name');
             $table->string('function_Group');
             $table->tinyInteger('function_FE_Duration');
@@ -26,7 +27,9 @@ class CreateFunctionsTable extends Migration
             $table->tinyInteger('function_FS_Duration');
             $table->decimal('function_FS_Cost', 15, 2);
             $table->decimal('function_FS_Price', 15, 2);
-            $table->text('function_Coment');
+            $table->text('function_Notes');
+            $table->tinyInteger('function_Status');
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
         });
     }

@@ -25,7 +25,9 @@ class CreateModulesTable extends Migration
             $table->tinyInteger('module_FS_Duration');
             $table->decimal('module_FS_Cost', 15, 2);
             $table->decimal('module_FS_Price', 15, 2);
-            $table->text('module_Coment');
+            $table->text('module_Notes');
+            $table->tinyInteger('module_Status');
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
         });
     }

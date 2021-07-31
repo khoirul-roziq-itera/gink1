@@ -15,61 +15,119 @@
         </div>
         <div class="container mt-5">
             <div class="row">
-                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+                <div class="col-12">
                     <div class="card card-danger">
-                        <form method="POST" action="{{ route('functions.update', $func->id) }}">
+                        <form method="POST" action="{{ route('functions.update', $func->id) }}" id="myForm">
                             @csrf
                             @method('patch')
 
-                            <div class="card-header">
-                                <h4>Edit Data Project</h4>
-                                <br>
-                            </div>
-
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="appName">Nama Aplikasi</label>
-                                    <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project" value="{{ $func->app_name }}">
+                                <div class="form-group row">
+                                    <label for="funcTitle" class="col-sm-2 col-form-label">Function Title</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control" value="{{ $func->function_Title }}" />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="category">Kategori</label>
-                                    <select id="category" name="category" class="form-control">
-                                        <option value="">- Pilih Kateg</option>
-                                        <option value="Akutansi">Akutansi</option>
-                                        <option value="Administrasi">Administrasi</option>
-                                    </select>
+                                <div class="form-group row">
+                                    <label for="funcName" class="col-sm-2 col-form-label">Function Name</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="funcName" name="funcName" class="form-control" value="{{ $func->function_Name }}" />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="tags">Tag</label>
-                                    <input type="text" id="tags" name="tags" class="form-control" placeholder="Masukkan nama project">
-                                </div>
-                                <div class="form-group">
-                                    <label>Waktu Mulai</label>
-                                    <input type="date" name="startProjectT" class="form-control datepicker" value="{{ $func->start_project_t }}" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Batas Waktu</label>
-                                    <input type="date" name="deadlineProjectT" class="form-control datepicker" value="{{ $func->deadline_project_t }}" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Waktu Selesai</label>
-                                    <input type="date" name="endProjectT" class="form-control datepicker" value="{{ $func->end_project_t }}" required />
+                                <div class="form-group row">
+                                    <label for="funcGroup" class="col-sm-2 col-form-label">function Group</label>
+                                    <div class="col-sm-7">
+                                        <select id="funcGroup" name="funcGroup" class="form-control">
+                                            <option value="">-- Choose Group --</option>
+                                            <option value="Create">Create</option>
+                                            <option value="Read">Read</option>
+                                            <option value="Update">Update</option>
+                                            <option value="Delete">Delete</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="status">Status</label>
-                                    <select id="status" name="status" class="form-control">
-                                        <option value="">- Pilih Status</option>
-                                        <option value="3">Selesai</option>
-                                        <option value="2">Sedang Dikerjakan</option>
-                                        <option value="1">Menunggu</option>
-                                    </select>
+                                <div class="form-group row">
+                                    <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="FEDuration" id="FEDuration" class="form-control" value="{{ $func->function_FE_Duration }}" />
+                                    </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="FECost" class="col-sm-2 col-form-label">Front-End Cost</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="FECost" id="FECost" class="form-control" value="{{ $func->function_FE_Cost }}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="FEPrice" class="col-sm-2 col-form-label">Front-End Price</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="FEPrice" id="FEPrice" class="form-control" value="{{ $func->function_FE_Price }}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="BEDuration" class="col-sm-2 col-form-label">Back-End Duration</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="BEDuration" id="BEDuration" class="form-control" value="{{ $func->function_BE_Duration }}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="BECost" class="col-sm-2 col-form-label">Back-End Cost</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="BECost" id="BECost" class="form-control" value="{{ $func->function_BE_Cost }}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="BEPrice" class="col-sm-2 col-form-label">Back-End Price</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="BEPrice" id="BEPrice" class="form-control" value="{{ $func->function_BE_Price }}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="FSDuration" class="col-sm-2 col-form-label">Full-Stack Duration</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="FSDuration" id="FSDuration" class="form-control" value="{{ $func->function_FS_Duration }}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="FSCost" class="col-sm-2 col-form-label">Full-Stack Cost</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="FSCost" id="FSCost" class="form-control" value="{{ $func->function_FS_Cost }}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="FSPrice" class="col-sm-2 col-form-label">Full-Stack Price</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" name="FSPrice" id="FSPrice" class="form-control" value="{{ $func->function_FS_Price }}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="funcNotes" class="col-sm-2 col-form-label">Function Notes</label>
+                                    <div class="col-sm-7">
+                                        <textarea name="funcNotes" id="funcNotes" class="form-control">{{ $func->function_FE_Duration }}</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="funcStatus" class="col-sm-2 col-form-label">Status</label>
+                                    <div class="col-sm-7">
+                                        <select id="funcStatus" name="funcStatus" class="form-control">
+                                            <option value="">-- Choose Status --</option>
+                                            <option value="1">Menunggu</option>
+                                            <option value="2">Sedang Dikerjakan</option>
+                                            <option value="3">Selesai</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="form-group float-right">
-                                    <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
+                                    <a href="{{ url('functions') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
                                     <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Save</button>
                                 </div>
                             </div>
+
                         </form>
                     </div>
                     <div class="simple-footer">
