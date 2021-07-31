@@ -23,54 +23,75 @@
                                 @csrf
                                 <div class="card-body">
                                     <div class="form-group row">
-                                        <label for="appname" class="col-sm-2 col-form-label">App Name</label>
+                                        <label for="appname" class="col-sm-2 col-form-label">Name Modul</label>
                                         <div class="col-sm-7">
-                                            <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project">
+                                            <input type="text" id="appName" name="appModul" class="form-control" placeholder="Masukkan nama modul">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="category" class="col-sm-2 col-form-label">Category</label>
+                                        <label for="appname" class="col-sm-2 col-form-label">Input Function</label>
                                         <div class="col-sm-7">
-                                            <select id="category" name="category" class="form-control">
-                                                <option value="">- Pilih Kateg</option>
-                                                <option value="Akutansi">Akutansi</option>
-                                                <option value="Administrasi">Administrasi</option>
-                                            </select>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="cari nama function">
+                                                <button class="btn btn-outline-primary" type="button"><i class="fas fa-search" style="font-size: 20px"></i></button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="tags" class="col-sm-2 col-form-label">Tag</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" id="tags" name="tags" class="form-control" placeholder="Masukkan tags">
+                                        <div class="col-sm-7 offset-2">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" value="">
+                                                <button class="btn btn-outline-primary" type="button"><i class="fas fa-plus" style="font-size: 20px"></i></button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="startTime" class="col-sm-2 col-form-label">Start Time</label>
-                                        <div class="col-sm-7">
-                                            <input type="date" name="startProjectT" class="form-control datepicker" required />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="deadline" class="col-sm-2 col-form-label">Deadline</label>
-                                        <div class="col-sm-7">
-                                            <input type="date" name="deadlineProjectT" class="form-control datepicker" required />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="finished" class="col-sm-2 col-form-label">Finished</label>
-                                        <div class="col-sm-7">
-                                            <input type="date" name="endProjectT" class="form-control datepicker" required />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="status" class="col-sm-2 col-form-label">Status</label>
-                                        <div class="col-sm-7">
-                                            <select id="status" name="status" class="form-control">
-                                                <option value="">- Pilih Status</option>
-                                                <option value="3">Selesai</option>
-                                                <option value="2">Sedang Dikerjakan</option>
-                                                <option value="1">Menunggu</option>
-                                            </select>
+                                        <div class="col-sm-7 offset-2">  
+                                            <div class="section-title">Data Function</div>
+                                            <table class="table table-bordered text-center">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">No</th>
+                                                        <th scope="col">Function Name</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>fungsi a</td>
+                                                        <td>
+                                                            <form action="" method="post">
+                                                              <div class="btn-group" role="group" aria-label="Basic example">
+                                                                <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt" style="font-size: 20px"></i></a>
+                                                              </div>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>fungsi a</td>
+                                                        <td>
+                                                            <form action="" method="post">
+                                                              <div class="btn-group" role="group" aria-label="Basic example">
+                                                                <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt" style="font-size: 20px"></i></a>
+                                                              </div>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>fungsi a</td>
+                                                        <td>
+                                                            <form action="" method="post">
+                                                              <div class="btn-group" role="group" aria-label="Basic example">
+                                                                <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt" style="font-size: 20px"></i></a>
+                                                              </div>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -88,7 +109,8 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div>                 
+                                        
 @endsection
   
 
