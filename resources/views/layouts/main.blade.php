@@ -178,7 +178,7 @@
     </script>     --}}
     <script src="https://demo.getstisla.com/assets/modules/prism/prism.js"></script>
     <script src="{{ asset ('js/page/bootstrap-modal.js')}}"></script>
-        <!-- Template JS File -->
+    <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
 </body>
