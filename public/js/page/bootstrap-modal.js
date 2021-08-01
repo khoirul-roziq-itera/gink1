@@ -1,5 +1,7 @@
 "use strict";
 
+$("#modalFE .close").click(function(){$("#modalFE").hide()}); 
+
 $("#modal-1").fireModal({body: 'Modal body text goes here.'});
 
 $("#modal-2").fireModal({body: 'Modal body text goes here.', center: true});

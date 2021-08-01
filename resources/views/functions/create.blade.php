@@ -48,6 +48,29 @@
                                     </div>
                                 </div>
 
+
+                                <div class="form-group row">
+                                    <label for="" class="col-sm-2 col-form-label">Pilih Form Input</label>
+                                    <div class="col-sm-7">
+                                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" >
+                                            <div class="btn-group me-2" role="group" aria-label="First group" style="padding-right:3px">
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFE">
+                                                    Front-End
+                                                </button>                                          
+                                            </div>
+                                            <div class="btn-group me-2" role="group" aria-label="Second group" style="padding-right:3px">
+                                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalBE">
+                                                    Back-End
+                                                </button>
+                                            </div>
+                                            <div class="btn-group me-2" role="group" aria-label="Third group">
+                                                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalFS">
+                                                      Full-Stack
+                                                </button>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
                                     <div class="col-sm-7">
@@ -126,7 +149,7 @@
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
                                             <a href="{{ url('functions') }}"><button type="button" class="btn btn-danger btn-lg">Cancel</button></a>
-                                            <button type="submit" onclick="sweet()" class="btn btn-success btn-lg" id="swal-2">Submit</button>
+                                            <button type="submit" onclick="sweet()" class="btn btn-primary btn-lg" id="swal-2">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -139,3 +162,163 @@
     </section>
 </div>
 @endsection
+
+
+<!-- Modal FE -->
+<div class="modal fade" id="modalFE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Front-End Function</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">        
+        <form>
+            <div class="form-group">
+              <label>Front-End Duration</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                </div>
+                <input type="text" name="FEDuration" id="FEDuration" class="form-control" placeholder="Masukkan jumlah hari" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Front-End Cost</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-money-bill-wave"></i>
+                  </div>
+                </div>
+                <input type="text" name="FEPrice" id="FEPrice" class="form-control" placeholder="Masukkan biaya Rp. " required />
+              </div>
+            </div>
+            <div class="form-group">
+                <label>Front-End Price</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                  </div>
+                  <input type="text" name="FEPrice" id="FEPrice" class="form-control" placeholder="Masukkan harga Rp. "  required />
+                </div>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal BE -->
+<div class="modal fade" id="modalBE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Back-End Function</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">        
+        <form>
+            <div class="form-group">
+              <label>Back-End Duration</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                </div>
+                <input type="text" name="BEDuration" id="BEDuration" class="form-control" placeholder="Masukkan jumlah hari" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Back-End Cost</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-money-bill-wave"></i>
+                  </div>
+                </div>
+                <input type="text" name="FSCost" id="FSCost" class="form-control"  placeholder="Masukkan harga Rp. " required />
+              </div>
+            </div>
+            <div class="form-group">
+                <label>Back-End Price</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                  </div>
+                  <input type="text" name="FSPrice" id="FSPrice" class="form-control"   placeholder="Masukkan harga Rp. " required />
+                </div>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal FS -->
+<div class="modal fade" id="modalFS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Full-Stack Function</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">        
+        <form>
+            <div class="form-group">
+              <label>Full-Stack Duration</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                </div>
+                <input type="text" name="FSDuration" id="FSDuration" class="form-control" placeholder="Masukkan jumlah hari" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Full-Stack Cost</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-money-bill-wave"></i>
+                  </div>
+                </div>
+                <input type="text" name="FSPrice" id="FSPrice" class="form-control" placeholder="Masukkan biaya Rp. " required />
+              </div>
+            </div>
+            <div class="form-group">
+                <label>Full-Stack Price</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                  </div>
+                  <input type="text" name="FSPrice" id="FSPrice" class="form-control" placeholder="Masukkan harga Rp. "  required />
+                </div>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

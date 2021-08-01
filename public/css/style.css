@@ -1322,7 +1322,7 @@ table tr:hover .table-links {
 }
 
 .modal-body {
-    padding-top: 15px;
+    padding-top: 2em;
 }
 
 .modal-footer {
@@ -1331,8 +1331,8 @@ table tr:hover .table-links {
 }
 
 .modal-header {
-    border-bottom: none;
-    padding-bottom: 5px;
+    border-bottom: 1px solid #e3eaef;
+    padding-bottom: 10px;
 }
 .modal-header h5 {
     font-size: 18px;
