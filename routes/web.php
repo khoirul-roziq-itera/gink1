@@ -62,7 +62,7 @@ Route::get('editModul', function () {
 
 // menu function
 Route::get('addFunction', function () {
-    return view('/functions/create');
+    return view('/functions/create1');
 });
 Route::get('listFunction', function () {
     return view('/functions/index');

@@ -12,7 +12,6 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/prism/prism.css">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -24,7 +23,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" integrity="sha512-KXkS7cFeWpYwcoXxyfOumLyRGXMp7BTMTjwrgjMg0+hls4thG2JGzRgQtRfnAuKTn2KWTDZX4UdPg+xTs8k80Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
+</head>
 <body>
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
@@ -113,17 +112,8 @@
                                     <li><a class="nav-link" href="{{ url('categories/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
-                            <!-- <li>
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-signature"></i><span style="font-weight:bold; font-size:19px">Laporan</span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="nav-link" href="addCateg" style="font-weight:bold; font-size:15px;">Project</a></li>
-                                    <li><a class="nav-link" href="listCateg" style="font-weight:bold; font-size:15px">Function</a></li>
-                                    <li><a class="nav-link" href="listCateg" style="font-weight:bold; font-size:15px">Modul</a></li>
-                                </ul>
-                            </li> -->
                         </ul>
                     </div>
-
                 </aside>
             </div>
 
@@ -166,18 +156,8 @@
     <script src="{{asset ('js/page/modules-datatables.js')}}"></script>
     <script src="{{asset ('js/page/modules-calendar.js')}}"></script>
 
-    {{-- <script type="text/javascript">
-        $(document).ready(function() {
-            var multipleCancelButton = new Choices('#pilih-modul', {
-                removeItemButton: true,
-                maxItemCount: 10,
-                searchResultLimit: 10,
-                renderChoiceLimit: 10
-            });
-        });
-    </script>     --}}
-    <script src="https://demo.getstisla.com/assets/modules/prism/prism.js"></script>
-    <script src="{{ asset ('js/page/bootstrap-modal.js')}}"></script>
+
+   
         <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
