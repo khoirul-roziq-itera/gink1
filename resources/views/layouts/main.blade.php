@@ -156,9 +156,25 @@
     <script src="{{asset ('js/page/modules-datatables.js')}}"></script>
     <script src="{{asset ('js/page/modules-calendar.js')}}"></script>
 
+<<<<<<< HEAD
 
    
         <!-- Template JS File -->
+=======
+    {{-- <script type="text/javascript">
+        $(document).ready(function() {
+            var multipleCancelButton = new Choices('#pilih-modul', {
+                removeItemButton: true,
+                maxItemCount: 10,
+                searchResultLimit: 10,
+                renderChoiceLimit: 10
+            });
+        });
+    </script>     --}}
+    <script src="https://demo.getstisla.com/assets/modules/prism/prism.js"></script>
+    <script src="{{ asset ('js/page/bootstrap-modal.js')}}"></script>
+    <!-- Template JS File -->
+>>>>>>> 714cb9982768b0c49f7095ed048076d9d7ac0616
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
 </body>
