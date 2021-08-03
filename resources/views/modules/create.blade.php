@@ -97,8 +97,8 @@
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
-                                            <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary">Cancel</button></a>
-                                            <button type="submit" onclick="sweet()" class="btn btn-danger" id="swal-2">Submit</button>
+                                            <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
+                                            <button type="submit" onclick="sweet()" class="btn btn-primary" id="swal-2">Submit</button>
                                         </div>
                                     </div>
                                 </div>

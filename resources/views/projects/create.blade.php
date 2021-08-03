@@ -41,7 +41,14 @@
                                 <div class="form-group row">
                                     <label for="tags" class="col-sm-2 col-form-label">Tag</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="tags" name="tags" class="form-control" placeholder="Masukkan tags">
+                                        <select id="choices-tags" name="tags" class="form-control" placeholder="Select tags" multiple>
+                                            <option value="HTML">HTML</option>
+                                            <option value="Jquery">Jquery</option>
+                                            <option value="CSS">CSS</option>
+                                            <option value="Bootstrap 3">Bootstrap 3</option>
+                                            <option value="Bootstrap 4">Bootstrap 4</option>
+                                            <option value="Java">Java</option>
+                                        </select> 
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -76,8 +83,8 @@
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
-                                            <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                            <button type="submit" onclick="sweet()" class="btn btn-danger btn-lg" id="swal-2">Submit</button>
+                                            <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
+                                            <button type="submit" onclick="sweet()" class="btn btn-primary" id="swal1">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -89,4 +96,7 @@
         </div>
     </section>
 </div>
+
+
+
 @endsection

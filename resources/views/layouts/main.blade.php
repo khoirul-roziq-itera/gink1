@@ -12,18 +12,25 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/components.css') }}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="{{ asset ('DataTables/DataTables-1.10.25/css/dataTables.bootstrap4.min.css')}}" />
 
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" integrity="sha512-KXkS7cFeWpYwcoXxyfOumLyRGXMp7BTMTjwrgjMg0+hls4thG2JGzRgQtRfnAuKTn2KWTDZX4UdPg+xTs8k80Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
+     <!-- Template CSS -->
+     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/components.css') }}">
 
 </head>
+
 <body>
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
@@ -129,7 +136,6 @@
         </div>
     </div>
 
-
     <!-- General JS Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -150,33 +156,27 @@
     {{-- calender --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha512-o0rWIsZigOfRAgBxl4puyd0t6YKzeAw9em/29Ag7lhCQfaaua/mDwnpE2PVzwqJ08N7/wqrgdjc2E0mwdSY2Tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{-- modul sweetalert --}}
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 
 
     <script src="{{asset ('js/page/modules-datatables.js')}}"></script>
     <script src="{{asset ('js/page/modules-calendar.js')}}"></script>
 
-<<<<<<< HEAD
-
    
-        <!-- Template JS File -->
-=======
-    {{-- <script type="text/javascript">
-        $(document).ready(function() {
-            var multipleCancelButton = new Choices('#pilih-modul', {
-                removeItemButton: true,
-                maxItemCount: 10,
-                searchResultLimit: 10,
-                renderChoiceLimit: 10
-            });
-        });
-    </script>     --}}
     <script src="https://demo.getstisla.com/assets/modules/prism/prism.js"></script>
-    <script src="{{ asset ('js/page/bootstrap-modal.js')}}"></script>
+   
     <!-- Template JS File -->
->>>>>>> 714cb9982768b0c49f7095ed048076d9d7ac0616
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+
+    {{-- Script form multiple select --}}
+    <script>
+        $(document).ready(function(){
+            var multipleCancelButton = new Choices('#choices-tags', {
+                removeItemButton: true,
+                });
+        });
+    </script>
 </body>
 
 </html>
