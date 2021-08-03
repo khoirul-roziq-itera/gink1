@@ -30,7 +30,6 @@
                   <div class="col-sm-2 " style="padding-top:4px">
                     <button class="btn btn-success"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
                   </div>
-
                 </div>
               </form>
             </div>
@@ -52,7 +51,7 @@
                           <th>Actions</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      {{-- <tbody>
                         @foreach($tags as $tag => $result)
                         <tr class="text-center">
                           <td>{{ $tag + 1 }}</td>
@@ -71,10 +70,10 @@
                           </td>
                         </tr>
                         @endforeach
-                      </tbody>
+                      </tbody> --}}
                     </table>
                   </div>
-                </div>
+                  </div>
               </div>
             </div>
           </div>

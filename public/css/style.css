@@ -817,11 +817,12 @@ select.form-control:not([size]):not([multiple]) {
     -ms-grid-row-align: center;
     align-self: center;
     width: 100%;
-    min-height: 70px;
+    min-height: 50px;
     padding: 1em;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #e3eaef;
+    background-color: #fd5959;
 }
 .card .card-header .btn {
     margin-top: 1px;
@@ -844,9 +845,8 @@ select.form-control:not([size]):not([multiple]) {
 .card .card-header h4 {
     font-size: 20px;
     line-height: 28px;
-    color: #292727;
+    color: #fff;
     padding-right: 10px;
-    margin-bottom: 0;
     font-weight: 15px;
 }
 .card .card-header h4 + .card-header-action,
