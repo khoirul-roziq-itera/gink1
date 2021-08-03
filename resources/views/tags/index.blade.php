@@ -51,7 +51,7 @@
                           <th>Actions</th>
                         </tr>
                       </thead>
-                      {{-- <tbody>
+                      <tbody>
                         @foreach($tags as $tag => $result)
                         <tr class="text-center">
                           <td>{{ $tag + 1 }}</td>
@@ -70,10 +70,10 @@
                           </td>
                         </tr>
                         @endforeach
-                      </tbody> --}}
+                      </tbody>
                     </table>
                   </div>
-                  </div>
+                </div>
               </div>
             </div>
           </div>

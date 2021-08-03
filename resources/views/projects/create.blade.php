@@ -31,42 +31,58 @@
                                 <div class="form-group row">
                                     <label for="category" class="col-sm-2 col-form-label">Category</label>
                                     <div class="col-sm-7">
-                                        <select id="category" name="category" class="form-control">
-                                            <option value="">- Pilih Kateg</option>
-                                            <option value="Akutansi">Akutansi</option>
-                                            <option value="Administrasi">Administrasi</option>
+                                        <select id="category" name="category" class="form-control" placeholder="Select category">
+                                            @foreach( $categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                            @endforeach
+
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="tags" class="col-sm-2 col-form-label">Tag</label>
                                     <div class="col-sm-7">
-                                        <select id="choices-tags" name="tags" class="form-control" placeholder="Select tags" multiple>
-                                            <option value="HTML">HTML</option>
-                                            <option value="Jquery">Jquery</option>
-                                            <option value="CSS">CSS</option>
-                                            <option value="Bootstrap 3">Bootstrap 3</option>
-                                            <option value="Bootstrap 4">Bootstrap 4</option>
-                                            <option value="Java">Java</option>
-                                        </select> 
+                                        <select id="choices-tags" name="tags[]" class="form-control" placeholder="Select tags" multiple>
+                                            @foreach ( $tags as $tag)
+                                            <option value="{{ $tag->id }}">{{$tag->tag_name}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="startTime" class="col-sm-2 col-form-label">Start Time</label>
+                                    <label for="startProjectT" class="col-sm-2 col-form-label">Start Time</label>
                                     <div class="col-sm-7">
-                                        <input type="date" name="startProjectT" class="form-control datepicker" required />
+                                        <input type="date" name="startProjectT" class="form-control datepicker" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="deadline" class="col-sm-2 col-form-label">Deadline</label>
+                                    <label for="deadlineProjectT" class="col-sm-2 col-form-label">Deadline</label>
                                     <div class="col-sm-7">
-                                        <input type="date" name="deadlineProjectT" class="form-control datepicker" required />
+                                        <input type="date" name="deadlineProjectT" class="form-control datepicker" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="finished" class="col-sm-2 col-form-label">Finished</label>
+                                    <label for="endProjectT" class="col-sm-2 col-form-label">Finished</label>
                                     <div class="col-sm-7">
-                                        <input type="date" name="endProjectT" class="form-control datepicker" required />
+                                        <input type="date" name="endProjectT" class="form-control datepicker" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="costTotal" class="col-sm-2 col-form-label">Cost Total</label>
+                                    <div class="col-sm-7">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Rp. </span>
+                                            <input type="text" name="costTotal" id="costTotal" class="form-control" placeholder="Masukkan biaya" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="priceTotal" class="col-sm-2 col-form-label">PriceTotal</label>
+                                    <div class="col-sm-7">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Rp. </span>
+                                            <input type="text" name="priceTotal" id="priceTotal" class="form-control" placeholder="Masukkan biaya" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -78,6 +94,12 @@
                                             <option value="2">Sedang Dikerjakan</option>
                                             <option value="1">Menunggu</option>
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+                                    <div class="col-sm-7">
+                                        <textarea name="notes" id="notes" class="form-control"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">

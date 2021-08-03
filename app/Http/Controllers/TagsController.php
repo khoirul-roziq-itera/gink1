@@ -86,11 +86,29 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tag = Tag::findorfail($id);
+        $tag->delete();
+
+        return redirect('tags')->with('success', 'Tag Archived Successfully!');
     }
 
     public function archive()
     {
-        return view('tags.archive');
+        $tags = Tag::onlyTrashed()->get();
+        return view('tags.archive', compact('tags'));
+    }
+
+    public function restore($id)
+    {
+        Tag::withTrashed()->where('id', $id)->first()->restore();
+
+        return redirect()->back()->with('status', 'Tag Successfully Restored!');
+    }
+
+    public function kill($id)
+    {
+        Tag::withTrashed()->where('id', $id)->first()->forceDelete();
+
+        return redirect()->back()->with('success', 'Tag Deleted Successfully!');
     }
 }

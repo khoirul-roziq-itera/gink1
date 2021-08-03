@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddNotesToApplications extends Migration
+class CreateApplicationTagTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddNotesToApplications extends Migration
      */
     public function up()
     {
-        Schema::table('applications', function (Blueprint $table) {
-            $table->text('notes');
+        Schema::create('application_tag', function (Blueprint $table) {
+            $table->id();
+            $table->integer('aplications_id');
+            $table->integer('tags_id');
         });
     }
 
@@ -25,8 +27,6 @@ class AddNotesToApplications extends Migration
      */
     public function down()
     {
-        Schema::table('applications', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('aplications_tags');
     }
 }

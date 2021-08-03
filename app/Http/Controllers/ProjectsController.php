@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\Application;
-use App\View\Components\AppLayout;
+use App\Models\Category;
+use App\Models\Tag;
 
 class ProjectsController extends Controller
 {
@@ -16,7 +18,8 @@ class ProjectsController extends Controller
     public function index()
     {
         $apps = Application::all();
-        return view('projects.index', compact('apps'));
+
+        return view('projects.index', compact('apps',));
     }
 
     /**
@@ -26,7 +29,9 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        $categories = Category::all();
+        $tags = Tag::all();
+        return view('projects.create', compact('categories', 'tags'));
     }
 
     /**
@@ -37,15 +42,19 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        Application::create([
+        $app = Application::create([
             'app_name' => $request->appName,
             'category' => $request->category,
-            'tags' => $request->tags,
             'status' => $request->status,
             'start_project_t' => $request->startProjectT,
             'end_project_t' => $request->endProjectT,
-            'deadline_project_t' => $request->deadlineProjectT
+            'deadline_project_t' => $request->deadlineProjectT,
+            'cost_total' => $request->costTotal,
+            'price_total' => $request->priceTotal,
+            'notes' => $request->notes
         ]);
+
+        $app->tags()->attach($request->tags);
 
         return redirect('projects')->with('success', 'Project Successfully Created!');
     }

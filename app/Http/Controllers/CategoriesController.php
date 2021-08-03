@@ -85,11 +85,29 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $categorie = Category::findorfail($id);
+        $categorie->delete();
+
+        return redirect('categories')->with('success', 'Category Archived Successfully!');
     }
 
     public function archive()
     {
-        return view('categories.archive');
+        $categories = Category::onlyTrashed()->get();
+        return view('categories.archive', compact('categories'));
+    }
+
+    public function restore($id)
+    {
+        Category::withTrashed()->where('id', $id)->first()->restore();
+
+        return redirect()->back()->with('status', 'Category Successfully Restored!');
+    }
+
+    public function kill($id)
+    {
+        Category::withTrashed()->where('id', $id)->first()->forceDelete();
+
+        return redirect()->back()->with('success', 'Category Deleted Successfully!');
     }
 }

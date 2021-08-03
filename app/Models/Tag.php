@@ -12,4 +12,9 @@ class Tag extends Model
     use SoftDeletes;
 
     protected $fillable = ['tag_name'];
+
+    public function aplication()
+    {
+        return $this->belongsToMany('App\Model\Application');
+    }
 }

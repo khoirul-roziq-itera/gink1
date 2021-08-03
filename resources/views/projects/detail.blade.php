@@ -36,7 +36,11 @@
               <div class="form-group row">
                 <label for="appname" class="col-sm-2 col-form-label">Tags</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="-">
+                  <ul>
+                    @foreach( $app->tags as $tag )
+                    <li>{{$tag->tag_name }}</li>
+                    @endforeach
+                  </ul>
                 </div>
               </div>
               <div class="form-group row">
