@@ -822,7 +822,6 @@ select.form-control:not([size]):not([multiple]) {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #e3eaef;
-    background-color: #fd5959;
 }
 .card .card-header .btn {
     margin-top: 1px;
@@ -845,7 +844,7 @@ select.form-control:not([size]):not([multiple]) {
 .card .card-header h4 {
     font-size: 20px;
     line-height: 28px;
-    color: #fff;
+    color: #6c757d;
     padding-right: 10px;
     font-weight: 15px;
 }
@@ -3225,7 +3224,7 @@ pre {
     display: inline-block;
     font-size: 18px;
     margin-top: 3px;
-    color: #34395e;
+    color: #6c757d;
 }
 .section .section-header .section-header-back {
     margin-right: 15px;

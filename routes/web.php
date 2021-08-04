@@ -82,7 +82,7 @@ Route::get('archiveTags', function () {
     return view('/tags/archive');
 });
 Route::get('listTags', function () {
-    return view('/tags/index');
+    return view('/tags/index11');
 });
 
 //Category

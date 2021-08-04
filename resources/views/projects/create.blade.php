@@ -31,11 +31,13 @@
                                 <div class="form-group row">
                                     <label for="category" class="col-sm-2 col-form-label">Category</label>
                                     <div class="col-sm-7">
-                                        <select id="category" name="category" class="form-control" placeholder="Select category">
-                                            @foreach( $categories as $category)
+                                        <select id="choices-categories" name="category[]" class="form-control" placeholder="Select categories" multiple>
+                                            {{-- @foreach( $categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->category_name }}</option>
-                                            @endforeach
-
+                                            @endforeach --}}
+                                            <option value="1">a</option>
+                                            <option value="1">a</option>
+                                            <option value="1">a</option>
                                         </select>
                                     </div>
                                 </div>

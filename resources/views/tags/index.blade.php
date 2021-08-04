@@ -17,7 +17,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Add Tag</h4>
+               <h4>Add Tag</h4>
             </div>
             <div class="card-body">
               <form action="{{ route('tags.store') }}" method="POST">
@@ -34,7 +34,6 @@
               </form>
             </div>
           </div>
-
           <div class="row">
             <div class="col-12">
               <div class="card">
@@ -43,11 +42,12 @@
                 </div>
                 <div class="card-body p-0">
                   <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
-                    <table id="table-1" class="table table-hover table-bordered border-primary">
+                    <table id="table-1" class="table table-hover table-bordered">
                       <thead class="text-center">
                         <tr>
                           <th>Nomor</th>
                           <th>Tag Name</th>
+                          <th>Actions</th>
                           <th>Actions</th>
                         </tr>
                       </thead>

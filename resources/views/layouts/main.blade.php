@@ -161,18 +161,28 @@
 
     <script src="{{asset ('js/page/modules-datatables.js')}}"></script>
     <script src="{{asset ('js/page/modules-calendar.js')}}"></script>
-
-   
+    
+    
     <script src="https://demo.getstisla.com/assets/modules/prism/prism.js"></script>
+    
    
+
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
 
-    {{-- Script form multiple select --}}
+    {{-- Script form multiple select tags--}}
     <script>
         $(document).ready(function(){
             var multipleCancelButton = new Choices('#choices-tags', {
+                removeItemButton: true,
+                });
+        });
+    </script>
+    {{-- Script form multiple select categories--}}
+    <script>
+        $(document).ready(function(){
+            var multipleCancelButton = new Choices('#choices-categories', {
                 removeItemButton: true,
                 });
         });
