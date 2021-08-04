@@ -10,4 +10,9 @@ class Module extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    public function funcs()
+    {
+        return $this->belongsToMany('App\Model\Func');
+    }
 }

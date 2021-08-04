@@ -29,4 +29,9 @@ class Func extends Model
         'function_Notes',
         'function_Status'
     ];
+
+    public function modules()
+    {
+        return $this->belongsToMany('App\Model\Module');
+    }
 }

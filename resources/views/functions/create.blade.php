@@ -47,7 +47,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <!-- <div class="form-group row">
                                     <div class="col-sm-7 offset-4">
                                         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                                             <div class="btn-group me-2" role="group" aria-label="First group">
@@ -61,11 +61,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
                                     <div class="col-sm-7">
-                                        <input type="text" name="FEDuration" id="FEDuration" class="form-control" placeholder="Masukkan jumlah hari" disabled="disabled" />
+                                        <input type="text" name="FEDuration" id="FEDuration" class="form-control" placeholder="Masukkan jumlah hari" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -73,7 +73,7 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FECost" id="FECost" class="form-control" placeholder="Masukkan biaya" disabled="disabled" />
+                                            <input type="text" name="FECost" id="FECost" class="form-control" placeholder="Masukkan biaya" />
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
 
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FEPrice" id="FEPrice" class="form-control" placeholder="Masukkan harga" disabled="disabled" />
+                                            <input type="text" name="FEPrice" id="FEPrice" class="form-control" placeholder="Masukkan harga" />
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                 <div class="form-group row">
                                     <label for="BEDuration" class="col-sm-2 col-form-label">Back-End Duration</label>
                                     <div class="col-sm-7">
-                                        <input type="text" name="BEDuration" id="BEDuration" class="form-control" placeholder="Masukkan jumlah hari" disabled="disabled" />
+                                        <input type="text" name="BEDuration" id="BEDuration" class="form-control" placeholder="Masukkan jumlah hari" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -99,7 +99,7 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="BECost" id="BECost" class="form-control" placeholder="Masukkan biaya" disabled="disabled" />
+                                            <input type="text" name="BECost" id="BECost" class="form-control" placeholder="Masukkan biaya" />
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="BEPrice" id="BEPrice" class="form-control" placeholder="Masukkan harga" disabled="disabled" />
+                                            <input type="text" name="BEPrice" id="BEPrice" class="form-control" placeholder="Masukkan harga" />
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +116,7 @@
                                 <div class="form-group row">
                                     <label for="FSDuration" class="col-sm-2 col-form-label">Full-Stack Duration</label>
                                     <div class="col-sm-7">
-                                        <input type="text" name="FSDuration" id="FSDuration" class="form-control" placeholder="Masukkan jumlah hari" disabled="disabled" />
+                                        <input type="text" name="FSDuration" id="FSDuration" class="form-control" placeholder="Masukkan jumlah hari" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -124,7 +124,7 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FSCost" id="FSCost" class="form-control" placeholder="Masukkan biaya" disabled="disabled" />
+                                            <input type="text" name="FSCost" id="FSCost" class="form-control" placeholder="Masukkan biaya" />
                                         </div>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FSPrice" id="FSPrice" class="form-control" placeholder="Masukkan harga" disabled="disabled" />
+                                            <input type="text" name="FSPrice" id="FSPrice" class="form-control" placeholder="Masukkan harga" />
                                         </div>
                                     </div>
                                 </div>

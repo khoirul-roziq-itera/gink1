@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApplicationTagTable extends Migration
+class CreateModuleFunc extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateApplicationTagTable extends Migration
      */
     public function up()
     {
-        Schema::create('application_tag', function (Blueprint $table) {
+        Schema::create('module_func', function (Blueprint $table) {
             $table->id();
-            $table->integer('application_id');
-            $table->integer('tag_id');
+            $table->integer('module_id');
+            $table->integer('func_id');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +28,6 @@ class CreateApplicationTagTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aplications_tags');
+        Schema::dropIfExists('module_func');
     }
 }

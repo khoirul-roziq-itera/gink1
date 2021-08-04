@@ -29,23 +29,28 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="tags" class="col-sm-2 col-form-label">Input Functions</label>
+                                    <div class="col-sm-7">
+                                        <select id="choices-tags" name="funcs[]" class="form-control" placeholder="Select Functions" multiple>
+                                            @foreach ( $funcs as $func)
+                                            <option value="{{ $func->id }}">{{ $func->function_Name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group row">
                                     <label for="appname" class="col-sm-2 col-form-label">Input Function</label>
                                     <div class="col-sm-7">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="cari nama function">
-                                            <button class="btn btn-outline-primary" type="button"><i class="fas fa-search" style="font-size: 20px"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-7 offset-2">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" value="">
+                                            <input type="text" class="form-control" id="choices-tags" name="funcs" placeholder="choose functions">
+                                            @foreach ( $funcs as $func)
+                                            <option value="{{ $func->id }}">{{ $func->function_Name }}</option>
+                                            @endforeach
                                             <button class="btn btn-outline-primary" type="button"><i class="fas fa-plus" style="font-size: 20px"></i></button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group row">
+                                </div> -->
+                                <!-- <div class="form-group row">
                                     <div class="col-sm-7 offset-2">
                                         <div class="section-title">Data Function</div>
                                         <table class="table table-bordered text-center">
@@ -93,7 +98,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">

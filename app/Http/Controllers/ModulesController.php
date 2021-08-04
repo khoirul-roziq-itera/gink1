@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Module;
+use App\Models\Func;
 
 class ModulesController extends Controller
 {
@@ -25,7 +26,8 @@ class ModulesController extends Controller
      */
     public function create()
     {
-        return view('modules.create');
+        $funcs = Func::all();
+        return view('modules.create', compact('funcs'));
     }
 
     /**
