@@ -12,7 +12,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
     <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
 
@@ -22,12 +22,12 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" integrity="sha512-KXkS7cFeWpYwcoXxyfOumLyRGXMp7BTMTjwrgjMg0+hls4thG2JGzRgQtRfnAuKTn2KWTDZX4UdPg+xTs8k80Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
-     <!-- Template CSS -->
-     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-     <link rel="stylesheet" href="{{ asset('css/components.css') }}">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components.css') }}">
 
 </head>
 
@@ -161,11 +161,11 @@
 
     <script src="{{asset ('js/page/modules-datatables.js')}}"></script>
     <script src="{{asset ('js/page/modules-calendar.js')}}"></script>
-    
-    
+
+
     <script src="https://demo.getstisla.com/assets/modules/prism/prism.js"></script>
-    
-   
+
+
 
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
@@ -173,18 +173,27 @@
 
     {{-- Script form multiple select tags--}}
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             var multipleCancelButton = new Choices('#choices-tags', {
                 removeItemButton: true,
-                });
+            });
         });
     </script>
-    {{-- Script form multiple select categories--}}
+    {{-- Script form select categories--}}
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             var multipleCancelButton = new Choices('#choices-categories', {
                 removeItemButton: true,
-                });
+            });
+        });
+    </script>
+
+    {{-- Script form select function--}}
+    <script>
+        $(document).ready(function() {
+            var multipleCancelButton = new Choices('#choices-functions', {
+                removeItemButton: true,
+            });
         });
     </script>
 </body>
