@@ -31,7 +31,7 @@
                                 <div class="form-group row">
                                     <label for="tags" class="col-sm-2 col-form-label">Input Functions</label>
                                     <div class="col-sm-7">
-                                        <select id="choices-tags" name="funcs[]" class="form-control" placeholder="Select Functions" multiple>
+                                        <select id="choices-functions" name="funcs[]" class="form-control" placeholder="Select Functions" multiple>
                                             @foreach ( $funcs as $func)
                                             <option value="{{ $func->id }}">{{ $func->function_Name }}</option>
                                             @endforeach
