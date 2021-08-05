@@ -121,17 +121,18 @@
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="form-group float-right">
-                                    <a href="{{ url('functions') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                    <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Save</button>
+                                <div class="form-group row">
+                                    <div class="col-sm-7 offset-2">
+                                        <div class="form-group float-right">
+                                            <a href="{{ url('functions') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
+                                            <button type="submit" class="btn btn-primary" id="swal-2">Save changes</button>
+                                        </div>
+                                    </div>
                                 </div>
+                                
                             </div>
 
                         </form>
-                    </div>
-                    <div class="simple-footer">
-                        Copyright &copy; GinkTech 2021
                     </div>
                 </div>
             </div>

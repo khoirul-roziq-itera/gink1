@@ -20,15 +20,15 @@
                <h4>Add Tag</h4>
             </div>
             <div class="card-body">
-              <form action="{{ route('tags.store') }}" method="POST">
+              <form action="{{ route('tags.store') }}" method="POST" id="tag">
                 @csrf
                 <div class="form-group row">
                   <label for="tagName" class="col-sm-2 col-form-label">Tag Name</label>
                   <div class="col-sm-5">
-                    <input type="nama" class="form-control" id="tagName" name="tagName" placeholder="Input tag">
+                    <input type="nama" class="form-control" id="tagName" name="tagName" placeholder="Input tag"/>
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
-                    <button class="btn btn-success"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
+                    <button type="submit" class="btn btn-success" id="swal-3"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
                   </div>
                 </div>
               </form>
@@ -47,7 +47,6 @@
                         <tr>
                           <th>Nomor</th>
                           <th>Tag Name</th>
-                          <th>Actions</th>
                           <th>Actions</th>
                         </tr>
                       </thead>

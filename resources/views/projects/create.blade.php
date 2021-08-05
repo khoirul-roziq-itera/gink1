@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>INPUT DATA</h4>
+                            <h4>Input Data</h4>
                         </div>
                         <form method="POST" action="{{ route('projects.store') }}" id="myForm">
                             @csrf
@@ -32,12 +32,9 @@
                                     <label for="category" class="col-sm-2 col-form-label">Category</label>
                                     <div class="col-sm-7">
                                         <select id="choices-categories" name="category[]" class="form-control" placeholder="Select categories" multiple>
-                                            {{-- @foreach( $categories as $category)
+                                            @foreach( $categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->category_name }}</option>
-                                            @endforeach --}}
-                                            <option value="1">a</option>
-                                            <option value="1">a</option>
-                                            <option value="1">a</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>

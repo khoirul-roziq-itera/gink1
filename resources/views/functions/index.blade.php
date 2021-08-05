@@ -43,7 +43,7 @@
               </div>
 
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
-                <table id="table-1" class="table table-hover table-bordered border-primary">
+                <table id="table-1" class="table table-hover table-bordered">
                   <thead class="text-center">
                     <tr>
                       <th>Nomor</th>
@@ -93,5 +93,5 @@
     </div>
   </section>
 </div>
-
+@include('sweetalert::alert')
 @endsection

@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>INPUT DATA</h4>
+                            <h4>Input Data</h4>
                         </div>
                         <form method="POST" action="{{ route('functions.store') }}" id="myForm">
                             @csrf
@@ -25,13 +25,13 @@
                                 <div class="form-group row">
                                     <label for="funcTitle" class="col-sm-2 col-form-label">Function Title</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control" placeholder="Input Function Title">
+                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control" placeholder="Masukkan judul">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="funcName" class="col-sm-2 col-form-label">Function Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcName" name="funcName" class="form-control" placeholder="Input Function Name">
+                                        <input type="text" id="funcName" name="funcName" class="form-control" placeholder="Masukkan nama">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -158,7 +158,7 @@
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
                                             <a href="{{ url('functions') }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
-                                            <button type="submit" onclick="sweet()" class="btn btn-primary btn" id="swal-2">Submit</button>
+                                            <button type="submit" class="btn btn-primary btn">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -209,5 +209,6 @@
         });
 
     });
+
 </script>
 @endsection

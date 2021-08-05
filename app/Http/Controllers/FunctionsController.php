@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Func;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class FunctionsController extends Controller
 {
@@ -52,7 +54,7 @@ class FunctionsController extends Controller
             'function_Notes' => $request->funcNotes,
             'function_Status' => $request->funcStatus
         ]);
-
+        
         return redirect('functions')->with('success', 'Function Successfully Created!');
     }
 

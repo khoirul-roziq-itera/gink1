@@ -82,8 +82,8 @@
         </div>
       </div>
     </section>
-            <div class="simple-footer">
-              Copyright &copy; GinkTech 2021
+            <div class="simple-footer" style="color:#98a6ad">
+              Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="https://ginktech.net/">GinkTech</a>
             </div>
   </div>
 

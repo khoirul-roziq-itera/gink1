@@ -40,12 +40,7 @@
                                         <label for="name">Name</label>
                                         <input id="name" type="text" class="form-control" name="name" autofocus>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="name">Jabatan</label>
-                                        <input id="name" type="text" class="form-control" name="name" autofocus>
-                                    </div>
-
+                                    
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input id="email" type="email" class="form-control" name="email">
@@ -89,9 +84,9 @@
                                 
                             </div>
                         </div>
-                        <div class="simple-footer">
-                            Copyright &copy; GinkTech 2021
-                        </div>
+                        <div class="simple-footer" style="color:#98a6ad">
+                            Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="https://ginktech.net/">GinkTech</a>
+                          </div>
                     </div>
                 </div>
             </div>

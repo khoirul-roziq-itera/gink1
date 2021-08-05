@@ -60,8 +60,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group float-right">
-                                    <a href="{{ url('projects') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                    <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Save</button>
+                                    <a href="{{ url('projects') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
+                                    <button type="submit" class="btn btn-primary" id="swal-2">Save</button>
                                 </div>
                             </div>
                         </form>

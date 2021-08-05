@@ -18,7 +18,7 @@
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4 style="font-size: 15px">Waiting</h4>
+                  <h4 style="font-size: 20px">Waiting</h4>
                 </div>
                 <div class="card-body" style="font-size: 25pt">
                   10
@@ -33,7 +33,7 @@
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4 style="font-size: 15px">Processed</h4>
+                  <h4 style="font-size: 20px">Processed</h4>
                 </div>
                 <div class="card-body" style="font-size: 25pt">
                   42
@@ -48,7 +48,7 @@
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4 style="font-size: 15px">Completed</h4>
+                  <h4 style="font-size: 20px">Completed</h4>
                 </div>
                 <div class="card-body" style="font-size: 25pt">
                   10
@@ -63,7 +63,7 @@
               </div>
               <div class="card-wrap">
                 <div class="card-header">
-                  <h4 style="font-size: 15px">Total Project</h4>
+                  <h4 style="font-size: 20px">Total Project</h4>
                 </div>
                 <div class="card-body"  style="font-size: 25pt">
                   47
@@ -81,13 +81,13 @@
               <div class="section-body">
                 <div class="row">
                   <div class="col-12">
-                    <div class="card">
+                   
                       <div class="card-body">
                         <div class="fc-overflow">
                           <div id="myEvent"></div>
                         </div>
                       </div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@
               </div>
               <div class="card-body">            
                 <div class="table-responsive">
-                  <table id="table-1" class="table table-hover table-bordered border-primary">
+                  <table id="table-1" class="table table-hover table-bordered">
                     <thead class="text-center">
                       <tr>
                           <th>No</th>

@@ -19,7 +19,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>DATA PROJECT</h4>
+              <h4>Data Project</h4>
             </div>
             <div class="card-body p-0">
               <div class="row">

@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>INPUT DATA</h4>
+                            <h4>Input Data</h4>
                         </div>
                         <form method="POST" action="{{ route('modules.store') }}" id="myForm">
                             @csrf
@@ -43,9 +43,9 @@
                                     <div class="col-sm-7">
                                         <div class="input-group">
                                             <input type="text" class="form-control" id="choices-tags" name="funcs" placeholder="choose functions">
-                                            @foreach ( $funcs as $func)
+                                            {{-- @foreach ( $funcs as $func)
                                             <option value="{{ $func->id }}">{{ $func->function_Name }}</option>
-                                            @endforeach
+                                            @endforeach --}}
                                             <button class="btn btn-outline-primary" type="button"><i class="fas fa-plus" style="font-size: 20px"></i></button>
                                         </div>
                                     </div>
