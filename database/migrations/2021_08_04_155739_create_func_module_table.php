@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModuleFunc extends Migration
+class CreateFuncModuleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateModuleFunc extends Migration
      */
     public function up()
     {
-        Schema::create('module_func', function (Blueprint $table) {
+        Schema::create('func_module', function (Blueprint $table) {
             $table->id();
             $table->integer('module_id');
             $table->integer('func_id');
@@ -28,6 +28,6 @@ class CreateModuleFunc extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('module_func');
+        Schema::dropIfExists('func_module');
     }
 }

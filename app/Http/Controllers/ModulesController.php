@@ -38,7 +38,24 @@ class ModulesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $module = Module::create([
+            'module_Name' => $request->moduleName,
+            'module_FE_Duration' => $request->FEDuration,
+            'module_FE_Cost' => $request->FECost,
+            'module_FE_Price' => $request->FEPrice,
+            'module_BE_Duration' => $request->BEDuration,
+            'module_BE_Cost' => $request->BECost,
+            'module_BE_Price' => $request->BEPrice,
+            'module_FS_Duration' => $request->FSDuration,
+            'module_FS_Cost' => $request->FSCost,
+            'module_FS_Price' => $request->FSPrice,
+            'module_Notes' => $request->moduleNotes,
+            'module_Status' => $request->moduleStatus
+        ]);
+
+        $module->funcs()->attach($request->funcs);
+
+        return redirect('modules')->with('success', 'Module Successfully Created!');
     }
 
     /**
