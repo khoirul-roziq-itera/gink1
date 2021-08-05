@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Module;
 use App\Models\Func;
+use Illuminate\Support\Facades\DB;
 
 class ModulesController extends Controller
 {
@@ -38,6 +39,16 @@ class ModulesController extends Controller
      */
     public function store(Request $request)
     {
+
+
+
+        $sum = 0;
+        $tempReq = $request->funcs;
+        for ($i = 0; $i < count($tempReq); $i++) {
+            $sum += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FE_Duration;
+        }
+        dd($sum);
+
         $module = Module::create([
             'module_Name' => $request->moduleName,
             'module_FE_Duration' => $request->FEDuration,
