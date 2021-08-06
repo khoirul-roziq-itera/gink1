@@ -19,12 +19,12 @@ class CreateApplicationsTable extends Migration
             $table->integer('category');
             $table->integer('tags');
             $table->tinyInteger('status');
-            $table->string('start_project_t');
-            $table->string('end_project_t');
-            $table->string('deadline_project_t');
+            $table->string('start_project_t')->nullable(true);
+            $table->string('end_project_t')->nullable(true);
+            $table->string('deadline_project_t')->nullable(true);
             $table->decimal('cost_total');
             $table->decimal('price_total');
-            $table->text('notes');
+            $table->text('notes')->nullable(true);
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
         });
