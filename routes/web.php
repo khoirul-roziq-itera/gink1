@@ -84,6 +84,9 @@ Route::get('archiveTags', function () {
 Route::get('listTags', function () {
     return view('/tags/index11');
 });
+Route::get('detailTags', function () {
+    return view('/tags/detail');
+});
 
 //Category
 Route::get('addCateg', function () {
@@ -91,6 +94,9 @@ Route::get('addCateg', function () {
 });
 Route::get('listCateg', function () {
     return view('/categories/index');
+});
+Route::get('detailCateg', function () {
+    return view('/categories/detail');
 });
 
 Route::group(['middleware' => 'auth'], function () {

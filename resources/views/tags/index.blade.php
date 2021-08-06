@@ -3,6 +3,8 @@
 @section('title','List Tags')
 
 @section('container')
+
+
 <div class="main-content">
   <section class="section">
     <div class="section-header">
@@ -28,7 +30,7 @@
                     <input type="nama" class="form-control" id="tagName" name="tagName" placeholder="Input tag"/>
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
-                    <button type="submit" class="btn btn-success" id="swal-3"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
+                    <button type="submit" class="btn btn-success" id="swal"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
                   </div>
                 </div>
               </form>
@@ -42,7 +44,7 @@
                 </div>
                 <div class="card-body p-0">
                   <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
-                    <table id="table-1" class="table table-hover table-bordered">
+                    <table id="table-1" class="table table-hover">
                       <thead class="text-center">
                         <tr>
                           <th>Nomor</th>

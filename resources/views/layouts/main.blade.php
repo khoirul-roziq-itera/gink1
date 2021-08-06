@@ -74,14 +74,14 @@
                         <p style="margin-top: 3px; font-size:14pt; font-weight:bold">GinkTech</p>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm" style="margin-bottom: 7em">
-                        <a style="font-weight:bold; font-size:19px">GT</a>
+                        <a style="font-weight:bold; font-size:25px ; color:#fd5959">GT</a>
                     </div>
                     <div class="menu-sidebar" style="margin-top: 3.5em">
                         <ul class="sidebar-menu">
                             <li>
                                 <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Dashboard</span></a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown" style="color:white">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="{{ url('projects/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
@@ -113,7 +113,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-tasks"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="nav-link" href="{{ url('categories') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
                                     <li><a class="nav-link" href="{{ url('categories/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
@@ -147,8 +147,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <!-- sweetalert -->
-    <script src="{{asset('js/page/modules-sweetalert.js')}}"></script>
+  
     {{-- datatables  --}}
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
@@ -157,8 +156,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha512-o0rWIsZigOfRAgBxl4puyd0t6YKzeAw9em/29Ag7lhCQfaaua/mDwnpE2PVzwqJ08N7/wqrgdjc2E0mwdSY2Tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{-- modul sweetalert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-
-
+    <script src="{{asset ('js/mysweetalert.js')}}"></script>
+   
     <script src="{{asset ('js/page/modules-datatables.js')}}"></script>
     <script src="{{asset ('js/page/modules-calendar.js')}}"></script>
 

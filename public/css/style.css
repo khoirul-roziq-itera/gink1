@@ -2704,7 +2704,7 @@ html {
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: #ffff;
     font-size: 14px;
     font-weight: 400;
     font-family: "Nunito", "Segoe UI", arial;
@@ -3352,9 +3352,10 @@ pre {
     top: 0;
     height: 100%;
     width: 250px;
-    background-color: #fff;
+    background-color:#EAEAEA;
     z-index: 880;
     left: 0;
+    color:#fd5959;
 }
 
 .main-sidebar,
@@ -3422,6 +3423,7 @@ body.main-sidebar .sidebar-brand {
 }
 body.sidebar-mini .main-sidebar .sidebar-brand-sm {
     display: block;
+    
 }
 body.sidebar-mini .main-sidebar .sidebar-menu > li {
     padding: 10px;
