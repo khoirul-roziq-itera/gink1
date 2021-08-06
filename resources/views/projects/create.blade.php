@@ -31,12 +31,7 @@
                                 <div class="form-group row">
                                     <label for="category" class="col-sm-2 col-form-label">Category</label>
                                     <div class="col-sm-7">
-<<<<<<< HEAD
                                         <select id="choices-categories" name="category[]" class="form-control" placeholder="Select categories" multiple>
-=======
-                                        <select id="choices-categories" name="category" class="form-control" placeholder="Select categories">
-                                            <option value="">--- Choose Category ---</option>
->>>>>>> f9180240cbd14eae5eb93ee76df52a6bbb9fe2ab
                                             @foreach( $categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->category_name }}</option>
                                             @endforeach
