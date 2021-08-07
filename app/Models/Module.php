@@ -22,6 +22,8 @@ class Module extends Model
         'module_FS_Duration',
         'module_FS_Cost',
         'module_FS_Price',
+        'module_Cost_Total',
+        'module_Price_Total',
         'module_Notes',
         'module_Status'
     ];

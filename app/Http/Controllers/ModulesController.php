@@ -39,9 +39,6 @@ class ModulesController extends Controller
      */
     public function store(Request $request)
     {
-
-
-
         $sumFEDuration = 0;
         $sumFECost = 0;
         $sumFEPrice = 0;
@@ -76,6 +73,8 @@ class ModulesController extends Controller
             'module_FS_Duration' => $sumFSDuration,
             'module_FS_Cost' => $sumFSCost,
             'module_FS_Price' => $sumFSPrice,
+            'module_Cost_Total' => $sumFECost + $sumBECost + $sumFSCost,
+            'module_Price_Total' => $sumFEPrice + $sumBEPrice + $sumFSPrice,
             'module_Notes' => $request->moduleNotes,
             'module_Status' => $request->moduleStatus
         ]);
