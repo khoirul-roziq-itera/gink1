@@ -99,6 +99,10 @@ Route::get('detailCateg', function () {
     return view('/categories/detail');
 });
 
+Route::get('admin', function () {
+    return view('/admins/index');
+});
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', function () {
         return view('dashboard');

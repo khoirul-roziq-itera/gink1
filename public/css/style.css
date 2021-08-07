@@ -3428,6 +3428,9 @@ body.sidebar-mini .main-sidebar .sidebar-brand-sm {
 body.sidebar-mini .main-sidebar .sidebar-menu > li {
     padding: 10px;
 }
+body.sidebar-mini .main-sidebar .sidebar-menu > li.active {
+    color:white;
+}
 body.sidebar-mini .main-sidebar .sidebar-menu > li.menu-header {
     padding: 0;
     font-size: 0;
