@@ -42,24 +42,40 @@ class ModulesController extends Controller
 
 
 
-        $sum = 0;
+        $sumFEDuration = 0;
+        $sumFECost = 0;
+        $sumFEPrice = 0;
+        $sumBEDuration = 0;
+        $sumBECost = 0;
+        $sumBEPrice = 0;
+        $sumFSDuration = 0;
+        $sumFSCost = 0;
+        $sumFSPrice = 0;
         $tempReq = $request->funcs;
+
         for ($i = 0; $i < count($tempReq); $i++) {
-            $sum += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FE_Duration;
+            $sumFEDuration += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FE_Duration;
+            $sumFECost += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FE_Cost;
+            $sumFEPrice += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FE_Price;
+            $sumBEDuration += DB::table('functions')->where('id', $tempReq[$i])->first()->function_BE_Duration;
+            $sumBECost += DB::table('functions')->where('id', $tempReq[$i])->first()->function_BE_Cost;
+            $sumBEPrice += DB::table('functions')->where('id', $tempReq[$i])->first()->function_BE_Price;
+            $sumFSDuration += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FS_Duration;
+            $sumFSCost += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FS_Cost;
+            $sumFSPrice += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FS_Price;
         }
-        dd($sum);
 
         $module = Module::create([
             'module_Name' => $request->moduleName,
-            'module_FE_Duration' => $request->FEDuration,
-            'module_FE_Cost' => $request->FECost,
-            'module_FE_Price' => $request->FEPrice,
-            'module_BE_Duration' => $request->BEDuration,
-            'module_BE_Cost' => $request->BECost,
-            'module_BE_Price' => $request->BEPrice,
-            'module_FS_Duration' => $request->FSDuration,
-            'module_FS_Cost' => $request->FSCost,
-            'module_FS_Price' => $request->FSPrice,
+            'module_FE_Duration' => $sumFEDuration,
+            'module_FE_Cost' => $sumFECost,
+            'module_FE_Price' => $sumFEPrice,
+            'module_BE_Duration' => $sumBEDuration,
+            'module_BE_Cost' => $sumBECost,
+            'module_BE_Price' => $sumBEPrice,
+            'module_FS_Duration' => $sumFSDuration,
+            'module_FS_Cost' => $sumFSCost,
+            'module_FS_Price' => $sumFSPrice,
             'module_Notes' => $request->moduleNotes,
             'module_Status' => $request->moduleStatus
         ]);
