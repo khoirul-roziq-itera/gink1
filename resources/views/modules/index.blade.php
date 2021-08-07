@@ -42,39 +42,49 @@
               </div>
 
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
-                <table id="table-1" class="table table-hover table-bordered border-primary">
+                <table id="table-1" class="table table-hover table-bordered">
                   <thead class="text-center">
                     <tr>
                       <th>Nomor</th>
-                      <th>Applications Name</th>
-                      <th>Category</th>
-                      <th>Deadline</th>
+                      <th>Module Name</th>
+                      <th>Functions</th>
                       <th>Status</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {{-- @foreach($modules as $app => $result)
+                    @foreach($modules as $module => $result)
                     <tr class="text-center">
-                      <td>{{ $app + 1 }}</td>
-                      <td>{{ $result->app_name }}</td>
-                      <td>{{ $result->category }}</td>
-                      <td>{{ $result->deadline_project_t }}</td>
+                      <td>{{ $module + 1 }}</td>
+                      <td>{{ $result->module_Name }}</td>
                       <td>
-                        <div class="badge badge-primary">Selesai</div>
+                        @foreach( $result->funcs as $func )
+                        <span class="badge bg-secondary mt-1">{{ $func->function_Name }}</span><br>
+                        @endforeach
                       </td>
                       <td>
-                        <form action="{{ route('projects.destroy', $result->id ) }}" method="post">
+                        @if( $result->function_Status == 1)
+                        <span class="badge badge-warning">Menunggu</span>
+                        @elseif( $result->function_Status == 2 )
+                        <span class="badge badge-info">Sedang Dikerjakan</span>
+                        @else
+                        <span class="badge badge-success">Selesai</span>
+                        @endif
+                      </td>
+                      <td>
+
+                        <form action="{{ route('functions.destroy', $result->id ) }}" method="post">
                           @csrf
                           @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                            <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
                             <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
                           </div>
                         </form>
+
                       </td>
                     </tr>
-                    @endforeach --}}
+                    @endforeach
                   </tbody>
                 </table>
               </div>
