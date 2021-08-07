@@ -115,7 +115,7 @@ class ModulesController extends Controller
     {
         $funcs = Func::all();
         $module = Module::where('id', $id)->first();
-        return view('modules.edit', compact('modul', 'funcs'));
+        return view('modules.edit', compact('module', 'funcs'));
     }
 
     /**

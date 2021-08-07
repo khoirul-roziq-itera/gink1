@@ -15,9 +15,9 @@
         </div>
         <div class="container mt-5">
             <div class="row">
-                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+                <div class="col-12 ">
                     <div class="card card-danger">
-                        <form method="POST" action="{{ route('projects.update', $app->id) }}">
+                        <form method="POST" action="{{ route('modules.update', $module->id) }}">
                             @csrf
                             @method('patch')
 
@@ -27,9 +27,9 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="moduleName" class="col-sm-2 col-form-label">Name Modul</label>
+                                    <label for="moduleName" class="col-sm-2 col-form-label">Module Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="moduleName" name="moduleName" class="form-control" placeholder="Masukkan nama modul">
+                                        <input type="text" id="moduleName" name="moduleName" class="form-control" placeholder="Masukkan nama modul" value="{{ $module->module_Name }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -37,16 +37,21 @@
                                     <div class="col-sm-7">
                                         <select id="choices-functions" name="funcs[]" class="form-control" placeholder="Select Functions" multiple>
                                             @foreach ( $funcs as $func)
-                                            <option value="{{ $func->id }}">{{ $func->function_Name }}</option>
+                                            <option value="{{ $func->id }}" @foreach( $module->funcs as $result )
+                                                @if($func->id == $result->id)
+                                                selected
+                                                @endif
+                                                @endforeach
+                                                >{{ $func->function_Name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="moduleNotes" class="col-sm-2 col-form-label">Function Notes</label>
+                                    <label for="moduleNotes" class="col-sm-2 col-form-label">Module Notes</label>
                                     <div class="col-sm-7">
-                                        <textarea name="moduleNotes" id="moduleNotes" class="form-control"></textarea>
+                                        <textarea name="moduleNotes" id="moduleNotes" class="form-control" value="{{ $module->module_Notes }}"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -61,54 +66,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group float-right">
-                                    <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
+                                    <a href="{{ route('modules.edit', $module->id) }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
                                     <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Save</button>
                                 </div>
                             </div>
-                            <!-- <div class="card-body">
-                                <div class="form-group">
-                                    <label for="appName">Nama Aplikasi</label>
-                                    <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project" value="{{ $app->app_name }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="category">Kategori</label>
-                                    <select id="category" name="category" class="form-control">
-                                        <option value="">- Pilih Kateg</option>
-                                        <option value="Akutansi">Akutansi</option>
-                                        <option value="Administrasi">Administrasi</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="tags">Tag</label>
-                                    <input type="text" id="tags" name="tags" class="form-control" placeholder="Masukkan nama project">
-                                </div>
-                                <div class="form-group">
-                                    <label>Waktu Mulai</label>
-                                    <input type="date" name="startProjectT" class="form-control datepicker" value="{{ $app->start_project_t }}" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Batas Waktu</label>
-                                    <input type="date" name="deadlineProjectT" class="form-control datepicker" value="{{ $app->deadline_project_t }}" required />
-                                </div>
-                                <div class="form-group">
-                                    <label>Waktu Selesai</label>
-                                    <input type="date" name="endProjectT" class="form-control datepicker" value="{{ $app->end_project_t }}" required />
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="status">Status</label>
-                                    <select id="status" name="status" class="form-control">
-                                        <option value="">- Pilih Status</option>
-                                        <option value="3">Selesai</option>
-                                        <option value="2">Sedang Dikerjakan</option>
-                                        <option value="1">Menunggu</option>
-                                    </select>
-                                </div>
-                                <div class="form-group float-right">
-                                    <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
-                                    <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Save</button>
-                                </div>
-                            </div> -->
                         </form>
                     </div>
                     <div class="simple-footer">

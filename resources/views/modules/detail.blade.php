@@ -84,6 +84,18 @@
                 </div>
               </div>
               <div class="form-group row">
+                <label for="costTotal" class="col-sm-2 col-form-label">Cost Total</label>
+                <div class="col-sm-7">
+                  <input readonly="" type="text" name="costTotal" id="costTotal" class="form-control" value="{{ $module->module_Cost_Total }}" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="priceTotal" class="col-sm-2 col-form-label">Price Total</label>
+                <div class="col-sm-7">
+                  <input readonly="" type="text" name="priceTotal" id="priceTotal" class="form-control" value="{{ $module->module_Price_Total }}" />
+                </div>
+              </div>
+              <div class="form-group row">
                 <label for="funcNotes" class="col-sm-2 col-form-label">Module Notes</label>
                 <div class="col-sm-7">
                   <textarea name="funcNotes" id="funcNotes" class="form-control" readonly="">{{ $module->module_FE_Duration }}</textarea>
@@ -99,7 +111,7 @@
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
-                    <a href="{{ route('functions.edit', $module->id) }}"><button class="btn btn-success "> <i class="fas fa-edit" style="font-size: 18px"></i> Edit</button></a>
+                    <a href="{{ route('modules.edit', $module->id) }}"><button class="btn btn-success "> <i class="fas fa-edit" style="font-size: 18px"></i> Edit</button></a>
                   </div>
                 </div>
               </div>
