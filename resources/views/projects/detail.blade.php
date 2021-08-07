@@ -36,11 +36,9 @@
               <div class="form-group row">
                 <label for="appname" class="col-sm-2 col-form-label">Tags</label>
                 <div class="col-sm-7">
-                  <ul>
-                    @foreach( $app->tags as $tag )
-                    <li>{{$tag->tag_name }}</li>
-                    @endforeach
-                  </ul>
+                  @foreach( $app->tags as $tag )
+                  <span class="badge bg-secondary ml-1">{{$tag->tag_name }}</span>
+                  @endforeach
                 </div>
               </div>
               <div class="form-group row">
