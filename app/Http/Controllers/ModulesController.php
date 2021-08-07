@@ -93,7 +93,16 @@ class ModulesController extends Controller
     public function show($id)
     {
         $module = Module::where('id', $id)->first();
-        return view('modules.detail', compact('modul'));
+        if ($module->module_Status == 1) {
+            $moduleStatus = 'Menunggu';
+        } else if ($module->module_Status == 2) {
+            $moduleStatus = 'Sedang Dikerjakan';
+        } else {
+            $moduleStatus = 'Selesai';
+        }
+
+        $module = Module::where('id', $id)->first();
+        return view('modules.detail', compact('module', 'moduleStatus'));
     }
 
     /**
@@ -104,8 +113,9 @@ class ModulesController extends Controller
      */
     public function edit($id)
     {
+        $funcs = Func::all();
         $module = Module::where('id', $id)->first();
-        return view('modules.edit', compact('modul'));
+        return view('modules.edit', compact('modul', 'funcs'));
     }
 
     /**

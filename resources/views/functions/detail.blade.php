@@ -74,7 +74,7 @@
               <div class="form-group row">
                 <label for="BEPrice" class="col-sm-2 col-form-label">Back-End Price</label>
                 <div class="col-sm-7">
-                  <input readonly="" type="text" name="BEPrice" id="BEPrice" class="form-control" value="{{ $func->function_bE_Price }}" />
+                  <input readonly="" type="text" name="BEPrice" id="BEPrice" class="form-control" value="{{ $func->function_BE_Price }}" />
                 </div>
               </div>
 

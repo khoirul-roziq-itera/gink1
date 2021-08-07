@@ -63,9 +63,9 @@
                         @endforeach
                       </td>
                       <td>
-                        @if( $result->function_Status == 1)
+                        @if( $result->module_Status == 1)
                         <span class="badge badge-warning">Menunggu</span>
-                        @elseif( $result->function_Status == 2 )
+                        @elseif( $result->module_Status == 2 )
                         <span class="badge badge-info">Sedang Dikerjakan</span>
                         @else
                         <span class="badge badge-success">Selesai</span>
@@ -73,11 +73,11 @@
                       </td>
                       <td>
 
-                        <form action="{{ route('functions.destroy', $result->id ) }}" method="post">
+                        <form action="{{ route('modules.destroy', $result->id ) }}" method="post">
                           @csrf
                           @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                            <a href="{{ url('modules', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
                             <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
                           </div>
                         </form>

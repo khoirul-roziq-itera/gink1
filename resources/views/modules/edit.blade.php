@@ -25,8 +25,47 @@
                                 <h4>Edit Data Project</h4>
                                 <br>
                             </div>
-
                             <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="moduleName" class="col-sm-2 col-form-label">Name Modul</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="moduleName" name="moduleName" class="form-control" placeholder="Masukkan nama modul">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="tags" class="col-sm-2 col-form-label">Input Functions</label>
+                                    <div class="col-sm-7">
+                                        <select id="choices-functions" name="funcs[]" class="form-control" placeholder="Select Functions" multiple>
+                                            @foreach ( $funcs as $func)
+                                            <option value="{{ $func->id }}">{{ $func->function_Name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="moduleNotes" class="col-sm-2 col-form-label">Function Notes</label>
+                                    <div class="col-sm-7">
+                                        <textarea name="moduleNotes" id="moduleNotes" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="moduleStatus" class="col-sm-2 col-form-label">Status</label>
+                                    <div class="col-sm-7">
+                                        <select id="moduleStatus" name="moduleStatus" class="form-control">
+                                            <option value="">-- Choose Status --</option>
+                                            <option value="1">Menunggu</option>
+                                            <option value="2">Sedang Dikerjakan</option>
+                                            <option value="3">Selesai</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group float-right">
+                                    <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
+                                    <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Save</button>
+                                </div>
+                            </div>
+                            <!-- <div class="card-body">
                                 <div class="form-group">
                                     <label for="appName">Nama Aplikasi</label>
                                     <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project" value="{{ $app->app_name }}">
@@ -69,7 +108,7 @@
                                     <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-secondary btn-lg">Cancel</button></a>
                                     <button type="submit" class="btn btn-danger btn-lg" id="swal-2">Save</button>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                     <div class="simple-footer">
