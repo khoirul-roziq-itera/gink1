@@ -21,8 +21,28 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">Nama Tag</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="{{ url ('tags')}}" class="btn btn-danger">Back</a>
+                
+                <div class="row">
+                    <div class="col-6">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama Project</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Appku</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="float-right">
+                        <a href="{{ url ('tags')}}" class="btn btn-danger">Back</a>
+                      </div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>

@@ -3352,10 +3352,10 @@ pre {
     top: 0;
     height: 100%;
     width: 250px;
-    background-color:#EAEAEA;
+    background-color: #eaeaea;
     z-index: 880;
     left: 0;
-    color:#fd5959;
+    color: #fd5959;
 }
 
 .main-sidebar,
@@ -3423,13 +3423,12 @@ body.main-sidebar .sidebar-brand {
 }
 body.sidebar-mini .main-sidebar .sidebar-brand-sm {
     display: block;
-    
 }
 body.sidebar-mini .main-sidebar .sidebar-menu > li {
     padding: 10px;
 }
 body.sidebar-mini .main-sidebar .sidebar-menu > li.active {
-    color:white;
+    color: white;
 }
 body.sidebar-mini .main-sidebar .sidebar-menu > li.menu-header {
     padding: 0;
