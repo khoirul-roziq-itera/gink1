@@ -12,5 +12,9 @@ class Category extends Model
     use SoftDeletes;
 
     protected $fillable = ['category_name', 'category_slug'];
-    protected $table = 'categories';
+
+    public function applications()
+    {
+        return $this->belongsToMany('App\Models\Application');
+    }
 }

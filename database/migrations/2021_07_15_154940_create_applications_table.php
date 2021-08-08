@@ -16,8 +16,7 @@ class CreateApplicationsTable extends Migration
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
             $table->string('app_name');
-            $table->integer('category');
-            $table->integer('tags');
+            $table->integer('category_id');
             $table->tinyInteger('status');
             $table->string('start_project_t')->nullable(true);
             $table->string('end_project_t')->nullable(true);

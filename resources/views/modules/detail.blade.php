@@ -28,6 +28,12 @@
                 </div>
               </div>
               <div class="form-group row">
+                <label for="moduleCreator" class="col-sm-2 col-form-label">Module Creator</label>
+                <div class="col-sm-7">
+                  <input readonly="" type="text" id="moduleCreator" name="moduleCreator" class="form-control" value="{{ $module->user->name }}" />
+                </div>
+              </div>
+              <div class="form-group row">
                 <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
                 <div class="col-sm-7">
                   <input readonly="" type="text" name="FEDuration" id="FEDuration" class="form-control" value="{{ $module->module_FE_Duration }}" />
