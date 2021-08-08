@@ -6,6 +6,7 @@ use App\Http\Controllers\FunctionsController;
 use App\Http\Controllers\ModulesController;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\AdminsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,11 +100,17 @@ Route::get('detailCateg', function () {
     return view('/categories/detail');
 });
 
-Route::get('admin', function () {
-    return view('/admins/index');
+// Route::get('admin', function () {
+//     return view('/admins/index');
+// });
+
+
+Route::group(['middleware' => ['auth', 'userlevel:admin']], function () {
+    Route::resource('/admins', AdminsController::class);
 });
 
-Route::group(['middleware' => 'auth'], function () {
+
+Route::group(['middleware' => ['auth', 'userlevel:admin,creator']], function () {
     Route::get('dashboard', function () {
         return view('dashboard');
     });
