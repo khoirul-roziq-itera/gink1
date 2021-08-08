@@ -1,7 +1,7 @@
 @extends('layouts/main')
 
 
-@section('title','List Functions')
+@section('title','Data admin')
 
 @section('container')
 <!-- Main Content -->
@@ -17,12 +17,11 @@
                     <div class="card">
                         <div class="card-body p-0">
                         <div class="row">
-
-                            <div class="col-6 offset-6">
+                          <div class="col-6 offset-6">
                             <div style="padding:2.5em">
                                 <a href="" class="btn btn-success float-right"  data-toggle="modal" data-target="#tambahadmin"><i class="fas fa-plus-circle"></i> Add Data</a>
                             </div>
-                            </div>
+                          </div>  
                         </div>
 
                         <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
