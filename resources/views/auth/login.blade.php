@@ -24,7 +24,7 @@
               <img src="{{ asset('img/ginktech.jpg') }}" alt="logo" width="150" class="shadow-light rounded-circle">
             </div>
 
-            <div class="card card-danger">
+            <div class="card card-danger" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
               <div class="card-header"><h3 style="color: #525457">Login</h3></div>
 
                        @if (session('status'))
