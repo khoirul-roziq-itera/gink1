@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Module;
 use App\Models\Func;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ModulesController extends Controller
 {
@@ -76,7 +78,9 @@ class ModulesController extends Controller
             'module_Cost_Total' => $sumFECost + $sumBECost + $sumFSCost,
             'module_Price_Total' => $sumFEPrice + $sumBEPrice + $sumFSPrice,
             'module_Notes' => $request->moduleNotes,
-            'module_Status' => $request->moduleStatus
+            'module_Status' => $request->moduleStatus,
+            'user_id' => Auth::id(),
+            'module_slug' => Str::of($request->moduleName)->slug('-')
         ]);
 
         $module->funcs()->attach($request->funcs);

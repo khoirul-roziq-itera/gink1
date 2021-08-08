@@ -25,7 +25,9 @@ class Module extends Model
         'module_Cost_Total',
         'module_Price_Total',
         'module_Notes',
-        'module_Status'
+        'module_Status',
+        'user_id',
+        'module_slug'
     ];
 
     public function funcs()
