@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Str;
 
 class CategoriesController extends Controller
 {
@@ -37,7 +38,8 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         Category::create([
-            'category_name' => $request->categoryName
+            'category_name' => $request->categoryName,
+            'category_slug' => Str::of($request->categoryName)->slug('-')
         ]);
 
         return redirect('categories')->with('success', 'Category Successfully Created!');
