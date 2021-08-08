@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Models\Application;
 use App\Models\Category;
 use App\Models\Tag;
+use Illuminate\Support\Facades\DB;
 
 class ProjectsController extends Controller
 {
@@ -135,6 +136,7 @@ class ProjectsController extends Controller
     public function kill($id)
     {
         Application::withTrashed()->where('id', $id)->first()->forceDelete();
+        DB::table('application_tag')->where('application_id', $id)->delete();
 
         return redirect()->back()->with('success', 'Project Deleted Successfully!');
     }

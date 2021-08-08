@@ -16,49 +16,55 @@
     </div>
 
     <div class="section-body">
-
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-body p-0">
-              <div class="table-responsive" style="padding: 2em">
-                <table id="table-1" class="table table-hover table-bordered border-primary">
+              <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
+                <table id="table-1" class="table table-hover table-bordered">
                   <thead class="text-center">
                     <tr>
-                      <th>No</th>
-                      <th>Applications Name</th>
-                      <th>Category</th>
-                      <th>Finished</th>
-                      <th>Estimated Costs</th>
+                      <th>Nomor</th>
+                      <th>Module Name</th>
+                      <th>Functions</th>
+                      <th>Status</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
-                  {{-- <tbody>
+                  <tbody>
                     @foreach($modules as $module => $result)
                     <tr class="text-center">
                       <td>{{ $module + 1 }}</td>
-                  <td>{{ $result->module_name }}</td>
-                  <td>{{ $result->category }}</td>
-                  <td>{{ $result->deadline_project_t }}</td>
-                  <td>
-                    <div class="badge badge-primary">Selesai</div>
-                  </td>
-                  <td>
-                    <form action="{{ url('moduless/kill/'.$result->id) }}" method="post">
-                      @csrf
-                      @method('delete')
-                      <div class="btn-group" role="group" aria-label="Basic example">
-                        <a href="{{ url('modules/restore/'.$result->id) }}" class="btn btn-success" style="margin: 2px"><i class="fas fa-history"> Restore</i></a>
-                        <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </form>
-                  </td>
-                  </tr>
-                  @endforeach --}}
+                      <td>{{ $result->module_Name }}</td>
+                      <td>
+                        @foreach( $result->funcs as $func )
+                        <span class="badge bg-secondary mt-1">{{ $func->function_Name }}</span><br>
+                        @endforeach
+                      </td>
+                      <td>
+                        @if( $result->module_Status == 1)
+                        <span class="badge badge-warning">Menunggu</span>
+                        @elseif( $result->module_Status == 2 )
+                        <span class="badge badge-info">Sedang Dikerjakan</span>
+                        @else
+                        <span class="badge badge-success">Selesai</span>
+                        @endif
+                      </td>
+                      <td>
+                        <form action="{{ url('modules/kill/'.$result->id) }}" method="post">
+                          @csrf
+                          @method('delete')
+                          <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="{{ url('modules/restore/'.$result->id) }}" class="btn btn-success" style="margin: 2px"><i class="fas fa-history"> Restore</i></a>
+                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i></a>
+                          </div>
+                        </form>
+                      </td>
+                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
         </div>

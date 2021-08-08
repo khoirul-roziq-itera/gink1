@@ -160,7 +160,7 @@ class ModulesController extends Controller
     public function kill($id)
     {
         Module::withTrashed()->where('id', $id)->first()->forceDelete();
-
+        DB::table('func_module')->where('module_id', $id)->delete();
         return redirect()->back()->with('success', 'Modul Deleted Successfully!');
     }
 }

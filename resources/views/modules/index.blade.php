@@ -1,17 +1,17 @@
 @extends('layouts/main')
 
 
-@section('title','List Project')
+@section('title','List Modules')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Project</h1>
+      <h1 style="font-size: 25px">List Module</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-        <div class="breadcrumb-item">List Project</div>
+        <div class="breadcrumb-item active"><a href="#">Data Module</a></div>
+        <div class="breadcrumb-item">List Module</div>
       </div>
     </div>
     <div class="section-body">
