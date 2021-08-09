@@ -1,7 +1,7 @@
 @extends('layouts/main')
 
 @section('title','Detail Project')
-
+@section('id', $module->id)
 @section('container')
 <div class="main-content">
   <section class="section">
