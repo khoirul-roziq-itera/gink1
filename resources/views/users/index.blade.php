@@ -1,7 +1,7 @@
 @extends('layouts/main')
 
 
-@section('title','Data admin')
+@section('title','Manage users')
 
 @section('container')
 <!-- Main Content -->
@@ -9,6 +9,9 @@
   <section class="section">
         <div class="section-header">
             <h1 style="font-size: 25px">Manage User</h1>
+            <div class="section-header-breadcrumb">
+                <div class="breadcrumb-item">Manage User</a></div>
+              </div>
         </div>
 
         <div class="section-body">
@@ -22,7 +25,7 @@
                         <div class="row">
                           <div class="col-6 offset-6">
                             <div style="padding:2.5em">
-                                <a href="addadmin" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</a>
+                                <a href="addusers" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</a>
                             </div>
                           </div>  
                         </div>
@@ -46,7 +49,7 @@
                                     <td>admin@gmail.com</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <a href="detailadmin" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
+                                            <a href="detailusers" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
                                             <a href="#" class="btn btn-danger" style="margin: 2px"><i class="fas fa-trash-alt"></i></a>
                                         </div>
                                     </td>

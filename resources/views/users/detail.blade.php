@@ -8,7 +8,7 @@
     <div class="section-header">
       <h1 style="font-size: 25px">Detail User</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Manage User</a></div>
+        <div class="breadcrumb-item active"><a href="users">Manage User</a></div>
         <div class="breadcrumb-item">Edit Project</div>
       </div>
     </div>
@@ -17,7 +17,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Detail Data</h4>
+              <h4>Informasi Profile</h4>
             </div>
             <div class="card-body">
               <div class="form-group row">
@@ -50,8 +50,8 @@
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
-                    <a href="" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Cancel</></a>
-                    <a href="" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
+                    <a href="users" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Cancel</></a>
+                    <a href="editusers" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
                   </div>
                 </div>
               </div>

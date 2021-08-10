@@ -58,9 +58,6 @@ Route::get('editModul', function () {
     return view('/modules/edit');
 });
 
-
-
-
 // menu function
 Route::get('addFunction', function () {
     return view('/functions/create1');
@@ -104,13 +101,13 @@ Route::get('detailCateg', function () {
 Route::get('users', function () {
      return view('/users/index');
  });
-Route::get('adduser', function () {
+Route::get('addusers', function () {
      return view('/users/create');
  });
-Route::get('detailuser', function () {
+Route::get('detailusers', function () {
      return view('/users/detail');
  });
-Route::get('edituser', function () {
+Route::get('editusers', function () {
      return view('/users/edit');
 });
 
