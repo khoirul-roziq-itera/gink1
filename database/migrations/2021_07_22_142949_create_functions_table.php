@@ -17,6 +17,7 @@ class CreateFunctionsTable extends Migration
             $table->id();
             $table->string('function_Title');
             $table->string('function_Name');
+            $table->string('function_slug');
             $table->string('function_Group');
             $table->tinyInteger('function_FE_Duration')->nullable(true);
             $table->decimal('function_FE_Cost', 15, 2)->nullable(true);

@@ -16,8 +16,15 @@ class CreateApplicationsTable extends Migration
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
             $table->string('app_name');
+            $table->string('app_slug');
             $table->integer('category_id');
             $table->tinyInteger('status');
+            $table->decimal('module_FE_Cost', 15, 2);
+            $table->decimal('module_FE_Price', 15, 2);
+            $table->decimal('module_BE_Cost', 15, 2);
+            $table->decimal('module_BE_Price', 15, 2);
+            $table->decimal('module_FS_Cost', 15, 2);
+            $table->decimal('module_FS_Price', 15, 2);
             $table->string('start_project_t')->nullable(true);
             $table->string('end_project_t')->nullable(true);
             $table->string('deadline_project_t')->nullable(true);

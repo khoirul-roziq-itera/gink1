@@ -16,6 +16,7 @@ class Func extends Model
     protected $fillable = [
         'function_Title',
         'function_Name',
+        'function_slug',
         'function_Group',
         'function_FE_Duration',
         'function_FE_Cost',

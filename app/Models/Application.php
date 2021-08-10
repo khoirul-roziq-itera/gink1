@@ -13,8 +13,8 @@ class Application extends Model
 
     protected $fillable = [
         'app_name',
+        'app_slug',
         'category',
-        // 'tags',
         'status',
         'start_project_t',
         'end_project_t',

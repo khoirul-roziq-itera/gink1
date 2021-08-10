@@ -16,6 +16,8 @@ class CreateModulesTable extends Migration
         Schema::create('modules', function (Blueprint $table) {
             $table->id();
             $table->string('module_Name');
+            $table->string('module_slug');
+            $table->integer('user_id');
             $table->tinyInteger('module_FE_Duration');
             $table->decimal('module_FE_Cost', 15, 2);
             $table->decimal('module_FE_Price', 15, 2);
@@ -25,6 +27,8 @@ class CreateModulesTable extends Migration
             $table->tinyInteger('module_FS_Duration');
             $table->decimal('module_FS_Cost', 15, 2);
             $table->decimal('module_FS_Price', 15, 2);
+            $table->decimal('module_Cost_Total', 15, 2);
+            $table->decimal('module_Price_Total', 15, 2);
             $table->text('module_Notes');
             $table->tinyInteger('module_Status');
             $table->softDeletes($column = 'deleted_at', $precision = 0);
