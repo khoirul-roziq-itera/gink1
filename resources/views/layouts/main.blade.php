@@ -97,8 +97,13 @@
                                 </ul>
                             </li>
                             @if(auth()->user()->level == "admin")
+<<<<<<< HEAD
                             <li class="{{ Request::is('admin') ? 'active' : '' }}">
                                 <a href="{{ url('/users') }}"><i class="fas fa-users fa-lg"></i><span style="font-weight:bold; font-size:19px">Data Admin</span></a>
+=======
+                            <li class="{{ Request::is('user') ? 'active' : '' }}">
+                                <a href="users"><i class="fas fa-users fa-lg"></i><span style="font-weight:bold; font-size:19px">Manage User</span></a>
+>>>>>>> f222b8362d2a561d704a022d3c1ff8f52035190a
                             </li>
                             @endif
                         </ul>

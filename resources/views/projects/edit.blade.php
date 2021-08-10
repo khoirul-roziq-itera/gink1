@@ -49,7 +49,6 @@
                                     <label>Waktu Selesai</label>
                                     <input type="date" name="endProjectT" class="form-control datepicker" value="{{ $app->end_project_t }}" required />
                                 </div>
-
                                 <div class="form-group">
                                     <label for="status">Status</label>
                                     <select id="status" name="status" class="form-control">

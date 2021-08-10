@@ -1,15 +1,15 @@
 @extends('layouts/main')
 
-@section('title','Create Admin')
+@section('title','Edit User')
 
 @section('container')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Create User</h1>
+            <h1 style="font-size: 25px">Edit User</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Manage User</a></div>
-                <div class="breadcrumb-item">Create User</div>
+                <div class="breadcrumb-item active"><a href="users">Manage User</a></div>
+                <div class="breadcrumb-item">Edit User</div>
             </div>
         </div>
         <div class="section-body">
@@ -25,7 +25,7 @@
                                 <div class="form-group row">
                                     <label for="funcTitle" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control" placeholder="Masukkan nama lengkap">
+                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control" value="Admin">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -58,7 +58,7 @@
                                 <div class="form-group row">
                                     <label for="funcName" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcName" name="funcName" class="form-control" placeholder="Masukkan email">
+                                        <input type="text" id="funcName" name="funcName" class="form-control" value="admin@admin.com">
                                     </div>
                                 </div>
 
@@ -71,8 +71,8 @@
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
-                                            <a href="{{ url('functions') }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
-                                            <button type="submit" class="btn btn-primary btn">Submit</button>
+                                            <a href="detailusers"><button type="button" class="btn btn-danger btn">Cancel</button></a>
+                                            <button type="submit" class="btn btn-primary btn">Save changes</button>
                                         </div>
                                     </div>
                                 </div>

@@ -59,9 +59,6 @@ Route::get('editModul', function () {
     return view('/modules/edit');
 });
 
-
-
-
 // menu function
 Route::get('addFunction', function () {
     return view('/functions/create1');
@@ -102,6 +99,7 @@ Route::get('detailCateg', function () {
 });
 
 // vIEW ADMIN
+<<<<<<< HEAD
 Route::get('admins', function () {
     return view('/users/index');
 });
@@ -112,6 +110,20 @@ Route::get('detailadmin', function () {
     return view('/users/detail');
 });
 
+=======
+Route::get('users', function () {
+     return view('/users/index');
+ });
+Route::get('addusers', function () {
+     return view('/users/create');
+ });
+Route::get('detailusers', function () {
+     return view('/users/detail');
+ });
+Route::get('editusers', function () {
+     return view('/users/edit');
+});
+>>>>>>> f222b8362d2a561d704a022d3c1ff8f52035190a
 
 Route::group(['middleware' => ['auth', 'userlevel:admin']], function () {
     Route::resource('/users', UsersController::class);
