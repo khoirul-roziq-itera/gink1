@@ -98,7 +98,7 @@
                             </li>
                             @if(auth()->user()->level == "admin")
                             <li class="{{ Request::is('admin') ? 'active' : '' }}">
-                                <a href="{{ url('/admins') }}"><i class="fas fa-users fa-lg"></i><span style="font-weight:bold; font-size:19px">Data Admin</span></a>
+                                <a href="{{ url('/users') }}"><i class="fas fa-users fa-lg"></i><span style="font-weight:bold; font-size:19px">Data Admin</span></a>
                             </li>
                             @endif
                         </ul>
