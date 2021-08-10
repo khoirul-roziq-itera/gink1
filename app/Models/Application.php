@@ -20,9 +20,18 @@ class Application extends Model
         'start_project_t',
         'end_project_t',
         'deadline_project_t',
-        'cost_total',
-        'price_total',
-        'notes'
+        'app_FE_Duration',
+        'app_FE_Cost',
+        'app_FE_Price',
+        'app_BE_Duration',
+        'app_BE_Cost',
+        'app_BE_Price',
+        'app_FS_Duration',
+        'app_FS_Cost',
+        'app_FS_Price',
+        'app_Cost_Total',
+        'app_Price_Total',
+        'app_notes'
     ];
 
     public function category()
