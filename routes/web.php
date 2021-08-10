@@ -101,16 +101,18 @@ Route::get('detailCateg', function () {
 });
 
 // vIEW ADMIN
-Route::get('admins', function () {
+Route::get('users', function () {
      return view('/users/index');
  });
-Route::get('addadmin', function () {
+Route::get('adduser', function () {
      return view('/users/create');
  });
-Route::get('detailadmin', function () {
+Route::get('detailuser', function () {
      return view('/users/detail');
  });
-
+Route::get('edituser', function () {
+     return view('/users/edit');
+});
 
 Route::group(['middleware' => ['auth', 'userlevel:admin']], function () {
     Route::resource('/admins', AdminsController::class);

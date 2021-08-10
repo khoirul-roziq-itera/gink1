@@ -8,7 +8,7 @@
 <div class="main-content">
   <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Data Admin</h1>
+            <h1 style="font-size: 25px">Manage User</h1>
         </div>
 
         <div class="section-body">
@@ -16,7 +16,7 @@
                 <div class="col-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4>Data Administrator</h4>
+                        <h4>Data User</h4>
                       </div>
                         <div class="card-body p-0">
                         <div class="row">
@@ -32,8 +32,8 @@
                             <thead class="text-center">
                                 <tr>
                                 <th>Nomor</th>
-                                <th>Nama Lengkap</th>
-                                <th>Peran Admin</th>
+                                <th>Name</th>
+                                <th>Level</th>
                                 <th>Email</th>
                                 <th>Actions</th>
                                 </tr>
@@ -42,7 +42,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>Administrator Sistem</td>
-                                    <td>Admin Sistem</td>
+                                    <td>Admin</td>
                                     <td>admin@gmail.com</td>
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">

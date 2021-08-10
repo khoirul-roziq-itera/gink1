@@ -1,93 +1,65 @@
 @extends('layouts/main')
 
+@section('title','Detail Project')
 
-@section('title','Dashboard')
-    
 @section('container')
-     <!-- Main Content -->
-     <div class="main-content">
-        <section class="section">
-          <div class="section-header">
-            <h1>Detail Admin</h1>
-          </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card" style="box-shadow: 5px 10px #b6b3b3;">
-              <div class="card-header">
-                <i class="fas fa-user" style="font-size: 20px; padding:0.5em"></i> <h4> Profile</h4>
-              </div>
-              <div class="card-body">   
-                  <div class="form-group row">
-                    <label for="staticName" class="col-sm-2 col-form-label">Name </label>
-                    <div class="col-sm-5">
-                      <input type="text" readonly class="form-control-plaintext" id="staticName" value="Admin">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="staticName" class="col-sm-2 col-form-label">Level </label>
-                    <div class="col-sm-5">
-                      <input type="text" readonly class="form-control-plaintext" id="staticName" value="Admin">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="staticName" class="col-sm-2 col-form-label">Email </label>
-                    <div class="col-sm-5">
-                      <input type="text" readonly class="form-control-plaintext" id="staticName" value="Admin@gmail.com">
-                    </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-               
-        <div class="col-lg-6">
+<div class="main-content">
+  <section class="section">
+    <div class="section-header">
+      <h1 style="font-size: 25px">Detail User</h1>
+      <div class="section-header-breadcrumb">
+        <div class="breadcrumb-item active"><a href="#">Manage User</a></div>
+        <div class="breadcrumb-item">Edit Project</div>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="row">
+        <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <i class="fas fa-user-edit" style="font-size: 20px; margin-right:0.5em"></i> <h4>Edit Profile</h4>
+              <h4>Detail Data</h4>
             </div>
             <div class="card-body">
-              <form method="POST" action="{{ route('register') }}">
-                @csrf
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input id="name" type="text" class="form-control" name="name" autofocus>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="Appku">
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control" name="email">
-                    <div class="invalid-feedback">
-                    </div>
+              </div>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Level</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="Akutansi">
                 </div>
+              </div>
 
-                <div class="row">
-                    <div class="form-group col-6">
-                        <label for="password" class="d-block">Password</label>
-                        <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password">
-                        <div id="pwindicator" class="pwindicator">
-                            <div class="bar"></div>
-                            <div class="label"></div>
-                        </div>
-                    </div>
-                    <div class="form-group col-6">
-                        <label for="password_confirmation" class="d-block">Password Confirmation</label>
-                        <input id="password_confirmation" type="password" class="form-control" name="password_confirmation">
-                    </div>
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="01/09/2021">
                 </div>
+              </div>
 
-                <div class="form-group">
-
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">
-                        {{ __('Save') }}
-                    </button>
-
+              <div class="form-group row">
+                <label for="appname" class="col-sm-2 col-form-label">Foto</label>
+                <div class="col-sm-7">
+                  <input type="name" class="form-control" id="name" readonly="" value="MyImage.jpg">
                 </div>
-              </form> 
+              </div>
+              
+              <div class="form-group row">
+                <div class="col-sm-9">
+                  <div class="card-footer text-right">
+                    <a href="" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Cancel</></a>
+                    <a href="" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
-   </div>
-</section>
+    </div>
+  </section>
 </div>
-
-                    
 @endsection
