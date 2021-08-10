@@ -9,8 +9,8 @@
     <div class="section-header">
       <h1 style="font-size: 25px">List Project</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-        <div class="breadcrumb-item">List Project</div>
+        <div class="breadcrumb-item active">Project</a></div>
+        <div class="breadcrumb-item">List</div>
       </div>
     </div>
 
@@ -77,8 +77,8 @@
                           @csrf
                           @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i></a>
+                            <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
+                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i> Archive</a>
                           </div>
                         </form>
 

@@ -8,8 +8,8 @@
         <div class="section-header">
             <h1 style="font-size: 25px">Create Project</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-                <div class="breadcrumb-item">Create Project</div>
+                <div class="breadcrumb-item active"><a href="{{ url('projects') }}">Project</a></div>
+                <div class="breadcrumb-item">Create</div>
             </div>
         </div>
         <div class="section-body">

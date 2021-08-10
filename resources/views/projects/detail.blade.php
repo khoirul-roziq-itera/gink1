@@ -8,9 +8,8 @@
     <div class="section-header">
       <h1 style="font-size: 25px">Detail Project</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-        <div class="breadcrumb-item active"><a href="#">List Project</a></div>
-        <div class="breadcrumb-item">Edit Project</div>
+        <div class="breadcrumb-item active"><a href="{{ url ('projects') }}">Data Project</a></div>
+        <div class="breadcrumb-item">Edit</div>
       </div>
     </div>
     <div class="section-body">
@@ -18,7 +17,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <a href="{{ url ('projects')}}"><button class="btn btn-secondary "><i class="fas fa-arrow-circle-left"></i> Back</button></a>
+              <h4>Detail Data</h4>
             </div>
             <div class="card-body">
               <div class="form-group row">
@@ -74,7 +73,8 @@
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
-                    <a href="{{ route('projects.edit', $app->id) }}"><button class="btn btn-success "> <i class="fas fa-edit" style="font-size: 18px"></i> Edit</button></a>
+                    <a href="{{ url('projects') }}" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</a>
+                    <a href="{{ route('projects.edit', $app->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
                   </div>
                 </div>
               </div>
