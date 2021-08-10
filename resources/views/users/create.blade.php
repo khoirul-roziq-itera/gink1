@@ -19,13 +19,13 @@
                         <div class="card-header">
                             <h4>Input Data</h4>
                         </div>
-                        <form method="POST" action="{{ route('functions.store') }}" id="myForm">
+                        <form method="POST" action="{{ route('users.store') }}" enctype="multipart/form-data" id="myForm">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="funcTitle" class="col-sm-2 col-form-label">Name</label>
+                                    <label for="name" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control" placeholder="Masukkan nama lengkap">
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="Masukkan nama lengkap">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -39,39 +39,40 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="password_confirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
+                                    <label for="passwordConfirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
                                     <div class="col-sm-7">
-                                        <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" placeholder="Masukkan password">
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group row">
-                                    <label for="funcGroup" class="col-sm-2 col-form-label">Level</label>
-                                    <div class="col-sm-7">
-                                        <select id="funcGroup" name="funcGroup" class="form-control">
-                                            <option value="">-- Choose Level --</option>
-                                            <option value="">Admin</option>
-                                            <option value="">Creator</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="funcName" class="col-sm-2 col-form-label">Email</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" id="funcName" name="funcName" class="form-control" placeholder="Masukkan email">
+                                        <input id="passwordConfirmation" type="password" class="form-control" name="passwordConfirmation" placeholder="Masukkan password">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="funcName" class="col-sm-2 col-form-label">Foto</label>
+                                    <label for="level" class="col-sm-2 col-form-label">Level</label>
                                     <div class="col-sm-7">
-                                        <input type="file" class="form-control" id="customFile">         
-                                    </div>                           
-                                </div>                          
+                                        <select id="level" name="level" class="form-control">
+                                            <option value="">-- Choose Level --</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="creator">Creator</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="email" name="email" class="form-control" placeholder="Masukkan email">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="photo" class="col-sm-2 col-form-label">Photo</label>
+                                    <div class="col-sm-7">
+                                        <input type="file" class="form-control" id="photo" name="photo">
+                                        <!-- <input type="text" id="photo" name="photo" class="form-control"> -->
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
-                                            <a href="{{ url('functions') }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
+                                            <a href="{{ url('users') }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
                                             <button type="submit" class="btn btn-primary btn">Submit</button>
                                         </div>
                                     </div>

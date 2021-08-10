@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class UsersController extends Controller
 {
@@ -36,7 +39,15 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'level' => $request->level,
+            'profile_photo_path' => $request->file('photo')->move('uploads/photo', Str::slug($request->name) . '-' . $request->file('photo')->getClientOriginalName())
+        ]);
+
+        return redirect('users')->with('success', 'User Successfully Created!');
     }
 
     /**
@@ -59,7 +70,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::where('id', $id)->first();
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -71,7 +83,15 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        User::where('id', $id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'level' => $request->level,
+            'profile_photo_path' => $request->photo
+        ]);
+
+        return redirect('users')->with('success', 'User Successfully Created!');
     }
 
     /**

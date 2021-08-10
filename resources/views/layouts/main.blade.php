@@ -43,23 +43,24 @@
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                      <img alt="image" src="{{ asset('img/avatar-1.png')}}" class="rounded-circle mr-1">
-                      <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-title text-center">My Profile</div>
-                        <a href="detailusers" class="dropdown-item has-icon">
-                          <i class="fas fa-user lg " style="color:red"></i> Profile Akun
+                            <img alt="image" src="{{ asset('img/avatar-1.png')}}" class="rounded-circle mr-1">
+                            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div>
                         </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item has-icon text-danger">
-                            <form method="POST" action="{{ route('logout') }}" class="dropdown-item has-icon text-danger">
-                                @csrf
-                                <button type="submit" class="btn btn-danger" ><i class="fas fa-sign-out-alt" style="margin: 0.5em; "></i> Logout</button>
-                            </form>
-                        </a>
-                      </div>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-title text-center">My Profile</div>
+                            <a href="detailusers" class="dropdown-item has-icon">
+                                <i class="fas fa-user lg " style="color:red"></i> Profile Akun
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item has-icon text-danger">
+                                <form method="POST" action="{{ route('logout') }}" class="dropdown-item has-icon text-danger">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt" style="margin: 0.5em; "></i> Logout</button>
+                                </form>
+                            </a>
+                        </div>
                     </li>
-                  </ul>
+                </ul>
             </nav>
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
@@ -117,30 +118,30 @@
                             </li>
                             @if(auth()->user()->level == "admin")
                             <li class="{{ Request::is('user') ? 'active' : '' }}">
-                                <a href="users"><i class="fas fa-users fa-lg"></i><span style="font-weight:bold; font-size:19px">Manage User</span></a>
+                                <a href="{{ url('/users') }}"><i class="fas fa-users fa-lg"></i><span style="font-weight:bold; font-size:19px">Manage Users</span></a>
                             </li>
                             @endif
                         </ul>
                     </div>
                     {{-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini text-center">
                         <form method="POST" action="{{ route('logout') }}" class="dropdown-item has-icon text-danger">
-                            @csrf
-                            <button type="submit" class="btn btn-danger" style="margin: 0.5em"><i class="fas fa-sign-out-alt" style="margin: 0.5em"></i> Logout</button>
-                        </form>
-                    </div> --}}
-                </aside>
-            </div>
-
-            <!-- Main Content -->
-            @yield('container')
-
-            {{-- footer --}}
-            <footer class="main-footer">
-                <div class="footer-left">
-                    Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="https://ginktech.net/">GinkTech</a>
-                </div>
-            </footer>
+                    @csrf
+                    <button type="submit" class="btn btn-danger" style="margin: 0.5em"><i class="fas fa-sign-out-alt" style="margin: 0.5em"></i> Logout</button>
+                    </form>
+            </div> --}}
+            </aside>
         </div>
+
+        <!-- Main Content -->
+        @yield('container')
+
+        {{-- footer --}}
+        <footer class="main-footer">
+            <div class="footer-left">
+                Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="https://ginktech.net/">GinkTech</a>
+            </div>
+        </footer>
+    </div>
     </div>
 
     <!-- General JS Scripts -->

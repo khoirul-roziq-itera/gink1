@@ -19,13 +19,14 @@
                         <div class="card-header">
                             <h4>Input Data</h4>
                         </div>
-                        <form method="POST" action="{{ route('functions.store') }}" id="myForm">
+                        <form method="POST" action="{{ route('users.update', $user->id) }}" id="myForm">
                             @csrf
+                            @method('patch')
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="funcTitle" class="col-sm-2 col-form-label">Name</label>
+                                    <label for="name" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control" value="Admin">
+                                        <input type="text" id="name" name="name" class="form-control" value="{{ $user->name }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -44,34 +45,35 @@
                                         <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" placeholder="Masukkan password">
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group row">
-                                    <label for="funcGroup" class="col-sm-2 col-form-label">Level</label>
+                                    <label for="level" class="col-sm-2 col-form-label">Level</label>
                                     <div class="col-sm-7">
-                                        <select id="funcGroup" name="funcGroup" class="form-control">
+                                        <select id="level" name="level" class="form-control">
                                             <option value="">-- Choose Level --</option>
-                                            <option value="">Admin</option>
-                                            <option value="">Creator</option>
+                                            <option value="admin" @if($user->level == 'admin') selected @endif>Admin</option>
+                                            <option value="creator" @if($user->level == 'creator') selected @endif>Creator</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="funcName" class="col-sm-2 col-form-label">Email</label>
+                                    <label for="email" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcName" name="funcName" class="form-control" value="admin@admin.com">
+                                        <input type="text" id="email" name="email" class="form-control" value="{{ $user->email }}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="funcName" class="col-sm-2 col-form-label">Foto</label>
+                                    <label for="photo" class="col-sm-2 col-form-label">Foto</label>
                                     <div class="col-sm-7">
-                                        <input type="file" class="form-control" id="customFile">         
-                                    </div>                           
-                                </div>                          
+                                        <!-- <input type="file" class="form-control" id="customFile"> -->
+                                        <input type="text" class="form-control" id="photo" name="photo" value="{{ $user->profile_photo_path }}">
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
-                                            <a href="detailusers"><button type="button" class="btn btn-danger btn">Cancel</button></a>
+                                            <a href="{{ url('users', $user->id) }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
                                             <button type="submit" class="btn btn-primary btn">Save changes</button>
                                         </div>
                                     </div>

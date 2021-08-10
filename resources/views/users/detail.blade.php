@@ -21,40 +21,41 @@
             </div>
             <div class="card-body">
               <div class="form-group row">
-                <label for="appname" class="col-sm-2 col-form-label">Name</label>
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="Appku">
+                  <input type="text" class="form-control" id="name" readonly="" value="{{ $user->name }}">
                 </div>
               </div>
               <div class="form-group row">
-                <label for="appname" class="col-sm-2 col-form-label">Level</label>
+                <label for="level" class="col-sm-2 col-form-label">Level</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="Akutansi">
+                  <input type="text" class="form-control" id="level" readonly="" value="{{ $user->level }}">
                 </div>
               </div>
 
               <div class="form-group row">
                 <label for="appname" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="01/09/2021">
+                  <input type="name" class="form-control" id="name" readonly="" value="{{ $user->email }}">
                 </div>
               </div>
 
               <div class="form-group row">
                 <label for="appname" class="col-sm-2 col-form-label">Foto</label>
                 <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="MyImage.jpg">
+                  <input type="name" class="form-control" id="name" readonly="" value="{{ $user->profile_photo_path }}">
                 </div>
               </div>
-              
+              <img src="{{ asset($user->profile_photo_path) }}" alt="">
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
                     <a href="users" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Cancel</></a>
-                    <a href="editusers" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
+                    <a href="{{ route('users.edit', $user->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
