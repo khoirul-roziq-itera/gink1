@@ -10,8 +10,8 @@
     <div class="section-header">
       <h1 style="font-size: 25px">Archive Tags</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Tags</a></div>
-        <div class="breadcrumb-item">Archive Tags</div>
+        <div class="breadcrumb-item active"><a href="{{ url('tags')}}">Tags</a></div>
+        <div class="breadcrumb-item">Archive</div>
       </div>
     </div>
 

@@ -23,7 +23,7 @@
                 <div class="row" style="padding-bottom: 1em">
                   <div class="col-6">
                     <div class="input-group">
-                      <span class="input-group-text" style="font-weight: bold">Tag Name </span>
+                        <span class="input-group-text" style="font-weight: bold">Tag Name </span>
                         <input type="text" aria-label="First name" class="form-control" value="app">
                     </div>
                   </div>
