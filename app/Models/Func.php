@@ -36,4 +36,9 @@ class Func extends Model
     {
         return $this->belongsToMany('App\Model\Module');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

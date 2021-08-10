@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class CategoriesController extends Controller
@@ -39,7 +40,8 @@ class CategoriesController extends Controller
     {
         Category::create([
             'category_name' => $request->categoryName,
-            'category_slug' => Str::of($request->categoryName)->slug('-')
+            'category_slug' => Str::of($request->categoryName)->slug('-'),
+            'user_id' => Auth::id()
         ]);
 
         return redirect('categories')->with('success', 'Category Successfully Created!');

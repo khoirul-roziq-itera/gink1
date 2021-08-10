@@ -184,6 +184,15 @@
         });
     </script>
 
+    {{-- Script form select modules--}}
+    <script>
+        $(document).ready(function() {
+            var multipleCancelButton = new Choices('#choices-modules', {
+                removeItemButton: true,
+            });
+        });
+    </script>
+
 
 </body>
 

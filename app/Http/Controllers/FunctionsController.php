@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Func;
-use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 
 class FunctionsController extends Controller
@@ -41,6 +42,8 @@ class FunctionsController extends Controller
         Func::create([
             'function_Title' => $request->funcTitle,
             'function_Name' => $request->funcName,
+            'function_slug' => Str::of($request->funcName)->slug('-'),
+            'user_id' => Auth::id(),
             'function_Group' => $request->funcGroup,
             'function_FE_Duration' => $request->FEDuration,
             'function_FE_Cost' => $request->FECost,
@@ -54,7 +57,7 @@ class FunctionsController extends Controller
             'function_Notes' => $request->funcNotes,
             'function_Status' => $request->funcStatus
         ]);
-        
+
         return redirect('functions')->with('success', 'Function Successfully Created!');
     }
 

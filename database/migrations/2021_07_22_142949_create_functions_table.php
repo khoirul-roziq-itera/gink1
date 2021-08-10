@@ -29,7 +29,7 @@ class CreateFunctionsTable extends Migration
             $table->tinyInteger('function_FS_Duration')->nullable(true);
             $table->decimal('function_FS_Cost', 15, 2)->nullable(true);
             $table->decimal('function_FS_Price', 15, 2)->nullable(true);
-            $table->text('function_Notes');
+            $table->text('function_Notes')->nullable(true);
             $table->tinyInteger('function_Status');
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();

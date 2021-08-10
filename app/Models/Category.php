@@ -17,4 +17,9 @@ class Category extends Model
     {
         return $this->belongsToMany('App\Models\Application');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

@@ -39,4 +39,9 @@ class Module extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
+    public function aplication()
+    {
+        return $this->belongsToMany('App\Model\Application');
+    }
 }

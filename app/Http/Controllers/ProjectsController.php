@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Application;
+use App\Models\Module;
 use App\Models\Category;
 use App\Models\Tag;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ProjectsController extends Controller
@@ -32,7 +34,8 @@ class ProjectsController extends Controller
     {
         $categories = Category::all();
         $tags = Tag::all();
-        return view('projects.create', compact('categories', 'tags'));
+        $modules = Module::all();
+        return view('projects.create', compact('categories', 'tags', 'modules'));
     }
 
     /**
@@ -45,17 +48,26 @@ class ProjectsController extends Controller
     {
         $app = Application::create([
             'app_name' => $request->appName,
-            'category' => $request->category,
+            'app_slug' => Str::of($request->appName)->slug('-'),
+            'user_id' => Auth::id(),
+            'category_id' => $request->category,
             'status' => $request->status,
             'start_project_t' => $request->startProjectT,
             'end_project_t' => $request->endProjectT,
             'deadline_project_t' => $request->deadlineProjectT,
-            'cost_total' => $request->costTotal,
-            'price_total' => $request->priceTotal,
-            'notes' => $request->notes
+            // 'app_FE_Cost' => $sumFECost,
+            // 'app_FE_Price' => $sumFEPrice,
+            // 'app_BE_Cost' => $sumBECost,
+            // 'app_BE_Price' => $sumBEPrice,
+            // 'app_FS_Cost' => $sumFSCost,
+            // 'app_FS_Price' => $sumFSPrice,
+            // 'app_Cost_Total' => $sumFECost + $sumBECost + $sumFSCost,
+            // 'app_Price_Total' => $sumFEPrice + $sumBEPrice + $sumFSPrice,
+            'app_notes' => $request->notes
         ]);
 
         $app->tags()->attach($request->tags);
+        $app->modules()->attach($request->modules);
 
         return redirect('projects')->with('success', 'Project Successfully Created!');
     }
@@ -137,6 +149,7 @@ class ProjectsController extends Controller
     {
         Application::withTrashed()->where('id', $id)->first()->forceDelete();
         DB::table('application_tag')->where('application_id', $id)->delete();
+        DB::table('application_module')->where('application_id', $id)->delete();
 
         return redirect()->back()->with('success', 'Project Deleted Successfully!');
     }

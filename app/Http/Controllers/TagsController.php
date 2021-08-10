@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tag;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class TagsController extends Controller
 {
@@ -38,7 +40,9 @@ class TagsController extends Controller
     public function store(Request $request)
     {
         Tag::create([
-            'tag_name' => $request->tagName
+            'tag_name' => $request->tagName,
+            'tag_slug' => Str::of($request->tagName)->slug('-'),
+            'user_id' => Auth::id()
         ]);
 
         return redirect('tags')->with('success', 'Tag Successfully Created!');

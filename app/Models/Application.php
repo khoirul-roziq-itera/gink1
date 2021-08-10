@@ -15,7 +15,7 @@ class Application extends Model
         'app_name',
         'app_slug',
         'user_id',
-        'category',
+        'category_id',
         'status',
         'start_project_t',
         'end_project_t',
@@ -42,5 +42,15 @@ class Application extends Model
     public function tags()
     {
         return $this->belongsToMany('App\Models\Tag');
+    }
+
+    public function modules()
+    {
+        return $this->belongsToMany('App\Models\Module');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
     }
 }

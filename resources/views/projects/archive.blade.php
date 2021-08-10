@@ -41,8 +41,8 @@
                     <tr class="text-center">
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
-                      <td>{{ $result->category }}</td>
-                      <td>{{ $result->deadline_project_t }}</td>
+                      <td>{{ $result->category->category_name }}</td>
+                      <td>{{ $result->deadline_project_t}}</td>
                       <td>
                         <div class="badge badge-primary">Selesai</div>
                       </td>

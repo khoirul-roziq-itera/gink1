@@ -50,6 +50,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="modules" class="col-sm-2 col-form-label">Modules</label>
+                                    <div class="col-sm-7">
+                                        <select id="choices-modules" name="modules[]" class="form-control" placeholder="Select modules" multiple>
+                                            @foreach ( $modules as $module)
+                                            <option value="{{ $module->id }}">{{$module->module_Name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="startProjectT" class="col-sm-2 col-form-label">Start Time</label>
                                     <div class="col-sm-7">
                                         <input type="date" name="startProjectT" class="form-control datepicker" />
