@@ -17,6 +17,7 @@ class CreateApplicationsTable extends Migration
             $table->id();
             $table->string('app_name');
             $table->string('app_slug');
+            $table->integer('user_id');
             $table->integer('category_id');
             $table->tinyInteger('status');
             $table->decimal('module_FE_Cost', 15, 2);

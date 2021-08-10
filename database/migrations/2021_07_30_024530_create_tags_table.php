@@ -17,6 +17,7 @@ class CreateTagsTable extends Migration
             $table->id();
             $table->string('tag_name');
             $table->string('tag_slug');
+            $table->integer('user_id');
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
         });

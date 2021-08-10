@@ -17,6 +17,7 @@ class Func extends Model
         'function_Title',
         'function_Name',
         'function_slug',
+        'user_id',
         'function_Group',
         'function_FE_Duration',
         'function_FE_Cost',
