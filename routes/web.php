@@ -6,7 +6,8 @@ use App\Http\Controllers\FunctionsController;
 use App\Http\Controllers\ModulesController;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\AdminsController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,14 +107,14 @@ Route::get('detailCateg', function () {
 
 
 Route::group(['middleware' => ['auth', 'userlevel:admin']], function () {
-    Route::resource('/admins', AdminsController::class);
+    Route::resource('/admins', UsersController::class);
 });
 
 
 Route::group(['middleware' => ['auth', 'userlevel:admin,creator']], function () {
-    Route::get('dashboard', function () {
-        return view('dashboard');
-    });
+
+    // Controller Dashboard Routes
+    Route::resource('/dashboard', DashboardController::class);
 
     // Controller Projects Routes
     Route::get('/projects/archive', [ProjectsController::class, 'archive']);
