@@ -10,8 +10,8 @@
     <div class="section-header">
       <h1 style="font-size: 25px">Archive Project</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
-        <div class="breadcrumb-item">Archive Modul</div>
+        <div class="breadcrumb-item active"><a href="{{ url('projects')}}">Data Project</a></div>
+        <div class="breadcrumb-item">Archive</div>
       </div>
     </div>
 
@@ -52,7 +52,7 @@
                           @method('delete')
                           <div class="btn-group" role="group" aria-label="Basic example">
                             <a href="{{ url('projects/restore/'.$result->id) }}" class="btn btn-success" style="margin: 2px"><i class="fas fa-history"> Restore</i></a>
-                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i></a>
+                            <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i> Delete</a>
                           </div>
                         </form>
                       </td>

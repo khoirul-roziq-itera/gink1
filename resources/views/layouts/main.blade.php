@@ -41,6 +41,25 @@
 
                     </ul>
                 </form>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                      <img alt="image" src="{{ asset('img/avatar-1.png')}}" class="rounded-circle mr-1">
+                      <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-title text-center">My Profile</div>
+                        <a href="detailusers" class="dropdown-item has-icon">
+                          <i class="fas fa-user lg " style="color:red"></i> Profile Akun
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item has-icon text-danger">
+                            <form method="POST" action="{{ route('logout') }}" class="dropdown-item has-icon text-danger">
+                                @csrf
+                                <button type="submit" class="btn btn-danger" ><i class="fas fa-sign-out-alt" style="margin: 0.5em; "></i> Logout</button>
+                            </form>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
             </nav>
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
@@ -58,12 +77,12 @@
                             <li class="{{ Request::is('dashboard') ? 'active' : '' }}">
                                 <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Dashboard</span></a>
                             </li>
-                            <li class="nav-item dropdown {{ Request::is('projects/create') || Request::is('projects') || Request::is('projects/archive') || Request::is('projects/1') ? 'active' : '' }}">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
+                            <li class="nav-item dropdown {{ Request::is('functions/create') || Request::is('functions') || Request::is('functions/archive') ? 'active' : '' }}">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
                                 <ul class="dropdown-menu">
-                                    <li class="{{ Request::is('projects/create') ? 'active' : '' }}"><a href="{{ url('projects/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li class="{{ Request::is('projects') ? 'active' : '' }}"><a href="{{ url ('projects') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
-                                    <li class="{{ Request::is('projects/archive') ? 'active' : '' }}"><a href="{{ url ('projects/archive')}}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                    <li class="{{ Request::is('functions/create') ? 'active' : '' }}"><a href="{{ url('functions/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li class="{{ Request::is('functions') ? 'active' : '' }}"><a href="{{ url('functions') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li class="{{ Request::is('functions/archive') ? 'active' : '' }}"><a href="{{ url('functions/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown {{ Request::is('modules/create') || Request::is('modules') || Request::is('modules/archive') ? 'active' : '' }}">
@@ -74,12 +93,12 @@
                                     <li class="{{ Request::is('modules/archive') ? 'active' : '' }}"><a href="{{ url('modules/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown {{ Request::is('functions/create') || Request::is('functions') || Request::is('functions/archive') ? 'active' : '' }}">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
+                            <li class="nav-item dropdown {{ Request::is('projects/create') || Request::is('projects') || Request::is('projects/archive') || Request::is('projects/1') ? 'active' : '' }}">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
                                 <ul class="dropdown-menu">
-                                    <li class="{{ Request::is('functions/create') ? 'active' : '' }}"><a href="{{ url('functions/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li class="{{ Request::is('functions') ? 'active' : '' }}"><a href="{{ url('functions') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
-                                    <li class="{{ Request::is('functions/archive') ? 'active' : '' }}"><a href="{{ url('functions/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                    <li class="{{ Request::is('projects/create') ? 'active' : '' }}"><a href="{{ url('projects/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li class="{{ Request::is('projects') ? 'active' : '' }}"><a href="{{ url ('projects') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
+                                    <li class="{{ Request::is('projects/archive') ? 'active' : '' }}"><a href="{{ url ('projects/archive')}}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown {{ Request::is('tags') || Request::is('tags/archive') || Request::is('tags/detail') ? 'active' : '' }}">
@@ -103,12 +122,12 @@
                             @endif
                         </ul>
                     </div>
-                    <div class="mt-4 mb-4 p-3 hide-sidebar-mini text-center">
+                    {{-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini text-center">
                         <form method="POST" action="{{ route('logout') }}" class="dropdown-item has-icon text-danger">
                             @csrf
                             <button type="submit" class="btn btn-danger" style="margin: 0.5em"><i class="fas fa-sign-out-alt" style="margin: 0.5em"></i> Logout</button>
                         </form>
-                    </div>
+                    </div> --}}
                 </aside>
             </div>
 
