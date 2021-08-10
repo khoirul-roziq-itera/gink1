@@ -8,27 +8,33 @@
      <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Profile</h1>
+            <h1>Detail Admin</h1>
           </div>
         <div class="row">
           <div class="col-lg-6">
             <div class="card" style="box-shadow: 5px 10px #b6b3b3;">
               <div class="card-header">
-                <i class="fas fa-user" style="font-size: 20px; padding:0.5em"></i> <h4> My Profile</h4>
+                <i class="fas fa-user" style="font-size: 20px; padding:0.5em"></i> <h4> Profile</h4>
               </div>
               <div class="card-body">   
                   <div class="form-group row">
-                    <label for="staticName" class="col-sm-2 col-form-label">Nama </label>
+                    <label for="staticName" class="col-sm-2 col-form-label">Name </label>
                     <div class="col-sm-5">
                       <input type="text" readonly class="form-control-plaintext" id="staticName" value="Admin">
                     </div>
-                </div>
-                <div class="form-group row">
+                  </div>
+                  <div class="form-group row">
+                    <label for="staticName" class="col-sm-2 col-form-label">Level </label>
+                    <div class="col-sm-5">
+                      <input type="text" readonly class="form-control-plaintext" id="staticName" value="Admin">
+                    </div>
+                  </div>
+                  <div class="form-group row">
                     <label for="staticName" class="col-sm-2 col-form-label">Email </label>
                     <div class="col-sm-5">
                       <input type="text" readonly class="form-control-plaintext" id="staticName" value="Admin@gmail.com">
                     </div>
-                </div>
+                  </div>
               </div>
           </div>
         </div>

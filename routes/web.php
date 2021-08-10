@@ -100,9 +100,16 @@ Route::get('detailCateg', function () {
     return view('/categories/detail');
 });
 
-// Route::get('admin', function () {
-//     return view('/admins/index');
-// });
+// vIEW ADMIN
+Route::get('admins', function () {
+     return view('/users/index');
+ });
+Route::get('addadmin', function () {
+     return view('/users/create');
+ });
+Route::get('detailadmin', function () {
+     return view('/users/detail');
+ });
 
 
 Route::group(['middleware' => ['auth', 'userlevel:admin']], function () {
