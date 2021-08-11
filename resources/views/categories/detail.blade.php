@@ -6,7 +6,7 @@
   <div class="main-content">
     <section class="section">
       <div class="section-header">
-        <h1 style="font-size: 25px">Detail Category</h1>
+        <h1 style="font-size: 25px">Categories</h1>
         <div class="section-header-breadcrumb">
           <div class="breadcrumb-item active"><a href="{{ url('categories')}}">Categories</a></div>
           <div class="breadcrumb-item">Detail</a></div> 
@@ -17,7 +17,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                  <h4>Detail Data</h4>
+                  <h4>Detail Category</h4>
               </div>
               <div class="card-body">
                 <div class="row" style="padding-bottom: 1em">

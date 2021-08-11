@@ -1,14 +1,14 @@
 @extends('layouts/main')
 
 
-@section('title','List Modules')
+@section('title','Data Modules')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Module</h1>
+      <h1 style="font-size: 25px">Module</h1>
       <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active">Module</a></div>
         <div class="breadcrumb-item">List</div>

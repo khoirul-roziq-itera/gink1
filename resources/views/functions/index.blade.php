@@ -9,18 +9,26 @@
   <section class="section">
     <div class="section-header">
       <h1 style="font-size: 25px">Functions</h1>
-      <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active">Functions</a></div>
-        <div class="breadcrumb-item active">List</a></div>
-      </div>
     </div>
 
     <div class="section-body">
+
+      @if(session('success'))
+      <div class="alert alert-success alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('success')}}
+        </div>
+      </div>
+      @endif
+      
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>List Functions</h4>
+              <h4>Data Functions</h4>
             </div>
             <div class="card-body p-0">
               <div class="row">
@@ -96,5 +104,5 @@
     </div>
   </section>
 </div>
-@include('sweetalert::alert')
+
 @endsection

@@ -1,27 +1,42 @@
 @extends('layouts/main')
 
 
-@section('title','List Functions')
+@section('title','Archive Functions')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Archive Functions</h1>
+      <h1 style="font-size: 25px">Functions</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="{{ url ('functions')}}">Function</a></div>
+        <div class="breadcrumb-item active"><a href="{{ url ('functions')}}">Functions</a></div>
         <div class="breadcrumb-item">Archive</div>
     </div>
     </div>
 
     <div class="section-body">
+
+      @if(session('success'))
+      <div class="alert alert-success alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('success')}}
+        </div>
+      </div>
+      @endif
+
       <div class="row">
         <div class="col-12">
           <div class="card">
+            <div class="card-header">
+              <h4>Archive Functions</h4>
+            </div>
             <div class="card-body p-0">
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
-                <table id="table-1" class="table table-hover table-bordered border-primary">
+                <table id="table-1" class="table table-hover table-bordered">
                   <thead class="text-center">
                     <tr>
                       <th>Nomor</th>
@@ -39,11 +54,11 @@
                       <td>{{ $result->function_Name }}</td>
                       <td>
                         @if( $result->function_Status == 1)
-                        <span class="badge badge-warning">Menunggu</span>
+                        <span class="badge badge-danger">Waiting</span>
                         @elseif( $result->function_Status == 2 )
-                        <span class="badge badge-info">Sedang Dikerjakan</span>
+                        <span class="badge badge-success">On Progess</span>
                         @else
-                        <span class="badge badge-success">Selesai</span>
+                        <span class="badge badge-primary">Finished</span>
                         @endif
                       </td>
                       <td>

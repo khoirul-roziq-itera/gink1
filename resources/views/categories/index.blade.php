@@ -6,11 +6,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Categories</h1>
-      <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="{{ url('categories')}}">Categories</a></div>
-        <div class="breadcrumb-item active">List</a></div>
-      </div>
+      <h1 style="font-size: 25px">Categories</h1>
     </div>
     <div class="section-body">
       <div class="row">
@@ -55,7 +51,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>List Categories</h4>
+                  <h4>Data Categories</h4>
                 </div>
                 <div class="card-body p-0">
                   <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
