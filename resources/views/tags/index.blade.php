@@ -1,6 +1,6 @@
 @extends('layouts/main')
 
-@section('title','List Tags')
+@section('title','Tags')
 
 @section('container')
 
@@ -8,18 +8,14 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Tags</h1>
-      <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="{{ url('tags')}}">Data Tags</a></div>
-        <div class="breadcrumb-item active">List</a></div>
-      </div>
+      <h1 style="font-size: 25px">Tags</h1>
     </div>
     <div class="section-body">
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Add Tag</h4>
+              <h4>Create Tag</h4>
             </div>
             <div class="card-body">
               <form action="{{ route('tags.store') }}" method="POST" id="tag">
@@ -35,7 +31,7 @@
                     </div>
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
-                    <button type="submit" class="btn btn-success" id="swal-2"><i class="fas fa-plus-circle fa-lg"></i> Add</button>
+                    <button type="submit" class="btn btn-success" id="swal-2"><i class="fas fa-plus-circle fa-lg"></i> Add Data</button>
                   </div>
                 </div>
               </form>
@@ -56,9 +52,8 @@
           <div class="row">
             <div class="col-12">
               <div class="card">
-
                 <div class="card-header">
-                  <h4>Data Tags</h4>
+                  <h4>List Tags</h4>
                 </div>
                 <div class="card-body p-0">
                   <div class="col-12">

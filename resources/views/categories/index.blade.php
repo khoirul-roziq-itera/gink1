@@ -1,6 +1,6 @@
 @extends('layouts/main')
 
-@section('title','List Categories')
+@section('title','Categories')
 
 @section('container')
 <div class="main-content">
@@ -17,7 +17,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Add Category</h4>
+              <h4>Create Category</h4>
             </div>
             <div class="card-body">
               <form action="{{ route('categories.store') }}" method="POST">
@@ -25,21 +25,37 @@
                 <div class="form-group row">
                   <label for="categoryName" class="col-sm-2 col-form-label">Category Name</label>
                   <div class="col-sm-5">
-                    <input type="nama" class="form-control" id="categoryName" name="categoryName" placeholder="Input Category">
+                    <input type="nama" class="form-control  @error('categoryName') is-invalid @enderror" id="categoryName" name="categoryName" placeholder="Input Category">
+                    <div class="invalid-feedback">
+                      @error('categoryName')
+                      {{ $message }}
+                      @enderror
+                    </div>
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
-                    <button class="btn btn-success"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
+                    <button class="btn btn-success"> <i class="fas fa-plus-circle fa-lg"></i> Add Data</button>
                   </div>
-
                 </div>
               </form>
             </div>
           </div>
+
+          @if(session('success'))
+          <div class="alert alert-success alert-dismissible show fade">
+            <div class="alert-body">
+              <button class="close" data-dismiss="alert">
+                <span>&times;</span>
+              </button>
+              {{session('success')}}
+            </div>
+          </div>
+          @endif
+
           <div class="row">
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Data Category</h4>
+                  <h4>List Categories</h4>
                 </div>
                 <div class="card-body p-0">
                   <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
