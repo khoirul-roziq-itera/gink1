@@ -44,12 +44,12 @@
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src="{{ asset(Auth::user()->profile_photo_url) }}"  class="rounded-circle mr-1">
+                            <img alt="image" src="{{ asset(Auth::user()->profile_photo_url) }}" class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }} </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-title text-center">My Profile</div>
-                            <a href="{{url ('detailprofile')}}" class="dropdown-item has-icon">
+                            <a href="{{ url('profile', Auth::user()->id) }}" class="dropdown-item has-icon">
                                 <i class="fas fa-user lg " style="color:red"></i> Profile Akun
                             </a>
                             <div class="dropdown-divider"></div>
@@ -125,19 +125,19 @@
                             @endif
                         </ul>
                     </div>
-            </aside>
-        </div>
-
-        <!-- Main Content -->
-        @yield('container')
-
-        {{-- footer --}}
-        <footer class="main-footer">
-            <div class="footer-left">
-                Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="https://ginktech.net/">GinkTech</a>
+                </aside>
             </div>
-        </footer>
-    </div>
+
+            <!-- Main Content -->
+            @yield('container')
+
+            {{-- footer --}}
+            <footer class="main-footer">
+                <div class="footer-left">
+                    Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="https://ginktech.net/">GinkTech</a>
+                </div>
+            </footer>
+        </div>
     </div>
 
     <!-- General JS Scripts -->
