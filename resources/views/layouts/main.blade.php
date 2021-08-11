@@ -83,7 +83,7 @@
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
                                 <ul class="dropdown-menu">
                                     <li class="{{ Request::is('functions/create') ? 'active' : '' }}"><a href="{{ url('functions/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li class="{{ Request::is('functions') ? 'active' : '' }}"><a href="{{ url('functions') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li class="{{ Request::is('functions') ? 'active' : '' }}"><a href="{{ url('functions') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
                                     <li class="{{ Request::is('functions/archive') ? 'active' : '' }}"><a href="{{ url('functions/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
@@ -91,7 +91,7 @@
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
                                 <ul class="dropdown-menu">
                                     <li class="{{ Request::is('modules/create') ? 'active' : '' }}"><a href="{{ url('modules/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li class="{{ Request::is('modules') ? 'active' : '' }}"><a href="{{ url('modules') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li class="{{ Request::is('modules') ? 'active' : '' }}"><a href="{{ url('modules') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
                                     <li class="{{ Request::is('modules/archive') ? 'active' : '' }}"><a href="{{ url('modules/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
@@ -99,14 +99,14 @@
                             <li class="nav-item dropdown {{ Request::is('tags') || Request::is('tags/archive') || Request::is('tags/detail') ? 'active' : '' }}">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-tags"></i><span style="font-weight:bold; font-size:19px">Tags</span></a>
                                 <ul class="dropdown-menu">
-                                    <li class=" {{  Request::is('tags') ? 'active' : '' }}"><a class="nav-link" href="{{ url('tags') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li class=" {{  Request::is('tags') ? 'active' : '' }}"><a class="nav-link" href="{{ url('tags') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
                                     <li class=" {{  Request::is('tags/archive') ? 'active' : '' }}"><a class="nav-link" href="{{ url('tags/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown {{ Request::is('categories') || Request::is('categories/archive') ? 'active' : '' }}">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
                                 <ul class="dropdown-menu">
-                                    <li class=" {{ Request::is('categories') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
+                                    <li class=" {{ Request::is('categories') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
                                     <li class=" {{ Request::is('categories/archive') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
@@ -114,7 +114,7 @@
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
                                 <ul class="dropdown-menu">
                                     <li class="{{ Request::is('projects/create') ? 'active' : '' }}"><a href="{{ url('projects/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li class="{{ Request::is('projects') ? 'active' : '' }}"><a href="{{ url ('projects') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
+                                    <li class="{{ Request::is('projects') ? 'active' : '' }}"><a href="{{ url ('projects') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
                                     <li class="{{ Request::is('projects/archive') ? 'active' : '' }}"><a href="{{ url ('projects/archive')}}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
@@ -125,12 +125,6 @@
                             @endif
                         </ul>
                     </div>
-                    {{-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini text-center">
-                        <form method="POST" action="{{ route('logout') }}" class="dropdown-item has-icon text-danger">
-                    @csrf
-                    <button type="submit" class="btn btn-danger" style="margin: 0.5em"><i class="fas fa-sign-out-alt" style="margin: 0.5em"></i> Logout</button>
-                    </form>
-            </div> --}}
             </aside>
         </div>
 

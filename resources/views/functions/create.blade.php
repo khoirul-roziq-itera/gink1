@@ -1,6 +1,6 @@
 @extends('layouts/main')
 
-@section('title','Create Functions')
+@section('title','Create Function')
 
 @section('container')
 <div class="main-content">
@@ -25,19 +25,29 @@
                                 <div class="form-group row">
                                     <label for="funcTitle" class="col-sm-2 col-form-label">Function Title</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control" placeholder="Masukkan judul">
+                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control @error('funcTitle') is-invalid @enderror" placeholder="Masukkan judul">
+                                        <div class="invalid-feedback">
+                                            @error('funcTitle')
+                                             {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="funcName" class="col-sm-2 col-form-label">Function Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcName" name="funcName" class="form-control" placeholder="Masukkan nama">
+                                        <input type="text" id="funcName" name="funcName" class="form-control @error('funcName') is-invalid @enderror" placeholder="Masukkan nama">
+                                        <div class="invalid-feedback">
+                                            @error('tagName')
+                                            {{ $message }}
+                                            @enderror
+                                          </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="funcGroup" class="col-sm-2 col-form-label">Function Group</label>
                                     <div class="col-sm-7">
-                                        <select id="funcGroup" name="funcGroup" class="form-control">
+                                        <select id="funcGroup" name="funcGroup" class="form-control @error('funcGroup') is-invalid @enderror">
                                             <option value="">-- Choose Group --</option>
                                             <option value="Create">Create</option>
                                             <option value="Read">Read</option>
@@ -45,13 +55,26 @@
                                             <option value="Delete">Delete</option>
                                             <option value="Other">Other</option>
                                         </select>
+                                        <div class="invalid-feedback">
+                                            @error('funcGroup')
+                                            {{ $message }}
+                                            @enderror
+                                          </div>
                                     </div>
                                 </div>
     
                                 <div class="form-group row">
                                     <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
                                     <div class="col-sm-7">
-                                        <input type="text" name="FEDuration" id="FEDuration" class="form-control" placeholder="Masukkan jumlah hari" />
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="FEDuration" id="FEDuration" class="form-control @error('FEDuration') is-invalid @enderror" placeholder="Masukkan jumlah hari" />
+                                            <span class="input-group-text" id="basic-addon1">Day </span>
+                                            <div class="invalid-feedback">
+                                                @error('FEDuration')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -59,25 +82,41 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FECost" id="FECost" class="form-control" placeholder="Masukkan biaya" />
+                                            <input type="text" name="FECost" id="FECost" class="form-control @error('FECost') is-invalid @enderror" placeholder="Masukkan biaya" />
+                                            <div class="invalid-feedback">
+                                                @error('FECost')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="FEPrice" class="col-sm-2 col-form-label">Front-End Price</label>
                                     <div class="col-sm-7">
-
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FEPrice" id="FEPrice" class="form-control" placeholder="Masukkan harga" />
+                                            <input type="text" name="FEPrice" id="FEPrice" class="form-control @error('FEPrice') is-invalid @enderror" placeholder="Masukkan harga" />
+                                            <div class="invalid-feedback">
+                                                @error('FEPrice')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="form-group row">
                                     <label for="BEDuration" class="col-sm-2 col-form-label">Back-End Duration</label>
                                     <div class="col-sm-7">
-                                        <input type="text" name="BEDuration" id="BEDuration" class="form-control" placeholder="Masukkan jumlah hari" />
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="BEDuration" id="BEDuration" class="form-control @error('BEDuration') is-invalid @enderror" placeholder="Masukkan jumlah hari" />
+                                            <span class="input-group-text" id="basic-addon1">Day </span>
+                                            <div class="invalid-feedback">
+                                                @error('BEDuration')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -85,7 +124,12 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="BECost" id="BECost" class="form-control" placeholder="Masukkan biaya" />
+                                            <input type="text" name="BECost" id="BECost" class="form-control @error('BECost') is-invalid @enderror" placeholder="Masukkan biaya" />
+                                            <div class="invalid-feedback">
+                                                @error('BECost')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +138,12 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="BEPrice" id="BEPrice" class="form-control" placeholder="Masukkan harga" />
+                                            <input type="text" name="BEPrice" id="BEPrice" class="form-control @error('BEPrice') is-invalid @enderror" placeholder="Masukkan harga" />
+                                            <div class="invalid-feedback">
+                                                @error('BEPrice')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
                                         </div>
                                     </div>
                                 </div>
@@ -102,7 +151,15 @@
                                 <div class="form-group row">
                                     <label for="FSDuration" class="col-sm-2 col-form-label">Full-Stack Duration</label>
                                     <div class="col-sm-7">
-                                        <input type="text" name="FSDuration" id="FSDuration" class="form-control" placeholder="Masukkan jumlah hari" />
+                                        <div class="input-group mb-3">
+                                            <input type="text" name="FSDuration" id="FSDuration" class="form-control @error('FSDuration') is-invalid @enderror" placeholder="Masukkan jumlah hari" />
+                                            <span class="input-group-text" id="basic-addon1">Day </span>
+                                            <div class="invalid-feedback">
+                                                @error('FSDuration')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -110,7 +167,12 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FSCost" id="FSCost" class="form-control" placeholder="Masukkan biaya" />
+                                            <input type="text" name="FSCost" id="FSCost" class="form-control @error('FSCost') is-invalid @enderror" placeholder="Masukkan biaya" />
+                                            <div class="invalid-feedback">
+                                                @error('FECost')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
                                         </div>
                                     </div>
                                 </div>
@@ -119,25 +181,40 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FSPrice" id="FSPrice" class="form-control" placeholder="Masukkan harga" />
+                                            <input type="text" name="FSPrice" id="FSPrice" class="form-control @error('FSPrice') is-invalid @enderror" placeholder="Masukkan harga" />
+                                            <div class="invalid-feedback">
+                                                @error('FEPrice')
+                                                {{ $message }}
+                                                @enderror
+                                              </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="funcNotes" class="col-sm-2 col-form-label">Function Notes</label>
                                     <div class="col-sm-7">
-                                        <textarea name="funcNotes" id="funcNotes" class="form-control"></textarea>
+                                        <textarea name="funcNotes" id="funcNotes" class="form-control @error('funcNotes') is-invalid @enderror"></textarea>
+                                        <div class="invalid-feedback">
+                                            @error('funcNotes')
+                                            {{ $message }}
+                                            @enderror
+                                          </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="funcStatus" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-7">
-                                        <select id="funcStatus" name="funcStatus" class="form-control">
+                                        <select id="funcStatus" name="funcStatus" class="form-control @error('funcStatus') is-invalid @enderror">
                                             <option value="">-- Choose Status --</option>
                                             <option value="1">Waiting</option>
                                             <option value="2">On Progress</option>
                                             <option value="3">Finished</option>
                                         </select>
+                                        <div class="invalid-feedback">
+                                            @error('funcStatus')
+                                            {{ $message }}
+                                            @enderror
+                                          </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">

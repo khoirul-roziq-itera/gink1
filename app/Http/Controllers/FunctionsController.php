@@ -74,7 +74,7 @@ class FunctionsController extends Controller
             'function_Status' => $request->funcStatus
         ]);
 
-        return redirect('functions')->with('success', 'Function Successfully Created!');
+        return redirect('functions')->with('success', 'Function Created Successfully!');
     }
 
     /**
@@ -150,7 +150,7 @@ class FunctionsController extends Controller
             'function_Notes' => $request->funcNotes,
             'function_Status' => $request->funcStatus
         ]);
-        return redirect('functions')->with('success', 'Function Successfully Updated!');
+        return redirect('functions')->with('success', 'Function Updated Successfully!');
     }
 
     /**
@@ -177,7 +177,7 @@ class FunctionsController extends Controller
     {
         Func::withTrashed()->where('id', $id)->first()->restore();
 
-        return redirect()->back()->with('status', 'Function Successfully Restored!');
+        return redirect()->back()->with('status', 'Function Restored Successfully!');
     }
 
     public function kill($id)

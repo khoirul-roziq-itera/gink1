@@ -48,7 +48,7 @@ class TagsController extends Controller
             'tag_slug' => Str::of($request->tagName)->slug('-'),
             'user_id' => Auth::id()
         ]);
-        return redirect('tags')->with('success', 'Tag Successfully Created!');
+        return redirect('tags')->with('success', 'Tag Created Successfully!');
     }
 
     /**
@@ -96,7 +96,7 @@ class TagsController extends Controller
         $tag = Tag::findorfail($id);
         $tag->delete();
 
-        return redirect('tags')->with('archive', 'Tag Archived Successfully!');
+        return redirect('tags')->with('success', 'Tag Archived Successfully!');
     }
 
     public function archive()
@@ -109,13 +109,13 @@ class TagsController extends Controller
     {
         Tag::withTrashed()->where('id', $id)->first()->restore();
 
-        return redirect()->back()->with('restore', 'Tag Successfully Restored!');
+        return redirect()->back()->with('success', 'Tag  Restored Successfully!');
     }
 
     public function kill($id)
     {
         Tag::withTrashed()->where('id', $id)->first()->forceDelete();
 
-        return redirect()->back()->with('delete', 'Tag Deleted Successfully!');
+        return redirect()->back()->with('success', 'Tag Deleted Successfully!');
     }
 }

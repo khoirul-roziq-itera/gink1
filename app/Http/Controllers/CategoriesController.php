@@ -109,7 +109,7 @@ class CategoriesController extends Controller
     {
         Category::withTrashed()->where('id', $id)->first()->restore();
 
-        return redirect()->back()->with('status', 'Category Successfully Restored!');
+        return redirect()->back()->with('success', 'Category Successfully Restored!');
     }
 
     public function kill($id)

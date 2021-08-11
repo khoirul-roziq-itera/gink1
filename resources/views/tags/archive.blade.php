@@ -8,7 +8,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Archive Tags</h1>
+      <h1 style="font-size: 25px">Tags</h1>
       <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active"><a href="{{ url('tags')}}">Tags</a></div>
         <div class="breadcrumb-item">Archive</div>
@@ -17,23 +17,13 @@
 
     <div class="section-body">
 
-      @if(session('delete'))
-      <div class="alert alert-danger alert-dismissible show fade">
-        <div class="alert-body">
-          <button class="close" data-dismiss="alert">
-            <span>&times;</span>
-          </button>
-          {{session('delete')}}
-        </div>
-      </div>          
-      @endif
-      @if(session('restore'))
+      @if(session('success'))
       <div class="alert alert-success alert-dismissible show fade">
         <div class="alert-body">
           <button class="close" data-dismiss="alert">
             <span>&times;</span>
           </button>
-          {{session('restore')}}
+          {{session('success')}}
         </div>
       </div>          
       @endif
@@ -42,7 +32,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Data Archive</h4>
+              <h4>Archive Tags</h4>
            </div>
             <div class="card-body p-0">
               <div class="table-responsive" style="padding: 2em">
