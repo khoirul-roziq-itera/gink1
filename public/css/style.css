@@ -715,7 +715,7 @@ select.form-control:not([size]):not([multiple]) {
 .alert {
     color: #fff;
     border: none;
-    padding: 15px 20px;
+    padding: 2em;
 }
 .alert .alert-title {
     font-size: 18px;

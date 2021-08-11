@@ -98,7 +98,7 @@
               <div class="form-group row">
                 <label for="funcNotes" class="col-sm-2 col-form-label">Function Notes</label>
                 <div class="col-sm-7">
-                  <textarea name="funcNotes" id="funcNotes" class="form-control" readonly="">{{ $func->function_FE_Duration }}</textarea>
+                  <textarea name="funcNotes" id="funcNotes" class="form-control" readonly="">{{ $func->function_Notes }}</textarea>
                 </div>
               </div>
               <div class="form-group row">

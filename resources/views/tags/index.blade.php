@@ -37,14 +37,33 @@
             </div>
           </div>
 
-          @if(session('sukses'))
-            <div class="alaret alert-success" role="alert">
-              {{session('sukses')}}
-            </div>     
-          @endif  
+        
+          @if(session('create'))
+          <div class="alert alert-success alert-dismissible show fade">
+            <div class="alert-body">
+              <button class="close" data-dismiss="alert">
+                <span>&times;</span>
+              </button>
+              {{session('create')}}
+            </div>
+          </div>     
+          @endif
+          @if(session('archive'))
+          <div class="alert alert-success alert-dismissible show fade">
+            <div class="alert-body">
+              <button class="close" data-dismiss="alert">
+                <span>&times;</span>
+              </button>
+              {{session('archive')}}
+            </div>
+          </div>     
+          @endif
+
+            
           <div class="row">
             <div class="col-12">
               <div class="card">
+
                 <div class="card-header">
                   <h4>Data Tags</h4>
                 </div>

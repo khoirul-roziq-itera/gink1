@@ -16,6 +16,28 @@
     </div>
 
     <div class="section-body">
+
+      @if(session('delete'))
+      <div class="alert alert-danger alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('delete')}}
+        </div>
+      </div>          
+      @endif
+      @if(session('restore'))
+      <div class="alert alert-success alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('restore')}}
+        </div>
+      </div>          
+      @endif
+
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -52,12 +74,10 @@
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </div>

@@ -1,66 +1,124 @@
 @extends('layouts/main')
 
-@section('title','Edit Data')
+@section('title','Create Data')
 
 @section('container')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Edit Project</h1>
+            <h1 style="font-size: 25px">Create Project</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-                <div class="breadcrumb-item active"><a href="#">List Project</a></div>
-                <div class="breadcrumb-item">Edit Project</div>
+                <div class="breadcrumb-item active"><a href="{{ url('projects') }}">Project</a></div>
+                <div class="breadcrumb-item">Create</div>
             </div>
         </div>
-        <div class="container mt-5">
+        <div class="section-body">
             <div class="row">
-                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
-                    <div class="card card-danger">
-                        <form method="POST" action="{{ route('projects.update', $app->id) }}">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Input Data</h4>
+                        </div>
+                        <form method="POST" action="{{ route('projects.store') }}" id="myForm">
                             @csrf
-                            @method('patch')
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="appName">Nama Aplikasi</label>
-                                    <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project" value="{{ $app->app_name }}">
+                                <div class="form-group row">
+                                    <label for="appname" class="col-sm-2 col-form-label">App Name</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="category">Kategori</label>
-                                    <select id="category" name="category" class="form-control">
-                                        <option value="">- Pilih Kateg</option>
-                                        <option value="Akutansi">Akutansi</option>
-                                        <option value="Administrasi">Administrasi</option>
-                                    </select>
+                                <div class="form-group row">
+                                    <label for="category" class="col-sm-2 col-form-label">Category</label>
+                                    <div class="col-sm-7">
+                                        <select id="choices-categories" name="category" class="form-control" placeholder="Select categories">
+                                            <option value="">--- Choose Category ---</option>
+                                            @foreach( $categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="tags">Tag</label>
-                                    <input type="text" id="tags" name="tags" class="form-control" placeholder="Masukkan nama project">
+                                <div class="form-group row">
+                                    <label for="tags" class="col-sm-2 col-form-label">Tag</label>
+                                    <div class="col-sm-7">
+                                        <select id="choices-tags" name="tags[]" class="form-control" placeholder="Select tags" multiple>
+                                            @foreach ( $tags as $tag)
+                                            <option value="{{ $tag->id }}">{{$tag->tag_name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Waktu Mulai</label>
-                                    <input type="date" name="startProjectT" class="form-control datepicker" value="{{ $app->start_project_t }}" required />
+                                <div class="form-group row">
+                                    <label for="modules" class="col-sm-2 col-form-label">Modules</label>
+                                    <div class="col-sm-7">
+                                        <select id="choices-modules" name="modules[]" class="form-control" placeholder="Select modules" multiple>
+                                            @foreach ( $modules as $module)
+                                            <option value="{{ $module->id }}">{{$module->module_Name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Batas Waktu</label>
-                                    <input type="date" name="deadlineProjectT" class="form-control datepicker" value="{{ $app->deadline_project_t }}" required />
+                                <div class="form-group row">
+                                    <label for="startProjectT" class="col-sm-2 col-form-label">Start Time</label>
+                                    <div class="col-sm-7">
+                                        <input type="date" name="startProjectT" class="form-control datepicker" />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>Waktu Selesai</label>
-                                    <input type="date" name="endProjectT" class="form-control datepicker" value="{{ $app->end_project_t }}" required />
+                                <div class="form-group row">
+                                    <label for="deadlineProjectT" class="col-sm-2 col-form-label">Deadline</label>
+                                    <div class="col-sm-7">
+                                        <input type="date" name="deadlineProjectT" class="form-control datepicker" />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="status">Status</label>
-                                    <select id="status" name="status" class="form-control">
-                                        <option value="">- Pilih Status</option>
-                                        <option value="3">Selesai</option>
-                                        <option value="2">Sedang Dikerjakan</option>
-                                        <option value="1">Menunggu</option>
-                                    </select>
+                                <div class="form-group row">
+                                    <label for="endProjectT" class="col-sm-2 col-form-label">Finished</label>
+                                    <div class="col-sm-7">
+                                        <input type="date" name="endProjectT" class="form-control datepicker" />
+                                    </div>
                                 </div>
-                                <div class="form-group float-right">
-                                    <a href="{{ url('projects') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
-                                    <button type="submit" class="btn btn-primary" id="swal-2">Save</button>
+                                <div class="form-group row">
+                                    <label for="costTotal" class="col-sm-2 col-form-label">Cost Total</label>
+                                    <div class="col-sm-7">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Rp. </span>
+                                            <input type="text" name="costTotal" id="costTotal" class="form-control" placeholder="Masukkan biaya" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="priceTotal" class="col-sm-2 col-form-label">PriceTotal</label>
+                                    <div class="col-sm-7">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Rp. </span>
+                                            <input type="text" name="priceTotal" id="priceTotal" class="form-control" placeholder="Masukkan biaya" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="status" class="col-sm-2 col-form-label">Status</label>
+                                    <div class="col-sm-7">
+                                        <select id="status" name="status" class="form-control">
+                                            <option value="">- Pilih Status</option>
+                                            <option value="3">Selesai</option>
+                                            <option value="2">Sedang Dikerjakan</option>
+                                            <option value="1">Menunggu</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+                                    <div class="col-sm-7">
+                                        <textarea name="notes" id="notes" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-9">
+                                        <div class="form-group float-right">
+                                            <a href="{{ route ('projects.edit',$app->id) }}" type="button" class="btn btn-danger">Cancel</a>
+                                            <button type="submit"  class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -70,4 +128,5 @@
         </div>
     </section>
 </div>
+
 @endsection
