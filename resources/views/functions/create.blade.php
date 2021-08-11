@@ -193,12 +193,7 @@
                                 <div class="form-group row">
                                     <label for="funcNotes" class="col-sm-2 col-form-label">Function Notes</label>
                                     <div class="col-sm-7">
-                                        <textarea name="funcNotes" id="funcNotes" class="form-control @error('funcNotes') is-invalid @enderror"></textarea>
-                                        <div class="invalid-feedback">
-                                            @error('funcNotes')
-                                            {{ $message }}
-                                            @enderror
-                                          </div>
+                                        <textarea name="funcNotes" id="funcNotes" class="form-control "></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
