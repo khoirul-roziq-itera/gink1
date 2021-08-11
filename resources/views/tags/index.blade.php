@@ -19,7 +19,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-               <h4>Add Tag</h4>
+              <h4>Add Tag</h4>
             </div>
             <div class="card-body">
               <form action="{{ route('tags.store') }}" method="POST" id="tag">
@@ -27,7 +27,12 @@
                 <div class="form-group row">
                   <label for="tagName" class="col-sm-2 col-form-label">Tag Name</label>
                   <div class="col-sm-5">
-                    <input type="nama" class="form-control" id="tagName" name="tagName" placeholder="Input tag"/>
+                    <input type="nama" class="form-control @error('tagName') is-invalid @enderror" id="tagName" name="tagName" placeholder="Input tag" />
+                    <div class="invalid-feedback">
+                      @error('tagName')
+                      {{ $message }}
+                      @enderror
+                    </div>
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
                     <button type="submit" class="btn btn-success" id="swal-2"><i class="fas fa-plus-circle fa-lg"></i> Add</button>
@@ -37,29 +42,17 @@
             </div>
           </div>
 
-        
-          @if(session('create'))
-          <div class="alert alert-success alert-dismissible show fade">
-            <div class="alert-body">
-              <button class="close" data-dismiss="alert">
-                <span>&times;</span>
-              </button>
-              {{session('create')}}
-            </div>
-          </div>     
-          @endif
-          @if(session('archive'))
-          <div class="alert alert-success alert-dismissible show fade">
-            <div class="alert-body">
-              <button class="close" data-dismiss="alert">
-                <span>&times;</span>
-              </button>
-              {{session('archive')}}
-            </div>
-          </div>     
-          @endif
 
-            
+          @if(session('success'))
+          <div class="alert alert-success alert-dismissible show fade">
+            <div class="alert-body">
+              <button class="close" data-dismiss="alert">
+                <span>&times;</span>
+              </button>
+              {{session('success')}}
+            </div>
+          </div>
+          @endif
           <div class="row">
             <div class="col-12">
               <div class="card">
@@ -80,22 +73,22 @@
                         </thead>
                         <tbody>
                           @foreach($tags as $tag => $result)
-                              <tr class="text-center">
-                                <td>{{ $tag + 1 }}</td>
-                                <td>{{ $result->tag_name }}</td>
-                                <td>
-      
-                                  <form action="{{ route('tags.destroy', $result->id ) }}" method="post">
-                                    @csrf
-                                    @method('delete')
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                      <a href="{{ url('tags', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
-                                      <button type="submit" class="btn btn-danger" style="margin: 2px"><i class="fas fa-archive"></i> Archive</a>
-                                    </div>
-                                  </form>
-      
-                                </td>
-                              </tr>
+                          <tr class="text-center">
+                            <td>{{ $tag + 1 }}</td>
+                            <td>{{ $result->tag_name }}</td>
+                            <td>
+
+                              <form action="{{ route('tags.destroy', $result->id ) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a href="{{ url('tags', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
+                                  <button type="submit" class="btn btn-danger" style="margin: 2px"><i class="fas fa-archive"></i> Archive</a>
+                                </div>
+                              </form>
+
+                            </td>
+                          </tr>
                           @endforeach
                         </tbody>
                       </table>
@@ -112,4 +105,3 @@
 </div>
 
 @endsection
-

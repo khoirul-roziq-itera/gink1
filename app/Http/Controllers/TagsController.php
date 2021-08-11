@@ -39,13 +39,16 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'tagName' => 'required|min:3|max:20',
+        ]);
+
         Tag::create([
             'tag_name' => $request->tagName,
             'tag_slug' => Str::of($request->tagName)->slug('-'),
             'user_id' => Auth::id()
         ]);
-
-        return redirect('tags')->with('create', 'Tag Successfully Created!');
+        return redirect('tags')->with('success', 'Tag Successfully Created!');
     }
 
     /**

@@ -3,6 +3,16 @@
 @section('title','Create Modul')
 
 @section('container')
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+@if (session('fail'))
+<div class="alert alert-danger">
+    {{ session('fail') }}
+</div>
+@endif
 <div class="main-content">
     <section class="section">
         <div class="section-header">

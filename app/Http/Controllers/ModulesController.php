@@ -85,7 +85,12 @@ class ModulesController extends Controller
 
         $module->funcs()->attach($request->funcs);
 
-        return redirect('modules')->with('success', 'Module Successfully Created!');
+        if ($module) {
+            return back()->with('success', 'Module Successfully Created!');
+        } else {
+            return back()->with('fail', 'Module Creation Failed!');
+        }
+        // return redirect('modules')->with('success', 'Module Successfully Created!');
     }
 
     /**
