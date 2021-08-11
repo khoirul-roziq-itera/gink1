@@ -35,35 +35,55 @@
                                 <div class="form-group row">
                                     <label for="moduleName" class="col-sm-2 col-form-label">Name Modul</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="moduleName" name="moduleName" class="form-control" placeholder="Masukkan nama modul">
+                                        <input type="text" id="moduleName" name="moduleName" class="form-control @error('moduleName') is-invalid @enderror" placeholder="Masukkan nama modul" value="{{ old('moduleName') }}">
+                                        <div class="invalid-feedback">
+                                            @error('moduleName')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="tags" class="col-sm-2 col-form-label">Input Functions</label>
                                     <div class="col-sm-7">
-                                        <select id="choices-functions" name="funcs[]" class="form-control" placeholder="Select Functions" multiple>
+                                        <select id="choices-functions" name="funcs[]" class="form-control @error('funcs') is-invalid @enderror" placeholder="Select Functions" multiple>
                                             @foreach ( $funcs as $func)
                                             <option value="{{ $func->id }}">{{ $func->function_Name }}</option>
                                             @endforeach
                                         </select>
+                                        <div class="invalid-feedback">
+                                            @error('funcs')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="moduleNotes" class="col-sm-2 col-form-label">Function Notes</label>
                                     <div class="col-sm-7">
-                                        <textarea name="moduleNotes" id="moduleNotes" class="form-control"></textarea>
+                                        <textarea name="moduleNotes" id="moduleNotes" class="form-control @error('moduleNotes') is-invalid @enderror">{{ old('moduleNotes') }}</textarea>
+                                        <div class="invalid-feedback">
+                                            @error('moduleNotes')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="moduleStatus" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-7">
-                                        <select id="moduleStatus" name="moduleStatus" class="form-control">
+                                        <select id="moduleStatus" name="moduleStatus" class="form-control @error('moduleStatus') is-invalid @enderror">
                                             <option value="">-- Choose Status --</option>
-                                            <option value="1">Menunggu</option>
-                                            <option value="2">Sedang Dikerjakan</option>
-                                            <option value="3">Selesai</option>
+                                            <option value="1">Waiting</option>
+                                            <option value="2">On Progress</option>
+                                            <option value="3">Finished</option>
                                         </select>
+                                        <div class="invalid-feedback">
+                                            @error('moduleStatus')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">

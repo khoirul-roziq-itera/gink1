@@ -42,9 +42,8 @@ class ModulesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'funcName' => 'required|min:3|max:100|unique:modules,module_Name',
-            'funcGroup' => 'required',
-            'funcStatus' => 'required',
+            'moduleName' => 'required|min:3|max:100|unique:modules,module_Name',
+            'moduleStatus' => 'required',
             'funcs' => 'required'
         ]);
 
@@ -139,9 +138,9 @@ class ModulesController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'funcName' => 'required|min:3|max:100|unique:modules,module_Name',
-            'funcGroup' => 'required',
-            'funcStatus' => 'required',
+            'moduleName' => 'required|min:3|max:100|unique:modules,module_Name',
+            'moduleGroup' => 'required',
+            'moduleStatus' => 'required',
             'funcs' => 'required'
         ]);
         $sumFEDuration = 0;
