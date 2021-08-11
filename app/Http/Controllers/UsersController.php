@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class UsersController extends Controller
@@ -102,6 +103,10 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::where('id', $id)->first();
+        $user->delete();
+        File::delete($user->profile_photo_path);
+
+        return redirect()->back()->with('status', 'Post Berhasil Dihapus Secara Permanen');
     }
 }
