@@ -30,7 +30,7 @@
                     <input type="nama" class="form-control" id="tagName" name="tagName" placeholder="Input tag"/>
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
-                    <button type="submit" class="btn btn-success" onclick="return swal('Hello world!');"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
+                    <button type="submit" class="btn btn-success" id="swal-2"><i class="fas fa-plus-circle fa-lg"></i> Add</button>
                   </div>
                 </div>
               </form>
@@ -80,28 +80,27 @@
                         </thead>
                         <tbody>
                           @foreach($tags as $tag => $result)
-                          <tr class="text-center">
-                            <td>{{ $tag + 1 }}</td>
-                            <td>{{ $result->tag_name }}</td>
-                            <td>
-  
-                              <form action="{{ route('tags.destroy', $result->id ) }}" method="post">
-                                @csrf
-                                @method('delete')
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                  <a href="{{ url('tags', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
-                                  <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i> Archive</a>
-                                </div>
-                              </form>
-  
-                            </td>
-                          </tr>
+                              <tr class="text-center">
+                                <td>{{ $tag + 1 }}</td>
+                                <td>{{ $result->tag_name }}</td>
+                                <td>
+      
+                                  <form action="{{ route('tags.destroy', $result->id ) }}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                      <a href="{{ url('tags', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
+                                      <button type="submit" class="btn btn-danger" style="margin: 2px"><i class="fas fa-archive"></i> Archive</a>
+                                    </div>
+                                  </form>
+      
+                                </td>
+                              </tr>
                           @endforeach
                         </tbody>
                       </table>
                     </div>
                   </div>
-                 
                 </div>
               </div>
             </div>

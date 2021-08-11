@@ -72,7 +72,7 @@ Route::get('archiveFunction', function () {
 Route::get('archiveFunction', function () {
     return view('/functions/edit');
 });
-Route::get('archiveFunction', function () {
+Route::get('detailFunction', function () {
     return view('/functions/detail');
 });
 

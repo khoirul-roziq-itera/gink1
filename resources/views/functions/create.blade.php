@@ -1,15 +1,15 @@
 @extends('layouts/main')
 
-@section('title','Create Function')
+@section('title','Create Functions')
 
 @section('container')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Create Function</h1>
+            <h1 style="font-size: 25px">Functions</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Data Function</a></div>
-                <div class="breadcrumb-item">Create Function</div>
+                <div class="breadcrumb-item active"><a href="{{url('functions')}}">Function</a></div>
+                <div class="breadcrumb-item">Create</div>
             </div>
         </div>
         <div class="section-body">
@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Input Data</h4>
+                            <h4>Create Functions</h4>
                         </div>
                         <form method="POST" action="{{ route('functions.store') }}" id="myForm">
                             @csrf
@@ -47,21 +47,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <!-- <div class="form-group row">
-                                    <div class="col-sm-7 offset-4">
-                                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                                            <div class="btn-group me-2" role="group" aria-label="First group">
-                                                <button type="button" value="Front-End" name="btnFunction" class="btn btn-primary">Front-End</button>
-                                            </div>
-                                            <div class="btn-group me-2" role="group" aria-label="Second group">
-                                                <button type="button" type="button" value="Back-End" name="btnFunction" class="btn btn-secondary">Back-End</button>
-                                            </div>
-                                            <div class="btn-group" role="group" aria-label="Third group">
-                                                <button type="button" value="Full-Stack" name="btnFunction" class="btn btn-info">Full-Stack</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
+    
                                 <div class="form-group row">
                                     <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
                                     <div class="col-sm-7">
@@ -148,9 +134,9 @@
                                     <div class="col-sm-7">
                                         <select id="funcStatus" name="funcStatus" class="form-control">
                                             <option value="">-- Choose Status --</option>
-                                            <option value="1">Menunggu</option>
-                                            <option value="2">Sedang Dikerjakan</option>
-                                            <option value="3">Selesai</option>
+                                            <option value="1">Waiting</option>
+                                            <option value="2">On Progress</option>
+                                            <option value="3">Finished</option>
                                         </select>
                                     </div>
                                 </div>

@@ -1,22 +1,24 @@
 @extends('layouts/main')
 
-@section('title','Edit Data')
+@section('title','Edit Functions')
 
 @section('container')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Edit Functions</h1>
+            <h1 style="font-size: 25px">Functions</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Data Functions</a></div>
-                <div class="breadcrumb-item active"><a href="#">List Functions</a></div>
-                <div class="breadcrumb-item">Edit Functions</div>
+                <div class="breadcrumb-item active"><a href="{{url('functions')}}">Functions</a></div>
+                <div class="breadcrumb-item">Edit</div>
             </div>
         </div>
-        <div class="container mt-5">
+        <div class="section-body">
             <div class="row">
                 <div class="col-12">
-                    <div class="card card-danger">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Edit Functions</h4>
+                        </div>
                         <form method="POST" action="{{ route('functions.update', $func->id) }}" id="myForm">
                             @csrf
                             @method('patch')
@@ -115,9 +117,9 @@
                                     <div class="col-sm-7">
                                         <select id="funcStatus" name="funcStatus" class="form-control">
                                             <option value="">-- Choose Status --</option>
-                                            <option value="1">Menunggu</option>
-                                            <option value="2">Sedang Dikerjakan</option>
-                                            <option value="3">Selesai</option>
+                                            <option value="1">Waiting</option>
+                                            <option value="2">On Progress</option>
+                                            <option value="3">Finished</option>
                                         </select>
                                     </div>
                                 </div>
@@ -129,9 +131,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
                             </div>
-
                         </form>
                     </div>
                 </div>

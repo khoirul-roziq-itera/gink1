@@ -8,19 +8,17 @@
         <div class="section-header">
             <h1 style="font-size: 25px">Edit Project</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Data Project</a></div>
-                <div class="breadcrumb-item active"><a href="#">List Project</a></div>
-                <div class="breadcrumb-item">Edit Project</div>
+                <div class="breadcrumb-item active"><a href="{{url('projects')}}">Project</a></div>
+                <div class="breadcrumb-item">Edit</div>
             </div>
         </div>
-        <div class="container mt-5">
+        <div class="section-body">
             <div class="row">
                 <div class="col-12 ">
                     <div class="card card-danger">
                         <form method="POST" action="{{ route('modules.update', $module->id) }}">
                             @csrf
                             @method('patch')
-
                             <div class="card-header">
                                 <h4>Edit Data Project</h4>
                                 <br>
@@ -75,9 +73,6 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <div class="simple-footer">
-                        Copyright &copy; GinkTech 2021
                     </div>
                 </div>
             </div>

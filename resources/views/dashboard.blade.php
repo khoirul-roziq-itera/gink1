@@ -104,23 +104,20 @@
                     <thead class="text-center">
                       <tr>
                           <th>No</th>
-                          <th>Nama Project</th>
-                          <th>Tanggal Selesai</th>
-                          <th>Estimasi Biaya</th>
-                          <th>Aksi</th>
+                          <th>Name App</th>
+                          <th>Category App</th>
+                          <th>Finished</th>
+                          <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="text-center">
                           <td>1</td>
                           <td>Calculator App</td>
-                          <td>30/05/2021</td>
-                          <td>Rp. 100.000</td>
+                          <td>Akutansi</td>
+                          <td>20/08/2000</td>
                           <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                              <a href="testdetail" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
                               <a href="#" class="btn btn-danger" style="margin: 2px" id="swal-6"><i class="fas fa-trash-alt"></i></a>
-                            </div>
                           </td>
                         </tr>
                     </tbody>

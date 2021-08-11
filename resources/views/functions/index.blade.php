@@ -1,17 +1,17 @@
 @extends('layouts/main')
 
 
-@section('title','List Functions')
+@section('title','Functions')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Functions</h1>
+      <h1 style="font-size: 25px">Functions</h1>
       <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active">Functions</a></div>
-        <div class="breadcrumb-item">List</div>
+        <div class="breadcrumb-item active">List</a></div>
       </div>
     </div>
 
@@ -20,7 +20,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Data Function</h4>
+              <h4>List Functions</h4>
             </div>
             <div class="card-body p-0">
               <div class="row">
@@ -64,11 +64,11 @@
                       <td>{{ $result->function_Name }}</td>
                       <td>
                         @if( $result->function_Status == 1)
-                        <span class="badge badge-warning">Menunggu</span>
+                        <span class="badge badge-danger">Waiting</span>
                         @elseif( $result->function_Status == 2 )
-                        <span class="badge badge-info">Sedang Dikerjakan</span>
+                        <span class="badge badge-success">On Progress</span>
                         @else
-                        <span class="badge badge-success">Selesai</span>
+                        <span class="badge badge-primary">Finished</span>
                         @endif
                       </td>
                       <td>

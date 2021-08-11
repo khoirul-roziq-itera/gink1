@@ -95,14 +95,7 @@
                                     <li class="{{ Request::is('modules/archive') ? 'active' : '' }}"><a href="{{ url('modules/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown {{ Request::is('projects/create') || Request::is('projects') || Request::is('projects/archive') || Request::is('projects/1') ? 'active' : '' }}">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
-                                <ul class="dropdown-menu">
-                                    <li class="{{ Request::is('projects/create') ? 'active' : '' }}"><a href="{{ url('projects/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li class="{{ Request::is('projects') ? 'active' : '' }}"><a href="{{ url ('projects') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
-                                    <li class="{{ Request::is('projects/archive') ? 'active' : '' }}"><a href="{{ url ('projects/archive')}}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
-                                </ul>
-                            </li>
+
                             <li class="nav-item dropdown {{ Request::is('tags') || Request::is('tags/archive') || Request::is('tags/detail') ? 'active' : '' }}">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-tags"></i><span style="font-weight:bold; font-size:19px">Tags</span></a>
                                 <ul class="dropdown-menu">
@@ -115,6 +108,14 @@
                                 <ul class="dropdown-menu">
                                     <li class=" {{ Request::is('categories') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i>List</a></li>
                                     <li class=" {{ Request::is('categories/archive') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown {{ Request::is('projects/create') || Request::is('projects') || Request::is('projects/archive') || Request::is('projects/1') ? 'active' : '' }}">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="{{ Request::is('projects/create') ? 'active' : '' }}"><a href="{{ url('projects/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li class="{{ Request::is('projects') ? 'active' : '' }}"><a href="{{ url ('projects') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-list-ul"></i> List</a></li>
+                                    <li class="{{ Request::is('projects/archive') ? 'active' : '' }}"><a href="{{ url ('projects/archive')}}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
                             @if(auth()->user()->level == "admin")
@@ -172,8 +173,6 @@
 
 
     <script src="https://demo.getstisla.com/assets/modules/prism/prism.js"></script>
-
-
 
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
