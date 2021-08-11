@@ -104,11 +104,11 @@ class ModulesController extends Controller
     {
         $module = Module::where('id', $id)->first();
         if ($module->module_Status == 1) {
-            $moduleStatus = 'Menunggu';
+            $moduleStatus = 'Waiting';
         } else if ($module->module_Status == 2) {
-            $moduleStatus = 'Sedang Dikerjakan';
+            $moduleStatus = 'On Progress';
         } else {
-            $moduleStatus = 'Selesai';
+            $moduleStatus = 'Finished';
         }
 
         $module = Module::where('id', $id)->first();

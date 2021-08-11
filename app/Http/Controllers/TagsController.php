@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tag;
+use App\Models\Application;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 
@@ -59,7 +60,9 @@ class TagsController extends Controller
      */
     public function show($id)
     {
-        //
+        $tag = Tag::where('id', $id)->first();
+        // $apps = Application::where('category_id', $id)->get();
+        return view('tags.detail', compact('tag'));
     }
 
     /**

@@ -13,9 +13,9 @@ class Tag extends Model
 
     protected $fillable = ['tag_name', 'tag_slug', 'user_id'];
 
-    public function aplication()
+    public function application()
     {
-        return $this->belongsToMany('App\Model\Application');
+        return $this->belongsToMany('App\Models\Application');
     }
 
     public function user()

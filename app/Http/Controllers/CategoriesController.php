@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Application;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
@@ -59,7 +60,9 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::where('id', $id)->first();
+        $apps = Application::where('category_id', $id)->get();
+        return view('categories.detail', compact('category', 'apps'));
     }
 
     /**
