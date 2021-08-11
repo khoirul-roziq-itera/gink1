@@ -112,6 +112,12 @@ Route::get('editusers', function () {
     return view('/users/edit');
 });
 
+Route::get('detailProfile', function () {
+    return view('/auth/profile');
+});
+
+
+
 Route::group(['middleware' => ['auth', 'userlevel:admin']], function () {
     Route::resource('/users', UsersController::class);
 });

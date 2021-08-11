@@ -25,7 +25,8 @@
                                 <div class="form-group row">
                                     <label for="funcTitle" class="col-sm-2 col-form-label">Function Title</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control @error('funcTitle') is-invalid @enderror" placeholder="Masukkan judul">
+                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control @error('funcTitle') is-invalid @enderror" 
+                                        placeholder="Input title"  value="{{ old('funcTitle') }}">
                                         <div class="invalid-feedback">
                                             @error('funcTitle')
                                              {{ $message }}
@@ -36,7 +37,8 @@
                                 <div class="form-group row">
                                     <label for="funcName" class="col-sm-2 col-form-label">Function Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcName" name="funcName" class="form-control @error('funcName') is-invalid @enderror" placeholder="Masukkan nama">
+                                        <input type="text" id="funcName" name="funcName" class="form-control @error('funcName') is-invalid @enderror" 
+                                        placeholder="Input name"  value="{{ old('funcName') }}">
                                         <div class="invalid-feedback">
                                             @error('tagName')
                                             {{ $message }}
@@ -67,7 +69,8 @@
                                     <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
-                                            <input type="text" name="FEDuration" id="FEDuration" class="form-control @error('FEDuration') is-invalid @enderror" placeholder="Masukkan jumlah hari" />
+                                            <input type="text" name="FEDuration" id="FEDuration" class="form-control @error('FEDuration') is-invalid @enderror" 
+                                            placeholder="Input total of days" value="{{ old('FEDuration') }}" />
                                             <span class="input-group-text" id="basic-addon1">Day </span>
                                             <div class="invalid-feedback">
                                                 @error('FEDuration')
@@ -82,7 +85,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FECost" id="FECost" class="form-control @error('FECost') is-invalid @enderror" placeholder="Masukkan biaya" />
+                                            <input type="text" name="FECost" id="FECost" class="form-control @error('FECost') is-invalid @enderror" 
+                                            placeholder="Input cost" value="{{ old('FECost') }}" />
                                             <div class="invalid-feedback">
                                                 @error('FECost')
                                                 {{ $message }}
@@ -96,7 +100,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FEPrice" id="FEPrice" class="form-control @error('FEPrice') is-invalid @enderror" placeholder="Masukkan harga" />
+                                            <input type="text" name="FEPrice" id="FEPrice" class="form-control @error('FEPrice') is-invalid @enderror" 
+                                            placeholder="Input price" value="{{ old('FEPrice') }}" />
                                             <div class="invalid-feedback">
                                                 @error('FEPrice')
                                                 {{ $message }}
@@ -109,7 +114,8 @@
                                     <label for="BEDuration" class="col-sm-2 col-form-label">Back-End Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
-                                            <input type="text" name="BEDuration" id="BEDuration" class="form-control @error('BEDuration') is-invalid @enderror" placeholder="Masukkan jumlah hari" />
+                                            <input type="text" name="BEDuration" id="BEDuration" class="form-control @error('BEDuration') is-invalid @enderror" 
+                                            placeholder="Input total of days" value="{{ old('BEDuration') }}" />
                                             <span class="input-group-text" id="basic-addon1">Day </span>
                                             <div class="invalid-feedback">
                                                 @error('BEDuration')
@@ -124,7 +130,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="BECost" id="BECost" class="form-control @error('BECost') is-invalid @enderror" placeholder="Masukkan biaya" />
+                                            <input type="text" name="BECost" id="BECost" class="form-control @error('BECost') is-invalid @enderror" 
+                                            placeholder="Input cost" value="{{ old('BECost') }}" />
                                             <div class="invalid-feedback">
                                                 @error('BECost')
                                                 {{ $message }}
@@ -138,7 +145,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="BEPrice" id="BEPrice" class="form-control @error('BEPrice') is-invalid @enderror" placeholder="Masukkan harga" />
+                                            <input type="text" name="BEPrice" id="BEPrice" class="form-control @error('BEPrice') is-invalid @enderror" 
+                                            placeholder="Input price" value="{{ old('BEPrice') }}" />
                                             <div class="invalid-feedback">
                                                 @error('BEPrice')
                                                 {{ $message }}
@@ -152,7 +160,8 @@
                                     <label for="FSDuration" class="col-sm-2 col-form-label">Full-Stack Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
-                                            <input type="text" name="FSDuration" id="FSDuration" class="form-control @error('FSDuration') is-invalid @enderror" placeholder="Masukkan jumlah hari" />
+                                            <input type="text" name="FSDuration" id="FSDuration" class="form-control @error('FSDuration') is-invalid @enderror" 
+                                            placeholder="Input total of days" value="{{ old('FSDuration') }}"  />
                                             <span class="input-group-text" id="basic-addon1">Day </span>
                                             <div class="invalid-feedback">
                                                 @error('FSDuration')
@@ -167,7 +176,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FSCost" id="FSCost" class="form-control @error('FSCost') is-invalid @enderror" placeholder="Masukkan biaya" />
+                                            <input type="text" name="FSCost" id="FSCost" class="form-control @error('FSCost') is-invalid @enderror"
+                                            placeholder="Input cost" value="{{ old('FSCost') }}" />
                                             <div class="invalid-feedback">
                                                 @error('FECost')
                                                 {{ $message }}
@@ -181,7 +191,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FSPrice" id="FSPrice" class="form-control @error('FSPrice') is-invalid @enderror" placeholder="Masukkan harga" />
+                                            <input type="text" name="FSPrice" id="FSPrice" class="form-control @error('FSPrice') is-invalid @enderror" 
+                                            placeholder="Input price " value="{{ old('FSPrice') }}" />
                                             <div class="invalid-feedback">
                                                 @error('FEPrice')
                                                 {{ $message }}
@@ -193,7 +204,7 @@
                                 <div class="form-group row">
                                     <label for="funcNotes" class="col-sm-2 col-form-label">Function Notes</label>
                                     <div class="col-sm-7">
-                                        <textarea name="funcNotes" id="funcNotes" class="form-control "></textarea>
+                                        <textarea name="funcNotes" id="funcNotes" class="form-control">{{ old('funcNotes') }}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
