@@ -8,18 +8,14 @@
     {{ session('success') }}
 </div>
 @endif
-@if (session('fail'))
-<div class="alert alert-danger">
-    {{ session('fail') }}
-</div>
-@endif
+
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Create Modul</h1>
+            <h1 style="font-size: 25px">Modules</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
-                <div class="breadcrumb-item">Create Modul</div>
+                <div class="breadcrumb-item active"><a href="{{ url('modules') }}">Modules</a></div>
+                <div class="breadcrumb-item">Create</div>
             </div>
         </div>
         <div class="section-body">
@@ -27,7 +23,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Input Data</h4>
+                            <h4>Create Module</h4>
                         </div>
                         <form method="POST" action="{{ route('modules.store') }}" id="myForm">
                             @csrf
