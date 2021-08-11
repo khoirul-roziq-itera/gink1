@@ -40,20 +40,19 @@ class FunctionsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'function_Title' => 'required|min:3|unique:functions',
-            'function_Name' => 'required|min:3|unique:functions',
-            'function_Group' => 'required',
-            'function_FE_Duration' => $request->FEDuration,
-            'function_FE_Cost' => $request->FECost,
-            'function_FE_Price' => $request->FEPrice,
-            'function_BE_Duration' => $request->BEDuration,
-            'function_BE_Cost' => $request->BECost,
-            'function_BE_Price' => $request->BEPrice,
-            'function_FS_Duration' => $request->FSDuration,
-            'function_FS_Cost' => $request->FSCost,
-            'function_FS_Price' => $request->FSPrice,
-            'function_Notes' => $request->funcNotes,
-            'function_Status' => $request->funcStatus
+            'funcTitle' => 'required|min:3|max:100|unique:functions,function_Title',
+            'funcName' => 'required|min:3|max:100|unique:functions,function_Name',
+            'funcGroup' => 'required',
+            'FEDuration' => 'numeric|min:0|max:100',
+            'FECost' => 'numeric|min:0',
+            'FEPrice' => 'numeric|min:0',
+            'BEDuration' => 'numeric|min:0|max:100',
+            'BECost' => 'numeric|min:0',
+            'BEPrice' => 'numeric|min:0',
+            'FSDuration' => 'numeric|min:0|max:100',
+            'FSCost' => 'numeric|min:0',
+            'FSPrice' => 'numeric|min:0',
+            'funcStatus' => 'required'
         ]);
 
         Func::create([
@@ -119,6 +118,22 @@ class FunctionsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'funcTitle' => 'required|min:3|max:100',
+            'funcName' => 'required|min:3|max:100',
+            'funcGroup' => 'required',
+            'FEDuration' => 'numeric|min:0|max:100',
+            'FECost' => 'numeric|min:0',
+            'FEPrice' => 'numeric|min:0',
+            'BEDuration' => 'numeric|min:0|max:100',
+            'BECost' => 'numeric|min:0',
+            'BEPrice' => 'numeric|min:0',
+            'FSDuration' => 'numeric|min:0|max:100',
+            'FSCost' => 'numeric|min:0',
+            'FSPrice' => 'numeric|min:0',
+            'funcStatus' => 'required'
+        ]);
+
         Func::where('id', $id)->update([
             'function_Title' => $request->funcTitle,
             'function_Name' => $request->funcName,

@@ -41,6 +41,13 @@ class ModulesController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'funcName' => 'required|min:3|max:100|unique:modules,module_Name',
+            'funcGroup' => 'required',
+            'funcStatus' => 'required',
+            'funcs' => 'required'
+        ]);
+
         $sumFEDuration = 0;
         $sumFECost = 0;
         $sumFEPrice = 0;
@@ -85,12 +92,7 @@ class ModulesController extends Controller
 
         $module->funcs()->attach($request->funcs);
 
-        if ($module) {
-            return back()->with('success', 'Module Successfully Created!');
-        } else {
-            return back()->with('fail', 'Module Creation Failed!');
-        }
-        // return redirect('modules')->with('success', 'Module Successfully Created!');
+        return redirect('modules')->with('success', 'Module Successfully Created!');
     }
 
     /**
@@ -136,7 +138,55 @@ class ModulesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'funcName' => 'required|min:3|max:100|unique:modules,module_Name',
+            'funcGroup' => 'required',
+            'funcStatus' => 'required',
+            'funcs' => 'required'
+        ]);
+        $sumFEDuration = 0;
+        $sumFECost = 0;
+        $sumFEPrice = 0;
+        $sumBEDuration = 0;
+        $sumBECost = 0;
+        $sumBEPrice = 0;
+        $sumFSDuration = 0;
+        $sumFSCost = 0;
+        $sumFSPrice = 0;
+        $tempReq = $request->funcs;
+
+        for ($i = 0; $i < count($tempReq); $i++) {
+            $sumFEDuration += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FE_Duration;
+            $sumFECost += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FE_Cost;
+            $sumFEPrice += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FE_Price;
+            $sumBEDuration += DB::table('functions')->where('id', $tempReq[$i])->first()->function_BE_Duration;
+            $sumBECost += DB::table('functions')->where('id', $tempReq[$i])->first()->function_BE_Cost;
+            $sumBEPrice += DB::table('functions')->where('id', $tempReq[$i])->first()->function_BE_Price;
+            $sumFSDuration += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FS_Duration;
+            $sumFSCost += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FS_Cost;
+            $sumFSPrice += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FS_Price;
+        }
+
+        $module = Module::where('id', $id)->update([
+            'module_Name' => $request->moduleName,
+            'module_FE_Duration' => $sumFEDuration,
+            'module_FE_Cost' => $sumFECost,
+            'module_FE_Price' => $sumFEPrice,
+            'module_BE_Duration' => $sumBEDuration,
+            'module_BE_Cost' => $sumBECost,
+            'module_BE_Price' => $sumBEPrice,
+            'module_FS_Duration' => $sumFSDuration,
+            'module_FS_Cost' => $sumFSCost,
+            'module_FS_Price' => $sumFSPrice,
+            'module_Cost_Total' => $sumFECost + $sumBECost + $sumFSCost,
+            'module_Price_Total' => $sumFEPrice + $sumBEPrice + $sumFSPrice,
+            'module_Notes' => $request->moduleNotes,
+            'module_Status' => $request->moduleStatus,
+            'user_id' => Auth::id(),
+            'module_slug' => Str::of($request->moduleName)->slug('-')
+        ]);
+
+        $module->funcs()->attach($request->funcs);
     }
 
     /**
