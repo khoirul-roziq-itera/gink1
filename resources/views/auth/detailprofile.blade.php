@@ -1,23 +1,19 @@
 @extends('layouts/main')
 
-@section('title','Detail User')
+@section('title','Detail Profile')
 
 @section('container')
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Manage Users</h1>
-      <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="users">Manage Users</a></div>
-        <div class="breadcrumb-item">Detail</div>
-      </div>
+      <h1 style="font-size: 25px">Profile</h1>
     </div>
     <div class="section-body">
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Detail User</h4>
+              <h4>Detail Profile</h4>
             </div>
             <div class="card-body">
               <div class="col-sm-4 offset-4"  style="padding-bottom: 1em;" >
@@ -51,7 +47,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

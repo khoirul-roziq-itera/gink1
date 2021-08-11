@@ -44,12 +44,12 @@
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src="{{ asset(Auth::user()->profile) }}" class="rounded-circle mr-1">
+                            <img alt="image" src="{{ asset(Auth::user()->profile_photo_url) }}"  class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }} </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-title text-center">My Profile</div>
-                            <a href="{{url ('detailusers')}}" class="dropdown-item has-icon">
+                            <a href="{{url ('detailprofile')}}" class="dropdown-item has-icon">
                                 <i class="fas fa-user lg " style="color:red"></i> Profile Akun
                             </a>
                             <div class="dropdown-divider"></div>
