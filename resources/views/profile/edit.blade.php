@@ -68,7 +68,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
-                                            <a href="{{ url('users', $user->id) }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
+                                            <a href="{{ url('profile', Auth::user()->id) }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
                                             <button type="submit" class="btn btn-primary btn">Save changes</button>
                                         </div>
                                     </div>

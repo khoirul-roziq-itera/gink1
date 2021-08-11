@@ -66,7 +66,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-7 offset-2">
                                         <div class="form-group float-right">
-                                            <a href="{{ route('modules.edit', $module->id) }}"><button type="button" class="btn btn-danger">Cancel</button></a>
+                                            <a href="{{ url('modules', $module->id) }}"><button type="button" class="btn btn-danger">Cancel</button></a>
                                             <button type="submit" class="btn btn-primary" id="swal-2">Save changes</button>
                                         </div>
                                     </div>
