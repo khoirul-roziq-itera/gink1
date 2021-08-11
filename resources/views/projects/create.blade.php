@@ -77,24 +77,7 @@
                                         <input type="date" name="endProjectT" class="form-control datepicker" />
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="costTotal" class="col-sm-2 col-form-label">Cost Total</label>
-                                    <div class="col-sm-7">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="costTotal" id="costTotal" class="form-control" placeholder="Masukkan biaya" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="priceTotal" class="col-sm-2 col-form-label">PriceTotal</label>
-                                    <div class="col-sm-7">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="priceTotal" id="priceTotal" class="form-control" placeholder="Masukkan biaya" />
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div class="form-group row">
                                     <label for="status" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-7">

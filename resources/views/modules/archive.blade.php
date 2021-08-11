@@ -1,17 +1,17 @@
 @extends('layouts/main')
 
 
-@section('title','Data Project')
+@section('title','Archive Modules')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Archive Project</h1>
+      <h1 style="font-size: 25px">Modules</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="#">Data Modul</a></div>
-        <div class="breadcrumb-item">Archive Modul</div>
+        <div class="breadcrumb-item active"><a href="#">Modules</a></div>
+        <div class="breadcrumb-item">Archive</div>
       </div>
     </div>
 
@@ -19,6 +19,9 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
+            <div class="card-header">
+              <h4>Archive Modules</h4>
+            </div>
             <div class="card-body p-0">
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered">

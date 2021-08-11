@@ -57,9 +57,9 @@
                                     <div class="col-sm-7">
                                         <select id="moduleStatus" name="moduleStatus" class="form-control">
                                             <option value="">-- Choose Status --</option>
-                                            <option value="1">Menunggu</option>
-                                            <option value="2">Sedang Dikerjakan</option>
-                                            <option value="3">Selesai</option>
+                                            <option value="1" @if($func->function_Status == '1') selected @endif>Waiting</option>
+                                            <option value="2" @if($func->function_Status == '2') selected @endif>On Progress</option>
+                                            <option value="3" @if($func->function_Status == '3') selected @endif>Finished</option>
                                         </select>
                                     </div>
                                 </div>
