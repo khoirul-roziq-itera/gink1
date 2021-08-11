@@ -1,14 +1,14 @@
 @extends('layouts/main')
 
-@section('title','Edit Data')
+@section('title','Edit Modules')
 
 @section('container')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Edit Project</h1>
+            <h1 style="font-size: 25px">Modules</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="{{url('projects')}}">Project</a></div>
+                <div class="breadcrumb-item active"><a href="{{url('modules')}}">Modules</a></div>
                 <div class="breadcrumb-item">Edit</div>
             </div>
         </div>
@@ -20,7 +20,7 @@
                             @csrf
                             @method('patch')
                             <div class="card-header">
-                                <h4>Edit Data Project</h4>
+                                <h4>Edit Module</h4>
                                 <br>
                             </div>
                             <div class="card-body">
@@ -66,7 +66,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-7 offset-2">
                                         <div class="form-group float-right">
-                                            <a href="{{ route('modules.edit', $module->id) }}"><button type="button" class="btn btn-danger">Cancel</button></a>
+                                            <a href="{{ url('modules', $module->id) }}"><button type="button" class="btn btn-danger">Cancel</button></a>
                                             <button type="submit" class="btn btn-primary" id="swal-2">Save changes</button>
                                         </div>
                                     </div>

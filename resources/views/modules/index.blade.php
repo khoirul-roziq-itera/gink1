@@ -12,6 +12,18 @@
 
     </div>
     <div class="section-body">
+
+      @if(session('success'))
+      <div class="alert alert-success alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('success')}}
+        </div>
+      </div>
+      @endif
+
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -47,7 +59,8 @@
                     <tr>
                       <th>Nomor</th>
                       <th>Module Name</th>
-                      <th>Functions</th>
+                      <th>Cost Total</th>
+                      <th>Price Total</th>
                       <th>Status</th>
                       <th>Actions</th>
                     </tr>
@@ -58,9 +71,10 @@
                       <td>{{ $module + 1 }}</td>
                       <td>{{ $result->module_Name }}</td>
                       <td>
-                        @foreach( $result->funcs as $func )
-                        <span class="badge bg-secondary mt-1">{{ $func->function_Name }}</span><br>
-                        @endforeach
+                          {{ $result->module_Cost_Total}}
+                      </td>
+                      <td>
+                          {{ $result->module_Price_Total}}
                       </td>
                       <td>
                         @if( $result->function_Status == 1)

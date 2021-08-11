@@ -46,11 +46,11 @@
                       </td>
                       <td>
                         @if( $result->module_Status == 1)
-                        <span class="badge badge-warning">Menunggu</span>
+                        <span class="badge badge-danger">Waiting</span>
                         @elseif( $result->module_Status == 2 )
-                        <span class="badge badge-info">Sedang Dikerjakan</span>
+                        <span class="badge badge-success">On Progress</span>
                         @else
-                        <span class="badge badge-success">Selesai</span>
+                        <span class="badge badge-primary">Finished</span>
                         @endif
                       </td>
                       <td>
@@ -72,7 +72,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </div>

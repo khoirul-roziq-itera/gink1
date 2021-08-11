@@ -6,9 +6,9 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Detail Module</h1>
+      <h1 style="font-size: 25px">Modules</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="{{ url ('modules')}}">Module</a></div>
+        <div class="breadcrumb-item active"><a href="{{ url ('modules')}}">Modules</a></div>
         <div class="breadcrumb-item">Detail</div>
       </div>
     </div>
@@ -17,7 +17,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Detail Data</h4>
+              <h4>Detail Module</h4>
             </div>
             <div class="card-body">
               <div class="form-group row">
@@ -113,6 +113,23 @@
                 </div>
               </div>
 
+                            {{-- <div class="form-group row">
+                                    <label for="tags" class="col-sm-2 col-form-label">Input Functions</label>
+                                    <div class="col-sm-7">
+                                        <select id="choices-functions" name="funcs[]" class="form-control" placeholder="Select Functions" multiple>
+                                            @foreach ( $funcs as $func)
+                                            <option value="{{ $func->id }}" @foreach( $module->funcs as $result )
+                                                @if($func->id == $result->id)
+                                                selected
+                                                @endif
+                                                @endforeach
+                                                >{{ $func->function_Name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div> --}}
+
+                                
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
