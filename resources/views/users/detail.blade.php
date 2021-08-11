@@ -20,6 +20,9 @@
               <h4>Informasi Profile</h4>
             </div>
             <div class="card-body">
+              <div class="col-sm-4 offset-4"  style="padding-bottom: 1em;" >
+                <img src="{{ asset($user->profile_photo_path) }}" width="150" class="rounded" alt="myfoto">
+              </div>
               <div class="form-group row">
                 <label for="name" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-7">
@@ -39,18 +42,11 @@
                   <input type="name" class="form-control" id="name" readonly="" value="{{ $user->email }}">
                 </div>
               </div>
-
-              <div class="form-group row">
-                <label for="appname" class="col-sm-2 col-form-label">Foto</label>
-                <div class="col-sm-7">
-                  <input type="name" class="form-control" id="name" readonly="" value="{{ $user->profile_photo_path }}">
-                </div>
-              </div>
-              <img src="{{ asset($user->profile_photo_path) }}" alt="">
+              
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
-                    <a href="users" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Cancel</></a>
+                    <a href="{{ url('users')}}" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Cancel</></a>
                     <a href="{{ route('users.edit', $user->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
                   </div>
                 </div>

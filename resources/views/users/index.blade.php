@@ -25,7 +25,7 @@
                             <div class="row">
                                 <div class="col-6 offset-6">
                                     <div style="padding:2.5em">
-                                        <a href="{{ url('users/create') }}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Create User</a>
+                                        <a href="{{ url('users/create') }}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</a>
                                     </div>
                                 </div>
                             </div>
@@ -53,8 +53,8 @@
                                                     @csrf
                                                     @method('delete')
                                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                                        <a href="{{ url('users', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i></a>
-                                                        <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i></a>
+                                                        <a href="{{ url('users', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
+                                                        <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i> Delete</a>
                                                     </div>
                                                 </form>
                                             </td>

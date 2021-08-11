@@ -30,7 +30,7 @@
                     <input type="nama" class="form-control" id="tagName" name="tagName" placeholder="Input tag"/>
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
-                    <button type="submit" class="btn btn-success" id="swal"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
+                    <button type="submit" class="btn btn-success" onclick="return swal('Hello world!');"> <i class="fas fa-plus-circle fa-lg"></i> Add</button>
                   </div>
                 </div>
               </form>
@@ -88,3 +88,4 @@
 </div>
 
 @endsection
+
