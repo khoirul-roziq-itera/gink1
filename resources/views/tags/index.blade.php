@@ -36,6 +36,12 @@
               </form>
             </div>
           </div>
+
+          @if(session('sukses'))
+            <div class="alaret alert-success" role="alert">
+              {{session('sukses')}}
+            </div>     
+          @endif  
           <div class="row">
             <div class="col-12">
               <div class="card">

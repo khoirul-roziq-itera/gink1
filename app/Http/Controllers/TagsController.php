@@ -45,7 +45,7 @@ class TagsController extends Controller
             'user_id' => Auth::id()
         ]);
 
-        return redirect('tags')->with('success', 'Tag Successfully Created!');
+        return redirect('tags')->with('sukses', 'Tag Successfully Created!');
     }
 
     /**
