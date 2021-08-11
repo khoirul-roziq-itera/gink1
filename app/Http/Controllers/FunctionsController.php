@@ -39,6 +39,23 @@ class FunctionsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'function_Title' => 'required|min:3|unique:functions',
+            'function_Name' => 'required|min:3|unique:functions',
+            'function_Group' => 'required',
+            'function_FE_Duration' => $request->FEDuration,
+            'function_FE_Cost' => $request->FECost,
+            'function_FE_Price' => $request->FEPrice,
+            'function_BE_Duration' => $request->BEDuration,
+            'function_BE_Cost' => $request->BECost,
+            'function_BE_Price' => $request->BEPrice,
+            'function_FS_Duration' => $request->FSDuration,
+            'function_FS_Cost' => $request->FSCost,
+            'function_FS_Price' => $request->FSPrice,
+            'function_Notes' => $request->funcNotes,
+            'function_Status' => $request->funcStatus
+        ]);
+
         Func::create([
             'function_Title' => $request->funcTitle,
             'function_Name' => $request->funcName,

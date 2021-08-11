@@ -38,6 +38,10 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'categoryName' => 'required|min:3|max:20|unique:categories,category_name'
+        ]);
+
         Category::create([
             'category_name' => $request->categoryName,
             'category_slug' => Str::of($request->categoryName)->slug('-'),
