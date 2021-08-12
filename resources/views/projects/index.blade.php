@@ -1,17 +1,13 @@
 @extends('layouts/main')
 
-@section('title','List Project')
+@section('title','Data Projects')
 
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">List Project</h1>
-      <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active">Project</a></div>
-        <div class="breadcrumb-item">List</div>
-      </div>
+      <h1 style="font-size: 25px">Projects</h1>
     </div>
 
     <div class="section-body">
@@ -44,7 +40,7 @@
                 </div>
               </div>
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
-                <table id="table-1" class="table table-hover table-bordered border-primary">
+                <table id="table-1" class="table table-hover table-bordered">
                   <thead class="text-center">
                     <tr>
                       <th>No</th>
@@ -60,19 +56,18 @@
                     <tr class="text-center">
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
-                      <td>{{ $result->category->category_name }}</td>
+                      <td>{{ $result->category_id }}</td>
                       <td>{{ $result->deadline_project_t }}</td>
                       <td>
                         @if( $result->status == 1)
-                        <span class="badge badge-warning">Menunggu</span>
+                        <span class="badge badge-danger">Waiting</span>
                         @elseif( $result->status == 2 )
-                        <span class="badge badge-info">Sedang Dikerjakan</span>
+                        <span class="badge badge-success">On Progress</span>
                         @else
-                        <span class="badge badge-success">Selesai</span>
+                        <span class="badge badge-primary">Finished</span>
                         @endif
                       </td>
                       <td>
-
                         <form action="{{ route('projects.destroy', $result->id ) }}" method="post">
                           @csrf
                           @method('delete')

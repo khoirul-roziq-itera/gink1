@@ -65,7 +65,7 @@
 
 a {
     color: #e62f2f;
-    font-weight: 500;
+    font-weight: 100;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -2700,14 +2700,15 @@ ul.nav-tabs li.nav-item a.nav-link.active i {
 
 body,
 html {
-    min-height: 100%;
+    min-height: 75%;
 }
 
 body {
     background-color: #ffff;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: bold;
     font-family: "Nunito", "Segoe UI", arial;
+    color: #6c6e70;
 }
 
 a.bb {
@@ -3250,7 +3251,7 @@ pre {
 }
 .section .section-title {
     font-size: 18px;
-    color: #191d21;
+    color: #97989a;
     font-weight: 600;
     position: relative;
     margin: 30px 0 25px 0;
