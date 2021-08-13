@@ -26,7 +26,12 @@
                                 <div class="form-group row">
                                     <label for="appName" class="col-sm-2 col-form-label">Application Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Input your application name" value="{{$app->app_name}}">
+                                        <input type="text" id="appName" name="appName" class="form-control @error('appName') is-invalid @enderror" placeholder="Input your application name" value="{{$app->app_name}}">
+                                        <div class="invalid-feedback">
+                                            @error('appName')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
