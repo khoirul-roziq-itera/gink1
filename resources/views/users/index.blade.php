@@ -23,12 +23,12 @@
                         </div>
                         <div class="card-body p-0">
                             <div class="row">
-                               
-                                  <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:4em">
-                                    <a href="{{ url('users/create')}}" type="button" class="btn btn-success" ><i class="fas fa-plus-circle"></i> Add Data</a>
-                                  </div>
-                       
-                              </div>
+
+                                <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:4em">
+                                    <a href="{{ url('users/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> Add User</a>
+                                </div>
+
+                            </div>
 
                             <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                                 <table id="table-1" class="table table-hover table-bordered">
