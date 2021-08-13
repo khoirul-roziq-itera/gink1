@@ -25,13 +25,23 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="name" name="name" class="form-control" placeholder="Masukkan nama lengkap">
+                                        <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Masukkan nama lengkap">
+                                        <div class="invalid-feedback">
+                                            @error('name')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                                     <div class="col-sm-7">
-                                        <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password" placeholder="Masukkan password">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" data-indicator="pwindicator" name="password" placeholder="Masukkan password">
+                                        <div class="invalid-feedback">
+                                            @error('password')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                         <div id="pwindicator" class="pwindicator">
                                             <div class="bar"></div>
                                             <div class="label"></div>
@@ -41,7 +51,12 @@
                                 <div class="form-group row">
                                     <label for="passwordConfirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
                                     <div class="col-sm-7">
-                                        <input id="passwordConfirmation" type="password" class="form-control" name="passwordConfirmation" placeholder="Masukkan password">
+                                        <input id="passwordConfirmation" type="password"  class="form-control @error('password') is-invalid @enderror" name="passwordConfirmation" placeholder="Masukkan password">
+                                        <div class="invalid-feedback">
+                                            @error('password')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
 
@@ -58,15 +73,24 @@
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="email" name="email" class="form-control" placeholder="Masukkan email">
+                                        <input type="text" id="email" name="email"  class="form-control @error('email') is-invalid @enderror" placeholder="Masukkan email">
+                                        <div class="invalid-feedback">
+                                            @error('email')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="photo" class="col-sm-2 col-form-label">Photo</label>
                                     <div class="col-sm-7">
-                                        <input type="file" class="form-control" id="photo" name="photo">
-                                        <!-- <input type="text" id="photo" name="photo" class="form-control"> -->
+                                        <input type="file" class="form-control @error('photo') is-invalid @enderror" id="photo" name="photo">
+                                        <div class="invalid-feedback">
+                                            @error('photo')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>   
                                     </div>
                                 </div>
                                 <div class="form-group row">

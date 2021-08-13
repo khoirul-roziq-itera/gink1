@@ -23,7 +23,7 @@
                 <div class="form-group row">
                   <label for="tagName" class="col-sm-2 col-form-label">Tag Name</label>
                   <div class="col-sm-5">
-                    <input type="nama" class="form-control @error('tagName') is-invalid @enderror" id="tagName" name="tagName" placeholder="Input tag" />
+                    <input type="nama" class="form-control @error('tagName') is-invalid @enderror" value="{{ old('tagName') }}" id="tagName" name="tagName" placeholder="Input tag" />
                     <div class="invalid-feedback">
                       @error('tagName')
                       {{ $message }}

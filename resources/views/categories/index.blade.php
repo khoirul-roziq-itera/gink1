@@ -21,7 +21,7 @@
                 <div class="form-group row">
                   <label for="categoryName" class="col-sm-2 col-form-label">Category Name</label>
                   <div class="col-sm-5">
-                    <input type="nama" class="form-control  @error('categoryName') is-invalid @enderror" id="categoryName" name="categoryName" placeholder="Input Category">
+                    <input type="nama" class="form-control  @error('categoryName') is-invalid @enderror" value="{{ old('categoryName')}}" id="categoryName" name="categoryName" placeholder="Input Category">
                     <div class="invalid-feedback">
                       @error('categoryName')
                       {{ $message }}
