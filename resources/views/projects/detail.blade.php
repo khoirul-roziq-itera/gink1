@@ -46,14 +46,14 @@
                       @foreach( $app->tags as $tag )
 
                       <span class="badge bg-secondary text-dark">{{ $tag->tag_name }}</span>
-                       
+
                       @endforeach
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="moduleName" class="col-sm-2 col-form-label">Category</label>
                     <div class="col-sm-7">
-                      {{-- <input type="text" class="form-control" disabled value="{{ $app->categories->category_name }}"> --}}
+                      <input type="text" class="form-control" disabled value="{{ $app->category->category_name }}">
                     </div>
                   </div>
                   <div class="form-group row">
