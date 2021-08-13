@@ -68,7 +68,7 @@
                         <tr>
                           <td style="background: rgb(185, 235, 185)">Front-End</td>
                           {{-- Duration --}}
-                          <td>{{ $func->function_FE_Duration }}  day</td>
+                          <td>{{ $func->function_FE_Duration }} day</td>
                           {{-- cost --}}
                           <td>Rp. {{ $func->function_FE_Cost }}</td>
                           {{-- price --}}
@@ -77,7 +77,7 @@
                         <tr>
                           <td style="background: rgb(185, 235, 185)">Back-End</td>
                           {{-- duration --}}
-                          <td>{{ $func->function_BE_Duration }}  day</td>
+                          <td>{{ $func->function_BE_Duration }} day</td>
                           {{-- cost --}}
                           <td>Rp. {{ $func->function_BE_Cost }}</td>
                           {{-- price --}}
@@ -86,7 +86,7 @@
                         <tr>
                           <td style="background: rgb(185, 235, 185)">Full-Stack</td>
                           {{-- duration --}}
-                          <td>{{ $func->function_FS_Duration }}  day</td>
+                          <td>{{ $func->function_FS_Duration }} day</td>
                           {{-- cost --}}
                           <td>Rp. {{ $func->function_FS_Cost }}</td>
                           {{-- price --}}
@@ -95,7 +95,7 @@
                         <tr>
                           <td style="background: rgb(185, 235, 185)">Total</td>
                           {{-- duration --}}
-                          <td style="background: rgb(185, 235, 185)">{{ $func->function_FE_Duration + $func->function_BE_Duration +  $func->function_FE_Duration }}  day </td>
+                          <td style="background: rgb(185, 235, 185)">{{ $func->function_FE_Duration + $func->function_BE_Duration +  $func->function_FE_Duration }} day </td>
                           {{-- cost --}}
                           <td style="background: rgb(185, 235, 185)">Rp. {{ $func->function_FE_Cost + $func->function_BE_Cost + $func->function_FS_Cost }}</td>
                           {{-- price --}}
@@ -110,8 +110,8 @@
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
-                    <a href="{{ url('functions') }}"  class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</button></a>
-                    <a href="{{ route('functions.edit', $func->id) }}" class="btn btn-success "> <i class="fas fa-edit" ></i> Edit</button></a>
+                    <a href="{{ url('functions') }}" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</button></a>
+                    <a href="{{ route('functions.edit', $func->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</button></a>
                   </div>
                 </div>
               </div>
