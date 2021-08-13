@@ -45,7 +45,7 @@
                       @foreach( $app->tags as $tag )
 
                       <span class="badge bg-secondary text-dark">{{ $tag->tag_name }}</span>
-                       
+
                       @endforeach
                     </div>
                   </div>
