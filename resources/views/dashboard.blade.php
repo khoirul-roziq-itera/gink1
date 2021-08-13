@@ -110,7 +110,7 @@
                       <th>No</th>
                       <th>Name</th>
                       <th>Category</th>
-                      <th>Finished</th>
+                      <th>Creator</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -119,7 +119,7 @@
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
                       <td>{{ $result->category->category_name }}</td>
-                      <td>{{ $result->end_project_t }}</td>
+                      <td>{{ $result->user->name }}</td>
                     </tr>
                     @endforeach
                   </tbody>

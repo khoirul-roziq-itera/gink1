@@ -42,7 +42,7 @@
                       <th>No</th>
                       <th>App Name</th>
                       <th>Category</th>
-                      <th>Deadline</th>
+                      <th>Creator</th>
                       <th>Status</th>
                       <th>Actions</th>
                     </tr>
@@ -53,7 +53,7 @@
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
                       <td>{{ $result->category->category_name }}</td>
-                      <td>{{ $result->deadline_project_t }}</td>
+                      <td>{{ $result->user->name }}</td>
                       <td>
                         @if( $result->status == 1)
                         <span class="badge badge-danger">Waiting</span>

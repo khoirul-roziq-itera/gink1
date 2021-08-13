@@ -50,15 +50,8 @@ class ProjectsController extends Controller
             'appName' => 'required|min:3|max:100||unique:applications,app_name',
             'status' => 'required',
             'category' => 'required',
-            'FEDuration' => 'numeric|min:0|max:100',
-            'FECost' => 'numeric|min:0',
-            'FEPrice' => 'numeric|min:0',
-            'BEDuration' => 'numeric|min:0|max:100',
-            'BECost' => 'numeric|min:0',
-            'BEPrice' => 'numeric|min:0',
-            'FSDuration' => 'numeric|min:0|max:100',
-            'FSCost' => 'numeric|min:0',
-            'FSPrice' => 'numeric|min:0',
+            'modules' => 'required',
+            'tags' => 'required'
         ]);
 
         $sumFECost = 0;
