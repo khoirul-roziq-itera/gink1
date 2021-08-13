@@ -24,9 +24,9 @@
                             @method('patch')
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="appName" class="col-sm-2 col-form-label">App Name</label>
+                                    <label for="appName" class="col-sm-2 col-form-label">Application Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project" value="{{$app->app_name}}">
+                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Input your application name" value="{{$app->app_name}}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -47,11 +47,14 @@
                                     <label for="tags" class="col-sm-2 col-form-label">Tag</label>
                                     <div class="col-sm-7">
                                         <select id="choices-tags" name="tags[]" class="form-control" placeholder="Select tags" multiple>
-                                            @foreach( $app->tags as $result )
                                             @foreach ( $tags as $tag)
-                                            <option value="{{ $tag->id }}" @if($result->id == $tag->id ) selected @endif>{{$tag->tag_name}}</option>
+                                            <option value="{{ $tag->id }}" @foreach( $app->tags as $value )
+                                                @if($value->id == $tag->id ) selected
+                                                @endif
+                                                @endforeach
+                                                >{{$tag->tag_name}}</option>
                                             @endforeach
-                                            @endforeach
+
                                         </select>
                                     </div>
                                 </div>
@@ -59,10 +62,13 @@
                                     <label for="modules" class="col-sm-2 col-form-label">Modules</label>
                                     <div class="col-sm-7">
                                         <select id="choices-modules" name="modules[]" class="form-control" placeholder="Select modules" multiple>
-                                            @foreach( $app->modules as $result )
+
                                             @foreach ( $modules as $module)
-                                            <option value="{{ $module->id }}" @if($result->id == $module->id ) selected @endif>{{$module->module_Name}}</option>
-                                            @endforeach
+                                            <option value="{{ $module->id }}" @foreach( $app->modules as $value )
+                                                @if($value->id == $module->id ) selected
+                                                @endif
+                                                @endforeach
+                                                >{{$module->module_Name}}</option>
                                             @endforeach
                                         </select>
                                     </div>

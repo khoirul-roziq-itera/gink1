@@ -87,11 +87,11 @@ class FunctionsController extends Controller
     {
         $func = Func::where('id', $id)->first();
         if ($func->function_Status == 1) {
-            $funcStatus = 'Menunggu';
+            $funcStatus = 'Waiting';
         } else if ($func->function_Status == 2) {
-            $funcStatus = 'Sedang Dikerjakan';
+            $funcStatus = 'On Progress';
         } else {
-            $funcStatus = 'Selesai';
+            $funcStatus = 'Finished';
         }
 
         return view('functions.detail', compact('func', 'funcStatus'));

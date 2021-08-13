@@ -139,6 +139,14 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'appName' => 'required|min:3|max:100',
+            'status' => 'required',
+            'category' => 'required',
+            'modules' => 'required',
+            'tags' => 'required'
+        ]);
+
         $sumFECost = 0;
         $sumFEPrice = 0;
         $sumBECost = 0;

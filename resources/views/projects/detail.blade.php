@@ -24,7 +24,7 @@
                 <div class="col-12">
                   <h2 class="section-title" style="padding-bottom: 1em">Informasi Project</h2>
                   <div class="form-group row">
-                    <label for="moduleName" class="col-sm-2 col-form-label">Project Name</label>
+                    <label for="moduleName" class="col-sm-2 col-form-label">Application Name</label>
                     <div class="col-sm-7">
                       <input type="text" class="form-control" disabled value="{{ $app->app_name }}">
                     </div>
@@ -69,12 +69,12 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach( $app->modules as $module => $result )
                         <tr>
-                          @foreach( $app->modules as $module => $result )
                           <td>{{ $module + 1}}</td>
                           <td>{{ $result->module_Name }}</td>
-                          @endforeach
                         </tr>
+                        @endforeach
                       </tbody>
                     </table>
                   </div>
@@ -93,12 +93,12 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach( $app->tags as $tag => $result )
                         <tr>
-                          @foreach( $app->tags as $tag => $result )
                           <td>{{ $tag + 1}}</td>
                           <td>{{ $result->tag_name }}</td>
-                          @endforeach
                         </tr>
+                        @endforeach
                       </tbody>
                     </table>
                   </div>
