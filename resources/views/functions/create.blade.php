@@ -37,13 +37,12 @@
                                 <div class="form-group row">
                                     <label for="funcName" class="col-sm-2 col-form-label">Function Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcName" name="funcName" class="form-control @error('funcTitle') is-invalid @enderror" 
-                                        placeholder="Input name"  value="{{ old('funcName') }}">
+                                        <input type="text" id="funcName" name="funcName" class="form-control @error('funcTitle') is-invalid @enderror" placeholder="Input name"  value="{{ old('funcName') }}">
                                         <div class="invalid-feedback">
                                             @error('funcName')
                                             {{ $message }}
                                             @enderror
-                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
