@@ -82,11 +82,12 @@
                                     <label for="status" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-7">
                                         <select id="status" name="status" class="form-control">
-                                            <option value="">- Pilih Status</option>
-                                            <option value="3">Selesai</option>
-                                            <option value="2">Sedang Dikerjakan</option>
-                                            <option value="1">Menunggu</option>
-                                        </select>
+                                            <select id="status" name="status" class="form-control">
+                                                <option value="">-- Choose Status --</option>
+                                                <option value="1">Waiting</option>
+                                                <option value="2">On Progress</option>
+                                                <option value="3">Finished</option>
+                                            </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">

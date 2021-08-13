@@ -35,7 +35,10 @@
                                         <select id="choices-categories" name="category" class="form-control" placeholder="Select categories">
                                             <option value="">--- Choose Category ---</option>
                                             @foreach( $categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                            <option value="{{ $category->id }}" @if( $app->category_id == $category->id )
+                                                selected
+                                                @endif
+                                                >{{ $category->category_name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -44,8 +47,10 @@
                                     <label for="tags" class="col-sm-2 col-form-label">Tag</label>
                                     <div class="col-sm-7">
                                         <select id="choices-tags" name="tags[]" class="form-control" placeholder="Select tags" multiple>
+                                            @foreach( $app->tags as $result )
                                             @foreach ( $tags as $tag)
-                                            <option value="{{ $tag->id }}">{{$tag->tag_name}}</option>
+                                            <option value="{{ $tag->id }}" @if($result->id == $tag->id ) selected @endif>{{$tag->tag_name}}</option>
+                                            @endforeach
                                             @endforeach
                                         </select>
                                     </div>
@@ -54,8 +59,10 @@
                                     <label for="modules" class="col-sm-2 col-form-label">Modules</label>
                                     <div class="col-sm-7">
                                         <select id="choices-modules" name="modules[]" class="form-control" placeholder="Select modules" multiple>
+                                            @foreach( $app->modules as $result )
                                             @foreach ( $modules as $module)
-                                            <option value="{{ $module->id }}">{{$module->module_Name}}</option>
+                                            <option value="{{ $module->id }}" @if($result->id == $module->id ) selected @endif>{{$module->module_Name}}</option>
+                                            @endforeach
                                             @endforeach
                                         </select>
                                     </div>

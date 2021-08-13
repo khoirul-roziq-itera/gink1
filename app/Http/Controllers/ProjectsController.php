@@ -61,25 +61,19 @@ class ProjectsController extends Controller
             'FSPrice' => 'numeric|min:0',
         ]);
 
-        // $sumFEDuration = 0;
         $sumFECost = 0;
         $sumFEPrice = 0;
-        // $sumBEDuration = 0;
         $sumBECost = 0;
         $sumBEPrice = 0;
-        // $sumFSDuration = 0;
         $sumFSCost = 0;
         $sumFSPrice = 0;
         $tempReq = $request->modules;
 
         for ($i = 0; $i < count($tempReq); $i++) {
-            // $sumFEDuration += DB::table('modules')->where('id', $tempReq[$i])->first()->function_FE_Duration;
             $sumFECost += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FE_Cost;
             $sumFEPrice += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FE_Price;
-            // $sumBEDuration += DB::table('modules')->where('id', $tempReq[$i])->first()->module_BE_Duration;
             $sumBECost += DB::table('modules')->where('id', $tempReq[$i])->first()->module_BE_Cost;
             $sumBEPrice += DB::table('modules')->where('id', $tempReq[$i])->first()->module_BE_Price;
-            // $sumFSDuration += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FS_Duration;
             $sumFSCost += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FS_Cost;
             $sumFSPrice += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FS_Price;
         }
@@ -145,32 +139,26 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $sumFEDuration = 0;
         $sumFECost = 0;
         $sumFEPrice = 0;
-        // $sumBEDuration = 0;
         $sumBECost = 0;
         $sumBEPrice = 0;
-        // $sumFSDuration = 0;
         $sumFSCost = 0;
         $sumFSPrice = 0;
         $tempReq = $request->modules;
 
         for ($i = 0; $i < count($tempReq); $i++) {
-            // $sumFEDuration += DB::table('modules')->where('id', $tempReq[$i])->first()->function_FE_Duration;
             $sumFECost += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FE_Cost;
             $sumFEPrice += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FE_Price;
-            // $sumBEDuration += DB::table('modules')->where('id', $tempReq[$i])->first()->module_BE_Duration;
             $sumBECost += DB::table('modules')->where('id', $tempReq[$i])->first()->module_BE_Cost;
             $sumBEPrice += DB::table('modules')->where('id', $tempReq[$i])->first()->module_BE_Price;
-            // $sumFSDuration += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FS_Duration;
             $sumFSCost += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FS_Cost;
             $sumFSPrice += DB::table('modules')->where('id', $tempReq[$i])->first()->module_FS_Price;
         }
-        Application::where('id', $id)->update([
+        $app = Application::findorfail($id);
+        $app_data = [
             'app_name' => $request->appName,
             'app_slug' => Str::of($request->appName)->slug('-'),
-            'user_id' => Auth::id(),
             'category_id' => $request->category,
             'status' => $request->status,
             'start_project_t' => $request->startProjectT,
@@ -185,7 +173,12 @@ class ProjectsController extends Controller
             'app_Cost_Total' => $sumFECost + $sumBECost + $sumFSCost,
             'app_Price_Total' => $sumFEPrice + $sumBEPrice + $sumFSPrice,
             'app_notes' => $request->notes
-        ]);
+        ];
+
+        $app->tags()->sync($request->tags);
+        $app->modules()->sync($request->modules);
+
+        $app->update($app_data);
 
         return redirect('projects')->with('success', 'Project Successfully Updated!');
     }
