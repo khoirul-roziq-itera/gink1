@@ -30,31 +30,11 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="moduleName" class="col-sm-2 col-form-label">Modules</label>
-                    <div class="col-sm-7">
-                      <!-- <input type="text" class="form-control" disabled value="#"> -->
-                      @foreach( $app->modules as $module )
-                      <span class="badge bg-secondary text-dark">{{ $module->module_Name }}</span>
-                      @endforeach
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="moduleName" class="col-sm-2 col-form-label">Tags</label>
-                    <div class="col-sm-7">
-                      <!-- <input type="text" class="form-control" disabled value="#"> -->
-                      @foreach( $app->tags as $tag )
-
-                      <span class="badge bg-secondary text-dark">{{ $tag->tag_name }}</span>
-
-                      @endforeach
-                    </div>
-                  </div>
-                  <div class="form-group row">
                     <label for="moduleName" class="col-sm-2 col-form-label">Category</label>
                     <div class="col-sm-7">
                       <input type="text" class="form-control" disabled value="{{ $app->category->category_name }}">
                     </div>
-                    
+
                   </div>
                   <div class="form-group row">
                     <label for="moduleName" class="col-sm-2 col-form-label">Start Time</label>
@@ -90,9 +70,10 @@
                       </thead>
                       <tbody>
                         <tr>
-                          @foreach( $app->modules as $module )
-                          <td>{{ $modules }}</td>
-                          <td>Modul 1</td>
+                          @foreach( $app->modules as $module => $result )
+                          <td>{{ $module + 1}}</td>
+                          <td>{{ $result->module_Name }}</td>
+                          @endforeach
                         </tr>
                       </tbody>
                     </table>
@@ -113,8 +94,10 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>1</td>
-                          <td>Tags 1</td>
+                          @foreach( $app->tags as $tag => $result )
+                          <td>{{ $tag + 1}}</td>
+                          <td>{{ $result->tag_name }}</td>
+                          @endforeach
                         </tr>
                       </tbody>
                     </table>
