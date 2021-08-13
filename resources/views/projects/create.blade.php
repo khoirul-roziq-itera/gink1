@@ -23,9 +23,9 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="appname" class="col-sm-2 col-form-label">App Name</label>
+                                    <label for="appname" class="col-sm-2 col-form-label">Application Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project">
+                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Input your application name">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -82,12 +82,11 @@
                                     <label for="status" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-7">
                                         <select id="status" name="status" class="form-control">
-                                            <select id="status" name="status" class="form-control">
-                                                <option value="">-- Choose Status --</option>
-                                                <option value="1">Waiting</option>
-                                                <option value="2">On Progress</option>
-                                                <option value="3">Finished</option>
-                                            </select>
+                                            <option value="">-- Choose Status --</option>
+                                            <option value="1">Waiting</option>
+                                            <option value="2">On Progress</option>
+                                            <option value="3">Finished</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
