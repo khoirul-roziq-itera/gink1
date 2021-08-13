@@ -86,6 +86,7 @@
                                 <div class="form-group row">
                                     <label for="status" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-7">
+<<<<<<< HEAD
                                         <select id="status" name="status" class="form-control @error('status') is-invalid @enderror">
                                             <option value="">-- Choose Status --</option>
                                             <option value="1">Waiting</option>
@@ -97,6 +98,15 @@
                                             {{ $message }}
                                             @enderror
                                         </div>
+=======
+                                        <select id="status" name="status" class="form-control">
+                                            <select id="status" name="status" class="form-control">
+                                                <option value="">-- Choose Status --</option>
+                                                <option value="1">Waiting</option>
+                                                <option value="2">On Progress</option>
+                                                <option value="3">Finished</option>
+                                            </select>
+>>>>>>> ac5f8a92051d17727fe964c2cc37752d9b823041
                                     </div>
                                 </div>
                                 <div class="form-group row">
