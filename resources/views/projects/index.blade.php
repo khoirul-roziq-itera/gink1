@@ -52,7 +52,7 @@
                     <tr class="text-center">
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
-                      <td>{{ $result->category_id }}</td>
+                      <td>{{ $result->category_n}}</td>
                       <td>{{ $result->deadline_project_t }}</td>
                       <td>
                         @if( $result->status == 1)
