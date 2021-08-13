@@ -90,7 +90,8 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>1</td>
+                          @foreach( $app->modules as $module )
+                          <td>{{ $modules }}</td>
                           <td>Modul 1</td>
                         </tr>
                       </tbody>
