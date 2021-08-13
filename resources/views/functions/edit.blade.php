@@ -39,7 +39,7 @@
                                     <div class="col-sm-7">
                                         <input type="text" id="funcName" name="funcName" class="form-control @error('funcName') is-invalid @enderror" value="{{ $func->function_Name }}">
                                         <div class="invalid-feedback">
-                                            @error('tagName')
+                                            @error('funcName')
                                             {{ $message }}
                                             @enderror
                                           </div>
@@ -68,13 +68,9 @@
                                     <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
-                                            <input type="text" name="FEDuration" id="FEDuration" class="form-control @error('FEDuration') is-invalid @enderror" value="{{ $func->function_FE_Duration }}" />
+                                            <input type="text" name="FEDuration" id="FEDuration" class="form-control" value="{{ $func->function_FE_Duration }}" />
                                             <span class="input-group-text" id="basic-addon1">Day </span>
-                                            <div class="invalid-feedback">
-                                                @error('FEDuration')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -83,12 +79,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FECost" id="FECost" class="form-control @error('FECost') is-invalid @enderror" value="{{ $func->function_FE_Cost }}" />
-                                            <div class="invalid-feedback">
-                                                @error('FECost')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                            <input type="text" name="FECost" id="FECost" class="form-control " value="{{ $func->function_FE_Cost }}" />
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -97,12 +89,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FEPrice" id="FEPrice" class="form-control @error('FEPrice') is-invalid @enderror" value="{{ $func->function_FE_Price }}" />
-                                            <div class="invalid-feedback">
-                                                @error('FEPrice')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                            <input type="text" name="FEPrice" id="FEPrice" class="form-control" value="{{ $func->function_FE_Price }}" />
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -110,13 +98,9 @@
                                     <label for="BEDuration" class="col-sm-2 col-form-label">Back-End Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
-                                            <input type="text" name="BEDuration" id="BEDuration" class="form-control @error('BEDuration') is-invalid @enderror" value="{{ $func->function_BE_Duration }}" />
+                                            <input type="text" name="BEDuration" id="BEDuration" class="form-control " value="{{ $func->function_BE_Duration }}" />
                                             <span class="input-group-text" id="basic-addon1">Day </span>
-                                            <div class="invalid-feedback">
-                                                @error('BEDuration')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -125,12 +109,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="BECost" id="BECost" class="form-control @error('BECost') is-invalid @enderror" value="{{ $func->function_BE_Cost }}" />
-                                            <div class="invalid-feedback">
-                                                @error('BECost')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                            <input type="text" name="BECost" id="BECost" class="form-control" value="{{ $func->function_BE_Cost }}" />
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -139,12 +119,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="BEPrice" id="BEPrice" class="form-control @error('BEPrice') is-invalid @enderror" value="{{ $func->function_BE_Price }}" />
-                                            <div class="invalid-feedback">
-                                                @error('BEPrice')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                            <input type="text" name="BEPrice" id="BEPrice" class="form-control " value="{{ $func->function_BE_Price }}" />
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -153,13 +129,9 @@
                                     <label for="FSDuration" class="col-sm-2 col-form-label">Full-Stack Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
-                                            <input type="text" name="FSDuration" id="FSDuration" class="form-control @error('FSDuration') is-invalid @enderror" value="{{ $func->function_FS_Duration }}" />
+                                            <input type="text" name="FSDuration" id="FSDuration" class="form-control" value="{{ $func->function_FS_Duration }}" />
                                             <span class="input-group-text" id="basic-addon1">Day </span>
-                                            <div class="invalid-feedback">
-                                                @error('FSDuration')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -168,12 +140,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FSCost" id="FSCost" class="form-control @error('FSCost') is-invalid @enderror" value="{{ $func->function_FS_Cost }}" />
-                                            <div class="invalid-feedback">
-                                                @error('FECost')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                            <input type="text" name="FSCost" id="FSCost" class="form-control " value="{{ $func->function_FS_Cost }}" />
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -182,12 +150,8 @@
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="FSPrice" id="FSPrice" class="form-control @error('FSPrice') is-invalid @enderror" value="{{ $func->function_FS_Price }}" />
-                                            <div class="invalid-feedback">
-                                                @error('FEPrice')
-                                                {{ $message }}
-                                                @enderror
-                                              </div>
+                                            <input type="text" name="FSPrice" id="FSPrice" class="form-control " value="{{ $func->function_FS_Price }}" />
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -200,17 +164,13 @@
                                 <div class="form-group row">
                                     <label for="funcStatus" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-7">
-                                        <select id="funcStatus" name="funcStatus" class="form-control @error('funcStatus') is-invalid @enderror">
+                                        <select id="funcStatus" name="funcStatus" class="form-control">
                                             <option value="">-- Choose Status --</option>
                                             <option value="1" @if($func->function_Status == '1') selected @endif>Waiting</option>
                                             <option value="2" @if($func->function_Status == '2') selected @endif>On Progress</option>
                                             <option value="3" @if($func->function_Status == '3') selected @endif>Finished</option>
                                         </select>
-                                        <div class="invalid-feedback">
-                                            @error('funcStatus')
-                                            {{ $message }}
-                                            @enderror
-                                          </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="form-group row">
