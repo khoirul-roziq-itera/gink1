@@ -6,9 +6,9 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Create Project</h1>
+            <h1 style="font-size: 25px">Projects</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="{{ url('projects') }}">Project</a></div>
+                <div class="breadcrumb-item active"><a href="{{ url('projects') }}">Projects</a></div>
                 <div class="breadcrumb-item">Create</div>
             </div>
         </div>
@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Input Data</h4>
+                            <h4>Create Project</h4>
                         </div>
                         <form method="POST" action="{{ route('projects.store') }}" id="myForm">
                             @csrf
@@ -98,8 +98,8 @@
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
-                                            <a href="{{ url('dashboard') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
-                                            <button type="submit" onclick="sweet()" class="btn btn-primary" id="swal1">Submit</button>
+                                            <a href="{{ url('projects') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </div>

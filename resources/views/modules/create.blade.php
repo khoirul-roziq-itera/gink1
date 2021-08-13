@@ -31,7 +31,7 @@
                                 <div class="form-group row">
                                     <label for="moduleName" class="col-sm-2 col-form-label">Name Modul</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="moduleName" name="moduleName" class="form-control @error('moduleName') is-invalid @enderror" placeholder="Masukkan nama modul" value="{{ old('moduleName') }}">
+                                        <input type="text" id="moduleName" name="moduleName" class="form-control @error('moduleName') is-invalid @enderror" value="{{ old('moduleName') }}" placeholder="Masukkan nama modul">
                                         <div class="invalid-feedback">
                                             @error('moduleName')
                                             {{ $message }}
