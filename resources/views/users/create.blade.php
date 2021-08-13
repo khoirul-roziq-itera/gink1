@@ -25,8 +25,8 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Masukkan nama lengkap">
-                                        <div class="invalid-feedback">
+                                        <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Input your name">
+                                        <div class=" invalid-feedback">
                                             @error('name')
                                             {{ $message }}
                                             @enderror
@@ -42,16 +42,12 @@
                                             {{ $message }}
                                             @enderror
                                         </div>
-                                        <div id="pwindicator" class="pwindicator">
-                                            <div class="bar"></div>
-                                            <div class="label"></div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="passwordConfirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
+                                    <label for="password_confirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
                                     <div class="col-sm-7">
-                                        <input id="passwordConfirmation" type="password"  class="form-control @error('password') is-invalid @enderror" name="passwordConfirmation" placeholder="Masukkan password">
+                                        <input id="password_confirmation" type="password" class="form-control @error('password') is-invalid @enderror" name="password_confirmation" placeholder="Masukkan password">
                                         <div class="invalid-feedback">
                                             @error('password')
                                             {{ $message }}
@@ -73,7 +69,7 @@
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="email" name="email"  class="form-control @error('email') is-invalid @enderror" placeholder="Masukkan email">
+                                        <input type="text" id="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Masukkan email" value="{{ old('email') }}">
                                         <div class="invalid-feedback">
                                             @error('email')
                                             {{ $message }}
@@ -90,7 +86,7 @@
                                             @error('photo')
                                             {{ $message }}
                                             @enderror
-                                        </div>   
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
