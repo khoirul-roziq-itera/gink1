@@ -24,7 +24,7 @@
                 <div class="col-12">
                   <h2 class="section-title" style="padding-bottom: 1em">Informasi Project</h2>
                   <div class="form-group row">
-                    <label for="moduleName" class="col-sm-2 col-form-label">Application Name</label>
+                    <label for="moduleName" class="col-sm-2 col-form-label">Project Name</label>
                     <div class="col-sm-7">
                       <input type="text" class="form-control" disabled value="{{ $app->app_name }}">
                     </div>

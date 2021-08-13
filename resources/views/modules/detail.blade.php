@@ -32,7 +32,7 @@
                   <input readonly="" type="text" id="moduleCreator" name="moduleCreator" class="form-control" value="{{ $module->user->name }}" />
                 </div>
               </div>
-   
+
               <div class="form-group row">
                 <label for="funcNotes" class="col-sm-2 col-form-label">Module Notes</label>
                 <div class="col-sm-7">
@@ -70,7 +70,7 @@
                 </div>
               </div>
 
-              
+
 
               <h2 class="section-title" style="padding-bottom: 1em">Calculation</h2>
               <div class="row">
@@ -127,7 +127,7 @@
                   </div>
                 </div>
               </div>
-                                
+
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
@@ -141,6 +141,8 @@
         </div>
       </div>
     </div>
-  </section>
+</div>
+</div>
+</section>
 </div>
 @endsection

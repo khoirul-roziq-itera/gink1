@@ -42,6 +42,6 @@ class Module extends Model
 
     public function aplication()
     {
-        return $this->belongsToMany('App\Model\Application');
+        return $this->belongsToMany('App\Models\Application');
     }
 }
