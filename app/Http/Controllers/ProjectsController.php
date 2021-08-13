@@ -130,7 +130,10 @@ class ProjectsController extends Controller
     public function edit($id)
     {
         $app = Application::where('id', $id)->first();
-        return view('projects.edit', compact('app'));
+        $categories = Category::all();
+        $tags = Tag::all();
+        $modules = Module::all();
+        return view('projects.edit', compact('app', 'categories', 'tags', 'modules'));
     }
 
     /**

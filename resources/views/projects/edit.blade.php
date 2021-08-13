@@ -1,15 +1,15 @@
 @extends('layouts/main')
 
-@section('title','Create Data')
+@section('title','Edit Project')
 
 @section('container')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Create Project</h1>
+            <h1 style="font-size: 25px">Edit Project</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="{{ url('projects') }}">Project</a></div>
-                <div class="breadcrumb-item">Create</div>
+                <div class="breadcrumb-item">Edit</div>
             </div>
         </div>
         <div class="section-body">
@@ -19,13 +19,14 @@
                         <div class="card-header">
                             <h4>Input Data</h4>
                         </div>
-                        <form method="POST" action="{{ route('projects.store') }}" id="myForm">
+                        <form method="POST" action="{{ route('projects.update', $app->id) }}" id="myForm">
                             @csrf
+                            @method('patch')
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="appname" class="col-sm-2 col-form-label">App Name</label>
+                                    <label for="appName" class="col-sm-2 col-form-label">App Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project">
+                                        <input type="text" id="appName" name="appName" class="form-control" placeholder="Masukkan nama project" value="{{$app->app_name}}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -78,45 +79,27 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="costTotal" class="col-sm-2 col-form-label">Cost Total</label>
-                                    <div class="col-sm-7">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="costTotal" id="costTotal" class="form-control" placeholder="Masukkan biaya" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="priceTotal" class="col-sm-2 col-form-label">PriceTotal</label>
-                                    <div class="col-sm-7">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                            <input type="text" name="priceTotal" id="priceTotal" class="form-control" placeholder="Masukkan biaya" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
                                     <label for="status" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-7">
                                         <select id="status" name="status" class="form-control">
-                                            <option value="">- Pilih Status</option>
-                                            <option value="3">Selesai</option>
-                                            <option value="2">Sedang Dikerjakan</option>
-                                            <option value="1">Menunggu</option>
+                                            <option value="">-- Choose Status --</option>
+                                            <option value="1" @if($app->status == '1') selected @endif>Waiting</option>
+                                            <option value="2" @if($app->status == '2') selected @endif>On Progress</option>
+                                            <option value="3" @if($app->status == '3') selected @endif>Finished</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="notes" class="col-sm-2 col-form-label">Notes</label>
                                     <div class="col-sm-7">
-                                        <textarea name="notes" id="notes" class="form-control"></textarea>
+                                        <textarea name="notes" id="notes" class="form-control">{{ $app->notes}}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
                                             <a href="{{ route ('projects.edit',$app->id) }}" type="button" class="btn btn-danger">Cancel</a>
-                                            <button type="submit"  class="btn btn-primary">Save changes</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
                                         </div>
                                     </div>
                                 </div>
