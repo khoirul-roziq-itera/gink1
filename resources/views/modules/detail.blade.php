@@ -32,74 +32,7 @@
                   <input readonly="" type="text" id="moduleCreator" name="moduleCreator" class="form-control" value="{{ $module->user->name }}" />
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FEDuration" id="FEDuration" class="form-control" value="{{ $module->module_FE_Duration }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="FECost" class="col-sm-2 col-form-label">Front-End Cost</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FECost" id="FECost" class="form-control" value="{{ $module->module_FE_Cost }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="FEPrice" class="col-sm-2 col-form-label">Front-End Price</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FEPrice" id="FEPrice" class="form-control" value="{{ $module->module_FE_Price }}" />
-                </div>
-              </div>
 
-              <div class="form-group row">
-                <label for="BEDuration" class="col-sm-2 col-form-label">Back-End Duration</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="BEDuration" id="BEDuration" class="form-control" value="{{ $module->module_BE_Duration }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="BECost" class="col-sm-2 col-form-label">Back-End Cost</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="BECost" id="BECost" class="form-control" value="{{ $module->module_BE_Cost }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="BEPrice" class="col-sm-2 col-form-label">Back-End Price</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="BEPrice" id="BEPrice" class="form-control" value="{{ $module->module_BE_Price }}" />
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="FSDuration" class="col-sm-2 col-form-label">Full-Stack Duration</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FSDuration" id="FSDuration" class="form-control" value="{{ $module->module_FS_Duration }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="FSCost" class="col-sm-2 col-form-label">Full-Stack Cost</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FSCost" id="FSCost" class="form-control" value="{{ $module->module_FS_Cost }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="FSPrice" class="col-sm-2 col-form-label">Full-Stack Price</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FSPrice" id="FSPrice" class="form-control" value="{{ $module->module_FS_Price }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="costTotal" class="col-sm-2 col-form-label">Cost Total</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="costTotal" id="costTotal" class="form-control" value="{{ $module->module_Cost_Total }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="priceTotal" class="col-sm-2 col-form-label">Price Total</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="priceTotal" id="priceTotal" class="form-control" value="{{ $module->module_Price_Total }}" />
-                </div>
-              </div>
               <div class="form-group row">
                 <label for="funcNotes" class="col-sm-2 col-form-label">Module Notes</label>
                 <div class="col-sm-7">
@@ -113,28 +46,95 @@
                 </div>
               </div>
 
-              {{-- <div class="form-group row">
-                                    <label for="tags" class="col-sm-2 col-form-label">Input Functions</label>
-                                    <div class="col-sm-7">
-                                        <select id="choices-functions" name="funcs[]" class="form-control" placeholder="Select Functions" multiple>
-                                            @foreach ( $funcs as $func)
-                                            <option value="{{ $func->id }}" @foreach( $module->funcs as $result )
-              @if($func->id == $result->id)
-              selected
-              @endif
-              @endforeach
-              >{{ $func->function_Name }}</option>
-              @endforeach
-              </select>
-            </div>
-          </div> --}}
+              <h2 class="section-title" style="padding-bottom: 1em">List Functions</h2>
+              <div class="row">
+                <div class="col-9">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Functions Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach( $module->funcs as $func => $result )
+                        <tr>
+                          <td>{{ $func + 1}}</td>
+                          <td>{{ $result->function_Name }}</td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
 
 
-          <div class="form-group row">
-            <div class="col-sm-9">
-              <div class="card-footer text-right">
-                <a href="{{ url ('modules') }}" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</a>
-                <a href="{{ route('modules.edit', $module->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
+
+              <h2 class="section-title" style="padding-bottom: 1em">Calculation</h2>
+              <div class="row">
+                <div class="col-9">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead class="text-center">
+                        <tr>
+                          <th>Role</th>
+                          <th>Duration</th>
+                          <th>Cost</th>
+                          <th>Price</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-center">
+                        <tr>
+                          <td style="background: rgb(185, 235, 185)">Front-End</td>
+                          {{-- Duration --}}
+                          <td>{{ $module->module_FE_Duration }} day</td>
+                          {{-- cost --}}
+                          <td>Rp. {{ $module->module_FE_Cost  }}</td>
+                          {{-- price --}}
+                          <td>Rp. {{ $module->module_FE_Price }}</td>
+                        </tr>
+                        <tr>
+                          <td style="background: rgb(185, 235, 185)">Back-End</td>
+                          {{-- duration --}}
+                          <td>{{ $module->module_BE_Duration }} day</td>
+                          {{-- cost --}}
+                          <td>Rp. {{ $module->module_BE_Cost }}</td>
+                          {{-- price --}}
+                          <td>Rp. {{ $module->module_BE_Price }}</td>
+                        </tr>
+                        <tr>
+                          <td style="background: rgb(185, 235, 185)">Full-Stack</td>
+                          {{-- duration --}}
+                          <td>{{ $module->module_FS_Duration }} day</td>
+                          {{-- cost --}}
+                          <td>Rp. {{ $module->module_FS_Cost }}</td>
+                          {{-- price --}}
+                          <td>Rp. {{ $module->module_FS_Price }}</td>
+                        </tr>
+                        <tr>
+                          <td style="background: rgb(185, 235, 185)">Total</td>
+                          {{-- duration --}}
+                          <td style="background: rgb(185, 235, 185)">{{ $module->module_FE_Duration  + $module->module_BE_Duration  +  $module->module_FS_Duration  }} day </td>
+                          {{-- cost --}}
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $module->module_FE_Cost + $module->module_BE_Cost + $module->module_FS_Cost }}</td>
+                          {{-- price --}}
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $module->module_FE_Price + $module->module_BE_Price + $module->module_FS_Price }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-sm-9">
+                  <div class="card-footer text-right">
+                    <a href="{{ url ('modules') }}" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</a>
+                    <a href="{{ route('modules.edit', $module->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
