@@ -34,7 +34,6 @@
                     <div class="col-sm-7">
                       <!-- <input type="text" class="form-control" disabled value="#"> -->
                       @foreach( $app->modules as $module )
-
                       <span class="badge bg-secondary text-dark">{{ $module->module_Name }}</span>
                       @endforeach
                     </div>
@@ -53,8 +52,9 @@
                   <div class="form-group row">
                     <label for="moduleName" class="col-sm-2 col-form-label">Category</label>
                     <div class="col-sm-7">
-                      {{-- <input type="text" class="form-control" disabled value="{{ $app->categories->category_name }}"> --}}
+                      <input type="text" class="form-control" disabled value="{{ $app->category->category_name }}">
                     </div>
+                    
                   </div>
                   <div class="form-group row">
                     <label for="moduleName" class="col-sm-2 col-form-label">Start Time</label>
@@ -73,6 +73,50 @@
                     <div class="col-sm-7">
                       <input type="text" class="form-control" disabled value="{{ $app->end_project_t }}">
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="section-title" style="padding-bottom: 1em">List Modules</h2>
+              <div class="row">
+                <div class="col-9">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Module Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Modul 1</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="section-title" style="padding-bottom: 1em">List Tags</h2>
+              <div class="row">
+                <div class="col-9">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Tags Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Tags 1</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
