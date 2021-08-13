@@ -35,7 +35,7 @@
                       <!-- <input type="text" class="form-control" disabled value="#"> -->
                       @foreach( $app->modules as $module )
 
-                      <span class="badge badge-secondary text-dark">{{ $module->module_Name }}</span>
+                      <span class="badge bg-secondary text-dark">{{ $module->module_Name }}</span>
                       @endforeach
                     </div>
                   </div>
@@ -45,14 +45,15 @@
                       <!-- <input type="text" class="form-control" disabled value="#"> -->
                       @foreach( $app->tags as $tag )
 
-                      <span class="badge badge-secondary text-dark">{{ $tag->tag_name }}</span>
+                      <span class="badge bg-secondary text-dark">{{ $tag->tag_name }}</span>
+                       
                       @endforeach
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="moduleName" class="col-sm-2 col-form-label">Category</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" disabled value="{{ $app->category->category_name }}">
+                      {{-- <input type="text" class="form-control" disabled value="{{ $app->categories->category_name }}"> --}}
                     </div>
                   </div>
                   <div class="form-group row">
@@ -131,12 +132,11 @@
                   </div>
                 </div>
               </div>
-
             </div>
             <div class="form-group row">
               <div class="col-sm-9">
                 <div class="card-footer text-right">
-                  <a href="" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</button></a>
+                  <a href="{{ url ('projects') }}" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</button></a>
                   <a href="{{ route('projects.edit', $app->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
                 </div>
               </div>

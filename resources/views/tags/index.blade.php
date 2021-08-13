@@ -31,7 +31,7 @@
                     </div>
                   </div>
                   <div class="col-sm-2 " style="padding-top:4px">
-                    <button type="submit" class="btn btn-success" id="swal-2"><i class="fas fa-plus-circle fa-lg"></i> Add Data</button>
+                    <button type="submit" class="btn btn-success" id="swal-2"><i class="fas fa-plus-circle fa-lg"></i> ADD DATA</button>
                   </div>
                 </div>
               </form>

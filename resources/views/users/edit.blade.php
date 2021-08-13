@@ -6,9 +6,9 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Edit User</h1>
+            <h1 style="font-size: 25px">Manage Users</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="users">Manage User</a></div>
+                <div class="breadcrumb-item active"><a href="{{ url('users') }}">Manage Users</a></div>
                 <div class="breadcrumb-item">Edit User</div>
             </div>
         </div>
@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Input Data</h4>
+                            <h4>Edit User</h4>
                         </div>
                         <form method="POST" action="{{ route('users.update', $user->id) }}" id="myForm">
                             @csrf

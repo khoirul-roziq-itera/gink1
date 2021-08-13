@@ -31,27 +31,21 @@
               <h4>Data Functions</h4>
             </div>
             <div class="card-body p-0">
-              <div class="row">
-                <div class="col-6">
-                  <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
-                    <button type="button" class="btn btn-primary" style="margin-right: 0.5em"><i class="fas fa-print"></i> PRINT</button>
-                    <div class="btn-group" role="group">
-                      <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-file-export"></i> EXPORT
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
-                      </ul>
-                    </div>
+              <div class="col-6">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">         
+                  <div class="btn-group" role="group" style="padding-right: 0.5em">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-file-export"></i> EXPORT
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
+                    </ul>
                   </div>
-                </div>
-                <div class="col-6">
-                  <div style="padding:2.5em">
-                    <a href="{{ url('functions/create')}}" class="btn btn-success float-right"><i class="fas fa-plus-circle"></i> Add Data</button></a>
-                  </div>
+                  <a href="{{ url('functions/create')}}" type="button" class="btn btn-success" ><i class="fas fa-plus-circle"></i> ADD DATA</a>
                 </div>
               </div>
+            </div>
 
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered">
