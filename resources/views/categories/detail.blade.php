@@ -47,7 +47,7 @@
                     </tbody>
                   </table>
                   <div class="float-right">
-                    <a href="{{ url ('tags')}}" class="btn btn-danger"> <i class="fas fa-arrow-left"></i> Back</a>
+                    <a href="{{ url ('categories')}}" class="btn btn-danger"> <i class="fas fa-arrow-left"></i> Back</a>
                   </div>
                 </div>
               </div>

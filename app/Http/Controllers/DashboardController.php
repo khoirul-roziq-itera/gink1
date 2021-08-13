@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Application;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -13,7 +14,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $waiting = Application::where('status', 1)->count();
+        $onProgress = Application::where('status', 2)->count();
+        $finished = Application::where('status', 3)->count();
+        $all = Application::all()->count();
+        $apps = Application::where('status', 3)->get();
+        return view('dashboard', compact('waiting', 'onProgress', 'finished', 'all', 'apps'));
     }
 
     /**
