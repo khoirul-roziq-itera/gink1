@@ -6,9 +6,9 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Edit Project</h1>
+            <h1 style="font-size: 25px">Projects</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="{{ url('projects') }}">Project</a></div>
+                <div class="breadcrumb-item active"><a href="{{ url('projects') }}">Projects</a></div>
                 <div class="breadcrumb-item">Edit</div>
             </div>
         </div>
@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Input Data</h4>
+                            <h4>Edit Project</h4>
                         </div>
                         <form method="POST" action="{{ route('projects.update', $app->id) }}" id="myForm">
                             @csrf
@@ -32,12 +32,12 @@
                                 <div class="form-group row">
                                     <label for="category" class="col-sm-2 col-form-label">Category</label>
                                     <div class="col-sm-7">
-                                        <select id="choices-categories" name="category" class="form-control" placeholder="Select categories">
+                                        {{-- <select id="choices-categories" name="category" class="form-control" placeholder="Select categories">
                                             <option value="">--- Choose Category ---</option>
                                             @foreach( $categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->category_name }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -98,7 +98,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
-                                            <a href="{{ route ('projects.edit',$app->id) }}" type="button" class="btn btn-danger">Cancel</a>
+                                            <a href="{{ url('projects', $app->id) }}" type="button" class="btn btn-danger">Cancel</a>
                                             <button type="submit" class="btn btn-primary">Save changes</button>
                                         </div>
                                     </div>

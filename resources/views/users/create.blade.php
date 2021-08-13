@@ -6,10 +6,10 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1 style="font-size: 25px">Create User</h1>
+            <h1 style="font-size: 25px">Manage User</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Manage User</a></div>
-                <div class="breadcrumb-item">Create User</div>
+                <div class="breadcrumb-item active"><a href="{{url('users')}}">Manage User</a></div>
+                <div class="breadcrumb-item">Create</div>
             </div>
         </div>
         <div class="section-body">
@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Input Data</h4>
+                            <h4>Create User</h4>
                         </div>
                         <form method="POST" action="{{ route('users.store') }}" enctype="multipart/form-data" id="myForm">
                             @csrf
