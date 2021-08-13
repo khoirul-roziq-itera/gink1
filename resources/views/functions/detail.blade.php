@@ -40,62 +40,6 @@
               </div>
 
               <div class="form-group row">
-                <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FEDuration" id="FEDuration" class="form-control" value="{{ $func->function_FE_Duration }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="FECost" class="col-sm-2 col-form-label">Front-End Cost</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FECost" id="FECost" class="form-control" value="{{ $func->function_FE_Cost }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="FEPrice" class="col-sm-2 col-form-label">Front-End Price</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FEPrice" id="FEPrice" class="form-control" value="{{ $func->function_FE_Price }}" />
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="BEDuration" class="col-sm-2 col-form-label">Back-End Duration</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="BEDuration" id="BEDuration" class="form-control" value="{{ $func->function_BE_Duration }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="BECost" class="col-sm-2 col-form-label">Back-End Cost</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="BECost" id="BECost" class="form-control" value="{{ $func->function_BE_Cost }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="BEPrice" class="col-sm-2 col-form-label">Back-End Price</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="BEPrice" id="BEPrice" class="form-control" value="{{ $func->function_BE_Price }}" />
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="FSDuration" class="col-sm-2 col-form-label">Full-Stack Duration</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FSDuration" id="FSDuration" class="form-control" value="{{ $func->function_FS_Duration }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="FSCost" class="col-sm-2 col-form-label">Full-Stack Cost</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FSCost" id="FSCost" class="form-control" value="{{ $func->function_FS_Cost }}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="FSPrice" class="col-sm-2 col-form-label">Full-Stack Price</label>
-                <div class="col-sm-7">
-                  <input readonly="" type="text" name="FSPrice" id="FSPrice" class="form-control" value="{{ $func->function_FS_Price }}" />
-                </div>
-              </div>
-              <div class="form-group row">
                 <label for="funcNotes" class="col-sm-2 col-form-label">Function Notes</label>
                 <div class="col-sm-7">
                   <textarea name="funcNotes" id="funcNotes" class="form-control" readonly="">{{ $func->function_Notes }}</textarea>
@@ -107,16 +51,73 @@
                   <input id="funcStatus" name="funcStatus" class="form-control" readonly="" value="{{ $funcStatus }}" />
                 </div>
               </div>
+              <h2 class="section-title" style="padding-bottom: 1em">Calculation</h2>
+              <div class="row">
+                <div class="col-9">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead class="text-center">
+                        <tr>
+                          <th>Role</th>
+                          <th>Duration</th>
+                          <th>Cost</th>
+                          <th>Price</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-center">
+                        <tr>
+                          <td style="background: rgb(185, 235, 185)">Front-End</td>
+                          {{-- Duration --}}
+                          <td>{{ $func->function_FE_Duration }} day</td>
+                          {{-- cost --}}
+                          <td>Rp. {{ $func->function_FE_Cost }}</td>
+                          {{-- price --}}
+                          <td>Rp. {{ $func->function_FE_Price }}</td>
+                        </tr>
+                        <tr>
+                          <td style="background: rgb(185, 235, 185)">Back-End</td>
+                          {{-- duration --}}
+                          <td>{{ $func->function_BE_Duration }} day</td>
+                          {{-- cost --}}
+                          <td>Rp. {{ $func->function_BE_Cost }}</td>
+                          {{-- price --}}
+                          <td>Rp. {{ $func->function_BE_Price }}</td>
+                        </tr>
+                        <tr>
+                          <td style="background: rgb(185, 235, 185)">Full-Stack</td>
+                          {{-- duration --}}
+                          <td>{{ $func->function_FS_Duration }} day</td>
+                          {{-- cost --}}
+                          <td>Rp. {{ $func->function_FS_Cost }}</td>
+                          {{-- price --}}
+                          <td>Rp. {{ $func->function_FS_Price }}</td>
+                        </tr>
+                        <tr>
+                          <td style="background: rgb(185, 235, 185)">Total</td>
+                          {{-- duration --}}
+                          <td style="background: rgb(185, 235, 185)">{{ $func->function_FE_Duration + $func->function_BE_Duration +  $func->function_FE_Duration }} day </td>
+                          {{-- cost --}}
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $func->function_FE_Cost + $func->function_BE_Cost + $func->function_FS_Cost }}</td>
+                          {{-- price --}}
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $func->function_FE_Price + $func->function_BE_Price + $func->function_FS_Price}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
 
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
-                    <a href="{{ url('functions') }}"  class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</button></a>
-                    <a href="{{ route('functions.edit', $func->id) }}" class="btn btn-success "> <i class="fas fa-edit" ></i> Edit</button></a>
+                    <a href="{{ url('functions') }}" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Back</button></a>
+                    <a href="{{ route('functions.edit', $func->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</button></a>
                   </div>
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
