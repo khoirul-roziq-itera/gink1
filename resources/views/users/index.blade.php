@@ -9,12 +9,20 @@
     <section class="section">
         <div class="section-header">
             <h1 style="font-size: 25px">Manage Users</h1>
-            <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item">Manage Users</a></div>
-            </div>
         </div>
 
         <div class="section-body">
+            @if(session('success'))
+            <div class="alert alert-success alert-dismissible show fade">
+              <div class="alert-body">
+                <button class="close" data-dismiss="alert">
+                  <span>&times;</span>
+                </button>
+                {{session('success')}}
+              </div>
+            </div>
+            @endif
+
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -25,7 +33,7 @@
                             <div class="row">
 
                                 <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:4em">
-                                    <a href="{{ url('users/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> Add User</a>
+                                    <a href="{{ url('users/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> ADD USER</a>
                                 </div>
 
                             </div>

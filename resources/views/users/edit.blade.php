@@ -86,7 +86,7 @@
                                 <div class="form-group row">
                                     <label for="photo" class="col-sm-2 col-form-label">Foto</label>
                                     <div class="col-sm-7">
-                                        <input type="text" class="form-control @error('photo') is-invalid @enderror" id="photo" name="photo" value="{{ $user->profile_photo_path }}">
+                                        <input type="file" class="form-control @error('photo') is-invalid @enderror" id="photo" name="photo" value="{{ $user->profile_photo_path }}">
                                         <div class="invalid-feedback">
                                             @error('photo')
                                             {{ $message }}

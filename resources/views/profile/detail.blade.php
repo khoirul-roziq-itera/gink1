@@ -46,6 +46,7 @@
               <div class="form-group row">
                 <div class="col-sm-9">
                   <div class="card-footer text-right">
+                    <a href="{{ url('dashboard')}}" class="btn btn-danger "> <i class="fas fa-arrow-left"></i> Cancel</></a>
                     <a href="{{ route('profile.edit', Auth::user()->id) }}" class="btn btn-success "> <i class="fas fa-edit"></i> Edit</a>
                   </div>
                 </div>

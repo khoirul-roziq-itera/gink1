@@ -11,6 +11,18 @@
     </div>
 
     <div class="section-body">
+
+      @if(session('success'))
+      <div class="alert alert-success alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('success')}}
+        </div>
+      </div>
+      @endif
+      
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -31,7 +43,7 @@
                         <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
                       </ul>
                     </div>
-                    <a href="{{ url('projects/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> Add Data</a>
+                    <a href="{{ url('projects/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> ADD DATA</a>
                   </div>
                 </div>
               </div>

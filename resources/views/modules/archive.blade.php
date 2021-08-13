@@ -16,6 +16,18 @@
     </div>
 
     <div class="section-body">
+
+      @if(session('success'))
+      <div class="alert alert-success alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('success')}}
+        </div>
+      </div>
+      @endif
+
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -26,23 +38,25 @@
               <div class="table-responsive" style="padding-left: 2em; padding-right: 2em">
                 <table id="table-1" class="table table-hover table-bordered">
                   <thead class="text-center">
-                    <tr>
-                      <th>Nomor</th>
-                      <th>Module Name</th>
-                      <th>Functions</th>
-                      <th>Status</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
+                  <tr>
+                    <th>Nomor</th>
+                    <th>Module Name</th>
+                    <th>Cost Total</th>
+                    <th>Price Total</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
                   <tbody>
                     @foreach($modules as $module => $result)
                     <tr class="text-center">
                       <td>{{ $module + 1 }}</td>
                       <td>{{ $result->module_Name }}</td>
                       <td>
-                        @foreach( $result->funcs as $func )
-                        <span class="badge bg-secondary mt-1">{{ $func->function_Name }}</span><br>
-                        @endforeach
+                        {{ $result->module_Cost_Total}}
+                      </td>
+                      <td>
+                        {{ $result->module_Price_Total}}
                       </td>
                       <td>
                         @if( $result->module_Status == 1)

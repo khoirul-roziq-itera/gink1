@@ -22,13 +22,18 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="name" name="name" class="form-control" value="{{ $user->name }}">
+                                        <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ $user->name }}">
+                                        <div class=" invalid-feedback">
+                                            @error('name')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                                     <div class="col-sm-7">
-                                        <input id="password" type="password" class="form-control pwstrength" data-indicator="pwindicator" name="password" placeholder="Masukkan password">
+                                        <input id="password" type="password" class="form-control pwstrength @error('password') is-invalid @enderror" data-indicator="pwindicator" name="password" placeholder="Masukkan password">
                                         <div id="pwindicator" class="pwindicator">
                                             <div class="bar"></div>
                                             <div class="label"></div>
@@ -38,7 +43,7 @@
                                 <div class="form-group row">
                                     <label for="password_confirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
                                     <div class="col-sm-7">
-                                        <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" placeholder="Masukkan password">
+                                        <input id="password_confirmation" type="password" class="form-control @error('password') is-invalid @enderror" name="password_confirmation" placeholder="Masukkan password">
                                     </div>
                                 </div>
 
@@ -55,14 +60,24 @@
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="email" name="email" class="form-control" value="{{ $user->email }}">
+                                        <input type="text" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ $user->email }}">
+                                        <div class="invalid-feedback">
+                                            @error('email')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="photo" class="col-sm-2 col-form-label">Foto</label>
                                     <div class="col-sm-7">
-                                        <input type="text" class="form-control" id="photo" name="photo" value="{{ $user->profile_photo_path }}">
+                                        <input type="file" class="form-control @error('photo') is-invalid @enderror" id="photo" name="photo" value="{{ $user->profile_photo_path }}">
+                                        <div class="invalid-feedback">
+                                            @error('photo')
+                                            {{ $message }}
+                                            @enderror
+                                        </div> 
                                     </div>
                                 </div>
                                 <div class="form-group row">

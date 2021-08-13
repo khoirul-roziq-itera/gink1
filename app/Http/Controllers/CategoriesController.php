@@ -99,7 +99,7 @@ class CategoriesController extends Controller
         $categorie = Category::findorfail($id);
         $categorie->delete();
 
-        return redirect('categories')->with('success', 'Category Archived Successfully!');
+        return redirect('categories')->with('success', 'Category Successfully  Archived!');
     }
 
     public function archive()

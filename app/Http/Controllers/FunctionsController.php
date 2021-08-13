@@ -122,15 +122,6 @@ class FunctionsController extends Controller
             'funcTitle' => 'required|min:3|max:100',
             'funcName' => 'required|min:3|max:100',
             'funcGroup' => 'required',
-            'FEDuration' => 'numeric|min:0|max:100',
-            'FECost' => 'numeric|min:0',
-            'FEPrice' => 'numeric|min:0',
-            'BEDuration' => 'numeric|min:0|max:100',
-            'BECost' => 'numeric|min:0',
-            'BEPrice' => 'numeric|min:0',
-            'FSDuration' => 'numeric|min:0|max:100',
-            'FSCost' => 'numeric|min:0',
-            'FSPrice' => 'numeric|min:0',
             'funcStatus' => 'required'
         ]);
 
@@ -177,7 +168,7 @@ class FunctionsController extends Controller
     {
         Func::withTrashed()->where('id', $id)->first()->restore();
 
-        return redirect()->back()->with('status', 'Function Restored Successfully!');
+        return redirect()->back()->with('success', 'Function Restored Successfully!');
     }
 
     public function kill($id)

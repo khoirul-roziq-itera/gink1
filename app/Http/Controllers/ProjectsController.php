@@ -195,7 +195,7 @@ class ProjectsController extends Controller
         $app = Application::findorfail($id);
         $app->delete();
 
-        return redirect('projects')->with('success', 'Project Archived Successfully!');
+        return redirect('projects')->with('success', 'Project Successfully  Archived!');
     }
 
     public function archive()
@@ -208,7 +208,7 @@ class ProjectsController extends Controller
     {
         Application::withTrashed()->where('id', $id)->first()->restore();
 
-        return redirect()->back()->with('status', 'Project Successfully Restored!');
+        return redirect()->back()->with('success', 'Project Successfully Restored!');
     }
 
     public function kill($id)
@@ -217,6 +217,6 @@ class ProjectsController extends Controller
         DB::table('application_tag')->where('application_id', $id)->delete();
         DB::table('application_module')->where('application_id', $id)->delete();
 
-        return redirect()->back()->with('success', 'Project Deleted Successfully!');
+        return redirect()->back()->with('success', 'Project Successfully Deleted!');
     }
 }

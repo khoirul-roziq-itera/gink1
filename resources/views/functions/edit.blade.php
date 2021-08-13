@@ -177,7 +177,7 @@
                                     <div class="col-sm-9">
                                         <div class="form-group float-right">
                                             <a href="{{ url('functions') }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
-                                            <button type="submit" class="btn btn-primary btn">Submit</button>
+                                            <button type="submit" class="btn btn-primary btn">Save changes</button>
                                         </div>
                                     </div>
                                 </div>

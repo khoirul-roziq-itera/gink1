@@ -8,30 +8,41 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1 style="font-size: 25px">Archive Project</h1>
+      <h1 style="font-size: 25px">Projects</h1>
       <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item active"><a href="{{ url('projects')}}">Data Project</a></div>
+        <div class="breadcrumb-item active"><a href="{{ url('projects')}}">Projects</a></div>
         <div class="breadcrumb-item">Archive</div>
       </div>
     </div>
 
     <div class="section-body">
 
+      @if(session('success'))
+      <div class="alert alert-success alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('success')}}
+        </div>
+      </div>
+      @endif
+      
       <div class="row">
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Data Archive</h4>
+              <h4>Archive Project</h4>
             </div>
             <div class="card-body p-0">
               <div class="table-responsive" style="padding: 2em">
-                <table id="table-1" class="table table-hover table-bordered border-primary">
+                <table id="table-1" class="table table-hover table-bordered">
                   <thead class="text-center">
                     <tr>
                       <th>Nomor</th>
                       <th>Applications Name</th>
                       <th>Category</th>
-                      <th>Deadline</th>
+                      <th>Creator</th>
                       <th>Status</th>
                       <th>Actions</th>
                     </tr>
@@ -42,7 +53,7 @@
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
                       <td>{{ $result->category->category_name }}</td>
-                      <td>{{ $result->deadline_project_t}}</td>
+                      <td>{{ $result->user->name }}</td>
                       <td>
                         <div class="badge badge-primary">Selesai</div>
                       </td>
