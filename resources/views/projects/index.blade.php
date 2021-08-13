@@ -21,7 +21,7 @@
               <div class="row">
                 <div class="col-6">
                   <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
-                    
+
                     <div class="btn-group" role="group" style="padding-right: 0.5em">
                       <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-file-export"></i> EXPORT
@@ -31,7 +31,7 @@
                         <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
                       </ul>
                     </div>
-                    <a href="{{ url('projects/create')}}" type="button" class="btn btn-success" ><i class="fas fa-plus-circle"></i> Add Data</a>
+                    <a href="{{ url('projects/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> Add Data</a>
                   </div>
                 </div>
               </div>
@@ -52,7 +52,7 @@
                     <tr class="text-center">
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
-                      <td>{{ $result->category_id }}</td>
+                      <td>{{ $result->category->category_name }}</td>
                       <td>{{ $result->deadline_project_t }}</td>
                       <td>
                         @if( $result->status == 1)

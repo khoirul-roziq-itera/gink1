@@ -18,7 +18,8 @@ class DashboardController extends Controller
         $onProgress = Application::where('status', 2)->count();
         $finished = Application::where('status', 3)->count();
         $all = Application::all()->count();
-        return view('dashboard', compact('waiting', 'onProgress', 'finished', 'all'));
+        $apps = Application::where('status', 3)->get();
+        return view('dashboard', compact('waiting', 'onProgress', 'finished', 'all', 'apps'));
     }
 
     /**

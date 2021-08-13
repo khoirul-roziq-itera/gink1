@@ -111,19 +111,17 @@
                       <th>Name</th>
                       <th>Category</th>
                       <th>Finished</th>
-                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($apps as $app => $result)
                     <tr class="text-center">
-                      <td>1</td>
-                      <td>Calculator App</td>
-                      <td>Akutansi</td>
-                      <td>20/08/2000</td>
-                      <td>
-                        <a href="#" class="btn btn-danger" style="margin: 2px" id="swal-6"><i class="fas fa-trash-alt"></i></a>
-                      </td>
+                      <td>{{ $app + 1 }}</td>
+                      <td>{{ $result->app_name }}</td>
+                      <td>{{ $result->category->category_name }}</td>
+                      <td>{{ $result->end_project_t }}</td>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>
