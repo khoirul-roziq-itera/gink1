@@ -25,7 +25,7 @@
             </div>
 
             <div class="card card-danger" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
-              <div class="card-header"><h3 style="color: #525457">Login</h3></div>
+              <div class="card-header"><h3 style="color: #525457; padding-left:10px">Login</h3></div>
 
                        @if (session('status'))
                           <div class="mb-4 font-medium text-sm text-green-600">
@@ -49,6 +49,7 @@
                     	<label for="password" class="control-label">Password</label>
                     </div>
                     <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                    
                     <div class="invalid-feedback">
                       please fill in your password
                     </div>
@@ -65,9 +66,6 @@
                     <button type="submit" class="btn btn-danger btn-lg btn-block" tabindex="4">
                       Login
                     </button>
-                  </div>
-                  <div class="mt-5 text-muted text-center ">
-                    Don't have an account? <a href="{{ route('register') }}" style="font-weight:100; font-size:14pt"> Register</a>
                   </div>
                 </form>
 
