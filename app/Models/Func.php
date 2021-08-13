@@ -34,7 +34,7 @@ class Func extends Model
 
     public function modules()
     {
-        return $this->belongsToMany('App\Model\Module');
+        return $this->belongsToMany('App\Models\Module');
     }
 
     public function user()
