@@ -33,15 +33,19 @@
                   <table class="table table-bordered">
                     <thead>
                       <tr>
-                        <th scope="col">Nomor</th>
-                        <th scope="col">Project Name</th>
+                        <th >Nomor</th>
+                        <th >Project Name</th>
+                        <th >Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       @foreach( $apps as $app => $result )
                       <tr>
                         <th scope="row">{{$app + 1}}</th>
-                        <td>{{ $result->app_name }}</td>
+                        <td> {{ $result->app_name }}</td>
+                        <td>
+                          <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
+                        </td>
                       </tr>
                       @endforeach
                     </tbody>

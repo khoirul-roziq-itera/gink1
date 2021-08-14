@@ -31,18 +31,22 @@
               <div class="row">
                 <div class="col-6">
                   <table class="table table-bordered">
-                    <thead>
+                    <thead class="text-center">
                       <tr>
                         <th scope="col">Nomor</th>
                         <th scope="col">Project Name</th>
+                        <th scope="col">Action</th>                       
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-center">
 
                       @foreach( $tag->application as $app => $result )
                       <tr>
                         <th scope="row">{{$app + 1}}</th>
-                        <td>{{ $result->app_name }}</td>
+                        <td scope="row">{{ $result->app_name }}</td>
+                        <td scope="row">
+                          <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
+                        </td>
                       </tr>
                       @endforeach
                     </tbody>
