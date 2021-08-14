@@ -60,7 +60,7 @@
                         <tr>
                           <th>Nomor</th>
                           <th>Category Name</th>
-                          <th>Category Slug</th>
+                          <th>Creator</th>
                           <th>Actions</th>
                         </tr>
                       </thead>
@@ -69,7 +69,7 @@
                         <tr class="text-center">
                           <td>{{ $category + 1 }}</td>
                           <td>{{ $result->category_name }}</td>
-                          <td>{{ $result->category_slug }}</td>
+                          <td>{{ $result->user->name }}</td>
                           <td>
 
                             <form action="{{ route('categories.destroy', $result->id ) }}" method="post">

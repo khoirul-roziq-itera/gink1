@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Faker\Provider\ar_JO\Company;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -74,7 +75,15 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        User::where('id', $id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'level' => $request->level,
+            'profile_photo_path' => $request->photo
+        ]);
+
+        return redirect('profile')->with('success', 'User Successfully Created!');
     }
 
     /**
