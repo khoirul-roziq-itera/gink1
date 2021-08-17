@@ -38,6 +38,9 @@ Route::group(['middleware' => ['auth', 'userlevel:admin,creator']], function () 
     // Controller Profile User
     Route::resource('/profile', ProfileController::class);
 
+    // Controler pdf
+    Route::get('testpdf','TestPdfController@dogenerate');
+
     // Controller Projects Routes
     Route::get('/projects/archive', [ProjectsController::class, 'archive']);
     Route::delete('/projects/kill/{id}', [ProjectsController::class, 'kill']);

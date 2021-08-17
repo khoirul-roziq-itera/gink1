@@ -55,7 +55,7 @@ class UsersController extends Controller
             'profile_photo_path' => $request->file('photo')->move('uploads/photo', Str::slug($request->name) . '-' . $request->file('photo')->getClientOriginalName())
         ]);
 
-        return redirect('users')->with('success', 'User Successfully Created!');
+        return redirect('users')->with('success', 'User Created Successfully!');
     }
 
     /**
@@ -99,7 +99,7 @@ class UsersController extends Controller
             'profile_photo_path' => $request->photo
         ]);
 
-        return redirect('users')->with('success', 'User Successfully Created!');
+        return redirect('users')->with('success', 'User Created Successfully!');
     }
 
     /**

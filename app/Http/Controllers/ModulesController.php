@@ -91,7 +91,7 @@ class ModulesController extends Controller
 
         $module->funcs()->attach($request->funcs);
 
-        return redirect('modules')->with('success', 'Module Successfully Created!');
+        return redirect('modules')->with('success', 'Module Created Successfully!');
     }
 
     /**
@@ -199,7 +199,7 @@ class ModulesController extends Controller
         $module = Module::findorfail($id);
         $module->delete();
 
-        return redirect('modules')->with('success', 'Module Successfully Archived !');
+        return redirect('modules')->with('success', 'Module Archived Successfully!');
     }
 
     public function archive()
@@ -212,13 +212,13 @@ class ModulesController extends Controller
     {
         Module::withTrashed()->where('id', $id)->first()->restore();
 
-        return redirect()->back()->with('success', 'Module Successfully Restored!');
+        return redirect()->back()->with('success', 'Module Restored Successfully!');
     }
 
     public function kill($id)
     {
         Module::withTrashed()->where('id', $id)->first()->forceDelete();
         DB::table('func_module')->where('module_id', $id)->delete();
-        return redirect()->back()->with('success', 'Module Successfully Deleted!');
+        return redirect()->back()->with('success', 'Module Deleted Successfully!');
     }
 }

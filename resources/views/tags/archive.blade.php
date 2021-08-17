@@ -41,6 +41,7 @@
                     <tr>
                       <th>Nomor</th>
                       <th>Tags Name</th>
+                      <th>Creator</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
@@ -49,6 +50,7 @@
                     <tr class="text-center">
                       <td>{{ $tag + 1 }}</td>
                       <td>{{ $result->tag_name }}</td>
+                      <td>{{ $result->user->name }}</td>
                       <td>
                         <form action="{{ url('tags/kill/'.$result->id) }}" method="post">
                           @csrf

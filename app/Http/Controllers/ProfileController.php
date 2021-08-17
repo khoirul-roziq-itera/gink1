@@ -83,7 +83,7 @@ class ProfileController extends Controller
             'profile_photo_path' => $request->photo
         ]);
 
-        return redirect('profile')->with('success', 'User Successfully Created!');
+        return redirect('profile')->with('success', 'User Created Successfully!');
     }
 
     /**

@@ -95,11 +95,11 @@
                         <tr>
                           <td style="background: rgb(185, 235, 185)">Total</td>
                           {{-- duration --}}
-                          <td style="background: rgb(185, 235, 185)">{{ $func->function_FE_Duration + $func->function_BE_Duration +  $func->function_FE_Duration }} day </td>
+                          <td style="background: rgb(185, 235, 185)">{{ $func->function_FE_Duration + $func->function_BE_Duration +  $func->function_FS_Duration }} day </td>
                           {{-- cost --}}
-                          <td style="background: rgb(185, 235, 185)">Rp. {{ $func->function_FE_Cost + $func->function_BE_Cost + $func->function_FS_Cost }}</td>
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $func->function_FE_Cost + $func->function_BE_Cost + $func->function_FS_Cost }}.00</td>
                           {{-- price --}}
-                          <td style="background: rgb(185, 235, 185)">Rp. {{ $func->function_FE_Price + $func->function_BE_Price + $func->function_FS_Price}}</td>
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $func->function_FE_Price + $func->function_BE_Price + $func->function_FS_Price}}.00</td>
                         </tr>
                       </tbody>
                     </table>

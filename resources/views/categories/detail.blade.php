@@ -28,17 +28,19 @@
                   </div>
                 </div>
               </div>
+
+              <h2 class="section-title" style="padding-bottom: 1em">List Projects</h2>
               <div class="row">
                 <div class="col-6">
                   <table class="table table-bordered">
-                    <thead>
+                    <thead class="text-center">
                       <tr>
                         <th >Nomor</th>
                         <th >Project Name</th>
                         <th >Action</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-center">
                       @foreach( $apps as $app => $result )
                       <tr>
                         <th scope="row">{{$app + 1}}</th>
