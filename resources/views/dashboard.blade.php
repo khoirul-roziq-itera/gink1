@@ -1,8 +1,6 @@
 @extends('layouts/main')
 
 
-@section('title','Dashboard')
-
 @section('container')
 <!-- Main Content -->
 <div class="main-content">
@@ -111,6 +109,7 @@
                       <th>Name</th>
                       <th>Category</th>
                       <th>Creator</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -120,6 +119,9 @@
                       <td>{{ $result->app_name }}</td>
                       <td>{{ $result->category->category_name }}</td>
                       <td>{{ $result->user->name }}</td>
+                      <td>
+                        <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
+                      </td>
                     </tr>
                     @endforeach
                   </tbody>

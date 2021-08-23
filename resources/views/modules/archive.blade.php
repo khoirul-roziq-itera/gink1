@@ -1,8 +1,6 @@
 @extends('layouts/main')
 
 
-@section('title','Archive Modules')
-
 @section('container')
 <!-- Main Content -->
 <div class="main-content">

@@ -1,6 +1,5 @@
 @extends('layouts/main')
 
-@section('title','Edit Function')
 
 @section('container')
 <div class="main-content">
