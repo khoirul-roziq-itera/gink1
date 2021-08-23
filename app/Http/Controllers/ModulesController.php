@@ -138,8 +138,7 @@ class ModulesController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'moduleName' => 'required|min:3|max:100|unique:modules,module_Name',
-            'moduleGroup' => 'required',
+            'moduleName' => 'required|min:3|max:100',
             'moduleStatus' => 'required',
             'funcs' => 'required'
         ]);
@@ -165,8 +164,8 @@ class ModulesController extends Controller
             $sumFSCost += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FS_Cost;
             $sumFSPrice += DB::table('functions')->where('id', $tempReq[$i])->first()->function_FS_Price;
         }
-
-        $module = Module::where('id', $id)->update([
+        $module = module::findorfail($id);
+        $module_data = [
             'module_Name' => $request->moduleName,
             'module_FE_Duration' => $sumFEDuration,
             'module_FE_Cost' => $sumFECost,
@@ -183,9 +182,21 @@ class ModulesController extends Controller
             'module_Status' => $request->moduleStatus,
             'user_id' => Auth::id(),
             'module_slug' => Str::of($request->moduleName)->slug('-')
-        ]);
+        ];
 
-        $module->funcs()->attach($request->funcs);
+        $module->funcs()->sync($request->funcs);
+        $module->update($module_data);
+
+        if ($module->module_Status == 1) {
+            $moduleStatus = 'Waiting';
+        } else if ($module->module_Status == 2) {
+            $moduleStatus = 'On Progress';
+        } else {
+            $moduleStatus = 'Finished';
+        }
+
+
+        return view('modules.detail', compact('module', 'moduleStatus'));
     }
 
     /**

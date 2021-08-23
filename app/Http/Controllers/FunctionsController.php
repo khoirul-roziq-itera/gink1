@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Func;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 
 class FunctionsController extends Controller
@@ -176,5 +177,14 @@ class FunctionsController extends Controller
         Func::withTrashed()->where('id', $id)->first()->forceDelete();
 
         return redirect()->back()->with('success', 'Function Deleted Successfully!');
+    }
+
+    public function exportpdf()
+    {
+        $funcs = Func::all();
+
+        view()->share('funcs', $funcs);
+        $pdf = PDF::loadview('functions/pdf');
+        return $pdf->download('index-functions.pdf');
     }
 }
