@@ -112,7 +112,7 @@ class TagsController extends Controller
     {
         Tag::withTrashed()->where('id', $id)->first()->restore();
 
-        return redirect()->back()->with('success', 'Tag  Restored Successfully!');
+        return redirect()->back()->with('success', 'Tag Restored Successfully!');
     }
 
     public function kill($id)

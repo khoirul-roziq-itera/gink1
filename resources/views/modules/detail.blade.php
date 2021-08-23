@@ -118,9 +118,9 @@
                           {{-- duration --}}
                           <td style="background: rgb(185, 235, 185)">{{ $module->module_FE_Duration  + $module->module_BE_Duration  +  $module->module_FS_Duration  }} day </td>
                           {{-- cost --}}
-                          <td style="background: rgb(185, 235, 185)">Rp. {{ $module->module_FE_Cost + $module->module_BE_Cost + $module->module_FS_Cost }}</td>
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $module->module_FE_Cost + $module->module_BE_Cost + $module->module_FS_Cost }}.00</td>
                           {{-- price --}}
-                          <td style="background: rgb(185, 235, 185)">Rp. {{ $module->module_FE_Price + $module->module_BE_Price + $module->module_FS_Price }}</td>
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $module->module_FE_Price + $module->module_BE_Price + $module->module_FS_Price }}.00</td>
                         </tr>
                       </tbody>
                     </table>

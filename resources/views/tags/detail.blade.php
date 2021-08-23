@@ -28,6 +28,8 @@
                   </div>
                 </div>
               </div>
+
+              <h2 class="section-title" style="padding-bottom: 1em">List Projects</h2>
               <div class="row">
                 <div class="col-6">
                   <table class="table table-bordered">
