@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth', 'userlevel:admin,creator']], function () 
     Route::resource('/profile', ProfileController::class);
 
     // Controler pdf
-    Route::get('testpdf','TestPdfController@dogenerate');
+    Route::get('testpdf', 'TestPdfController@dogenerate');
 
     // Controller Projects Routes
     Route::get('/projects/archive', [ProjectsController::class, 'archive']);
@@ -57,6 +57,7 @@ Route::group(['middleware' => ['auth', 'userlevel:admin,creator']], function () 
     Route::get('/functions/archive', [FunctionsController::class, 'archive']);
     Route::delete('/functions/kill/{id}', [FunctionsController::class, 'kill']);
     Route::get('/functions/restore/{id}', [FunctionsController::class, 'restore']);
+    Route::get('/functions/exportpdf', [FunctionsController::class, 'exportpdf']);
     Route::resource('/functions', FunctionsController::class);
 
     // Controller Tags Routes
