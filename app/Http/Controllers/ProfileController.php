@@ -7,6 +7,8 @@ use App\Models\User;
 use Faker\Provider\ar_JO\Company;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Fortify\Rules\Password;
+
 
 class ProfileController extends Controller
 {
@@ -75,6 +77,14 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'min:3', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string', new Password, 'confirmed'],
+            'level' => ['required'],
+
+        ]);
+
         User::where('id', $id)->update([
             'name' => $request->name,
             'email' => $request->email,

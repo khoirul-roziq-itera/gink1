@@ -47,6 +47,7 @@ class UsersController extends Controller
             'level' => ['required'],
             'photo' => ['required']
         ]);
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -91,12 +92,20 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'min:3', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string', new Password, 'confirmed'],
+            'level' => ['required'],
+
+        ]);
+
         User::where('id', $id)->update([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'level' => $request->level,
-            'profile_photo_path' => $request->photo
+            'profile_photo_path' => $request->file('photo')->move('uploads/photo', Str::slug($request->name) . '-' . $request->file('photo')->getClientOriginalName())
         ]);
 
         return redirect('users')->with('success', 'User Successfully Created!');
