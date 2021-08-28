@@ -1,6 +1,5 @@
 @extends('layouts/main')
 
-@section('title','Create Data')
 
 @section('container')
 <div class="main-content">

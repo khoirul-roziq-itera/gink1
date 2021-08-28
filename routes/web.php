@@ -75,4 +75,5 @@ Route::group(['middleware' => ['auth', 'userlevel:admin,creator']], function () 
     Route::delete('/categories/kill/{id}', [CategoriesController::class, 'kill']);
     Route::get('/categories/restore/{id}', [CategoriesController::class, 'restore']);
     Route::resource('/categories', CategoriesController::class);
+
 });

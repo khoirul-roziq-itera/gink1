@@ -1,8 +1,5 @@
 @extends('layouts/main')
 
-
-@section('title','Manage users')
-
 @section('container')
 <!-- Main Content -->
 <div class="main-content">

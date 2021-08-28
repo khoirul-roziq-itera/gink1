@@ -1,6 +1,5 @@
 @extends('layouts/main')
 
-@section('title','Create Modul')
 
 @section('container')
 @if (session('success'))

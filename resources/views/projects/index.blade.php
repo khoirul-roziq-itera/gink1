@@ -1,6 +1,5 @@
 @extends('layouts/main')
 
-@section('title','Data Projects')
 
 @section('container')
 <!-- Main Content -->
