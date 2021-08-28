@@ -22,7 +22,7 @@
         </div>
       </div>
       @endif
-      
+
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -40,7 +40,7 @@
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                         <li><a class="dropdown-item" href="#"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
+                        <li><a class="dropdown-item" href="{{ url('projects/exportIndexExcel') }}"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
                       </ul>
                     </div>
                     <a href="{{ url('projects/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> ADD DATA</a>

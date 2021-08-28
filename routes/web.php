@@ -45,19 +45,23 @@ Route::group(['middleware' => ['auth', 'userlevel:admin,creator']], function () 
     Route::get('/projects/archive', [ProjectsController::class, 'archive']);
     Route::delete('/projects/kill/{id}', [ProjectsController::class, 'kill']);
     Route::get('/projects/restore/{id}', [ProjectsController::class, 'restore']);
+    Route::get('/projects/exportIndexExcel', [ProjectsController::class, 'exportIndexExcel']);
     Route::resource('/projects', ProjectsController::class);
 
     // Controller Modules Routes
     Route::get('/modules/archive', [ModulesController::class, 'archive']);
     Route::delete('/modules/kill/{id}', [ModulesController::class, 'kill']);
     Route::get('/modules/restore/{id}', [ModulesController::class, 'restore']);
+    Route::get('/modules/exportIndexExcel', [ModulesController::class, 'exportIndexExcel']);
     Route::resource('/modules', ModulesController::class);
 
     // Controller Functions Routes
     Route::get('/functions/archive', [FunctionsController::class, 'archive']);
     Route::delete('/functions/kill/{id}', [FunctionsController::class, 'kill']);
     Route::get('/functions/restore/{id}', [FunctionsController::class, 'restore']);
-    Route::get('/functions/exportpdf', [FunctionsController::class, 'exportpdf']);
+    Route::get('/functions/exportIndexPdf', [FunctionsController::class, 'exportIndexPdf']);
+    Route::get('/functions/exportDetailPdf/{id}', [FunctionsController::class, 'exportDetailPdf']);
+    Route::get('/functions/exportIndexExcel', [FunctionsController::class, 'exportIndexExcel']);
     Route::resource('/functions', FunctionsController::class);
 
     // Controller Tags Routes

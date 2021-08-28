@@ -10,6 +10,8 @@ use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Exports\AppsExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProjectsController extends Controller
 {
@@ -218,5 +220,10 @@ class ProjectsController extends Controller
         DB::table('application_module')->where('application_id', $id)->delete();
 
         return redirect()->back()->with('success', 'Project Deleted Successfully!');
+    }
+
+    public function exportIndexExcel()
+    {
+        return Excel::download(new AppsExport, 'index-projects.xlsx');
     }
 }
