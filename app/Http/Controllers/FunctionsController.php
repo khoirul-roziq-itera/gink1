@@ -7,6 +7,8 @@ use App\Models\Func;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use PDF;
+use App\Exports\FunctionsExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 
 class FunctionsController extends Controller
@@ -179,12 +181,25 @@ class FunctionsController extends Controller
         return redirect()->back()->with('success', 'Function Deleted Successfully!');
     }
 
-    public function exportpdf()
+    public function exportIndexPdf()
     {
         $funcs = Func::all();
 
         view()->share('funcs', $funcs);
-        $pdf = PDF::loadview('functions/pdf');
+        $pdf = PDF::loadview('functions/pdfindex');
         return $pdf->download('index-functions.pdf');
+    }
+    public function exportDetailPdf($id)
+    {
+        $func = Func::where('id', $id)->first();
+
+        view()->share('func', $func);
+        $pdf = PDF::loadview('functions/pdfdetail');
+        return $pdf->download('detail-functions.pdf');
+    }
+
+    public function exportIndexExcel()
+    {
+        return Excel::download(new FunctionsExport, 'index-functions.xlsx');
     }
 }

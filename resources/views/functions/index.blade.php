@@ -36,8 +36,8 @@
                       <i class="fas fa-file-export"></i> EXPORT
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                      <li><a class="dropdown-item" href="{{ url('functions/exportpdf') }}"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
-                      <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
+                      <li><a class="dropdown-item" href="{{ url('functions/exportIndexPdf') }}"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
+                      <li><a class="dropdown-item" href="{{ url('functions/exportIndexExcel') }}"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
                     </ul>
                   </div>
                   <a href="{{ url('functions/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> ADD DATA</a>

@@ -8,6 +8,8 @@ use App\Models\Func;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use App\Exports\ModulesExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ModulesController extends Controller
 {
@@ -231,5 +233,10 @@ class ModulesController extends Controller
         Module::withTrashed()->where('id', $id)->first()->forceDelete();
         DB::table('func_module')->where('module_id', $id)->delete();
         return redirect()->back()->with('success', 'Module Deleted Successfully!');
+    }
+
+    public function exportIndexExcel()
+    {
+        return Excel::download(new ModulesExport, 'index-modules.xlsx');
     }
 }
