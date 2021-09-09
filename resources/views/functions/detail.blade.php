@@ -19,16 +19,10 @@
               <h4>Detail Functions</h4>
             </div>
             <div class="card-body">
-              <div class="btn-group mb-5" role="group" style="padding-right: 0.5em">
-                <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fas fa-file-export"></i> EXPORT
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  <li><a class="dropdown-item" target="_blank" href="{{ url('functions/exportDetailPdf', $func->id) }}"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
-                </ul>
-              </div>
-              <div class="form-group row">
+
+              <a class="btn btn-danger" href="{{ url('functions/exportDetailPdf', $func->id) }}" role="button">Export PDF</a>
+              
+              <div class="form-group row" style="padding-top: 1em">
                 <label for="funcTitle" class="col-sm-2 col-form-label">Function Title</label>
                 <div class="col-sm-7">
                   <input readonly="" type="text" id="funcTitle" name="funcTitle" class="form-control" value="{{ $func->function_Title }}" />

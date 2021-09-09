@@ -74,7 +74,6 @@
                                                 </address>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
 
@@ -83,9 +82,9 @@
                                         <div class="section-title">Calculation Function</div>
                                         <p class="section-lead">All items here for calculation in modules</p>
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-hover table-md">
+                                            <table class="table table-bordered table-md">
                                                 <tr>
-                                                    <th data-width="40">#</th>
+                                                    <th data-width="40">No.</th>
                                                     <th>Role</th>
                                                     <th class="text-center">Duration</th>
                                                     <th class="text-center">Cost</th>

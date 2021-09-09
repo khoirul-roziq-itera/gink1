@@ -30,12 +30,15 @@
             background-color: #04AA6D;
             color: white;
         }
+        .center {
+        text-align: center;
+      }
     </style>
 </head>
 
 <body>
-
-
+    <h2 class="center">Data Functions</h2>
+   
     <table id="table-1" class="table table-hover table-bordered">
         <thead class="text-center">
             <tr>

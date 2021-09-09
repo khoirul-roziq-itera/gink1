@@ -19,6 +19,7 @@
               <h4>Detail Project</h4>
             </div>
             <div class="card-body">
+              <a class="btn btn-danger" href="#" role="button">Export PDF</a>
               <div class="row">
                 <div class="col-12">
                   <h2 class="section-title" style="padding-bottom: 1em">Informasi Project</h2>
