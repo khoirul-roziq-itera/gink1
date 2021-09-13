@@ -14,7 +14,7 @@
                         <div class="card-header">
                             <h4>Edit Profile</h4>
                         </div>
-                        <form method="POST" action="{{ route('users.update', $user->id) }}" id="myForm">
+                        <form method="POST" action="{{ route('profile.update', Auth::user()->id) }}" id="myForm" enctype="multipart/form-data">
                             @csrf
                             @method('patch')
                             <div class="card-body">
@@ -33,6 +33,11 @@
                                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                                     <div class="col-sm-7">
                                         <input id="password" type="password" class="form-control pwstrength @error('password') is-invalid @enderror" data-indicator="pwindicator" name="password" placeholder="Masukkan password">
+                                        <div class="invalid-feedback">
+                                            @error('password')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                         <div id="pwindicator" class="pwindicator">
                                             <div class="bar"></div>
                                             <div class="label"></div>
@@ -43,10 +48,15 @@
                                     <label for="password_confirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
                                     <div class="col-sm-7">
                                         <input id="password_confirmation" type="password" class="form-control @error('password') is-invalid @enderror" name="password_confirmation" placeholder="Masukkan password">
+                                        <div class="invalid-feedback">
+                                            @error('password')
+                                            {{ $message }}
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <!-- <div class="form-group row">
                                     <label for="level" class="col-sm-2 col-form-label">Level</label>
                                     <div class="col-sm-7">
                                         <select id="level" name="level" class="form-control">
@@ -55,7 +65,7 @@
                                             <option value="creator" @if($user->level == 'creator') selected @endif>Creator</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-7">
@@ -71,12 +81,12 @@
                                 <div class="form-group row">
                                     <label for="photo" class="col-sm-2 col-form-label">Foto</label>
                                     <div class="col-sm-7">
-                                        <input type="file" class="form-control @error('photo') is-invalid @enderror" id="photo" name="photo" value="{{ $user->profile_photo_path }}">
+                                        <input type="file" class="form-control @error('photo') is-invalid @enderror" id="photo" name="photo">
                                         <div class="invalid-feedback">
                                             @error('photo')
                                             {{ $message }}
                                             @enderror
-                                        </div> 
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">

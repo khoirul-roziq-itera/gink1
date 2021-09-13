@@ -7,6 +7,16 @@
       <h1 style="font-size: 25px">Profile</h1>
     </div>
     <div class="section-body">
+      @if(session('success'))
+      <div class="alert alert-success alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{session('success')}}
+        </div>
+      </div>
+      @endif
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -15,10 +25,10 @@
             </div>
             <div class="card-body">
               <div class="col-sm-4 offset-4" style="padding-bottom: 1em;">
-                @if($user->profile_photo_path != null)
-                <img src="{{ asset($user->profile_photo_path) }}" width="150" class="rounded" alt="myfoto">
+                @if(Auth::user()->profile_photo_path != NULL)
+                <img src="{{ asset(Auth::user()->profile_photo_path) }}" alt="" class="rounded-circle" width="150">
                 @else
-                <img src="{{ asset($user->profile_photo_url) }}" width="150" class="rounded" alt="myfoto">
+                <img alt="image" src="{{ asset(Auth::user()->profile_photo_url) }}" class="rounded-circle" width="150">
                 @endif
               </div>
               <div class="form-group row">
