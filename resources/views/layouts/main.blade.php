@@ -50,7 +50,11 @@
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            @if(Auth::user()->profile_photo_path != NULL)
+                            <img src="{{ asset(Auth::user()->profile_photo_path) }}" alt="" class="rounded-circle mr-1">
+                            @else
                             <img alt="image" src="{{ asset(Auth::user()->profile_photo_url) }}" class="rounded-circle mr-1">
+                            @endif
                             <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }} </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">

@@ -77,12 +77,13 @@
                     </td>
                     <td>
 
-                      <form action="{{ route('modules.destroy', $result->id ) }}" method="post">
+                      <form action="{{ url('modules/kill/'.$result->id) }}" method="post">
                         @csrf
                         @method('delete')
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <a href="{{ url('modules', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
-                          <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i> Archive</a>
+                          <!-- <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i> Archive</a> -->
+                          <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i> Delete</a>
                         </div>
                       </form>
 
