@@ -23,9 +23,9 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="funcTitle" class="col-sm-2 col-form-label">Function Title</label>
+                                    <label for="funcTitle" class="col-sm-2 col-form-label">Fitur Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control @error('funcTitle') is-invalid @enderror" placeholder="Input title" value="{{ old('funcTitle') }}">
+                                        <input type="text" id="funcTitle" name="funcTitle" class="form-control @error('funcTitle') is-invalid @enderror" placeholder="Input name" value="{{ old('funcTitle') }}">
                                         <div class="invalid-feedback">
                                             @error('funcTitle')
                                             {{ $message }}
