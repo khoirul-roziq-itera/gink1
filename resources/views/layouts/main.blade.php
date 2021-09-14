@@ -22,9 +22,9 @@
 
     {{-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" />
- 
+
     <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
 
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" integrity="sha512-KXkS7cFeWpYwcoXxyfOumLyRGXMp7BTMTjwrgjMg0+hls4thG2JGzRgQtRfnAuKTn2KWTDZX4UdPg+xTs8k80Q==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
@@ -49,7 +49,11 @@
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            @if(Auth::user()->profile_photo_path != NULL)
+                            <img src="{{ asset(Auth::user()->profile_photo_path) }}" alt="" class="rounded-circle mr-1">
+                            @else
                             <img alt="image" src="{{ asset(Auth::user()->profile_photo_url) }}" class="rounded-circle mr-1">
+                            @endif
                             <div class="d-sm-none d-lg-inline-block">Hi, {{ Auth::user()->name }} </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -84,6 +88,7 @@
                             <li class="{{ Request::is('dashboard') ? 'active' : '' }}">
                                 <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Dashboard</span></a>
                             </li>
+<<<<<<< HEAD
 
                             <li class="{{ Request::is('functions') ? 'active' : '' }}">
                                 <a href="{{ url ('functions') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
@@ -99,6 +104,38 @@
 
                             <li class="{{ Request::is('categories') ? 'active' : '' }}">
                                 <a href="{{ url ('categories') }}"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
+=======
+                            <li class="nav-item dropdown {{ Request::is('functions/create') || Request::is('functions') || Request::is('functions/archive') ? 'active' : '' }}">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="{{ Request::is('functions/create') ? 'active' : '' }}"><a href="{{ url('functions/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li class="{{ Request::is('functions') ? 'active' : '' }}"><a href="{{ url('functions') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
+                                    <!-- <li class="{{ Request::is('functions/archive') ? 'active' : '' }}"><a href="{{ url('functions/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li> -->
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown {{ Request::is('modules/create') || Request::is('modules') || Request::is('modules/archive') ? 'active' : '' }}">
+                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="{{ Request::is('modules/create') ? 'active' : '' }}"><a href="{{ url('modules/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
+                                    <li class="{{ Request::is('modules') ? 'active' : '' }}"><a href="{{ url('modules') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
+                                    <!-- <li class="{{ Request::is('modules/archive') ? 'active' : '' }}"><a href="{{ url('modules/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li> -->
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown {{ Request::is('tags') || Request::is('tags/archive') || Request::is('tags/detail') ? 'active' : '' }}">
+                                <a href="{{ url('tags') }}" class="nav-link"><i class="fas fa-tags"></i><span style="font-weight:bold; font-size:19px">Tags</span></a>
+                                <!-- <ul class="dropdown-menu">
+                                    <li class=" {{  Request::is('tags') ? 'active' : '' }}"><a class="nav-link" href="{{ url('tags') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
+                                    <li class=" {{  Request::is('tags/archive') ? 'active' : '' }}"><a class="nav-link" href="{{ url('tags/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                </ul> -->
+                            </li>
+                            <li class="nav-item dropdown {{ Request::is('categories') || Request::is('categories/archive') ? 'active' : '' }}">
+                                <a href="{{ url('categories') }}" class="nav-link"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
+                                <!-- <ul class="dropdown-menu">
+                                    <li class=" {{ Request::is('categories') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
+                                    <li class=" {{ Request::is('categories/archive') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
+                                </ul> -->
+>>>>>>> bb51f6ea1237888ddaf895a8011a417f8644d9da
                             </li>
 
                             <li class="nav-item dropdown {{ Request::is('projects/create') || Request::is('projects') || Request::is('projects/archive') || Request::is('projects/1') ? 'active' : '' }}">
@@ -132,8 +169,12 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></scrip>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+        < /scrip> <
+        script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin = "anonymous" >
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

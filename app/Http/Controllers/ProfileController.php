@@ -8,6 +8,11 @@ use Faker\Provider\ar_JO\Company;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Fortify\Rules\Password;
+use Illuminate\Support\Facades\Validator;
+use Laravel\Fortify\Contracts\UpdatesUserPasswords;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 
 class ProfileController extends Controller
@@ -80,20 +85,33 @@ class ProfileController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'min:3', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
-            'password' => ['required', 'string', new Password, 'confirmed'],
-            'level' => ['required'],
 
         ]);
+
+        if ($request->photo) {
+            $nameImage = DB::table('users')->where('id', $id)->first();
+            File::delete($nameImage->profile_photo_path);
+            User::where('id', $id)->update([
+                'profile_photo_path' => $request->file('photo')->move('uploads/photo', Str::slug($request->name) . '-' . $request->file('photo')->getClientOriginalName())
+            ]);
+        }
+
+        if ($request->password) {
+            $request->validate([
+                'password' => ['string', new Password, 'confirmed']
+            ]);
+
+            User::where('id', $id)->update([
+                'password' => Hash::make($request->password)
+            ]);
+        }
 
         User::where('id', $id)->update([
             'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'level' => $request->level,
-            'profile_photo_path' => $request->photo
+            'email' => $request->email
         ]);
 
-        return redirect('profile')->with('success', 'User Created Successfully!');
+        return redirect('profile/' . $id)->with('success', 'Profile Updated Successfully!');
     }
 
     /**

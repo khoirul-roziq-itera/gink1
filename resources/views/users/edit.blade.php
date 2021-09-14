@@ -17,14 +17,14 @@
                         <div class="card-header">
                             <h4>Edit User</h4>
                         </div>
-                        <form method="POST" action="{{ route('users.update', $user->id) }}" id="myForm">
+                        <form method="POST" action="{{ route('users.update', $user->id) }}" id="myForm" enctype="multipart/form-data">
                             @csrf
                             @method('patch')
                             <div class="card-body">
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="name" name="name"  class="form-control @error('name') is-invalid @enderror" value="{{ $user->name }}">
+                                        <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ $user->name }}">
                                         <div class="invalid-feedback">
                                             @error('name')
                                             {{ $message }}
@@ -89,7 +89,7 @@
                                             @error('photo')
                                             {{ $message }}
                                             @enderror
-                                        </div> 
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
