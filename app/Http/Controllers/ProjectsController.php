@@ -221,6 +221,22 @@ class ProjectsController extends Controller
 
         return redirect()->back()->with('success', 'Project Deleted Successfully!');
     }
+    public function exportIndexPdf()
+    {
+        $apps = Application::all();
+
+        view()->share('apps', $apps);
+        $pdf = PDF::loadview('projects/pdfindex');
+        return $pdf->download('index-projects.pdf');
+    }
+    public function exportDetailPdf($id)
+    {
+        $app = Application::where('id', $id)->first();
+
+        view()->share('app', $app);
+        $pdf = PDF::loadview('projects/pdfdetail');
+        return $pdf->download('detail-projects.pdf');
+    }
 
     public function exportIndexExcel()
     {

@@ -51,7 +51,7 @@
                   <thead class="text-center">
                     <tr>
                       <th>No</th>
-                      <th>App Name</th>
+                      <th>Application Name</th>
                       <th>Category</th>
                       <th>Creator</th>
                       <th>Status</th>

@@ -19,12 +19,12 @@
               <h4>Detail Project</h4>
             </div>
             <div class="card-body">
-              <a class="btn btn-danger" href="#" role="button">Export PDF</a>
+              <a class="btn btn-danger" href="{{ url('projects/exportDetailPdf', $app->id) }}" role="button">Export PDF</a>
               <div class="row">
                 <div class="col-12">
                   <h2 class="section-title" style="padding-bottom: 1em">Informasi Project</h2>
                   <div class="form-group row">
-                    <label for="moduleName" class="col-sm-2 col-form-label">Project Name</label>
+                    <label for="moduleName" class="col-sm-2 col-form-label">Application Name</label>
                     <div class="col-sm-7">
                       <input type="text" class="form-control" disabled value="{{ $app->app_name }}">
                     </div>
@@ -43,7 +43,7 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="moduleName" class="col-sm-2 col-form-label">Deadline</label>
+                    <label for="moduleName" class="col-sm-2 col-form-label">Estimation Finished</label>
                     <div class="col-sm-7">
                       <input type="text" class="form-control" disabled value="{{ $app->deadline_project_t }}">
                     </div>

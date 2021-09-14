@@ -32,55 +32,93 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="invoice-title">
-                                            <h2>Detail Function</h2>
-                                            <div class="invoice-number">ID Function #{{ $func->id}}</div>
+                                            <h2>Detail Project</h2>
+                                            <div class="invoice-number">ID Project #{{ $app->id}}</div>
                                         </div>
                                         <hr>
                                         <div>
                                             <div class="col-md-6">
                                                 <address>
-                                                    <strong>Function Titile:</strong><br>
-                                                    {{ $func->function_Title }}<br>
+                                                    <strong>Application Name:</strong><br>
+                                                    {{ $app->app_name }}<br>
                                                 </address>
                                             </div>
                                             <div class="col-md-6">
                                                 <address>
-                                                    <strong>Function Name:</strong><br>
-                                                    {{ $func->function_Name }}<br>
+                                                    <strong>Category:</strong><br>
+                                                    {{ $app->category->category_name }}<br>
                                                 </address>
                                             </div>
                                             <div class="col-md-6">
                                                 <address>
-                                                    <strong>Function Group:</strong><br>
-                                                    {{ $func->function_Group }}<br>
+                                                    <strong>Start Time:</strong><br>
+                                                    {{ $app->start_project_t }}<br>
                                                 </address>
                                             </div>
                                             <div class="col-md-6">
                                                 <address>
-                                                    <strong>Function Notes:</strong><br>
-                                                    {{ $func->function_Notes }}<br>
+                                                    <strong>Estimation Finished:</strong><br>
+                                                    {{ $app->deadline_project_t }}<br>
                                                 </address>
                                             </div>
                                             <div class="col-md-6">
                                                 <address>
-                                                    <strong>Status:</strong><br>
-                                                    @if( $func->function_Status == 1)
-                                                    <span class="badge badge-danger">Waiting</span>
-                                                    @elseif( $func->function_Status == 2 )
-                                                    <span class="badge badge-success">On Progress</span>
-                                                    @else
-                                                    <span class="badge badge-primary">Finished</span>
-                                                    @endif<br>
+                                                    <strong>Finished:</strong><br>
+                                                    {{ $app->end_project_t }}<br>
                                                 </address>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
-                                <div class="row mt-4">
+                                <div class="row">
                                     <div class="col-md-12">
-                                        <div class="section-title">Calculation Function</div>
+                                        <p>List Modules</p>
+                                        <div class="table">
+                                            <table class="table table-bordered table-md">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Module Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach( $app->modules as $module => $result )
+                                                    <tr>
+                                                      <td>{{ $module + 1}}</td>
+                                                      <td>{{ $result->module_Name }}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                  </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <p>List Tags</p>
+                                      <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                          <thead>
+                                            <tr>
+                                              <th>#</th>
+                                              <th>Tags Name</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            @foreach( $app->tags as $tag => $result )
+                                            <tr>
+                                              <td>{{ $tag + 1}}</td>
+                                              <td>{{ $result->tag_name }}</td>
+                                            </tr>
+                                            @endforeach
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                {{-- <div class="row mt-4">
+                                    <div class="col-md-12">
                                         <p class="section-lead">All items here for calculation in modules</p>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-hover table-md">
@@ -116,8 +154,6 @@
                                         </div>
                                         <div class="row mt-4">
                                             <div class="col-lg-8">
-                                                <!-- <div class="section-title">Payment Method</div>
-                                                <p class="section-lead">The payment method that we provide is to make it easier for you to pay invoices.</p> -->
                                                 <div class="d-flex">
                                                     <div class="mr-2 bg-visa" data-width="61" data-height="38"></div>
                                                     <div class="mr-2 bg-jcb" data-width="61" data-height="38"></div>
@@ -142,7 +178,62 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
+                                <div class="row">
+                                    <div class="col-9">
+                                        <p>Calculation</p>
+                                      <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                          <thead class="text-center">
+                                            <tr>
+                                              <th>Role</th>
+                                              <th>Cost</th>
+                                              <th>Price</th>
+                                              <th>Profit</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody class="text-center">
+                                            <tr>
+                                              <td style="background: rgb(185, 235, 185)">Front-End</td>
+                                              {{-- cost --}}
+                                              <td>Rp. {{ $app->app_FE_Cost }}</td>
+                                              {{-- price --}}
+                                              <td>Rp. {{ $app->app_FE_Price }}</td>
+                                              {{-- profit --}}
+                                              <td>Rp. {{ $app->app_FE_Price - $app->app_FE_Cost }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="background: rgb(185, 235, 185)">Back-End</td>
+                                              {{-- cost --}}
+                                              <td>Rp. {{ $app->app_BE_Cost }}</td>
+                                              {{-- price --}}
+                                              <td>Rp. {{ $app->app_BE_Price }}</td>
+                                              {{-- total --}}
+                                              <td>Rp. {{ $app->app_BE_Price - $app->app_BE_Cost }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="background: rgb(185, 235, 185)">Full-Stack</td>
+                                              {{-- cost --}}
+                                              <td>Rp. {{ $app->app_FS_Cost }}</td>
+                                              {{-- price --}}
+                                              <td>Rp. {{ $app->app_FS_Price }}</td>
+                                              {{-- total --}}
+                                              <td>Rp. {{ $app->app_FS_Price - $app->app_FS_Cost }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="background: rgb(185, 235, 185)">Total</td>
+                                              {{-- cost --}}
+                                              <td style="background: rgb(185, 235, 185)">Rp. {{ $app->app_Cost_Total }}</td>
+                                              {{-- price --}}
+                                              <td style="background: rgb(185, 235, 185)">Rp. {{ $app->app_Price_Total }}</td>
+                                              {{-- total --}}
+                                              <td style="background: rgb(185, 235, 185)">Rp. {{ $app->app_Price_Total - $app->app_Cost_Total }}</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
                             <hr>
                             <!-- <div class="text-md-right">
