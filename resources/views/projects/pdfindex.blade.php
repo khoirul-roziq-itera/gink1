@@ -35,34 +35,35 @@
 
 <body>
 
-
+    <h2 class="center">Data Projects</h2>
     <table id="table-1" class="table table-hover table-bordered">
         <thead class="text-center">
             <tr>
                 <th>Nomor</th>
-                <th>Function Title</th>
-                <th>Function Name</th>
+                <th>Application Name</th>
+                <th>Category</th>
+                <th>Creator</th>
                 <th>Status</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($funcs as $func => $result)
+            @foreach($apps as $app => $result)
             <tr class="text-center">
-                <td>{{ $func + 1 }}</td>
-                <td>{{ $result->function_Title }}</td>
-                <td>{{ $result->function_Name }}</td>
-                <td>
-                    @if( $result->function_Status == 1)
-                    <span class="badge badge-danger">Waiting</span>
-                    @elseif( $result->function_Status == 2 )
-                    <span class="badge badge-success">On Progress</span>
-                    @else
-                    <span class="badge badge-primary">Finished</span>
-                    @endif
-                </td>
+              <td>{{ $app + 1 }}</td>
+              <td>{{ $result->app_name }}</td>
+              <td>{{ $result->category->category_name }}</td>
+              <td>{{ $result->user->name }}</td>
+              <td>
+                @if( $result->status == 1)
+                <span class="badge badge-danger">Waiting</span>
+                @elseif( $result->status == 2 )
+                <span class="badge badge-success">On Progress</span>
+                @else
+                <span class="badge badge-primary">Finished</span>
+                @endif
+              </td>
             </tr>
             @endforeach
-        </tbody>
     </table>
 
 </body>

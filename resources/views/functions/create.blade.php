@@ -23,7 +23,7 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="funcTitle" class="col-sm-2 col-form-label">Fitur Name</label>
+                                    <label for="funcTitle" class="col-sm-1 col-form-label">Fitur Name</label>
                                     <div class="col-sm-7">
                                         <input type="text" id="funcTitle" name="funcTitle" class="form-control @error('funcTitle') is-invalid @enderror" placeholder="Input name" value="{{ old('funcTitle') }}">
                                         <div class="invalid-feedback">
@@ -34,7 +34,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="funcName" class="col-sm-2 col-form-label">Function Name</label>
+                                    <label for="funcName" class="col-sm-1 col-form-label">Function Name</label>
                                     <div class="col-sm-7">
                                         <input type="text" id="funcName" name="funcName" class="form-control @error('funcName') is-invalid @enderror" placeholder="Input name" value="{{ old('funcName') }}">
                                         <div class="invalid-feedback">
@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="funcGroup" class="col-sm-2 col-form-label">Function Group</label>
+                                    <label for="funcGroup" class="col-sm-1 col-form-label">Function Group</label>
                                     <div class="col-sm-7">
                                         <select id="funcGroup" name="funcGroup" class="form-control @error('funcGroup') is-invalid @enderror">
                                             <option value="">-- Choose Group --</option>
@@ -62,8 +62,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr> 
+                                <div class="form-group row"> 
+                                    <div class="col-sm-7 offset-4">
+                                        <h3>Front-End</h3>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
-                                    <label for="FEDuration" class="col-sm-2 col-form-label">Front-End Duration</label>
+                                    <label for="FEDuration" class="col-sm-1 col-form-label">Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <input type="text" name="FEDuration" id="FEDuration" class="form-control @error('FEDuration') is-invalid @enderror" placeholder="Input total of days" value="{{ old('FEDuration') }}" />
@@ -77,7 +83,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="FECost" class="col-sm-2 col-form-label">Front-End Cost</label>
+                                    <label for="FECost" class="col-sm-1 col-form-label">Cost</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -91,7 +97,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="FEPrice" class="col-sm-2 col-form-label">Front-End Price</label>
+                                    <label for="FEPrice" class="col-sm-1 col-form-label">Price</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -104,8 +110,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr> 
+                                <div class="form-group row"> 
+                                    <div class="col-sm-7 offset-4">
+                                        <h4>Back-End</h4>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
-                                    <label for="BEDuration" class="col-sm-2 col-form-label">Back-End Duration</label>
+                                    <label for="BEDuration" class="col-sm-1 col-form-label">Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <input type="text" name="BEDuration" id="BEDuration" class="form-control @error('BEDuration') is-invalid @enderror" placeholder="Input total of days" value="{{ old('BEDuration') }}" />
@@ -119,7 +131,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="BECost" class="col-sm-2 col-form-label">Back-End Cost</label>
+                                    <label for="BECost" class="col-sm-1 col-form-label">Cost</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -133,7 +145,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="BEPrice" class="col-sm-2 col-form-label">Back-End Price</label>
+                                    <label for="BEPrice" class="col-sm-1 col-form-label">Price</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -146,9 +158,14 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <hr> 
+                                <div class="form-group row"> 
+                                    <div class="col-sm-7 offset-4">
+                                        <h4>Full-Stack</h4>
+                                    </div>
+                                </div>
                                 <div class="form-group row">
-                                    <label for="FSDuration" class="col-sm-2 col-form-label">Full-Stack Duration</label>
+                                    <label for="FSDuration" class="col-sm-1 col-form-label">Duration</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <input type="text" name="FSDuration" id="FSDuration" class="form-control @error('FSDuration') is-invalid @enderror" placeholder="Input total of days" value="{{ old('FSDuration') }}" />
@@ -162,7 +179,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="FSCost" class="col-sm-2 col-form-label">Full-Stack Cost</label>
+                                    <label for="FSCost" class="col-sm-1 col-form-label">Cost</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -176,7 +193,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="FSPrice" class="col-sm-2 col-form-label">Full-Stack Price</label>
+                                    <label for="FSPrice" class="col-sm-1 col-form-label">Price</label>
                                     <div class="col-sm-7">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -189,14 +206,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr>
                                 <div class="form-group row">
-                                    <label for="funcNotes" class="col-sm-2 col-form-label">Function Notes</label>
+                                    <label for="funcNotes" class="col-sm-1 col-form-label">Function Notes</label>
                                     <div class="col-sm-7">
                                         <textarea name="funcNotes" id="funcNotes" class="form-control">{{ old('funcNotes') }}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="funcStatus" class="col-sm-2 col-form-label">Status</label>
+                                    <label for="funcStatus" class="col-sm-1 col-form-label">Status</label>
                                     <div class="col-sm-7">
                                         <select id="funcStatus" name="funcStatus" class="form-control @error('funcStatus') is-invalid @enderror">
                                             <option value="">-- Choose Status --</option>

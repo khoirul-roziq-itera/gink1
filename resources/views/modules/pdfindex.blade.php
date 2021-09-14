@@ -34,37 +34,44 @@
 </head>
 
 <body>
-
-
+    <h2 class="center">Data Functions</h2>
     <table id="table-1" class="table table-hover table-bordered">
         <thead class="text-center">
-            <tr>
-                <th>Nomor</th>
-                <th>Function Title</th>
-                <th>Function Name</th>
-                <th>Status</th>
-            </tr>
+          <tr>
+            <th>Nomor</th>
+            <th>Module Name</th>
+            <th>Cost Total</th>
+            <th>Price Total</th>
+            <th>Status</th>
+          </tr>
         </thead>
         <tbody>
-            @foreach($funcs as $func => $result)
-            <tr class="text-center">
-                <td>{{ $func + 1 }}</td>
-                <td>{{ $result->function_Title }}</td>
-                <td>{{ $result->function_Name }}</td>
-                <td>
-                    @if( $result->function_Status == 1)
-                    <span class="badge badge-danger">Waiting</span>
-                    @elseif( $result->function_Status == 2 )
-                    <span class="badge badge-success">On Progress</span>
-                    @else
-                    <span class="badge badge-primary">Finished</span>
-                    @endif
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+          @foreach($modules as $module => $result)
+          <tr class="text-center">
+            <td>{{ $module + 1 }}</td>
+            <td>{{ $result->module_Name }}</td>
+            <td>
+              {{ $result->module_Cost_Total}}
+            </td>
+            <td>
+              {{ $result->module_Price_Total}}
+            </td>
+            <td>
+              @if( $result->module_Status == 1)
+              <span class="badge badge-danger">Waiting</span>
+              @elseif( $result->module_Status == 2 )
+              <span class="badge badge-success">On Progress</span>
+              @else
+              <span class="badge badge-primary">Finished</span>
+              @endif
+            </td>
+        </tr>
+    @endforeach
+</tbody>
+</table>
 
+
+            
 </body>
 
 </html>

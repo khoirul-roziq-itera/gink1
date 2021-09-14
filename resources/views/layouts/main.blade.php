@@ -89,19 +89,19 @@
                                 <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Dashboard</span></a>
                             </li>
 
-                            <li class="{{ Request::is('functions') ? 'active' : '' }}">
+                            <li class="{{ Request::is('functions') || Request::is('functions/create') ? 'active' : '' }}">
                                 <a href="{{ url ('functions') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
                             </li>
 
-                            <li class="{{ Request::is('modules') ? 'active' : '' }}">
+                            <li class="{{ Request::is('modules') || Request::is('modules/create') ? 'active' : '' }}">
                                 <a href="{{ url ('modules') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
                             </li>
 
-                            <li class="{{ Request::is('tags') ? 'active' : '' }}">
+                            <li class="{{ Request::is('tags') || Request::is('tags/create') ? 'active' : '' }}">
                                 <a href="{{ url ('tags') }}"><i class="fas fa-tags fa-lg"></i><span style="font-weight:bold; font-size:19px">Tags</span></a>
                             </li>
 
-                            <li class="{{ Request::is('categories') ? 'active' : '' }}">
+                            <li class="{{ Request::is('categories') || Request::is('categories/create') ? 'active' : '' }}">
                                 <a href="{{ url ('categories') }}"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
                             </li>
 
