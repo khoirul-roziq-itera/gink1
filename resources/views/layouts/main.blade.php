@@ -45,7 +45,6 @@
                 <form class="form-inline mr-auto">
                     <ul class="navbar-nav mr-3">
                         <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars" style="font-size:30px"></i></a></li>
-
                     </ul>
                 </form>
                 <ul class="navbar-nav navbar-right">
@@ -85,37 +84,23 @@
                             <li class="{{ Request::is('dashboard') ? 'active' : '' }}">
                                 <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Dashboard</span></a>
                             </li>
-                            <li class="nav-item dropdown {{ Request::is('functions/create') || Request::is('functions') || Request::is('functions/archive') ? 'active' : '' }}">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
-                                <ul class="dropdown-menu">
-                                    <li class="{{ Request::is('functions/create') ? 'active' : '' }}"><a href="{{ url('functions/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li class="{{ Request::is('functions') ? 'active' : '' }}"><a href="{{ url('functions') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
-                                    <li class="{{ Request::is('functions/archive') ? 'active' : '' }}"><a href="{{ url('functions/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown {{ Request::is('modules/create') || Request::is('modules') || Request::is('modules/archive') ? 'active' : '' }}">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-atlas"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
-                                <ul class="dropdown-menu">
-                                    <li class="{{ Request::is('modules/create') ? 'active' : '' }}"><a href="{{ url('modules/create') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-plus-circle"></i>Create</a></li>
-                                    <li class="{{ Request::is('modules') ? 'active' : '' }}"><a href="{{ url('modules') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
-                                    <li class="{{ Request::is('modules/archive') ? 'active' : '' }}"><a href="{{ url('modules/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
-                                </ul>
+
+                            <li class="{{ Request::is('functions') ? 'active' : '' }}">
+                                <a href="{{ url ('functions') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
                             </li>
 
-                            <li class="nav-item dropdown {{ Request::is('tags') || Request::is('tags/archive') || Request::is('tags/detail') ? 'active' : '' }}">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-tags"></i><span style="font-weight:bold; font-size:19px">Tags</span></a>
-                                <ul class="dropdown-menu">
-                                    <li class=" {{  Request::is('tags') ? 'active' : '' }}"><a class="nav-link" href="{{ url('tags') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
-                                    <li class=" {{  Request::is('tags/archive') ? 'active' : '' }}"><a class="nav-link" href="{{ url('tags/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
-                                </ul>
+                            <li class="{{ Request::is('modules') ? 'active' : '' }}">
+                                <a href="{{ url ('modules') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
                             </li>
-                            <li class="nav-item dropdown {{ Request::is('categories') || Request::is('categories/archive') ? 'active' : '' }}">
-                                <a href="#" class="nav-link has-dropdown"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
-                                <ul class="dropdown-menu">
-                                    <li class=" {{ Request::is('categories') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-database"></i>Data</a></li>
-                                    <li class=" {{ Request::is('categories/archive') ? 'active' : '' }}"><a class="nav-link" href="{{ url('categories/archive') }}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
-                                </ul>
+
+                            <li class="{{ Request::is('tags') ? 'active' : '' }}">
+                                <a href="{{ url ('tags') }}"><i class="fas fa-tags fa-lg"></i><span style="font-weight:bold; font-size:19px">Tags</span></a>
                             </li>
+
+                            <li class="{{ Request::is('categories') ? 'active' : '' }}">
+                                <a href="{{ url ('categories') }}"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
+                            </li>
+
                             <li class="nav-item dropdown {{ Request::is('projects/create') || Request::is('projects') || Request::is('projects/archive') || Request::is('projects/1') ? 'active' : '' }}">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
                                 <ul class="dropdown-menu">
