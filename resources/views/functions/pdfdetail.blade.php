@@ -39,7 +39,7 @@
                                         <div>
                                             <div class="col-md-6">
                                                 <address>
-                                                    <strong>Function Titile:</strong><br>
+                                                    <strong>Fitur Name:</strong><br>
                                                     {{ $func->function_Title }}<br>
                                                 </address>
                                             </div>

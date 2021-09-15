@@ -43,7 +43,7 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="moduleName" class="col-sm-2 col-form-label">Estimation Finished</label>
+                    <label for="moduleName" class="col-sm-2 col-form-label">Estimation Finish</label>
                     <div class="col-sm-7">
                       <input type="text" class="form-control" disabled value="{{ $app->deadline_project_t }}">
                     </div>

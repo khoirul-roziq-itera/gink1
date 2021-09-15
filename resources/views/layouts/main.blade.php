@@ -90,11 +90,11 @@
                             </li>
 
                             <li class="{{ Request::is('functions') || Request::is('functions/create') ? 'active' : '' }}">
-                                <a href="{{ url ('functions') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
+                                <a href="{{ url ('functions') }}"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
                             </li>
 
                             <li class="{{ Request::is('modules') || Request::is('modules/create') ? 'active' : '' }}">
-                                <a href="{{ url ('modules') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
+                                <a href="{{ url ('modules') }}"><i class="fas fa-book fa-lg"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
                             </li>
 
                             <li class="{{ Request::is('tags') || Request::is('tags/create') ? 'active' : '' }}">

@@ -230,7 +230,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-9">
+                                    <div class="col-sm-8">
                                         <div class="form-group float-right">
                                             <a href="{{ url('functions') }}"><button type="button" class="btn btn-danger btn">Cancel</button></a>
                                             <button type="submit" class="btn btn-primary btn">Submit</button>

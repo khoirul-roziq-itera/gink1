@@ -19,7 +19,8 @@
               <h4>Detail Module</h4>
             </div>
             <div class="card-body">
-              <div class="form-group row">
+              <a class="btn btn-danger" href="{{ url('modules/exportDetailPdf', $module->id) }}" role="button">Export PDF</a>
+              <div class="form-group row" style="padding-top: 1em">
                 <label for="moduleName" class="col-sm-2 col-form-label">Module Name</label>
                 <div class="col-sm-7">
                   <input readonly="" type="text" id="moduleName" name="moduleName" class="form-control" value="{{ $module->module_Name }}" />
