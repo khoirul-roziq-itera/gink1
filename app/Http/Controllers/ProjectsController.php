@@ -11,6 +11,7 @@ use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Exports\AppsExport;
+use PDF;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ProjectsController extends Controller
