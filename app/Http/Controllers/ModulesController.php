@@ -8,6 +8,7 @@ use App\Models\Func;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use PDF;
 use App\Exports\ModulesExport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -233,6 +234,23 @@ class ModulesController extends Controller
         Module::withTrashed()->where('id', $id)->first()->forceDelete();
         DB::table('func_module')->where('module_id', $id)->delete();
         return redirect()->back()->with('success', 'Module Deleted Successfully!');
+    }
+
+    public function exportIndexPdf()
+    {
+        $modules = Module::all();
+
+        view()->share('modules', $modules);
+        $pdf = PDF::loadview('modules/pdfindex');
+        return $pdf->download('index-modules.pdf');
+    }
+    public function exportDetailPdf($id)
+    {
+        $module = Module::where('id', $id)->first();
+
+        view()->share('module', $module);
+        $pdf = PDF::loadview('modules/pdfdetail');
+        return $pdf->download('detail-modules.pdf');
     }
 
     public function exportIndexExcel()
