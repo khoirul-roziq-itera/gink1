@@ -19,7 +19,7 @@
               <h4>Detail Module</h4>
             </div>
             <div class="card-body">
-              <a class="btn btn-danger" href="{{ url('modules/exportDetailPdf', $module->id) }}" role="button">Export PDF</a>
+              <a class="btn btn-danger" href="{{ url('modules/exportDetailPdf', $module->id) }}" role="button"><i class="fas fa-file-pdf"></i> Export PDF</a>
               <div class="form-group row" style="padding-top: 1em">
                 <label for="moduleName" class="col-sm-2 col-form-label">Module Name</label>
                 <div class="col-sm-7">

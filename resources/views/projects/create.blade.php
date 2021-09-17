@@ -44,7 +44,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="tags" class="col-sm-2 col-form-label">Tag</label>
+                                    <label for="tags" class="col-sm-2 col-form-label">Tags</label>
                                     <div class="col-sm-7">
                                         <select id="choices-tags" name="tags[]" class="form-control" placeholder="Select tags" multiple>
                                             @foreach ( $tags as $tag)

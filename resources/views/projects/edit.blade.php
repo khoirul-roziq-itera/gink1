@@ -80,13 +80,13 @@
                                 <div class="form-group row">
                                     <label for="startProjectT" class="col-sm-2 col-form-label">Start Time</label>
                                     <div class="col-sm-7">
-                                        <input type="date" name="startProjectT" class="form-control datepicker" />
+                                        <input type="date" name="startProjectT" class="form-control datepicker" value="{{ $app->start_project_t }}" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="deadlineProjectT" class="col-sm-2 col-form-label">Deadline</label>
+                                    <label for="deadlineProjectT" class="col-sm-2 col-form-label">Estimation Finish</label>
                                     <div class="col-sm-7">
-                                        <input type="date" name="deadlineProjectT" class="form-control datepicker" />
+                                        <input type="date" name="deadlineProjectT" class="form-control datepicker" value="{{ $app->deadline_project_t }}" />
                                     </div>
                                 </div>
                                 <div class="form-group row">

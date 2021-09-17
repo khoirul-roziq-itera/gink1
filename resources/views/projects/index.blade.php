@@ -32,17 +32,12 @@
               <div class="row">
                 <div class="col-6">
                   <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
-
-                    <div class="btn-group" role="group" style="padding-right: 0.5em">
-                      <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-file-export"></i> EXPORT
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <li><a class="dropdown-item" href="{{ url('projects/exportIndexPdf') }}"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
-                        <li><a class="dropdown-item" href="{{ url('projects/exportIndexExcel') }}"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
-                      </ul>
+                    <div style="padding-right: 0.5em">
+                      <a href="{{ url('projects/exportIndexPdf')}}" type="button" class="btn btn-danger"><i class="fas fa-file-pdf"></i> Export PDF</a>
                     </div>
-                    <a href="{{ url('projects/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> ADD DATA</a>
+                    <div>
+                      <a href="{{ url('projects/create')}}" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i> ADD DATA</a>
+                    </div>
                   </div>
                 </div>
               </div>

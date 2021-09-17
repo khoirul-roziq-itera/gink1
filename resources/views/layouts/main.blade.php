@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <link rel="icon" href="{{ asset ('img/ginktech.jpg')}}" type="image/gif">
+    <link rel="icon" href="{{ asset ('img/gink.png')}}" type="image/gif">
     <title>POCC | Gink Technology</title>
 
     <!-- General CSS Files -->
@@ -114,7 +114,7 @@
                                 </ul>
                             </li>
                             @if(auth()->user()->level == "admin")
-                            <li class="{{ Request::is('user') ? 'active' : '' }}">
+                            <li class="{{ Request::is('users') ? 'active' : '' }}">
                                 <a href="{{ url('/users') }}"><i class="fas fa-users fa-lg"></i><span style="font-weight:bold; font-size:19px">Manage Users</span></a>
                             </li>
                             @endif

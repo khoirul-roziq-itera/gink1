@@ -20,7 +20,7 @@
             </div>
             <div class="card-body">
 
-              <a class="btn btn-danger" href="{{ url('functions/exportDetailPdf', $func->id) }}" role="button">Export PDF</a>
+              <a class="btn btn-danger" href="{{ url('functions/exportDetailPdf', $func->id) }}" role="button"><i class="fas fa-file-pdf"></i> Export PDF</a>
               
               <div class="form-group row" style="padding-top: 1em">
                 <label for="funcTitle" class="col-sm-2 col-form-label">Function Title</label>

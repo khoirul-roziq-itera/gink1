@@ -19,7 +19,7 @@
               <h4>Detail Project</h4>
             </div>
             <div class="card-body">
-              <a class="btn btn-danger" href="{{ url('projects/exportDetailPdf', $app->id) }}" role="button">Export PDF</a>
+              <a class="btn btn-danger" href="{{ url('projects/exportDetailPdf', $app->id) }}" role="button"><i class="fas fa-file-pdf"></i> Export PDF</a>
               <div class="row">
                 <div class="col-12">
                   <h2 class="section-title" style="padding-bottom: 1em">Informasi Project</h2>
@@ -126,7 +126,7 @@
                           {{-- price --}}
                           <td>Rp. {{ $app->app_FE_Price }}</td>
                           {{-- profit --}}
-                          <td>Rp. {{ $app->app_FE_Price - $app->app_FE_Cost }}</td>
+                          <td>Rp. {{ $app->app_FE_Price - $app->app_FE_Cost }}.00</td>
                         </tr>
                         <tr>
                           <td style="background: rgb(185, 235, 185)">Back-End</td>
@@ -135,7 +135,7 @@
                           {{-- price --}}
                           <td>Rp. {{ $app->app_BE_Price }}</td>
                           {{-- total --}}
-                          <td>Rp. {{ $app->app_BE_Price - $app->app_BE_Cost }}</td>
+                          <td>Rp. {{ $app->app_BE_Price - $app->app_BE_Cost }}.00</td>
                         </tr>
                         <tr>
                           <td style="background: rgb(185, 235, 185)">Full-Stack</td>
@@ -144,7 +144,7 @@
                           {{-- price --}}
                           <td>Rp. {{ $app->app_FS_Price }}</td>
                           {{-- total --}}
-                          <td>Rp. {{ $app->app_FS_Price - $app->app_FS_Cost }}</td>
+                          <td>Rp. {{ $app->app_FS_Price - $app->app_FS_Cost }}.00</td>
                         </tr>
                         <tr>
                           <td style="background: rgb(185, 235, 185)">Total</td>
@@ -153,7 +153,7 @@
                           {{-- price --}}
                           <td style="background: rgb(185, 235, 185)">Rp. {{ $app->app_Price_Total }}</td>
                           {{-- total --}}
-                          <td style="background: rgb(185, 235, 185)">Rp. {{ $app->app_Price_Total - $app->app_Cost_Total }}</td>
+                          <td style="background: rgb(185, 235, 185)">Rp. {{ $app->app_Price_Total - $app->app_Cost_Total }}.00</td>
                         </tr>
                       </tbody>
                     </table>
