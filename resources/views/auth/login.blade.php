@@ -11,7 +11,6 @@
 
   <style>
     body {
-
     background-image : url('img/bg2.jpg');
     background-repeat: no-repeat;
     background-size  : cover;
@@ -37,13 +36,11 @@
 
             <div class="card card-danger" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
               <div class="card-header"><h3 style="color: #525457; padding-left:10px">Login</h3></div>
-
-                       @if (session('status'))
-                          <div class="mb-4 font-medium text-sm text-green-600">
-                              {{ session('status') }}
-                          </div>
-                        @endif
-
+              @if (session('status'))
+              <div class="mb-4 font-medium text-sm text-green-600">
+                  {{ session('status') }}
+              </div>
+              @endif
               <div class="card-body">
                 <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
                   @csrf
@@ -54,25 +51,15 @@
                       Please fill in your email
                     </div>
                   </div>
-
                   <div class="form-group">
                     <div class="d-block">
                     	<label for="password" class="control-label">Password</label>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
-                    
+                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required> 
                     <div class="invalid-feedback">
                       please fill in your password
                     </div>
                   </div>
-
-                  <div class="form-group">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
-                      <label class="custom-control-label" for="remember-me">Remember Me</label>
-                    </div>
-                  </div>
-
                   <div class="form-group">
                     <button type="submit" class="btn btn-danger btn-lg btn-block" tabindex="4">
                       Login
