@@ -29,8 +29,8 @@ class CreateApplicationsTable extends Migration
             $table->string('start_project_t')->nullable(true);
             $table->string('end_project_t')->nullable(true);
             $table->string('deadline_project_t')->nullable(true);
-            $table->decimal('app_Cost_Total')->nullable(true);
-            $table->decimal('app_Price_Total')->nullable(true);
+            $table->decimal('app_Cost_Total', 15, 2)->nullable(true);
+            $table->decimal('app_Price_Total', 15, 2)->nullable(true);
             $table->text('app_notes')->nullable(true);
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
