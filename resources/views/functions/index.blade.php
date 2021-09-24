@@ -31,15 +31,6 @@
             <div class="card-body p-0">
               <div class="col-6">
                 <div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="padding-top: 2em; padding-left:2em">
-                  {{-- <div class="btn-group" role="group" style="padding-right: 0.5em">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-file-export"></i> Export PDF
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                      <li><a class="dropdown-item" href="{{ url('functions/exportIndexPdf') }}"><i class="far fa-file-pdf" style="color: red"></i> PDF</a></li>
-                      <li><a class="dropdown-item" href="{{ url('functions/exportIndexExcel') }}"><i class="far fa-file-excel" style="color: rgb(76, 199, 138)"></i> EXCEL</a></li>
-                    </ul>
-                  </div> --}}
                   <div style="padding-right: 0.5em">
                     <a href="{{ url('functions/exportIndexPdf')}}" type="button" class="btn btn-danger"><i class="fas fa-file-pdf"></i> Export PDF</a>
                   </div>
@@ -77,7 +68,6 @@
                       @endif
                     </td>
                     <td>
-
                       <form action="{{ url('functions/kill/'.$result->id) }}" method="post">
                         @csrf
                         @method('delete')
@@ -85,7 +75,6 @@
                           <a href="{{ url('functions', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
                           <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i> Delete</a>                          </div>
                       </form>
-
                     </td>
                   </tr>
                   @endforeach

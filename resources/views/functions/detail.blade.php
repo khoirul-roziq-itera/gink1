@@ -23,7 +23,7 @@
               <a class="btn btn-danger" href="{{ url('functions/exportDetailPdf', $func->id) }}" role="button"><i class="fas fa-file-pdf"></i> Export PDF</a>
               
               <div class="form-group row" style="padding-top: 1em">
-                <label for="funcTitle" class="col-sm-2 col-form-label">Function Title</label>
+                <label for="funcTitle" class="col-sm-2 col-form-label">Fitur Name</label>
                 <div class="col-sm-7">
                   <input readonly="" type="text" id="funcTitle" name="funcTitle" class="form-control" value="{{ $func->function_Title }}" />
                 </div>

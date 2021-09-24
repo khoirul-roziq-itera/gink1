@@ -198,8 +198,8 @@ class ModulesController extends Controller
             $moduleStatus = 'Finished';
         }
 
-
-        return view('modules.detail', compact('module', 'moduleStatus'));
+        return redirect('modules')->with('success', 'Modules Updated Successfully!');
+        // return view('modules.detail', compact('module', 'moduleStatus'));
     }
 
     /**

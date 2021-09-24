@@ -71,13 +71,11 @@
                           <td>{{ $result->category_name }}</td>
                           <td>{{ $result->user->name }}</td>
                           <td>
-
                             <form action="{{ url('categories/kill/'.$result->id) }}" method="post">
                               @csrf
                               @method('delete')
                               <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="{{ url('categories', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
-                               
+                                <a href="{{ url('categories', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>  
                                 <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to delete this data?');"><i class="fas fa-trash-alt"></i> Delete</a>
                               </div>
                             </form>

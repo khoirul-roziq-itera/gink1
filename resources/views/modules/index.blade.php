@@ -6,10 +6,8 @@
   <section class="section">
     <div class="section-header">
       <h1 style="font-size: 25px">Modules</h1>
-
     </div>
     <div class="section-body">
-
       @if(session('success'))
       <div class="alert alert-success alert-dismissible show fade">
         <div class="alert-body">
@@ -72,7 +70,6 @@
                       @endif
                     </td>
                     <td>
-
                       <form action="{{ url('modules/kill/'.$result->id) }}" method="post">
                         @csrf
                         @method('delete')

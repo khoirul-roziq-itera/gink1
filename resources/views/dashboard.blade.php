@@ -8,7 +8,6 @@
     <div class="section-header">
       <h1 style="font-size: 25px">Dashboard</h1>
     </div>
-
     <div class="section-body">
       <h2 class="section-title">Infomation Project</h2>
       <div class="row">
@@ -82,17 +81,14 @@
             <div class="section-body">
               <div class="row">
                 <div class="col-12">
-
                   <div class="card-body">
                     <div class="fc-overflow">
                       <div id="myEvent"></div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <div class="col-lg-6 col-md-12 col-12 col-sm-12">
