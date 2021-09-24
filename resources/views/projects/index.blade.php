@@ -58,7 +58,11 @@
                     <tr class="text-center">
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
+                      @if( $result->category != NULL)
                       <td>{{ $result->category->category_name }}</td>
+                      @else
+                      <td class="text-danger">Category Deleted</td>
+                      @endif
                       <td>{{ $result->user->name }}</td>
                       <td>
                         @if( $result->status == 1)
