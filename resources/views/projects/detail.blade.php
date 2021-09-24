@@ -32,7 +32,12 @@
                   <div class="form-group row">
                     <label for="moduleName" class="col-sm-2 col-form-label">Category</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" disabled value="{{ $app->category->category_name }}">
+                    @if( $app->category != NULL)
+                    <input type="text" class="form-control" disabled value="{{ $app->category->category_name }}">
+                    @else
+                    <input type="text" class="form-control text-danger" disabled value="Category Deleted">
+                    @endif
+                      
                     </div>
 
                   </div>
