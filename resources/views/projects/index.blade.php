@@ -78,7 +78,6 @@
                             <button type="submit" class="btn btn-danger" style="margin: 2px" onclick="return confirm('Do you want to archive this data?');"><i class="fas fa-archive"></i> Archive</a>
                           </div>
                         </form>
-
                       </td>
                     </tr>
                     @endforeach
