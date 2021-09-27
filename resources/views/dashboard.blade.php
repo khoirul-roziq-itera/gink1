@@ -113,7 +113,11 @@
                     <tr class="text-center">
                       <td>{{ $app + 1 }}</td>
                       <td>{{ $result->app_name }}</td>
+                      @if( $result->category != NULL)
                       <td>{{ $result->category->category_name }}</td>
+                      @else
+                      <td class="text-danger">Category Deleted</td>
+                      @endif
                       <td>{{ $result->user->name }}</td>
                       <td>
                         <a href="{{ url('projects', $result->id) }}" class="btn btn-primary" style="margin: 2px"><i class="fas fa-eye"></i> Detail</a>
