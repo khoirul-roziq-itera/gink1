@@ -89,22 +89,6 @@
                                 <a href="{{ url ('dashboard') }}"><i class="fas fa-tachometer-alt fa-lg"></i><span style="font-weight:bold; font-size:19px">Dashboard</span></a>
                             </li>
 
-                            <li class="{{ Request::is('functions') || Request::is('functions/create') ? 'active' : '' }}">
-                                <a href="{{ url ('functions') }}"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
-                            </li>
-
-                            <li class="{{ Request::is('modules') || Request::is('modules/create') ? 'active' : '' }}">
-                                <a href="{{ url ('modules') }}"><i class="fas fa-book fa-lg"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
-                            </li>
-
-                            <li class="{{ Request::is('tags') || Request::is('tags/create') ? 'active' : '' }}">
-                                <a href="{{ url ('tags') }}"><i class="fas fa-tags fa-lg"></i><span style="font-weight:bold; font-size:19px">Tags</span></a>
-                            </li>
-
-                            <li class="{{ Request::is('categories') || Request::is('categories/create') ? 'active' : '' }}">
-                                <a href="{{ url ('categories') }}"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
-                            </li>
-
                             <li class="nav-item dropdown {{ Request::is('projects/create') || Request::is('projects') || Request::is('projects/archive') || Request::is('projects/1') ? 'active' : '' }}">
                                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-list"></i><span style="font-weight:bold; font-size:19px">Projects</span></a>
                                 <ul class="dropdown-menu">
@@ -113,6 +97,23 @@
                                     <li class="{{ Request::is('projects/archive') ? 'active' : '' }}"><a href="{{ url ('projects/archive')}}" style="font-weight:bold; font-size:15px"><i class="fas fa-archive"></i>Archive</a></li>
                                 </ul>
                             </li>
+
+                            <li class="{{ Request::is('modules') || Request::is('modules/create') ? 'active' : '' }}">
+                                <a href="{{ url ('modules') }}"><i class="fas fa-book fa-lg"></i><span style="font-weight:bold; font-size:19px">Modules</span></a>
+                            </li>
+
+                            <li class="{{ Request::is('functions') || Request::is('functions/create') ? 'active' : '' }}">
+                                <a href="{{ url ('functions') }}"><i class="fas fa-laptop-code"></i><span style="font-weight:bold; font-size:19px">Functions</span></a>
+                            </li>
+
+                            <li class="{{ Request::is('categories') || Request::is('categories/create') ? 'active' : '' }}">
+                                <a href="{{ url ('categories') }}"><i class="fas fa-stream"></i><span style="font-weight:bold; font-size:19px">Categories</span></a>
+                            </li>
+
+                            <li class="{{ Request::is('tags') || Request::is('tags/create') ? 'active' : '' }}">
+                                <a href="{{ url ('tags') }}"><i class="fas fa-tags fa-lg"></i><span style="font-weight:bold; font-size:19px">Tags</span></a>
+                            </li>
+
                             @if(auth()->user()->level == "admin")
                             <li class="{{ Request::is('users') ? 'active' : '' }}">
                                 <a href="{{ url('/users') }}"><i class="fas fa-users fa-lg"></i><span style="font-weight:bold; font-size:19px">Manage Users</span></a>
