@@ -49,19 +49,24 @@
         <tbody>
             @foreach($apps as $app => $result)
             <tr class="text-center">
-              <td>{{ $app + 1 }}</td>
-              <td>{{ $result->app_name }}</td>
-              <td>{{ $result->category->category_name }}</td>
-              <td>{{ $result->user->name }}</td>
-              <td>
-                @if( $result->status == 1)
-                <span class="badge badge-danger">Waiting</span>
-                @elseif( $result->status == 2 )
-                <span class="badge badge-success">On Progress</span>
+                <td>{{ $app + 1 }}</td>
+                <td>{{ $result->app_name }}</td>
+                @if( $result->category != NULL)
+                <td>{{ $result->category->category_name }}</td>
                 @else
-                <span class="badge badge-primary">Finished</span>
+                <td class="text-danger">Category Deleted</td>
                 @endif
-              </td>
+                <td>{{ $result->user->name }}</td>
+                <td>{{ $result->user->name }}</td>
+                <td>
+                    @if( $result->status == 1)
+                    <span class="badge badge-danger">Waiting</span>
+                    @elseif( $result->status == 2 )
+                    <span class="badge badge-success">On Progress</span>
+                    @else
+                    <span class="badge badge-primary">Finished</span>
+                    @endif
+                </td>
             </tr>
             @endforeach
     </table>

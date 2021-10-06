@@ -40,21 +40,13 @@ class FunctionsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(Request $request)
     {
         $request->validate([
             'funcTitle' => 'required|min:3|max:100|unique:functions,function_Title',
             'funcName' => 'required|min:3|max:100|unique:functions,function_Name',
             'funcGroup' => 'required',
-            // 'FEDuration' => 'numeric|min:0|max:100',
-            // 'FECost' => 'numeric|min:0',
-            // 'FEPrice' => 'numeric|min:0',
-            // 'BEDuration' => 'numeric|min:0|max:100',
-            // 'BECost' => 'numeric|min:0',
-            // 'BEPrice' => 'numeric|min:0',
-            // 'FSDuration' => 'numeric|min:0|max:100',
-            // 'FSCost' => 'numeric|min:0',
-            // 'FSPrice' => 'numeric|min:0',
             'funcStatus' => 'required'
         ]);
 

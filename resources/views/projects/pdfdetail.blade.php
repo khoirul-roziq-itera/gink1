@@ -46,7 +46,12 @@
                                             <div class="col-md-6">
                                                 <address>
                                                     <strong>Category:</strong><br>
-                                                    {{ $app->category->category_name }}<br>
+                                                    @if( $app->category != NULL)
+                                                    {{ $app->category->category_name }}
+                                                    @else
+                                                    <span class="text-danger">Category Deleted</span>
+                                                    @endif<br>
+                                                    
                                                 </address>
                                             </div>
                                             <div class="col-md-6">

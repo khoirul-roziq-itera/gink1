@@ -233,8 +233,9 @@ class ProjectsController extends Controller
     public function exportDetailPdf($id)
     {
         $app = Application::where('id', $id)->first();
-
-        view()->share('app', $app);
+        $category = DB::table('categories')->where('id',$app->category_id)->get();
+        
+        view()->share(compact('app'));      
         $pdf = PDF::loadview('projects/pdfdetail');
         return $pdf->download('detail-projects.pdf');
     }
